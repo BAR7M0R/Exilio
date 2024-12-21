@@ -1,0 +1,6 @@
+./.settings
+./.cproject
+./Drivers
+./.mxproject
+./.project
+./STM32F107VCTX_FLASH.ld
