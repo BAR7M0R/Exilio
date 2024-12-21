@@ -17,7 +17,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+#include <main.hpp>
 #include "cmsis_os.h"
 #include "tim.h"
 #include "gpio.h"

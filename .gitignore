@@ -1,7 +1,3 @@
-.settings
-.cproject
 Core/Startup/
 Drivers/
-.mxproject
-.project
 STM32F107VCTX_FLASH.ld
