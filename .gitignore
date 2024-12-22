@@ -1,4 +1,5 @@
 Core/Startup/
 Drivers/
 Debug/
+*.launch
 STM32F107VCTX_FLASH.ld
