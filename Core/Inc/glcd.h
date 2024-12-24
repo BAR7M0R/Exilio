@@ -11,8 +11,8 @@
 #define GLCD_CMD_SET_X      0xB8
 #define GLCD_CMD_SET_LINE   0xC0
 #define GLCD_CMD_ON_OFF		0x3E
-  #define GLCD_CMD_ON	    0x01
-  #define GLCD_CMD_OFF	    0x00
+#define GLCD_CMD_ON	    0x01
+#define GLCD_CMD_OFF	    0x00
 #define GLCD_STATUS_BUSY    0x80
 
 void glcd_Initialize(void);

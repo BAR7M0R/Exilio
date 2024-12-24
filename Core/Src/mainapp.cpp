@@ -8,6 +8,8 @@
 #include "mainapp.hpp"
 #include "main.h"
 
+#include "displaytask.hpp"
+
 void mainapp()
 {
 	while(true)

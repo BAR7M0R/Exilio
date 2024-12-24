@@ -131,7 +131,34 @@ void Error_Handler(void);
 #define LCD_D1_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
-
+#define GLCD_DATA_PORT       GPIOE
+#define GLCD_D0_Pin          GPIO_PIN_0
+#define GLCD_D0_GPIO_Port    GPIOE
+#define GLCD_D1_Pin          GPIO_PIN_1
+#define GLCD_D1_GPIO_Port    GPIOE
+#define GLCD_D2_Pin          GPIO_PIN_2
+#define GLCD_D2_GPIO_Port    GPIOE
+#define GLCD_D3_Pin          GPIO_PIN_3
+#define GLCD_D3_GPIO_Port    GPIOE
+#define GLCD_D4_Pin          GPIO_PIN_4
+#define GLCD_D4_GPIO_Port    GPIOE
+#define GLCD_D5_Pin          GPIO_PIN_5
+#define GLCD_D5_GPIO_Port    GPIOE
+#define GLCD_D6_Pin          GPIO_PIN_6
+#define GLCD_D6_GPIO_Port    GPIOE
+#define GLCD_D7_Pin          GPIO_PIN_7
+#define GLCD_D7_GPIO_Port    GPIOE
+#define GLCD_CTRL_PORT       GPIOE
+#define GLCD_RS_Pin          GPIO_PIN_8
+#define GLCD_RS_GPIO_Port    GPIOE
+#define GLCD_E_Pin           GPIO_PIN_9
+#define GLCD_E_GPIO_Port     GPIOE
+#define GLCD_RW_Pin          GPIO_PIN_10
+#define GLCD_RW_GPIO_Port    GPIOE
+#define GLCD_CS1_Pin         GPIO_PIN_12
+#define GLCD_CS1_GPIO_Port   GPIOE
+#define GLCD_CS2_Pin         GPIO_PIN_11
+#define GLCD_CS2_GPIO_Port   GPIOE
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
