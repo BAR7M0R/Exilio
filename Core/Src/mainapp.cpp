@@ -14,13 +14,13 @@
 #include <cstdint>
 #include "vTaskDisplayLCD.hpp"
 
+#define STACK_SIZE 8192
+
 void mainapp()
 {
-	xTaskCreate(vTaskDisplayLCD, "displaytask", 128, NULL, 1, NULL);
+	xTaskCreate(vTaskDisplayLCD, "vTaskDisplayLCD", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
 
 	vTaskStartScheduler();
-
-
 	while(true)
 	{
 
