@@ -14,7 +14,6 @@ extern "C" {
 
 void mainapp();
 
-//extern void vTaskDisplayLCD(void *pvParameters);
 
 #ifdef __cplusplus
 }
