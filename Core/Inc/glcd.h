@@ -1,6 +1,10 @@
 #ifndef GLCD_H
 #define GLCD_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "glcd_port.h"
 #include "font.h"
 
@@ -22,5 +26,8 @@ void glcd_GoTo(uint8_t pos_x, uint8_t pos_y);
 void glcd_PutPixel(uint8_t pos_x, uint8_t pos_y, uint8_t color);
 void glcd_PutChar(uint8_t c);
 
-    
+#ifdef __cplusplus
+}
+#endif
+
 #endif//GLCD_H
