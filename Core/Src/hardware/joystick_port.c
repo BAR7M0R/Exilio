@@ -21,10 +21,5 @@ uint8_t joystick_port_read(void)
 	if (HAL_GPIO_ReadPin(JOY_OK_GPIO_Port, JOY_OK_Pin) == GPIO_PIN_RESET)
 		key_state |= JOY_OK;
 
-	//if (HAL_GPIO_ReadPin(SW3_GPIO_Port, SW3_Pin) == GPIO_PIN_RESET)
-	//	key_state |= SW3;
-	//if (HAL_GPIO_ReadPin(SW4_GPIO_Port, SW4_Pin) == GPIO_PIN_RESET)
-	//	key_state |= SW4;
-
 	return key_state;
 }
