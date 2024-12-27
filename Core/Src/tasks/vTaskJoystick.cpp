@@ -8,7 +8,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include "driverKEY.h"
+#include "joystick_port.h"
 
 #include <stdint.h>
 #include <vTaskJoystick.hpp>
@@ -23,7 +23,7 @@ void vTaskJoy(void *pvParameters)
 
 	while(true)
 	{
-		keys_state = driverKEY_read();
+		keys_state = joystick_port_read();
 		keys_state_pressed = (~(keys_state ^ keys_state_prev)) & keys_state; // pressed keys
 
 		if (keys_state_pressed == KEYS_RELEASED) // all keys released

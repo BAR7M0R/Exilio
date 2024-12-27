@@ -13,7 +13,6 @@ extern "C" {
 #endif
 
 void vTaskJoy(void *pvParameters);
-extern QueueHandle_t joystickDataQueue;
 
 #ifdef __cplusplus
 }

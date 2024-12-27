@@ -12,7 +12,6 @@
 extern "C" {
 #endif
 
-#include "queue.h"
 
 void mainapp();
 
