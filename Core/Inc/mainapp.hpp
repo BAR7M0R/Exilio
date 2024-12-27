@@ -12,8 +12,11 @@
 extern "C" {
 #endif
 
+#include "queue.h"
+
 void mainapp();
 
+extern QueueHandle_t joystickDataQueue;
 
 #ifdef __cplusplus
 }

@@ -10,6 +10,7 @@
 #include "main.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "queue.h"
 
 #include <cstdint>
 
@@ -29,9 +30,13 @@ virtualDisplay vMap;
 
 void mainapp()
 {
+
+	joyQueue = xQueueCreate(1, sizeof(uint8_t));
+
 	xTaskCreate(vTaskDisplayLCD, "vTaskDisplayLCD", configMINIMAL_STACK_SIZE, reinterpret_cast<void *>(&vMap), tskIDLE_PRIORITY + 1, NULL);
 	//xTaskCreate(vTaskVirtualDisplay, "vTaskVirtualDisplay", configMinimal_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
 	//xTaskCreate(vTaskJoy,"vTaskJoy",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +1, NULL);
+	//xTaskCreate(vTaskButton,"vTaskButton",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +1, NULL);
 
 	vTaskStartScheduler();
 	while(true)
