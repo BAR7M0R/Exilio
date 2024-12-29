@@ -2,22 +2,22 @@
  * displaytask.cpp
  *
  *  Created on: Dec 24, 2024
- *      Author: dev
+ *      Author: Bartłomiej Głodek
  */
 
-#include "vTaskDisplayLCD.hpp"
+#include <glcd.h>
 #include "FreeRTOS.h"
 #include "task.h"
 
 
 #include <stdint.h>
-#include "glcd.h"
-
+#include <vTaskDisplayLCD.hpp>
 #include "virtualDisplay.hpp"
 
 void vTaskDisplayLCD(void *pvParameters)
 {
 	virtualDisplay *vDisplay = reinterpret_cast<virtualDisplay *>(pvParameters);
+
 	glcd_Initialize();
 	glcd_ClearScreen();
 

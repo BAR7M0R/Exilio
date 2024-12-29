@@ -5,16 +5,16 @@
  *      Author: dev
  */
 
-#ifndef SRC_VTASKJOY_HPP_
-#define SRC_VTASKJOY_HPP_
+#ifndef SRC_VTASKJOYSTICK_HPP_
+#define SRC_VTASKJOYSTICK_HPP_
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void vTaskJoy(void *pvParameters);
+void vTaskJoystick(void *pvParameters);
 
 #ifdef __cplusplus
 }
 #endif
-#endif /* SRC_VTASKJOY_HPP_ */
+#endif /* SRC_VTASKJOYSTICK_HPP_ */

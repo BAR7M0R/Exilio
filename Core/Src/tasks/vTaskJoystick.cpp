@@ -2,20 +2,22 @@
  * vTaskJoystick.cpp
  *
  *  Created on: Dec 27, 2024
- *      Author: dev
+ *      Author: Bartłomiej Głodek
  */
 
+#include <joystick_port.h>
+#include <vTaskJoystick.hpp>
+#include <xQueueJoystick.hpp>
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include "joystick_port.h"
 
-#include <stdint.h>
-#include <vTaskJoystick.hpp>
+#include <cstdint>
 
 
-void vTaskJoy(void *pvParameters)
+void vTaskJoystick(void *pvParameters)
 {
+	joystick_port_init();
 	uint8_t keys_state = 0x00;
 	uint8_t keys_state_prev = 0x00;
 	uint8_t keys_state_pressed = 0x00;
@@ -23,6 +25,8 @@ void vTaskJoy(void *pvParameters)
 
 	while(true)
 	{
+		//vTaskDelay(10);
+
 		keys_state = joystick_port_read();
 		keys_state_pressed = (~(keys_state ^ keys_state_prev)) & keys_state; // pressed keys
 
@@ -35,7 +39,9 @@ void vTaskJoy(void *pvParameters)
 			if ((~keys_state_pressed_prev & keys_state_pressed) != KEYS_RELEASED) // new key pressed
 			{
 				// key_state_pressed
-				//xQueueSend(xQueueKeys, &keys_state_pressed, portMAX_DELAY);
+				HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
+
+				xQueueJoystick_Send(keys_state_pressed);
 			}
 			else // can be used for auto-repeat
 			{

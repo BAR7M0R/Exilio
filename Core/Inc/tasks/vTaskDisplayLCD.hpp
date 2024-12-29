@@ -2,11 +2,11 @@
  * vTaskDisplayLCD.hpp
  *
  *  Created on: Dec 24, 2024
- *      Author: bartłomiej Głodek
+ *      Author: Bartłomiej Głodek
  */
 
-#ifndef SRC_VTASKDISPLAYLCD_HPP_
-#define SRC_VTASKDISPLAYLCD_HPP_
+#ifndef INC_VTASKDISPLAYLCD_HPP_
+#define INC_VTASKDISPLAYLCD_HPP_
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,4 +18,4 @@ void vTaskDisplayLCD(void *pvParameters);
 }
 #endif
 
-#endif /* SRC_DISPLAYTASK_HPP_ */
+#endif /* INC_VTASKDISPLAYLCD_HPP_ */
