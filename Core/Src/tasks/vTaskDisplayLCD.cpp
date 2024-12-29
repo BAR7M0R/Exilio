@@ -5,14 +5,19 @@
  *      Author: Bartłomiej Głodek
  */
 
-#include <glcd.h>
+#include <vTaskDisplayLCD.hpp>
+
 #include "FreeRTOS.h"
 #include "task.h"
+#include <glcd.h>
 
+#include "main.h"
 
 #include <stdint.h>
-#include <vTaskDisplayLCD.hpp>
+
 #include "virtualDisplay.hpp"
+
+#include "xMutexVirtualDisplay.hpp"
 
 void vTaskDisplayLCD(void *pvParameters)
 {
@@ -20,11 +25,13 @@ void vTaskDisplayLCD(void *pvParameters)
 
 	glcd_Initialize();
 	glcd_ClearScreen();
-
+	//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 	while(true)
 	{
-		taskENTER_CRITICAL();
+		xMutexVirtualDisplay_Lock();
 		glcd_PutFrame(vDisplay->getMap());
-		taskEXIT_CRITICAL();
+		xMutexVirtualDisplay_Unlock();
+		vTaskDelay(pdMS_TO_TICKS(100));
+		HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 	}
 }

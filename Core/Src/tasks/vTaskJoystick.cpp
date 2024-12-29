@@ -12,6 +12,7 @@
 #include "task.h"
 
 
+
 #include <cstdint>
 
 
@@ -25,8 +26,7 @@ void vTaskJoystick(void *pvParameters)
 
 	while(true)
 	{
-		//vTaskDelay(10);
-
+		//HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
 		keys_state = joystick_port_read();
 		keys_state_pressed = (~(keys_state ^ keys_state_prev)) & keys_state; // pressed keys
 
@@ -39,17 +39,18 @@ void vTaskJoystick(void *pvParameters)
 			if ((~keys_state_pressed_prev & keys_state_pressed) != KEYS_RELEASED) // new key pressed
 			{
 				// key_state_pressed
-				HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
+				//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 
-				xQueueJoystick_Send(keys_state_pressed);
+
 			}
 			else // can be used for auto-repeat
 			{
-				// key_state_pressed
+				xQueueJoystick_Send(keys_state_pressed);
 			}
 		}
 
 		keys_state_pressed_prev = keys_state_pressed;
 		keys_state_prev = keys_state;
+		vTaskDelay(10);
 	}
 }

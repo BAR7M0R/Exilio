@@ -18,6 +18,8 @@
 
 #include "xQueueJoystick.hpp"
 
+#include "xMutexVirtualDisplay.hpp"
+
 #include "virtualDisplay.hpp"
 
 
@@ -33,21 +35,21 @@ virtualDisplay vDisplay;
 
 void mainapp()
 {
-vTaskDisplayLCD(NULL);
+
 	//here define tasks
-	xTaskCreate(vTaskDisplayLCD, "vTaskDisplayLCD", configMINIMAL_STACK_SIZE, reinterpret_cast<void *>(&vDisplay), tskIDLE_PRIORITY + 1, NULL);
+	xTaskCreate(vTaskDisplayLCD, "vTaskDisplayLCD", configMINIMAL_STACK_SIZE, reinterpret_cast<void *>(&vDisplay), tskIDLE_PRIORITY + 2, NULL);
 	xTaskCreate(vTaskVirtualDisplay, "vTaskVirtualDisplay", configMINIMAL_STACK_SIZE, reinterpret_cast<void *>(&vDisplay), tskIDLE_PRIORITY + 1, NULL);
-	xTaskCreate(vTaskJoystick,"vTaskJoystick",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
+	xTaskCreate(vTaskJoystick,"vTaskJoystick",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 3, NULL);
 	//xTaskCreate(vTaskButton,"vTaskButton",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +1, NULL);
 	//here define queues
 	xQueueJoystick_Init();
-
+	xMutexVirtualDisplay_Init();
 
 	vTaskStartScheduler();
 
 	while(true)
 	  {
-
+		;
 	  }
 }
 

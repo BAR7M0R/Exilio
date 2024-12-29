@@ -25,6 +25,7 @@ private:
 public:
 	uint8_t *getVMap();
 	uint8_t * getMap();
+	void fill(uint8_t data);
 	virtualDisplay();
 	~virtualDisplay();
 	virtualDisplay(const virtualDisplay&) = delete;

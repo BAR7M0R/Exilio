@@ -15,12 +15,18 @@ uint8_t * virtualDisplay::getMap()
 {
 return *_Map;
 }
-
+void virtualDisplay::fill(uint8_t data)
+{
+	for (auto& row:_VMap)
+	{
+		row.fill(data);
+	}
+}
 virtualDisplay::virtualDisplay()
 {
 	for (auto& row:_VMap)
 	{
-		row.fill(0x0F);
+		row.fill(0x00);
 	}
 	int k = 0;
 	for (int i = MARGIN_HEIGHT; i < MARGIN_HEIGHT + HEIGHT; ++i)

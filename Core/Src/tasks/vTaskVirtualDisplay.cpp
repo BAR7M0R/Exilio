@@ -6,15 +6,16 @@
  */
 
 #include <glcd.h>
-#include <vTaskVirtualDisplay.hpp>
-#include <xQueueJoystick.hpp>
-#include <xQueueJoystick.hpp>
+#include "vTaskVirtualDisplay.hpp"
+#include "xQueueJoystick.hpp"
+#include "xMutexVirtualDisplay.hpp"
 #include "FreeRTOS.h"
 #include "task.h"
 #include <cstdint>
 #include <array>
 
 #include "virtualDisplay.hpp"
+
 
 void vTaskVirtualDisplay(void *pvParameters)
 {
@@ -23,10 +24,10 @@ void vTaskVirtualDisplay(void *pvParameters)
 	while(true)
 	{
 		xQueueJoystick_data=xQueueJoystick_Receive();
-		taskENTER_CRITICAL();
+		xMutexVirtualDisplay_Lock();
 		vDisplay->fill(xQueueJoystick_data);
-		taskEXIT_CRITICAL();
-		//vTaskDelay(100);
+		xMutexVirtualDisplay_Unlock();
+		vTaskDelay(pdMS_TO_TICKS(10));
 	}
 
 }
