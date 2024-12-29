@@ -1,9 +1,9 @@
-#include "joystick_port.h"
+#include <joystick_port.h>
 
 
 void joystick_port_init(void)
 {
-	#warning Przyciski zainicjowane przez bilioteke HAL
+	//#warning Przyciski zainicjowane przez bilioteke HAL
 }
 
 uint8_t joystick_port_read(void)

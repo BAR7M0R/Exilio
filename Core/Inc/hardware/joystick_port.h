@@ -1,6 +1,11 @@
 #ifndef JOYSICK_PORT_H
 #define JOYSICK_PORT_H
 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 #include "main.h"
 
@@ -16,5 +21,11 @@
 
 void joystick_port_init(void);
 uint8_t joystick_port_read(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+
 
 #endif//JOYSICK_PORT_H

@@ -5,8 +5,8 @@
 extern "C" {
 #endif
 
-#include "glcd_port.h"
-#include "font.h"
+#include <glcd_port.h>
+#include <font.h>
 
 #define GLCD_WIDTH		    128
 #define GLCD_HEIGHT	        64
