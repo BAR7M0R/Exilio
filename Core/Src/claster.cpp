@@ -93,7 +93,9 @@ void claster::putBlackmaskSegmentOnClaster(coordinates relativeCoords, segment b
 			tempBlackmask.flip();
 			tempBlackmask <<= yOffset;
 			tempBlackmask.flip();
-			_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8) &= static_cast<uint8_t>(tempBlackmask.to_ulong());
+			std::bitset<8> tempField(_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8));
+			tempField |= tempBlackmask;
+			_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8) &= static_cast<uint8_t>(tempField.to_ulong());
 			++sCounter;
 		}
 		else if ((currentFieldIndex >=secondBeginIndex) and (currentFieldIndex <= secondEndIndex))
@@ -101,8 +103,9 @@ void claster::putBlackmaskSegmentOnClaster(coordinates relativeCoords, segment b
 			tempBlackmask.flip();
 			tempBlackmask >>= (8 - yOffset);
 			tempBlackmask.flip();
-
-			_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8) &= static_cast<uint8_t>(tempBlackmask.to_ulong());
+			std::bitset<8> tempField(_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8));
+			tempField |= tempBlackmask;
+			_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8) &= static_cast<uint8_t>(tempField.to_ulong());
 			++sCounter;
 		}
 		else
@@ -113,31 +116,5 @@ void claster::putBlackmaskSegmentOnClaster(coordinates relativeCoords, segment b
 		//if (currentFieldIndex == firstEndIndex) currentFieldIndex = secondBeginIndex;
 		++currentFieldIndex;
 	}
-/*		std::bitset<8> maskSpaceWhitemask(0xFF);
-		maskSpaceWhitemask <<= (firstOffset);
-		std::bitset<8> maskWhitemask(mask[sCounter]);
 
-
-		if(!isSecond)
-		{
-			maskWhitemask <<=  firstOffset;
-			uint8_t temp = static_cast<uint8_t>((maskWhitemask & maskSpaceWhitemask).to_ulong());
-			_claster[currentFieldIndex/mask.size()]->operator [](sCounter) |= temp;
-
-		}
-		else
-		{
-			maskWhitemask >>= (8 - firstOffset);
-			uint8_t temp = static_cast<uint8_t>((maskWhitemask & (~maskSpaceWhitemask)).to_ulong());
-			_claster[currentFieldIndex/mask.size()]->operator [](sCounter) |= temp;
-		}
-		++sCounter;
-		++currentFieldIndex;
-		if (sCounter >= mask.size())
-		{
-			isSecond = true;
-			sCounter = 0;
-			currentFieldIndex = secondBeginIndex;
-		}
-	}*/
 }

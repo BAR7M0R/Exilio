@@ -64,7 +64,7 @@ void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, dem
 {
 	using namespace coordinatesTools;
 	segment texture = /*{0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};*/{0x01, 0x00, 0x00, 0x00,0x00,0x00,0x00,0x00};
-
+	//na dziewiątej pozycji dochodzi do napisania w klasterze 2/3 nadmiarowych danych ten punkt co się pojawia
 	segment core1 = takeSnap(vMapCMove(cordspreve, 0, 0));
 	segment core2 = takeSnap(vMapCMove(cordspreve, 8, 0));
 	segment core3 = takeSnap(vMapCMove(cordspreve, 0, 8));
@@ -89,6 +89,7 @@ void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, dem
 	putSegment(core2, vMapCMove(coords, 8, 0));
 	putSegment(core3, vMapCMove(coords, 0, 8));
 	putSegment(core4, vMapCMove(coords, 8, 8));
+
 	//c1.putSegmentOnClaster(vMapSm(coords), texture);
 
 

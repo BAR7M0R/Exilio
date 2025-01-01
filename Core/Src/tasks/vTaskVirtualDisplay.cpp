@@ -53,10 +53,10 @@ void vTaskVirtualDisplay(void *pvParameters)
 		vDisplay->putEntity(pcords.first, pcords.second);
 		xMutexVirtualDisplay_Unlock();
 		xMutexVirtualDisplay_Lock();
-		vDisplay->putEntity(e1coords, e1coords);
+		vDisplay->putEntity(e2coords, e2coords);
 		xMutexVirtualDisplay_Unlock();
 		xMutexVirtualDisplay_Lock();
-		vDisplay->putEntity(e2coords, e2coords);
+		vDisplay->putEntity(e1coords, e1coords);
 		xMutexVirtualDisplay_Unlock();
 
 		vTaskDelay(pdMS_TO_TICKS(10));

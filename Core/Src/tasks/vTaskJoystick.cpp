@@ -40,12 +40,12 @@ void vTaskJoystick(void *pvParameters)
 			{
 				// key_state_pressed
 				//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
-
+				xQueueJoystick_Send(keys_state_pressed);
 
 			}
 			else // can be used for auto-repeat
 			{
-				xQueueJoystick_Send(keys_state_pressed);
+				//xQueueJoystick_Send(keys_state_pressed);
 			}
 		}
 
