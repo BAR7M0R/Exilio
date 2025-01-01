@@ -21,7 +21,7 @@ extern "C" {
 
 void glcd_Initialize(void);
 void glcd_ClearScreen(void);
-void glcd_PutFrame(uint8_t* data);
+void glcd_PutFrame(uint8_t* data[1024]);
 void glcd_GoTo(uint8_t pos_x, uint8_t pos_y);
 void glcd_PutPixel(uint8_t pos_x, uint8_t pos_y, uint8_t color);
 void glcd_PutChar(uint8_t c);

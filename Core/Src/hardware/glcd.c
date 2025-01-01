@@ -27,15 +27,15 @@ void glcd_ClearScreen(void)
     
     glcd_GoTo(0, 0);
 }
-void glcd_PutFrame(uint8_t* data)
+void glcd_PutFrame(uint8_t** data)
 {
-	uint8_t k = 0;
+	uint16_t k = 0;
     for(uint8_t j = 0; j < (GLCD_HEIGHT / 8); j++)
     {
         glcd_GoTo(0, j);
 
         for(uint8_t i = 0; i < GLCD_WIDTH; i++)
-            glcd_WriteData(data[k++]);
+            glcd_WriteData(*data[k++]);
     }
     glcd_GoTo(0, 0);
 }

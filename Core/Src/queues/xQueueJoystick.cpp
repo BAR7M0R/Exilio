@@ -12,7 +12,7 @@
 #include <xQueueJoystick.hpp>
 
 constexpr uint32_t xQueueJoystickMaxTimeout = 100;
-constexpr uint32_t xQueueJoystickSize = 16;
+constexpr uint32_t xQueueJoystickSize = 10;
 
 QueueHandle_t xQueueJoystick;
 

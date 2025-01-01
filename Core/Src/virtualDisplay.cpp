@@ -5,15 +5,18 @@
  *      Author: dev
  */
 
+#include "segment.hpp"
+#include "claster.hpp"
 #include "virtualDisplay.hpp"
-
+#include "main.h"
+#include "coordinatesTools.hpp"
 uint8_t * virtualDisplay::getVMap()
 {
-return _VMap[0].data();
+return &_VMap[0][0];
 }
-uint8_t * virtualDisplay::getMap()
+uint8_t ** virtualDisplay::getMap()
 {
-return *_Map;
+return _Map;
 }
 void virtualDisplay::fill(uint8_t data)
 {
@@ -22,18 +25,152 @@ void virtualDisplay::fill(uint8_t data)
 		row.fill(data);
 	}
 }
+uint8_t virtualDisplay::checkNumberOfCells(coordinates& coords)
+{
+	uint8_t numberOfCells=0;
+	if (coords.y%NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD == 0)
+	{
+		numberOfCells = 1;
+	}
+	else
+	{
+		numberOfCells = 2;
+	}
+	return numberOfCells;
+}
+segment virtualDisplay::takeSnap(coordinates coords)
+{
+	segment snap;
+	uint8_t numberOfCells = checkNumberOfCells(coords);
+	for(uint8_t xIdx = 0; xIdx < snap.size(); ++xIdx)
+	{
+		for(uint8_t yIdx = 0; yIdx < numberOfCells; ++yIdx)
+		{
+			if (yIdx == 0)
+			{
+				snap.at(xIdx) |= (_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx)
+						>> coords.y%NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD);
+			}
+			else
+			{
+				snap.at(xIdx) |= (_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx)
+						<< (NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD - coords.y%NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD));
+			}
+		}
+	}
+	return snap;
+}
+void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, demage indicator*/)
+{
+	using namespace coordinatesTools;
+	segment texture = /*{0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};*/{0x01, 0x00, 0x00, 0x00,0x00,0x00,0x00,0x00};
+
+	segment core1 = takeSnap(vMapCMove(cordspreve, 0, 0));
+	segment core2 = takeSnap(vMapCMove(cordspreve, 8, 0));
+	segment core3 = takeSnap(vMapCMove(cordspreve, 0, 8));
+	segment core4 = takeSnap(vMapCMove(cordspreve, 8, 8));
+
+	claster cla1(core1, core2, core3, core4);
+	cla1.putBlackmaskSegmentOnClaster(vMapSm(cordspreve), ~texture);
+
+	putSegment(core1, vMapCMove(cordspreve, 0, 0));
+	putSegment(core2, vMapCMove(cordspreve, 8, 0));
+	putSegment(core3, vMapCMove(cordspreve, 0, 8));
+	putSegment(core4, vMapCMove(cordspreve, 8, 8));
+
+	core1 = takeSnap(vMapCMove(coords, 0, 0));
+	core2 = takeSnap(vMapCMove(coords, 8, 0));
+	core3 = takeSnap(vMapCMove(coords, 0, 8));
+	core4 = takeSnap(vMapCMove(coords, 8, 8));
+
+	cla1.putSegmentOnClaster(vMapSm(cordspreve), texture);
+
+	putSegment(core1, vMapCMove(coords, 0, 0));
+	putSegment(core2, vMapCMove(coords, 8, 0));
+	putSegment(core3, vMapCMove(coords, 0, 8));
+	putSegment(core4, vMapCMove(coords, 8, 8));
+	//c1.putSegmentOnClaster(vMapSm(coords), texture);
+
+
+	//segment snapfc = takeSnap(cordsfc);
+	//snapfc ^= texture;
+
+	/*putClaster(cordsfc, snapfc);
+	coordinates cordsfu;
+	cordsfu.x = cordspreve.x / 8;
+	cordsfu.y = cordspreve.y / 8 - 1;
+	claster snapfu = takeSnap(cordsfu);
+	putClaster(cordsfu, snapfu);
+	coordinates cordsfl;
+	cordsfl.x = cordspreve.x / 8 - 1;
+	cordsfl.y = cordspreve.y / 8;
+	claster snapfl = takeSnap(cordsfl);
+	putClaster(cordsfl, snapfl);
+	coordinates cordsfb;
+	cordsfb.x = cordspreve.x / 8;
+	cordsfb.y = cordspreve.y / 8 + 1;
+	claster snapfb = takeSnap(cordsfb);
+	putClaster(cordsfb, snapfb);
+	coordinates cordsfr;
+	cordsfr.x = cordspreve.x / 8 + 1;
+	cordsfr.y = cordspreve.y / 8;
+	claster snapfr = takeSnap(cordsfr);
+	putClaster(cordsfr, snapfr);*/
+	//coordinates cordspreveup = cordspreve;
+	//cordspreveup.y = cordspreve.y + 8;
+	//coordinates cordsprevedown = cordspreve;
+	//		cordsprevedown.y = cordspreve.y - 8;
+	//claster snapFirstu = takeSnap(cordspreveup);
+	//claster snapFirstd = takeSnap(cordsprevedown);
+	//snapFirst &= ~texture;
+	//putClaster(cordspreve, snapFirst);
+	//putClaster(cordspreveup, snapFirstu);
+	//putClaster(cordsprevedown , snapFirstd);
+	//claster snapSecond = takeSnap(coords);
+	//snapSecond |= texture;
+	//putClaster(coords, snapSecond);
+//
+}
+void virtualDisplay::putSegment(segment& s, coordinates coords)
+{
+	//uint8_t numberOfCells = checkNumberOfCells(coords);
+	for(uint8_t currentFieldIndex = 0; currentFieldIndex < s.size(); ++currentFieldIndex)
+	{
+		_VMap.at(coords.y / NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
+	}
+	//for(uint8_t xIdx = 0; xIdx < s.size(); ++xIdx)
+	//{
+		//for(uint8_t yIdx = 0; yIdx < numberOfCells; ++yIdx)
+		//{
+			//uint16_t floatTexture = static_cast<uint16_t>(s.at(xIdx));
+			//floatTexture <<= coords.y % NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD;
+			//if (yIdx == 0)
+			//{
+				//_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx) = 0x00FF & floatTexture;
+			//}
+			//else
+			//{
+				//_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx) = (0xFF00 & floatTexture) >> 8;
+			//}
+		//}
+	//}
+}
 virtualDisplay::virtualDisplay()
 {
 	for (auto& row:_VMap)
 	{
-		row.fill(0x00);
-	}
-	int k = 0;
-	for (int i = MARGIN_HEIGHT; i < MARGIN_HEIGHT + HEIGHT; ++i)
-	{
-		for (int j = MARGIN_WIDTH; j < MARGIN_WIDTH + WIDTH; ++j)
+		for (int i = 0; i< 30; ++i)
 		{
-			_Map[k++] = &_VMap[i][j];
+			row.at(i) = (0x00);
+		}
+
+	}
+	uint16_t k = 0;
+	for (uint8_t i = 0; i < HEIGHT_LCD; ++i)
+	{
+		for (uint8_t j = 0; j < WIDTH_LCD; ++j)
+		{
+			_Map[k++] = &_VMap[V_MARGIN_HEIGHT+i][V_MARGIN_WIDTH+j];
 		}
 	}
 }

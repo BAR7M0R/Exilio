@@ -26,6 +26,7 @@ void vTaskDisplayLCD(void *pvParameters)
 	glcd_Initialize();
 	glcd_ClearScreen();
 	//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
+
 	while(true)
 	{
 		xMutexVirtualDisplay_Lock();

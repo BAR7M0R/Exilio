@@ -51,6 +51,6 @@ void vTaskJoystick(void *pvParameters)
 
 		keys_state_pressed_prev = keys_state_pressed;
 		keys_state_prev = keys_state;
-		vTaskDelay(10);
+		vTaskDelay(50);
 	}
 }
