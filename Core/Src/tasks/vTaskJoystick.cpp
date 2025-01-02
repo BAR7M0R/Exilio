@@ -5,9 +5,9 @@
  *      Author: Bartłomiej Głodek
  */
 
-#include <joystick_port.h>
-#include <vTaskJoystick.hpp>
-#include <xQueueJoystick.hpp>
+#include "joystick_port.h"
+#include "vTaskJoystick.hpp"
+#include "xQueueJoystick.hpp"
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -45,7 +45,7 @@ void vTaskJoystick(void *pvParameters)
 			}
 			else // can be used for auto-repeat
 			{
-				//xQueueJoystick_Send(keys_state_pressed);
+				xQueueJoystick_Send(keys_state_pressed);
 			}
 		}
 

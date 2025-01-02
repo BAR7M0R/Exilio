@@ -7,10 +7,10 @@
 
 #ifndef SRC_VIRTUALDISPLAY_HPP_
 #define SRC_VIRTUALDISPLAY_HPP_
-#include <segment.hpp>
+#include "segment.hpp"
 #include <array>
 #include <cstdint>
-#include <coordinates.hpp>
+#include "coordinates.hpp"
 #include "displayConstans.hpp"
 class virtualDisplay
 {

@@ -90,21 +90,19 @@ void claster::putBlackmaskSegmentOnClaster(coordinates relativeCoords, segment b
 
 		if ((currentFieldIndex >=xOffset) and (currentFieldIndex < firstEndIndex))
 		{
-			tempBlackmask.flip();
 			tempBlackmask <<= yOffset;
-			tempBlackmask.flip();
 			std::bitset<8> tempField(_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8));
 			tempField |= tempBlackmask;
+			tempField ^= tempBlackmask;
 			_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8) &= static_cast<uint8_t>(tempField.to_ulong());
 			++sCounter;
 		}
 		else if ((currentFieldIndex >=secondBeginIndex) and (currentFieldIndex <= secondEndIndex))
 		{
-			tempBlackmask.flip();
 			tempBlackmask >>= (8 - yOffset);
-			tempBlackmask.flip();
 			std::bitset<8> tempField(_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8));
 			tempField |= tempBlackmask;
+			tempField ^= tempBlackmask;
 			_claster[currentFieldIndex/8]->operator []((currentFieldIndex) % 8) &= static_cast<uint8_t>(tempField.to_ulong());
 			++sCounter;
 		}

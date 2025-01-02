@@ -32,7 +32,7 @@ void vTaskDisplayLCD(void *pvParameters)
 		xMutexVirtualDisplay_Lock();
 		glcd_PutFrame(vDisplay->getMap());
 		xMutexVirtualDisplay_Unlock();
-		vTaskDelay(pdMS_TO_TICKS(1000));
+		vTaskDelay(pdMS_TO_TICKS(16));
 		HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
 	}
 }

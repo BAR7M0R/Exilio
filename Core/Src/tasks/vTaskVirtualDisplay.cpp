@@ -40,7 +40,7 @@ void vTaskVirtualDisplay(void *pvParameters)
 		xMutexVirtualDisplay_Unlock();
 		vTaskDelay(pdMS_TO_TICKS(10));
 	}*/
-
+	uint32_t i = 0;
 	while(true)
 	{
 		xQueueJoystick_data=xQueueJoystick_Receive();
@@ -49,6 +49,7 @@ void vTaskVirtualDisplay(void *pvParameters)
 		if ((xQueueJoystick_data & JOY_U) == JOY_U) {--pcords.first.y;}
 		if ((xQueueJoystick_data & JOY_L) == JOY_L) {--pcords.first.x;}
 		if ((xQueueJoystick_data & JOY_R) == JOY_R) {++pcords.first.x;}
+		if (pcords.first.x >= )
 		xMutexVirtualDisplay_Lock();
 		vDisplay->putEntity(pcords.first, pcords.second);
 		xMutexVirtualDisplay_Unlock();
@@ -56,8 +57,13 @@ void vTaskVirtualDisplay(void *pvParameters)
 		vDisplay->putEntity(e2coords, e2coords);
 		xMutexVirtualDisplay_Unlock();
 		xMutexVirtualDisplay_Lock();
-		vDisplay->putEntity(e1coords, e1coords);
+		//vDisplay->putEntity(e1coords, e1coords);
 		xMutexVirtualDisplay_Unlock();
+		if (i % 500 == 0)
+		{
+			//e1coords.x += -1;
+			e2coords.y += -1;
+		}
 
 		vTaskDelay(pdMS_TO_TICKS(10));
 	}

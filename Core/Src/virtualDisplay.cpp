@@ -10,6 +10,8 @@
 #include "virtualDisplay.hpp"
 #include "main.h"
 #include "coordinatesTools.hpp"
+using namespace displayConstans;
+
 uint8_t * virtualDisplay::getVMap()
 {
 return &_VMap[0][0];
@@ -63,8 +65,8 @@ segment virtualDisplay::takeSnap(coordinates coords)
 void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, demage indicator*/)
 {
 	using namespace coordinatesTools;
-	segment texture = /*{0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};*/{0x01, 0x00, 0x00, 0x00,0x00,0x00,0x00,0x00};
-	//na dziewiątej pozycji dochodzi do napisania w klasterze 2/3 nadmiarowych danych ten punkt co się pojawia
+	segment texture = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};//{0x07, 0x07, 0x07, 0x00,0x00,0x00,0x00,0x00};
+	//do zrefaktoryzowania
 	segment core1 = takeSnap(vMapCMove(cordspreve, 0, 0));
 	segment core2 = takeSnap(vMapCMove(cordspreve, 8, 0));
 	segment core3 = takeSnap(vMapCMove(cordspreve, 0, 8));
@@ -78,59 +80,17 @@ void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, dem
 	putSegment(core3, vMapCMove(cordspreve, 0, 8));
 	putSegment(core4, vMapCMove(cordspreve, 8, 8));
 
-	core1 = takeSnap(vMapCMove(coords, 0, 0));
-	core2 = takeSnap(vMapCMove(coords, 8, 0));
-	core3 = takeSnap(vMapCMove(coords, 0, 8));
-	core4 = takeSnap(vMapCMove(coords, 8, 8));
+	segment core11 = takeSnap(vMapCMove(coords, 0, 0));
+	segment core22 = takeSnap(vMapCMove(coords, 8, 0));
+	segment core33 = takeSnap(vMapCMove(coords, 0, 8));
+	segment core44 = takeSnap(vMapCMove(coords, 8, 8));
+	claster cla2(core11, core22, core33, core44);
+	cla2.putSegmentOnClaster(vMapSm(coords), texture);
 
-	cla1.putSegmentOnClaster(vMapSm(cordspreve), texture);
-
-	putSegment(core1, vMapCMove(coords, 0, 0));
-	putSegment(core2, vMapCMove(coords, 8, 0));
-	putSegment(core3, vMapCMove(coords, 0, 8));
-	putSegment(core4, vMapCMove(coords, 8, 8));
-
-	//c1.putSegmentOnClaster(vMapSm(coords), texture);
-
-
-	//segment snapfc = takeSnap(cordsfc);
-	//snapfc ^= texture;
-
-	/*putClaster(cordsfc, snapfc);
-	coordinates cordsfu;
-	cordsfu.x = cordspreve.x / 8;
-	cordsfu.y = cordspreve.y / 8 - 1;
-	claster snapfu = takeSnap(cordsfu);
-	putClaster(cordsfu, snapfu);
-	coordinates cordsfl;
-	cordsfl.x = cordspreve.x / 8 - 1;
-	cordsfl.y = cordspreve.y / 8;
-	claster snapfl = takeSnap(cordsfl);
-	putClaster(cordsfl, snapfl);
-	coordinates cordsfb;
-	cordsfb.x = cordspreve.x / 8;
-	cordsfb.y = cordspreve.y / 8 + 1;
-	claster snapfb = takeSnap(cordsfb);
-	putClaster(cordsfb, snapfb);
-	coordinates cordsfr;
-	cordsfr.x = cordspreve.x / 8 + 1;
-	cordsfr.y = cordspreve.y / 8;
-	claster snapfr = takeSnap(cordsfr);
-	putClaster(cordsfr, snapfr);*/
-	//coordinates cordspreveup = cordspreve;
-	//cordspreveup.y = cordspreve.y + 8;
-	//coordinates cordsprevedown = cordspreve;
-	//		cordsprevedown.y = cordspreve.y - 8;
-	//claster snapFirstu = takeSnap(cordspreveup);
-	//claster snapFirstd = takeSnap(cordsprevedown);
-	//snapFirst &= ~texture;
-	//putClaster(cordspreve, snapFirst);
-	//putClaster(cordspreveup, snapFirstu);
-	//putClaster(cordsprevedown , snapFirstd);
-	//claster snapSecond = takeSnap(coords);
-	//snapSecond |= texture;
-	//putClaster(coords, snapSecond);
-//
+	putSegment(core11, vMapCMove(coords, 0, 0));
+	putSegment(core22, vMapCMove(coords, 8, 0));
+	putSegment(core33, vMapCMove(coords, 0, 8));
+	putSegment(core44, vMapCMove(coords, 8, 8));
 }
 void virtualDisplay::putSegment(segment& s, coordinates coords)
 {
