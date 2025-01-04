@@ -7,10 +7,24 @@
 
 #ifndef INC_COORDINATES_HPP_
 #define INC_COORDINATES_HPP_
-
+#include <cstdint>
 struct coordinates {
-    uint8_t x;
-    uint8_t y;
+	std::int16_t x;
+    std::int16_t y;
+    coordinates operator+(coordinates c) const
+    {
+    	coordinates r;
+    	r.x = this->x + c.x;
+    	r.y = this->y + c.y;
+    	return r;
+    }
+    coordinates operator-(coordinates c) const
+    {
+    	coordinates r;
+    	r.x = this->x - c.x;
+    	r.y = this->y -c.y;
+    	return r;
+    }
 };
 
 #endif /* INC_COORDINATES_HPP_ */

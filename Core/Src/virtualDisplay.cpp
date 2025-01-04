@@ -61,11 +61,11 @@ segment virtualDisplay::takeSnap(coordinates coords)
 	}
 	return snap;
 }
-void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, demage indicator*/)
+void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve, segment texture)
 {
 	using namespace coordinatesTools;
 
-	segment texture(EntitiesInitialData::player::texture_data);//{0x07, 0x07, 0x07, 0x00,0x00,0x00,0x00,0x00};
+	//segment texture(EntitiesInitialData::enemy3::texture_data);//{0x07, 0x07, 0x07, 0x00,0x00,0x00,0x00,0x00};
 	//do zrefaktoryzowania
 	segment core1 = takeSnap(vMapCMove(cordspreve, 0, 0));
 	segment core2 = takeSnap(vMapCMove(cordspreve, 8, 0));

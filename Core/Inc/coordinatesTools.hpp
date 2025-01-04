@@ -16,8 +16,9 @@ namespace coordinatesTools {
 
 bool isInVmap(coordinates c);
 bool isInMap(coordinates c);
-coordinates stopOnMap(coordinates c);
-coordinates stopOnVmap(coordinates c);
+coordinates stopPointOnMap(coordinates c);
+coordinates stopPointOnVmap(coordinates c);
+coordinates stopRectangleOnBorderMap(coordinates c, coordinates c2);
 coordinates vMapSm(coordinates c);
 coordinates vMapSc(coordinates c);
 coordinates vMapCMove(coordinates c, uint8_t x, uint8_t y);
