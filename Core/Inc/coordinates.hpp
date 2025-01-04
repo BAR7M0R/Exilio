@@ -7,7 +7,6 @@
 
 #ifndef INC_COORDINATES_HPP_
 #define INC_COORDINATES_HPP_
-#include "displayConstans.hpp"
 
 struct coordinates {
     uint8_t x;

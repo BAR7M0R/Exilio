@@ -2,16 +2,20 @@
  * virtualDisplay.hpp
  *
  *  Created on: Dec 27, 2024
- *      Author: dev
+ *      Author: Bartłomiej Głodek
  */
 
 #ifndef SRC_VIRTUALDISPLAY_HPP_
 #define SRC_VIRTUALDISPLAY_HPP_
-#include "segment.hpp"
 #include <array>
 #include <cstdint>
+
+#include "segment.hpp"
 #include "coordinates.hpp"
 #include "displayConstans.hpp"
+
+
+using namespace displayConstans;
 class virtualDisplay
 {
 private:

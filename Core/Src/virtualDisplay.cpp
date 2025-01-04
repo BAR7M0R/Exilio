@@ -2,13 +2,12 @@
  * virtualDisplay.cpp
  *
  *  Created on: Dec 27, 2024
- *      Author: dev
+ *      Author: Bartłomiej Głodek
  */
 
-#include "segment.hpp"
-#include "claster.hpp"
 #include "virtualDisplay.hpp"
-#include "main.h"
+#include "claster.hpp"
+#include "entitiesInitData.hpp"
 #include "coordinatesTools.hpp"
 using namespace displayConstans;
 
@@ -65,7 +64,8 @@ segment virtualDisplay::takeSnap(coordinates coords)
 void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, demage indicator*/)
 {
 	using namespace coordinatesTools;
-	segment texture = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};//{0x07, 0x07, 0x07, 0x00,0x00,0x00,0x00,0x00};
+
+	segment texture(EntitiesInitialData::player::texture_data);//{0x07, 0x07, 0x07, 0x00,0x00,0x00,0x00,0x00};
 	//do zrefaktoryzowania
 	segment core1 = takeSnap(vMapCMove(cordspreve, 0, 0));
 	segment core2 = takeSnap(vMapCMove(cordspreve, 8, 0));
@@ -94,27 +94,10 @@ void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve/*, dem
 }
 void virtualDisplay::putSegment(segment& s, coordinates coords)
 {
-	//uint8_t numberOfCells = checkNumberOfCells(coords);
 	for(uint8_t currentFieldIndex = 0; currentFieldIndex < s.size(); ++currentFieldIndex)
 	{
 		_VMap.at(coords.y / NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
 	}
-	//for(uint8_t xIdx = 0; xIdx < s.size(); ++xIdx)
-	//{
-		//for(uint8_t yIdx = 0; yIdx < numberOfCells; ++yIdx)
-		//{
-			//uint16_t floatTexture = static_cast<uint16_t>(s.at(xIdx));
-			//floatTexture <<= coords.y % NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD;
-			//if (yIdx == 0)
-			//{
-				//_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx) = 0x00FF & floatTexture;
-			//}
-			//else
-			//{
-				//_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx) = (0xFF00 & floatTexture) >> 8;
-			//}
-		//}
-	//}
 }
 virtualDisplay::virtualDisplay()
 {
