@@ -14,6 +14,7 @@ player::player()
 :texture_(EntitiesInitialData::player1::texture_data)
 ,texture_corner_1_(EntitiesInitialData::player1::texture_corner_1)
 ,texture_corner_2_(EntitiesInitialData::player1::texture_corner_2)
+,offset_(EntitiesInitialData::player1::offset)
 ,currentPosition_({10,10})
 ,prevousPosition_({10,10})
 {}
@@ -49,5 +50,9 @@ const coordinates& player::getTextureCorner2() const
 const segment& player::getTexture() const
 {
 	return texture_;
+}
+const coordinates& player::getOffset() const
+{
+	return offset_;
 }
 

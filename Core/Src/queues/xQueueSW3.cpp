@@ -27,12 +27,7 @@ void xQueueSW3::Send(bool state)
 {
 	if (xQueueSW3_ != nullptr)
 	{
-		if (xQueueSend(xQueueSW3_,
-				static_cast<const void*>(&state),
-				pdMS_TO_TICKS(maxTimeout_)) == pdFAIL)
-		{
-			while(true);
-		}
+		xQueueSend(xQueueSW3_,static_cast<const void*>(&state),pdMS_TO_TICKS(maxTimeout_));
 	}
 }
 bool xQueueSW3::Receive()
@@ -40,12 +35,7 @@ bool xQueueSW3::Receive()
 	bool receivedValue = false;
 	if (xQueueSW3_ != nullptr)
 	{
-	    if (xQueueReceive(xQueueSW3_,
-	    		&receivedValue,
-				pdMS_TO_TICKS(maxTimeout_)) == pdFAIL);
-	    {
-	    	receivedValue = false;
-	    }
+		xQueueReceive(xQueueSW3_, &receivedValue, pdMS_TO_TICKS(maxTimeout_));
 	}
     return receivedValue;
 }

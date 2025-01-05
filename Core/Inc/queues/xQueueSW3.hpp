@@ -26,7 +26,7 @@ public:
 
 private:
 	static constexpr uint32_t maxTimeout_ = 100;
-	static constexpr std::size_t queueSize_ = 10;
+	static constexpr std::size_t queueSize_ = 100;
 	QueueHandle_t xQueueSW3_;
 };
 #endif /* INC_QUEUES_XQUEUESW3_HPP_ */

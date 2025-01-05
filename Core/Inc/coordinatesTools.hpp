@@ -16,9 +16,12 @@ namespace coordinatesTools {
 
 bool isInVmap(coordinates c);
 bool isInMap(coordinates c);
+bool isPointInScope(const coordinates c, const coordinates scopePoint1, const coordinates scopePoint2);
+bool isScopeInScope(const coordinates scope1Point1, const coordinates scope1Point2, const coordinates scope2Point1, const coordinates scope2Point2);
 coordinates stopPointOnMap(coordinates c);
 coordinates stopPointOnVmap(coordinates c);
 coordinates stopRectangleOnBorderMap(coordinates c, coordinates c2);
+coordinates stopRectangleOnBorderVMap(coordinates c, coordinates c2);
 coordinates vMapSm(coordinates c);
 coordinates vMapSc(coordinates c);
 coordinates vMapCMove(coordinates c, uint8_t x, uint8_t y);

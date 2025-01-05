@@ -40,7 +40,7 @@ void mainapp()
 	xTaskCreate(vTaskDisplayLCD, "vTaskDisplayLCD", configMINIMAL_STACK_SIZE, reinterpret_cast<void *>(&vDisplay), tskIDLE_PRIORITY + 2, NULL);
 	xTaskCreate(vTaskVirtualDisplay, "vTaskVirtualDisplay", configMINIMAL_STACK_SIZE, reinterpret_cast<void *>(&vDisplay), tskIDLE_PRIORITY + 1, NULL);
 	xTaskCreate(vTaskJoystick,"vTaskJoystick",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 3, NULL);
-	xTaskCreate(vTaskSW3,"vTaskSW3",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +3, NULL);
+	xTaskCreate(vTaskSW3,"vTaskSW3",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +4, NULL);
 	//xTaskCreate(vTaskUpdatePlayer, "vTaskUpdatePlayer", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +2, NULL);
 	//here define queues
 	//xQueueJoystick_Init();

@@ -61,7 +61,7 @@ segment virtualDisplay::takeSnap(coordinates coords)
 	}
 	return snap;
 }
-void virtualDisplay::putEntity(coordinates coords, coordinates cordspreve, segment texture)
+void virtualDisplay::putEntity(coordinates& coords, coordinates& cordspreve, const segment& texture)
 {
 	using namespace coordinatesTools;
 

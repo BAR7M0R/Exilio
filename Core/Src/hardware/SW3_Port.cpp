@@ -13,5 +13,5 @@ std::uint8_t SW3_Port_read()
 
 	if (HAL_GPIO_ReadPin(SW3_GPIO_Port, SW3_Pin) == GPIO_PIN_RESET)
 		key_state |= sw_3;
-	return keys_released;
+	return key_state;
 }

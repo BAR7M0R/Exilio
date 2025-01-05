@@ -23,11 +23,7 @@
 #include "player.hpp"
 #include "xMutexPlayer.hpp"
 
-#define JOY_D  0b00000001
-#define JOY_U  0b00000010
-#define JOY_L  0b00000100
-#define JOY_R  0b00001000
-#define JOY_OK 0b00010000
+#include "bullets.hpp"
 
 #include "entitiesInitData.hpp"
 
@@ -38,9 +34,9 @@ void vTaskVirtualDisplay(void *pvParameters)
 	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
 
 	virtualDisplay *vDisplay = reinterpret_cast<virtualDisplay *>(pvParameters);
-
-	segment texture(EntitiesInitialData::player1::texture_data);
-	std::pair<coordinates,coordinates> pcords = {{135, 10},{135, 10}};
+	bullets& bs = bullets::GetInstance();
+	//segment texture(EntitiesInitialData::player1::texture_data);
+	//std::pair<coordinates,coordinates> pcords = {{135, 10},{135, 10}};
 
 	while(true)
 	{
@@ -49,15 +45,27 @@ void vTaskVirtualDisplay(void *pvParameters)
 		//pcords.first = coordinatesTools::stopRectangleOnBorderMap(pcords.first,pcords.first + EntitiesInitialData::player1::texture_corner_2);
 
 		p.updatePosition(JoystickTools::convert(joystickQueue.Receive()));
+		if(sw3Queue.Receive())
+		{
+			bs.add(p.getCurrentPosition() + coordinates({0,-1})+p.getOffset());
+		}
+		bs.move();
+
+
 		xMutexVirtualDisplay_Lock();
-		//vDisplay->putEntity(pcords.first, pcords.second, texture);
+		for(bullet& b: bs)
+		{
+			if (b.isOnMap())
+			{
+				vDisplay->putEntity(b.getCurrentCoords(), b.getPrevousCoords(), b.getTexture());
+			}
+
+		}
 		vDisplay->putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
 		xMutexVirtualDisplay_Unlock();
-		//if(sw3Queue.Receive())
-		//{
+		bs.remove();
 
-		//}
-		vTaskDelay(pdMS_TO_TICKS(10));
+		vTaskDelay(pdMS_TO_TICKS(50));
 	}
 
 }

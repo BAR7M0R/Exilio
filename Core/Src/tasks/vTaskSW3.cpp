@@ -32,12 +32,12 @@ void vTaskSW3(void *pvParameters)
 			{
 				// key_state_pressed
 				//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
-				sw3Queue.Send(state_pressed);
+				sw3Queue.Send(true);
 
 			}
 			else // can be used for auto-repeat
 			{
-				sw3Queue.Send(state_pressed);
+				//sw3Queue.Send(true);
 			}
 		}
 

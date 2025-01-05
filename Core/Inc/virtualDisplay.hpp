@@ -32,7 +32,7 @@ public:
 	uint8_t *getVMap();
 	uint8_t ** getMap();
 	void fill(uint8_t data);
-	void putEntity(coordinates coords, coordinates cordspreve, segment texture/*, demage indicator*/);
+	void putEntity(coordinates& coords, coordinates& cordspreve, const segment& texture/*, demage indicator*/);
 	virtualDisplay();
 	~virtualDisplay();
 	virtualDisplay(const virtualDisplay&) = delete;

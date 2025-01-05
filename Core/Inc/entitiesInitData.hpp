@@ -49,7 +49,7 @@ struct enemy3 {
 	static constexpr inline std::uint8_t score_points = 4;
 	static constexpr inline std::size_t max_number_at_time = 1;
 };
-struct bullet {
+struct bullet1 {
 	static constexpr inline std::array<std::uint8_t, 8> texture_data = { 0x01,
 			0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 	static constexpr inline coordinates offset { 0, 0 };

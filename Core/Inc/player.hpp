@@ -24,12 +24,13 @@ public:
 	const segment& getTexture() const;
 	const coordinates& getTextureCorner1() const;
 	const coordinates& getTextureCorner2() const;
+	const coordinates& getOffset() const;
 
 private:
 	const segment texture_;
 	const coordinates texture_corner_1_;
 	const coordinates texture_corner_2_;
-
+	const coordinates offset_;
 	coordinates currentPosition_;
 	coordinates prevousPosition_;
 	static player instance_;

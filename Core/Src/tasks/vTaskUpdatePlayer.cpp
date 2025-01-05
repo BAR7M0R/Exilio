@@ -14,13 +14,15 @@
 #include "xMutexPlayer.hpp"
 #include "player.hpp"
 #include "joystickTools.hpp"
+
+#include "bullets.hpp"
 void vTaskUpdatePlayer(void *pvParameters)
 {
 	player& p = player::GetInstance();
 	xMutexPlayer& pMutex =  xMutexPlayer::GetInstance();
 	xQueueSW3& sw3Queue = xQueueSW3::GetInstance();
 	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
-
+	bullets& bs = bullets::GetInstance();
 	while(true)
 	{
 		pMutex.lock();
@@ -28,7 +30,9 @@ void vTaskUpdatePlayer(void *pvParameters)
 		pMutex.unlock();
 		if (sw3Queue.Receive())
 		{
-			//dodaj nowy pocik
+			bs.add(p.getCurrentPosition()+coordinates({0,1}));
 		}
+		bs.move();
+		bs.remove();
 	}
 }

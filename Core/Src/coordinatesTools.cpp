@@ -32,6 +32,32 @@ bool isInMap(coordinates c) {
 	}
 	return isOK;
 }
+bool isPointInScope(const coordinates c, const coordinates scopePoint1, const coordinates scopePoint2)
+{
+	bool r = false;
+	if ((c.x >= scopePoint1.x and c.x <= scopePoint2.x) and (c.y >= scopePoint1.y and c.y <= scopePoint2.y))
+	{
+		r = true;
+	}
+	return r;
+}
+bool isScopeInScope(const coordinates scope1Point1, const coordinates scope1Point2, const coordinates scope2Point1, const coordinates scope2Point2)
+{
+	bool r = false;
+	coordinates tempPoint;
+	if (isPointInScope(scope1Point1,scope2Point1,scope2Point2)) r = true;
+	tempPoint = scope1Point1;
+	tempPoint.x = tempPoint.x + scope1Point2.x;
+	if (isPointInScope(tempPoint,scope2Point1,scope2Point2)) r = true;
+	tempPoint = scope1Point1;
+	tempPoint.y = tempPoint.y + scope1Point2.y;
+	if (isPointInScope(tempPoint,scope2Point1,scope2Point2)) r = true;
+	if (isPointInScope(scope1Point2,scope2Point1,scope2Point2)) r = true;
+	{
+		r = true;
+	}
+	return r;
+}
 
 coordinates stopPointOnBorderMap(coordinates c) {
 	if (!isInMap(c)) {
