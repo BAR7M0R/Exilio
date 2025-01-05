@@ -8,6 +8,7 @@
 #include <glcd.h>
 #include "vTaskVirtualDisplay.hpp"
 #include "xQueueJoystick.hpp"
+#include "xQueueSW3.hpp"
 #include "xMutexVirtualDisplay.hpp"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -18,6 +19,10 @@
 
 #include "coordinatesTools.hpp"
 #include "joystickTools.hpp"
+
+#include "player.hpp"
+#include "xMutexPlayer.hpp"
+
 #define JOY_D  0b00000001
 #define JOY_U  0b00000010
 #define JOY_L  0b00000100
@@ -28,35 +33,32 @@
 
 void vTaskVirtualDisplay(void *pvParameters)
 {
+	player& p = player::GetInstance();
+	xQueueSW3& sw3Queue = xQueueSW3::GetInstance();
+	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
+
 	virtualDisplay *vDisplay = reinterpret_cast<virtualDisplay *>(pvParameters);
-	uint8_t xQueueJoystick_data = 0;
-	std::pair<coordinates,coordinates> pcords = {{135, 10},
-												 {135, 10}};
-	segment texture(EntitiesInitialData::player::texture_data);
+
+	segment texture(EntitiesInitialData::player1::texture_data);
+	std::pair<coordinates,coordinates> pcords = {{135, 10},{135, 10}};
 
 	while(true)
 	{
-		xQueueJoystick_data=xQueueJoystick_Receive();
-		pcords.second = pcords.first;
-		pcords.first = JoystickTools::updateCoordinates(xQueueJoystick_data, pcords.first);
-		pcords.first = coordinatesTools::stopRectangleOnBorderMap(pcords.first,pcords.first + EntitiesInitialData::player::texture_corner_2);
-		xMutexVirtualDisplay_Lock();
-		vDisplay->putEntity(pcords.first, pcords.second, texture);
-		xMutexVirtualDisplay_Unlock();
-/*		pcords.second = pcords.first;
-		xMutexVirtualDisplay_Lock();
-		//vDisplay->putEntity(e2coords, e2coords);
-		xMutexVirtualDisplay_Unlock();
-		xMutexVirtualDisplay_Lock();
-		//vDisplay->putEntity(e1coords, e1coords);
-		xMutexVirtualDisplay_Unlock();
-		if (i % 500 == 0)
-		{
-			//e1coords.x += -1;
-			e2coords.y += -1;
-		}*/
+		//pcords.second = pcords.first;
+		//pcords.first = pcords.first + JoystickTools::convert(joystickQueue.Receive());
+		//pcords.first = coordinatesTools::stopRectangleOnBorderMap(pcords.first,pcords.first + EntitiesInitialData::player1::texture_corner_2);
 
+		p.updatePosition(JoystickTools::convert(joystickQueue.Receive()));
+		xMutexVirtualDisplay_Lock();
+		//vDisplay->putEntity(pcords.first, pcords.second, texture);
+		vDisplay->putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
+		xMutexVirtualDisplay_Unlock();
+		//if(sw3Queue.Receive())
+		//{
+
+		//}
 		vTaskDelay(pdMS_TO_TICKS(10));
 	}
 
 }
+

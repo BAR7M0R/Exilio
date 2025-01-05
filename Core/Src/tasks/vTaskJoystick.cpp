@@ -18,6 +18,7 @@
 
 void vTaskJoystick(void *pvParameters)
 {
+	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
 	joystick_port_init();
 	uint8_t keys_state = 0x00;
 	uint8_t keys_state_prev = 0x00;
@@ -40,12 +41,14 @@ void vTaskJoystick(void *pvParameters)
 			{
 				// key_state_pressed
 				//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
-				xQueueJoystick_Send(keys_state_pressed);
+				//xQueueJoystick_Send(keys_state_pressed);
+				joystickQueue.Send(keys_state_pressed);
+
 
 			}
 			else // can be used for auto-repeat
 			{
-				xQueueJoystick_Send(keys_state_pressed);
+				joystickQueue.Send(keys_state_pressed);
 			}
 		}
 

@@ -11,20 +11,8 @@
 struct coordinates {
 	std::int16_t x;
     std::int16_t y;
-    coordinates operator+(coordinates c) const
-    {
-    	coordinates r;
-    	r.x = this->x + c.x;
-    	r.y = this->y + c.y;
-    	return r;
-    }
-    coordinates operator-(coordinates c) const
-    {
-    	coordinates r;
-    	r.x = this->x - c.x;
-    	r.y = this->y -c.y;
-    	return r;
-    }
+    coordinates operator+(coordinates c) const;
+    coordinates operator-(coordinates c) const;
 };
 
 #endif /* INC_COORDINATES_HPP_ */

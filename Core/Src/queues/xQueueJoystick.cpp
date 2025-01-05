@@ -6,38 +6,47 @@
  */
 
 #include <cstdint>
+#include "xQueueJoystick.hpp"
 
-//<to remove>
-#include <main.h>
-#include <xQueueJoystick.hpp>
+xQueueJoystick::xQueueJoystick()
+:xQueueJoystick_(nullptr){}
 
-constexpr uint32_t xQueueJoystickMaxTimeout = 100;
-constexpr uint32_t xQueueJoystickSize = 10;
-
-QueueHandle_t xQueueJoystick;
-
-void xQueueJoystick_Init()
+xQueueJoystick& xQueueJoystick::GetInstance()
 {
-	xQueueJoystick = xQueueCreate(xQueueJoystickSize, sizeof(uint8_t));
+	static xQueueJoystick instance;
+	if(instance.xQueueJoystick_ == nullptr)
+	{
+		instance.xQueueJoystick_ = xQueueCreate(queueSize_, sizeof(bool));  // Przykładowa kolejka
+        if (instance.xQueueJoystick_ == nullptr) {
+            while(true);
+        }
+	}
+	return instance;
 
 }
-void xQueueJoystick_Send(uint8_t value)
+void xQueueJoystick::Send(std::uint8_t state)
 {
-	if (xQueueSend(xQueueJoystick, static_cast<const void*>(&value), pdMS_TO_TICKS(xQueueJoystickMaxTimeout)) == pdFAIL)
+	if (xQueueJoystick_ != nullptr)
 	{
-		while(true) {HAL_Delay(100); HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);}
+		if (xQueueSend(xQueueJoystick_,
+				static_cast<const void*>(&state),
+				pdMS_TO_TICKS(maxTimeout_)) == pdFAIL)
+		{
+			;
+		}
 	}
 }
-uint8_t xQueueJoystick_Receive()
+std::uint8_t xQueueJoystick::Receive()
 {
-    uint8_t receivedValue;
-    if (xQueueJoystick != errQUEUE_EMPTY)
-    {
-        xQueueReceive(xQueueJoystick, &receivedValue, pdMS_TO_TICKS(xQueueJoystickMaxTimeout));  // Czekaj na dane
-    }
-    else
-    {
-    	while(true);
-    }
+	std::uint8_t receivedValue = 0;
+	if (xQueueJoystick_ != nullptr)
+	{
+	    if (xQueueReceive(xQueueJoystick_,
+	    		&receivedValue,
+				pdMS_TO_TICKS(maxTimeout_)) == pdFAIL)
+	    {
+	    	;
+	    }
+	}
     return receivedValue;
 }

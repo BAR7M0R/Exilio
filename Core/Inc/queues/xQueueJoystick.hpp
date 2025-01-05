@@ -8,19 +8,26 @@
 #ifndef INC_QUEUES_XQUEUEJOYSTICK_HPP_
 #define INC_QUEUES_XQUEUEJOYSTICK_HPP_
 
-#ifndef __cplusplus
-extern "C" {
-#endif
-
+#include <cstdint>
 #include "FreeRTOS.h"
 #include "queue.h"
 
-extern void xQueueJoystick_Init();
-extern void xQueueJoystick_Send(uint8_t value);
-extern uint8_t xQueueJoystick_Receive();
+class xQueueJoystick
+{
+private:
+	xQueueJoystick();
+	xQueueJoystick(const xQueueJoystick&) = delete;
+	xQueueJoystick& operator=(const xQueueJoystick&) = delete;
 
-#ifndef __cplusplus
-}
-#endif
+public:
+	static xQueueJoystick& GetInstance();
+	void Send(std::uint8_t state);
+	std::uint8_t Receive();
+
+private:
+	static constexpr uint32_t maxTimeout_ = 100;
+	static constexpr std::size_t queueSize_ = 2;
+	QueueHandle_t xQueueJoystick_;
+};
 
 #endif /* INC_QUEUES_XQUEUEJOYSTICK_HPP_ */

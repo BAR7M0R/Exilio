@@ -8,9 +8,6 @@
 #ifndef SRC_VTASKSW3_HPP_
 #define SRC_VTASKSW3_HPP_
 
-class vTaskSW3 {
-public:
-	vTaskSW3(vTaskSW3 &&other);
-};
+extern "C" void vTaskSW3(void *pvParameters);
 
 #endif /* SRC_VTASKSW3_HPP_ */
