@@ -1,3 +1,7 @@
+/**
+ *
+ *
+ */
 /*
  * vTaskSW3.cpp
  *
@@ -8,6 +12,8 @@
 #include "vTaskSW3.hpp"
 #include "SW3_Port.hpp"
 #include "xQueueSW3.hpp"
+
+using namespace SW3PortConsts;
 
 void vTaskSW3(void *pvParameters)
 {

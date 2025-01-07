@@ -1,8 +1,12 @@
-/*
- * coordinates.hpp
+/**
+ * @file coordinates.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-31
  *
- *  Created on: Dec 31, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef INC_COORDINATES_HPP_

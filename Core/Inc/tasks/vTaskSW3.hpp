@@ -1,8 +1,12 @@
-/*
- * vTaskSW3.hpp
+/**
+ * @file vTaskSW3.hpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-04
  *
- *  Created on: Jan 4, 2025
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef SRC_VTASKSW3_HPP_

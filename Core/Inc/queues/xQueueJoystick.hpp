@@ -1,10 +1,13 @@
-/*
- * xQueueJoystick.hpp
+/**
+ * @file xQueueJoystick
+ * @author Bartłomiej Głodek
+ * @date 2024-12-27
  *
- *  Created on: Dec 27, 2024
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
-
 #ifndef INC_QUEUES_XQUEUEJOYSTICK_HPP_
 #define INC_QUEUES_XQUEUEJOYSTICK_HPP_
 

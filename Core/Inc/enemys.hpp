@@ -1,8 +1,12 @@
-/*
- * enemy.hpp
+/**
+ * @file enemy.hpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-05
  *
- *  Created on: Jan 5, 2025
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef INC_ENEMY_HPP_

@@ -1,10 +1,13 @@
-/*
- * field.hpp
+/**
+ * @file field.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-31
  *
- *  Created on: Dec 31, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
-
 #ifndef INC_FIELD_HPP_
 #define INC_FIELD_HPP_
 

@@ -1,8 +1,12 @@
-/*
- * bullets.hpp
+/**
+ * @file bullets.hpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-05
  *
- *  Created on: Jan 5, 2025
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef SRC_TASKS_BULLETS_HPP_

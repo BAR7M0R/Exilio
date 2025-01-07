@@ -1,10 +1,13 @@
-/*
- * coordinatesTools.hpp
+/**
+ * @file coordinatesTools.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-31
  *
- *  Created on: Dec 31, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
-
 #include "coordinates.hpp"
 
 #ifndef INC_COORDINATESTOOLS_HPP_

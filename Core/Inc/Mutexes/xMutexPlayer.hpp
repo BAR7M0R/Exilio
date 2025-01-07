@@ -1,8 +1,12 @@
-/*
- * xMutexPlayer.hpp
+/**
+ * @file xMutexPlayer.hpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-05
  *
- *  Created on: Jan 5, 2025
- *      Author: Bartłomiej Głdoek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef INC_XMUTEXPLAYER_HPP_

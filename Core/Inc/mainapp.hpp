@@ -1,23 +1,18 @@
-/*
- * mainapp.hpp
+/**
+ * @file mainapp.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-22
  *
- *  Created on: Dec 22, 2024
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef SRC_MAINAPP_HPP_
 #define SRC_MAINAPP_HPP_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+extern "C" void mainapp();
 
-
-void mainapp();
-
-
-
-#ifdef __cplusplus
-}
 #endif
 #endif /* SRC_MAINAPP_HPP_ */

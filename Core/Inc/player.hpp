@@ -1,3 +1,14 @@
+/**
+ * @file player.hpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-05
+ *
+ * @brief
+ * @details
+ *
+ *
+ */
+
 /*
  * player.hpp
  *

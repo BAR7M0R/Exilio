@@ -1,8 +1,12 @@
-/*
- * xMutexVirtualDisplay.hpp
+/**
+ * @file xMutexVirtualDisplay.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-29
  *
- *  Created on: Dec 29, 2024
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_

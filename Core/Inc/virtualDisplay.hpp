@@ -1,8 +1,12 @@
-/*
- * virtualDisplay.hpp
+/**
+ * @file virtulaDisplay.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-27
  *
- *  Created on: Dec 27, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef SRC_VIRTUALDISPLAY_HPP_

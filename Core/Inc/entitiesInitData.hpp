@@ -1,8 +1,12 @@
-/*
- * entitiesInitData.hpp
+/**
+ * @file entitiesInitData.hpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-02
  *
- *  Created on: Jan 2, 2025
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef INC_ENTITIESINITDATA_HPP_
