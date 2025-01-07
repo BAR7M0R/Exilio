@@ -85,14 +85,42 @@ void NMI_Handler(void)
   */
 void HardFault_Handler(void)
 {
-  /* USER CODE BEGIN HardFault_IRQn 0 */
+    __asm volatile
+    (
+        "TST lr, #4 \n"          // Sprawdzamy, czy wyjątek jest wywołany z poziomu funkcji z wyjątkiem procesora
+        "ITE EQ \n"
+        "MRSEQ R0, MSP \n"       // Jeśli tak, to używamy wskaźnika stosu głównego (MSP)
+        "MRSNE R0, PSP \n"       // Jeśli nie, to używamy wskaźnika stosu procesu (PSP)
+        "B hard_fault_handler_c \n"  // Wywołujemy funkcję w języku C
+    );
+}
+typedef struct
+{
+    uint32_t R0;
+    uint32_t R1;
+    uint32_t R2;
+    uint32_t R3;
+    uint32_t R12;
+    uint32_t LR;   // Link Register
+    uint32_t PC;   // Program Counter
+    uint32_t xPSR; // Program Status Register
+} HardFaultStackFrame;
 
-  /* USER CODE END HardFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-    /* USER CODE END W1_HardFault_IRQn 0 */
-  }
+void hard_fault_handler_c(HardFaultStackFrame *stackFrame)
+{
+    // Rejestry procesora
+    uint32_t stacked_r0 = stackFrame->R0;
+    uint32_t stacked_r1 = stackFrame->R1;
+    uint32_t stacked_r2 = stackFrame->R2;
+    uint32_t stacked_r3 = stackFrame->R3;
+    uint32_t stacked_r12 = stackFrame->R12;
+    uint32_t stacked_lr = stackFrame->LR;
+    uint32_t stacked_pc = stackFrame->PC;
+    uint32_t stacked_xpsr = stackFrame->xPSR;
+
+    // Możesz tu zapisać te wartości do logu, wyświetlić na ekranie lub przesłać przez UART dla diagnostyki
+
+    while(1) {}
 }
 
 /**

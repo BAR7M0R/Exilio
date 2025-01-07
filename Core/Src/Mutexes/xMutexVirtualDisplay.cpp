@@ -10,11 +10,11 @@
 
 #include "xMutexVirtualDisplay.hpp"
 SemaphoreHandle_t xMutexVirtualDisplay = NULL;
-constexpr uint32_t xMutexVirtualDisplay_max_delay = 10;
+constexpr uint32_t xMutexVirtualDisplay_max_delay = 100;
 
 void xMutexVirtualDisplay_Init()
 {
-	xMutexVirtualDisplay = xSemaphoreCreateMutex();
+	xMutexVirtualDisplay = xSemaphoreCreateRecursiveMutex();
 
     if (xMutexVirtualDisplay == NULL)
     {
@@ -24,7 +24,7 @@ void xMutexVirtualDisplay_Init()
 
 void xMutexVirtualDisplay_Lock()
 {
-    if (xSemaphoreTake(xMutexVirtualDisplay, xMutexVirtualDisplay_max_delay) == pdFALSE)
+    if (xSemaphoreTake(xMutexVirtualDisplay, pdMS_TO_TICKS(xMutexVirtualDisplay_max_delay)) == pdFALSE)
     {
     	while (true);
     }

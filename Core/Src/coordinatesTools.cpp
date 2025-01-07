@@ -11,7 +11,9 @@
 
 namespace coordinatesTools {
 using namespace displayConstans;
-bool isInVmap(coordinates c) {
+
+
+bool isInVmap(const coordinates c) {
 	bool isOK = true;
 	if ((c.x < 0) or (c.x >= V_WIDTH)) {
 		isOK = false;
@@ -21,7 +23,7 @@ bool isInVmap(coordinates c) {
 	}
 	return isOK;
 }
-bool isInMap(coordinates c) {
+bool isInMap(const coordinates c) {
 	bool isOK = true;
 	if ((c.x < V_MARGIN_WIDTH) or (c.x >= V_MARGIN_WIDTH + WIDTH_LCD)) {
 		isOK = false;
@@ -31,6 +33,12 @@ bool isInMap(coordinates c) {
 		isOK = false;
 	}
 	return isOK;
+}
+bool isInDownMargin(const coordinates c)
+{
+	bool r = false;
+	if (c.y > (displayConstans::HEIGHT_LCD + displayConstans::V_MARGIN_HEIGHT)*8) r = true;
+	return r;
 }
 bool isPointInScope(const coordinates c, const coordinates scopePoint1, const coordinates scopePoint2)
 {

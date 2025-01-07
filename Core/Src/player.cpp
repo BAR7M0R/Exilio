@@ -15,7 +15,7 @@ player::player()
 ,texture_corner_1_(EntitiesInitialData::player1::texture_corner_1)
 ,texture_corner_2_(EntitiesInitialData::player1::texture_corner_2)
 ,offset_(EntitiesInitialData::player1::offset)
-,currentPosition_({10,10})
+,currentPosition_({70,70})
 ,prevousPosition_({10,10})
 {}
 player& player::GetInstance()

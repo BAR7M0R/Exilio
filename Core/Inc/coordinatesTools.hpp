@@ -14,8 +14,9 @@
 
 namespace coordinatesTools {
 
-bool isInVmap(coordinates c);
-bool isInMap(coordinates c);
+bool isInVmap(const coordinates c);
+bool isInMap(const coordinates c);
+bool isInDownMargin(const coordinates c);
 bool isPointInScope(const coordinates c, const coordinates scopePoint1, const coordinates scopePoint2);
 bool isScopeInScope(const coordinates scope1Point1, const coordinates scope1Point2, const coordinates scope2Point1, const coordinates scope2Point2);
 coordinates stopPointOnMap(coordinates c);

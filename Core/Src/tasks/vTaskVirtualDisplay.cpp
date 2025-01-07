@@ -24,7 +24,7 @@
 #include "xMutexPlayer.hpp"
 
 #include "bullets.hpp"
-
+#include "enemys.hpp"
 #include "entitiesInitData.hpp"
 
 void vTaskVirtualDisplay(void *pvParameters)
@@ -35,37 +35,51 @@ void vTaskVirtualDisplay(void *pvParameters)
 
 	virtualDisplay *vDisplay = reinterpret_cast<virtualDisplay *>(pvParameters);
 	bullets& bs = bullets::GetInstance();
-	//segment texture(EntitiesInitialData::player1::texture_data);
-	//std::pair<coordinates,coordinates> pcords = {{135, 10},{135, 10}};
+	enemys& es = enemys::GetInstance();
+	es.add(coordinates(40,8));
+	es.add(coordinates(50,8));
+	es.add(coordinates(60,8));
+	es.add(coordinates(70,8));
+	es.add(coordinates(80,8));
+	es.add(coordinates(90,8));
 
 	while(true)
 	{
 		//pcords.second = pcords.first;
 		//pcords.first = pcords.first + JoystickTools::convert(joystickQueue.Receive());
 		//pcords.first = coordinatesTools::stopRectangleOnBorderMap(pcords.first,pcords.first + EntitiesInitialData::player1::texture_corner_2);
-
+		es.add(coordinates(60,8));
+		es.add(coordinates(70,8));
+		es.add(coordinates(80,8));
+		es.add(coordinates(90,8));
 		p.updatePosition(JoystickTools::convert(joystickQueue.Receive()));
 		if(sw3Queue.Receive())
 		{
 			bs.add(p.getCurrentPosition() + coordinates({0,-1})+p.getOffset());
 		}
 		bs.move();
+		es.move();
 
-
-		xMutexVirtualDisplay_Lock();
+		//xMutexVirtualDisplay_Lock();
 		for(bullet& b: bs)
 		{
 			if (b.isOnMap())
 			{
 				vDisplay->putEntity(b.getCurrentCoords(), b.getPrevousCoords(), b.getTexture());
 			}
-
+		}
+		for(enemy& e: es)
+		{
+			if (e.isOnMap())
+			{
+				vDisplay->putEntity(e.getCurrentCoords(), e.getPrevousCoords(), e.getTexture());
+			}
 		}
 		vDisplay->putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
-		xMutexVirtualDisplay_Unlock();
+		//xMutexVirtualDisplay_Unlock();
 		bs.remove();
-
-		vTaskDelay(pdMS_TO_TICKS(50));
+		es.remove();
+		vTaskDelay(pdMS_TO_TICKS(100));
 	}
 
 }
