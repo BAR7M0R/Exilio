@@ -11,6 +11,8 @@
 #include "coordinatesTools.hpp"
 using namespace displayConstans;
 
+
+
 uint8_t * virtualDisplay::getVMap()
 {
 return &_VMap[0][0];
@@ -65,8 +67,6 @@ void virtualDisplay::putEntity(coordinates& coords, coordinates& cordspreve, con
 {
 	using namespace coordinatesTools;
 
-	//segment texture(EntitiesInitialData::enemy3::texture_data);//{0x07, 0x07, 0x07, 0x00,0x00,0x00,0x00,0x00};
-	//do zrefaktoryzowania
 	segment core1 = takeSnap(vMapCMove(cordspreve, 0, 0));
 	segment core2 = takeSnap(vMapCMove(cordspreve, 8, 0));
 	segment core3 = takeSnap(vMapCMove(cordspreve, 0, 8));
@@ -99,6 +99,11 @@ void virtualDisplay::putSegment(segment& s, coordinates coords)
 		_VMap.at(coords.y / NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
 	}
 }
+virtualDisplay& virtualDisplay::GetInstance()
+{
+	static virtualDisplay instance;
+	return instance;
+}
 virtualDisplay::virtualDisplay()
 {
 	for (auto& row:_VMap)
@@ -117,10 +122,5 @@ virtualDisplay::virtualDisplay()
 			_Map[k++] = &_VMap[V_MARGIN_HEIGHT+i][V_MARGIN_WIDTH+j];
 		}
 	}
-}
-
-virtualDisplay::~virtualDisplay()
-{
-
 }
 

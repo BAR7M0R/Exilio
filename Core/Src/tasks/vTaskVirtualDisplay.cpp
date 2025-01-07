@@ -1,5 +1,5 @@
-/*
- * vTaskVirtualDisplay.cpp
+/**
+ * @ vTaskVirtualDisplay.cpp
  *
  *  Created on: Dec 26, 2024
  *      Author: Bartłomiej Głodek
@@ -26,16 +26,22 @@
 #include "bullets.hpp"
 #include "enemys.hpp"
 #include "entitiesInitData.hpp"
-//
+/**
+ * @fn void vTaskVirtualDisplay(void*)
+ * @brief function to managing and generate virtual map.
+ * @param pvParameters
+ */
 void vTaskVirtualDisplay(void *pvParameters)
 {
+	virtualDisplay& vDisplay = virtualDisplay::GetInstance();
+	xMutexVirtualDisplay& mutexVD = xMutexVirtualDisplay::GetInstance();
 	player& p = player::GetInstance();
 	xQueueSW3& sw3Queue = xQueueSW3::GetInstance();
 	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
-
-	virtualDisplay *vDisplay = reinterpret_cast<virtualDisplay *>(pvParameters);
 	bullets& bs = bullets::GetInstance();
 	enemys& es = enemys::GetInstance();
+
+
 	es.add(coordinates(40,8));
 	es.add(coordinates(50,8));
 	es.add(coordinates(60,8));
@@ -65,17 +71,23 @@ void vTaskVirtualDisplay(void *pvParameters)
 		{
 			if (b.isOnMap())
 			{
-				vDisplay->putEntity(b.getCurrentCoords(), b.getPrevousCoords(), b.getTexture());
+				mutexVD.lock();
+				vDisplay.putEntity(b.getCurrentCoords(), b.getPrevousCoords(), b.getTexture());
+				mutexVD.unlock();
 			}
 		}
 		for(enemy& e: es)
 		{
 			if (e.isOnMap())
 			{
-				vDisplay->putEntity(e.getCurrentCoords(), e.getPrevousCoords(), e.getTexture());
+				mutexVD.lock();
+				vDisplay.putEntity(e.getCurrentCoords(), e.getPrevousCoords(), e.getTexture());
+				mutexVD.unlock();
 			}
 		}
-		vDisplay->putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
+		mutexVD.lock();
+		vDisplay.putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
+		mutexVD.unlock();
 		//xMutexVirtualDisplay_Unlock();
 		bs.remove();
 		es.remove();

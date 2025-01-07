@@ -5,35 +5,31 @@
  *      Author: dev
  */
 
-#include "FreeRTOS.h"
-#include "semphr.h"
-
 #include "xMutexVirtualDisplay.hpp"
-SemaphoreHandle_t xMutexVirtualDisplay = NULL;
-constexpr uint32_t xMutexVirtualDisplay_max_delay = 100;
 
-void xMutexVirtualDisplay_Init()
+xMutexVirtualDisplay::xMutexVirtualDisplay(){}
+
+xMutexVirtualDisplay& xMutexVirtualDisplay::GetInstance()
 {
-	xMutexVirtualDisplay = xSemaphoreCreateRecursiveMutex();
-
-    if (xMutexVirtualDisplay == NULL)
+	static xMutexVirtualDisplay instance;
+	if(instance.xMutexVirtualDisplay_ == nullptr)
+	{
+		instance.xMutexVirtualDisplay_ = xSemaphoreCreateMutex();
+	}
+	return instance;
+}
+void xMutexVirtualDisplay::lock()
+{
+    if (xSemaphoreTake(xMutexVirtualDisplay_, maxTimeout_) == pdFALSE)
     {
-        while (true);
+    	while (true);
     }
 }
-
-void xMutexVirtualDisplay_Lock()
+void xMutexVirtualDisplay::unlock()
 {
-    if (xSemaphoreTake(xMutexVirtualDisplay, pdMS_TO_TICKS(xMutexVirtualDisplay_max_delay)) == pdFALSE)
+    if (xSemaphoreGive(xMutexVirtualDisplay_) == pdFALSE)
     {
     	while (true);
     }
 }
 
-void xMutexVirtualDisplay_Unlock()
-{
-    if (xSemaphoreGive(xMutexVirtualDisplay) == pdFALSE)
-    {
-    	while (true);
-    }
-}

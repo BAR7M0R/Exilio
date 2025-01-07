@@ -24,6 +24,8 @@ namespace displayConstans
 	static constexpr inline std::uint8_t BORDER_BOTTOM = V_MARGIN_HEIGHT+HEIGHT_LCD;
 	static constexpr inline std::uint8_t BORDER_LEFT = V_MARGIN_WIDTH;
 	static constexpr inline std::uint8_t BORDER_RIGHT = V_MARGIN_WIDTH+WIDTH_LCD;
+	static constexpr inline std::uint8_t MAX_X = V_WIDTH;
+	static constexpr inline std::uint8_t MAX_Y = V_HEIGHT*NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD;
 };
 
 
