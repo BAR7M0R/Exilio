@@ -1,0 +1,36 @@
+\doxysection{x\+Mutex\+Player.\+hpp}
+\label{x_mutex_player_8hpp_source}\index{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/Mutexes/xMutexPlayer.hpp@{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/Mutexes/xMutexPlayer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ xMutexPlayer.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jan\ 5,\ 2025}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Bartłomiej\ Głdoek}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_XMUTEXPLAYER\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_XMUTEXPLAYER\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}FreeRTOS.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}semphr.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }xMutexPlayer}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ xMutexPlayer();}
+\DoxyCodeLine{00018\ \ \ \ \ xMutexPlayer(\textcolor{keyword}{const}\ xMutexPlayer\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ xMutexPlayer\&\ operator=(\textcolor{keyword}{const}\ xMutexPlayer\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ xMutexPlayer\&\ GetInstance();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ lock();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ unlock();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\_t\ maxTimeout\_\ =\ 10;}
+\DoxyCodeLine{00028\ \ \ \ \ SemaphoreHandle\_t\ xMutexPlayer\_;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_XMUTEXPLAYER\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

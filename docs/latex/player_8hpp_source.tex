@@ -1,0 +1,45 @@
+\doxysection{player.\+hpp}
+\label{player_8hpp_source}\index{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/player.hpp@{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/player.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ player.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jan\ 5,\ 2025}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ dev}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_PLAYER\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_PLAYER\_HPP\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}coordinates.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}segment.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }player}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ player();}
+\DoxyCodeLine{00016\ \ \ \ \ player(\textcolor{keyword}{const}\ player\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00017\ \ \ \ \ player\&\ operator=(\textcolor{keyword}{const}\ player\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ player\&\ GetInstance();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePosition(coordinates\ direction);}
+\DoxyCodeLine{00022\ \ \ \ \ coordinates\&\ getCurrentPosition();}
+\DoxyCodeLine{00023\ \ \ \ \ coordinates\&\ getPrevousPosition();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ segment\&\ getTexture()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ coordinates\&\ getTextureCorner1()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ coordinates\&\ getTextureCorner2()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ coordinates\&\ getOffset()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ segment\ texture\_;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ coordinates\ texture\_corner\_1\_;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{const}\ coordinates\ texture\_corner\_2\_;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ coordinates\ offset\_;}
+\DoxyCodeLine{00034\ \ \ \ \ coordinates\ currentPosition\_;}
+\DoxyCodeLine{00035\ \ \ \ \ coordinates\ prevousPosition\_;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ player\ instance\_;}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_PLAYER\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

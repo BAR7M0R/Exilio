@@ -1,0 +1,37 @@
+\doxysection{display\+Constans.\+hpp}
+\label{display_constans_8hpp_source}\index{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/displayConstans.hpp@{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/displayConstans.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ displayConstans.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 31,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ dev}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}field.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ INC\_DISPLAYCONSTANS\_HPP\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ INC\_DISPLAYCONSTANS\_HPP\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }displayConstans}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ WIDTH\_LCD\ =\ 128;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ HEIGHT\_LCD\ =\ 8;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ NUMBER\_OF\_PIX\_IN\_LCD\_SINGLE\_FIELD\ =\ FIELD\_SIZE;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ V\_MARGIN\_WIDTH\ =\ 8;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ V\_MARGIN\_HEIGHT\ =\ 1;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ V\_WIDTH\ =\ WIDTH\_LCD\ +\ V\_MARGIN\_WIDTH\ *\ 2;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ V\_HEIGHT\ =\ HEIGHT\_LCD\ +\ V\_MARGIN\_HEIGHT\ *\ 3;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ BORDER\_TOP\ =\ V\_MARGIN\_HEIGHT;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ BORDER\_BOTTOM\ =\ V\_MARGIN\_HEIGHT+HEIGHT\_LCD;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ BORDER\_LEFT\ =\ V\_MARGIN\_WIDTH;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{inline}\ std::uint8\_t\ BORDER\_RIGHT\ =\ V\_MARGIN\_WIDTH+WIDTH\_LCD;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_DISPLAYCONSTANS\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

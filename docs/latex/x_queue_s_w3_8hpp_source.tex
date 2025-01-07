@@ -1,0 +1,38 @@
+\doxysection{x\+Queue\+SW3.\+hpp}
+\label{x_queue_s_w3_8hpp_source}\index{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/queues/xQueueSW3.hpp@{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/queues/xQueueSW3.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ xQueueSW3.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jan\ 5,\ 2025}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Bartłomiej\ Głodek}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_QUEUES\_XQUEUESW3\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_QUEUES\_XQUEUESW3\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}FreeRTOS.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}queue.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }xQueueSW3}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ xQueueSW3();}
+\DoxyCodeLine{00019\ \ \ \ \ xQueueSW3(\textcolor{keyword}{const}\ xQueueSW3\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00020\ \ \ \ \ xQueueSW3\&\ operator=(\textcolor{keyword}{const}\ xQueueSW3\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ xQueueSW3\&\ GetInstance();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ Send(\textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ Receive();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\_t\ maxTimeout\_\ =\ 100;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ std::size\_t\ queueSize\_\ =\ 100;}
+\DoxyCodeLine{00030\ \ \ \ \ QueueHandle\_t\ xQueueSW3\_;}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_QUEUES\_XQUEUESW3\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

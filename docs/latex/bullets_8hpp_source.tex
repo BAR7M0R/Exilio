@@ -1,0 +1,147 @@
+\doxysection{bullets.\+hpp}
+\label{bullets_8hpp_source}\index{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/bullets.hpp@{C:/Users/dev/STM32CubeIDE/workspace\_1.17.0/Exilio/Core/Inc/bullets.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ bullets.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jan\ 5,\ 2025}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ dev}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_TASKS\_BULLETS\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_TASKS\_BULLETS\_HPP\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}coordinates.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}segment.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}coordinatesTools.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}entitiesInitData.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }bullet}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ bullet()}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ create(coordinates\ c,\ coordinates\ direction)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ onMap\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ currentPosition\_\ =\ c;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ prevousPosition\_\ =\ currentPosition\_;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ direction\_\ =\ direction;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ move()}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ namespace\ }coordinatesTools;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ prevousPosition\_\ =\ currentPosition\_;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ currentPosition\_\ =\ currentPosition\_\ +\ direction\_;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ currentPosition\_\ =\ coordinatesTools::stopRectangleOnBorderVMap(currentPosition\_,currentPosition\_\ +\ texture\_corner\_2\_);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ remove()}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ currentPosition\_\ =\ coordinates(\{0,0\});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ onMap\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{const}\ segment\&\ getTexture()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ texture\_;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ coordinates\&\ getCurrentCoords()}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentPosition\_;}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ coordinates\&\ getPrevousCoords()}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ prevousPosition\_;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{const}\ coordinates\&\ getTextureCorner1()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ texture\_corner\_1\_;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{const}\ coordinates\&\ getTextureCorner2()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ texture\_corner\_2\_;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ isOnMap()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00062\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ onMap\_;}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ onMap\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ segment\ texture\_;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ coordinates\ texture\_corner\_1\_;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ coordinates\ texture\_corner\_2\_;}
+\DoxyCodeLine{00071\ \ \ \ \ coordinates\ direction\_;}
+\DoxyCodeLine{00072\ \ \ \ \ coordinates\ currentPosition\_;}
+\DoxyCodeLine{00073\ \ \ \ \ coordinates\ prevousPosition\_;}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ \textcolor{keyword}{class\ }bullets\ \{}
+\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ bullets()\{\}}
+\DoxyCodeLine{00078\ \ \ \ \ bullets(\textcolor{keyword}{const}\ bullets\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00079\ \ \ \ \ bullets\&\ operator=(\textcolor{keyword}{const}\ bullets\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ bullets\&\ GetInstance()}
+\DoxyCodeLine{00082\ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ bullets\ instance;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ bullet\ at(std::size\_t\ i)}
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ bullets\_.at(i);}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ add(coordinates\ c)}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ i\ :\ bullets\_)}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i.isOnMap()\ ==\textcolor{keyword}{false})}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i.create(c,\ coordinates(\{0,\ -\/1\}));}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ move(\textcolor{comment}{/*enemys\&\ toChack*/})}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(bullet\&\ b\ :\ bullets\_)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b.isOnMap())}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (coordinatesTools::isInMap(b.getCurrentCoords()))}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//for\ (enemy\&\ e\ :\ enemys)}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\{}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (!coordinatesTools::isScopeInScope(b.getCurrentCoords()\ +\ getTextureCorner1(),\ b.getCurrentCoords()\ +\ b.getTextureCorner2(),}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//e.getCurrentCoords()\ +\ getTextureCorner1(),\ e.getCurrentCoords()\ +\ e.getTextureCorner2());}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.move();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\}}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ remove()}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(bullet\&\ b\ :\ bullets\_)}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!coordinatesTools::isInMap(b.getCurrentCoords()))}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.remove();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{auto}\ begin()\ \{\ \textcolor{keywordflow}{return}\ bullets\_.begin();\ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{auto}\ end()\ \{\ \textcolor{keywordflow}{return}\ bullets\_.end();\ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{auto}\ begin()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bullets\_.begin();\ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{auto}\ end()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bullets\_.end();\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00138\ \ \ \ \ std::array<bullet,\ 6>\ bullets\_;}
+\DoxyCodeLine{00139\ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_TASKS\_BULLETS\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
