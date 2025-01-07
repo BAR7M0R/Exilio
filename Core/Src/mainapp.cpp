@@ -26,9 +26,7 @@ void mainapp()
 
 	vTaskStartScheduler();
 
-	while(true)
-	  {
-		;
-	  }
+	while(true);
+
 }
 

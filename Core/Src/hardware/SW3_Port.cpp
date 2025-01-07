@@ -1,12 +1,16 @@
-/*
- * SW3_Port.cpp
+/**
+ * @file SW3_Port.cpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-04
  *
- *  Created on: Jan 4, 2025
- *      Author: dev
+ *
  */
-
 #include <SW3_Port.hpp>
 #include "main.h"
+/**
+ * @fn std::uint8_t SW3_Port_read()
+ * @return state of SW3 button value should be 0 for low state 1 for hight state
+ */
 std::uint8_t SW3_Port_read()
 {
 	uint8_t key_state = 0;
