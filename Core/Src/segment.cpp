@@ -1,8 +1,12 @@
-/*
- * segment.cpp
+/**
+ * @file segment.cpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-30
  *
- *  Created on: Dec 30, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #include <segment.hpp>

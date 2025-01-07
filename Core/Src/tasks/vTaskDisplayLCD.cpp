@@ -12,8 +12,6 @@
  *
  * @todo remove HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin); line before publish
  * @todo remove #include "main.h" -||-
- * @todo change virtual Display variable to singledon
- * @todo change xMutexVirtualDisplay to singledon
  *
  * This file uses the following libraries:
  * - FreeRTOS.h and task.h: For FreeRTOS task management.

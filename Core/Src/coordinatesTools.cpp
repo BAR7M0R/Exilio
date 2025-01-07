@@ -1,8 +1,12 @@
-/*
- * coordinatesTools.cpp
+/**
+ * @file coordinatesTools.cpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-04
  *
- *  Created on: Jan 4, 2025
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 #include <cstdint>
 #include "coordinatesTools.hpp"

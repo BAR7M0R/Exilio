@@ -1,8 +1,12 @@
 /**
- * @ vTaskVirtualDisplay.cpp
+ * @file vTaskVirtualDisplay.cpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-26
  *
- *  Created on: Dec 26, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
 
 #include <glcd.h>

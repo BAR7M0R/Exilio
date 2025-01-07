@@ -1,8 +1,12 @@
-/*
- * claster.cpp
+/**
+ * @file claster.cpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-31
  *
- *  Created on: Dec 31, 2024
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 
 #include "claster.hpp"

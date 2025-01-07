@@ -1,4 +1,13 @@
-/*
+/**
+ * @file xMutexVirtualDisplay.cpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-29
+ *
+ * @brief
+ * @details
+ *
+ *
+ *//*
  * xMutexVirtualDisplay.cpp
  *
  *  Created on: Dec 29, 2024

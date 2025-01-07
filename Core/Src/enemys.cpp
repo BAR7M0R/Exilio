@@ -1,10 +1,13 @@
-/*
- * enemys.cpp
+/**
+ * @file enemys.cpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-02
  *
- *  Created on: Jan 2, 2025
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
-
 #include "enemys.hpp"
 
 

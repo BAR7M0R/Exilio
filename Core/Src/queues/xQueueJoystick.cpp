@@ -1,10 +1,13 @@
-/*
- * xQueueJoystick.cpp
+/**
+ * @file xQueueJoystick.cpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-27
  *
- *  Created on: Dec 27, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
-
 #include <cstdint>
 #include "xQueueJoystick.hpp"
 

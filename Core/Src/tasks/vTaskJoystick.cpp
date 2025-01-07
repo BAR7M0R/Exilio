@@ -1,10 +1,13 @@
-/*
- * vTaskJoystick.cpp
+/**
+ * @file vTaskJoystick
+ * @author Bartłomiej Głodek
+ * @date 2024-12-27
  *
- *  Created on: Dec 27, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
-
 #include "joystick_port.h"
 #include "vTaskJoystick.hpp"
 #include "xQueueJoystick.hpp"

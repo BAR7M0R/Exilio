@@ -1,8 +1,12 @@
-/*
- * joystickTools.cpp
+/**
+ * @file joystickTools.cpp
+ * @author Bartłomiej Głodek
+ * @date 2025-01-05
  *
- *  Created on: Jan 5, 2025
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 #include "joystickTools.hpp"
 

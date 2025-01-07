@@ -1,9 +1,14 @@
-/*
- * mainapp.cpp
+/**
+ * @file mainapp.cpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-22
  *
- *  Created on: Dec 22, 2024
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
+
 
 #include "mainapp.hpp"
 #include "main.h"
