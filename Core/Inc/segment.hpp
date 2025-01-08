@@ -1,10 +1,13 @@
-/*
- * segment.hpp
+/**
+ * @file segment.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-30
  *
- *  Created on: Dec 30, 2024
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
-
 #ifndef INC_SEGMENT_HPP_
 #define INC_SEGMENT_HPP_
 #include <field.hpp>

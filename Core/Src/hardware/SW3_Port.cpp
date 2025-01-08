@@ -13,6 +13,7 @@
  */
 std::uint8_t SW3_Port_read()
 {
+	using namespace SW3PortConsts;
 	uint8_t key_state = 0;
 
 	if (HAL_GPIO_ReadPin(SW3_GPIO_Port, SW3_Pin) == GPIO_PIN_RESET)

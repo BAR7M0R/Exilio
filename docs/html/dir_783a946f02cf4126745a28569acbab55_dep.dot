@@ -10,5 +10,5 @@ digraph "Core/Src/hardware"
   dir_783a946f02cf4126745a28569acbab55 [label="hardware", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_783a946f02cf4126745a28569acbab55.html",tooltip=""];
   }
   dir_e2489e887f17afa3cbc07a4ec152cdd2 [label="Inc", fillcolor="#edf0f7", color="red", style="filled,dashed", URL="dir_e2489e887f17afa3cbc07a4ec152cdd2.html",tooltip=""];
-  dir_783a946f02cf4126745a28569acbab55->dir_e2489e887f17afa3cbc07a4ec152cdd2 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html" href="dir_000002_000003.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_783a946f02cf4126745a28569acbab55->dir_e2489e887f17afa3cbc07a4ec152cdd2 [headlabel="2", labeldistance=1.5 headhref="dir_000002_000003.html" href="dir_000002_000003.html" color="steelblue1" fontcolor="steelblue1"];
 }

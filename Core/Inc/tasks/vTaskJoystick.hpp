@@ -1,21 +1,17 @@
-
-/*
- * vTaskJoystick.hpp
+/**
+ * @file vTaskJoystick.hpp
+ * @author Bartłomiej Głodek
+ * @date 2024-12-27
  *
- *  Created on: Dec 27, 2024
- *      Author: dev
+ * @brief
+ * @details
+ *
+ *
  */
 
 #ifndef SRC_VTASKJOYSTICK_HPP_
 #define SRC_VTASKJOYSTICK_HPP_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+extern "C" void vTaskJoystick(void *pvParameters);
 
-void vTaskJoystick(void *pvParameters);
-
-#ifdef __cplusplus
-}
-#endif
 #endif /* SRC_VTASKJOYSTICK_HPP_ */

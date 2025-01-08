@@ -1,10 +1,13 @@
-/*
- * xQueueSW3.hpp
+/**
+ * @file xQueueJoystick
+ * @author Bartłomiej Głodek
+ * @date 2025-01-05
  *
- *  Created on: Jan 5, 2025
- *      Author: Bartłomiej Głodek
+ * @brief
+ * @details
+ *
+ *
  */
-
 #ifndef INC_QUEUES_XQUEUESW3_HPP_
 #define INC_QUEUES_XQUEUESW3_HPP_
 

@@ -147,7 +147,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="stm32f1xx__hal__conf_8h.html#a74c081bc55e9ff96bf229f44e96c6155"><param name="Name" value="PHY_SPEED_STATUS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="stm32f1xx__hal__conf_8h.html#a32b55e84d27cf298a77f54b133cd1acc"><param name="Name" value="PHY_SR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classplayer.html"><param name="Name" value="player"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structscenarios_1_1s1.html"><param name="Name" value="scenarios::s1"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsegment.html"><param name="Name" value="segment"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="stm32f1xx__hal__conf_8h.html"><param name="Name" value="stm32f1xx_hal_conf.h"></OBJECT>
   <UL>
@@ -366,6 +365,17 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group___s_t_m32_f1xx___system___private___macros.html"><param name="Name" value="STM32F1xx_System_Private_Macros"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group___s_t_m32_f1xx___system___private___types_definitions.html"><param name="Name" value="STM32F1xx_System_Private_TypesDefinitions"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group___s_t_m32_f1xx___system___private___variables.html"><param name="Name" value="STM32F1xx_System_Private_Variables"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_s_w3___port_8cpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="Name" value="SW3_Port.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="Name" value="SW3_Port.hpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_s_w3___port_8cpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="Name" value="SW3_Port_read()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_s_w3___port_8cpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="Name" value="SW3_Port.cpp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="Name" value="SW3_Port_read()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="Name" value="SW3_Port.hpp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_s_w3_port_defines.html"><param name="Name" value="SW3PortDefines"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="sysmem_8c.html#a68125648bcce70b6bb3aa0be50e99700"><param name="Name" value="sysmem.c"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a70af21c671abfcc773614a9a4f63d920"><param name="Name" value="SystemClock_Config(void)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group___s_t_m32_f1xx___system___private___functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f"><param name="Name" value="SystemCoreClockUpdate(void)"></OBJECT>
@@ -397,13 +407,19 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="stm32f1xx__hal__conf_8h.html#aae550dad9f96d52cfce5e539adadbbb4"><param name="Name" value="VDD_VALUE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classvirtual_display.html"><param name="Name" value="virtualDisplay"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classv_task_scenerio_generation.html"><param name="Name" value="vTaskScenerioGeneration"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classv_task_update_bullets.html"><param name="Name" value="vTaskUpdateBullets"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classv_task_update_enemys.html"><param name="Name" value="vTaskUpdateEnemys"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="Name" value="vTaskVirtualDisplay(void *pvParameters)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="Name" value="vTaskVirtualDisplay.cpp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="v_task_virtual_display_8hpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="Name" value="vTaskVirtualDisplay(void *pvParameters)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="v_task_virtual_display_8hpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="Name" value="vTaskVirtualDisplay.hpp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="Name" value="vTaskVirtualDisplay.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="v_task_virtual_display_8hpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="Name" value="vTaskVirtualDisplay.hpp"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classx_mutex_player.html"><param name="Name" value="xMutexPlayer"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classx_queue_bullet_generation.html"><param name="Name" value="xQueueBulletGeneration"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classx_mutex_virtual_display.html"><param name="Name" value="xMutexVirtualDisplay"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classx_queue_joystick.html"><param name="Name" value="xQueueJoystick"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classx_queue_player_generation.html"><param name="Name" value="xQueuePlayerGeneration"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classx_queue_s_w3.html"><param name="Name" value="xQueueSW3"></OBJECT>
 </UL>
 </BODY>

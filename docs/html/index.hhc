@@ -38,6 +38,13 @@
       </UL>
     </UL>
   </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Namespaces"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Namespace List"><param name="Local" value="namespaces.html#top"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="SW3PortDefines"><param name="Local" value="namespace_s_w3_port_defines.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
 <LI><OBJECT type="text/sitemap"><param name="Name" value="Classes"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html#top"><param name="ImageNumber" value="1"></OBJECT>
@@ -63,12 +70,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Name" value="JoystickTools"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="direction"><param name="Local" value="struct_joystick_tools_1_1direction.html"><param name="ImageNumber" value="1"></OBJECT>
-        <UL>
-        </UL>
-      </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="scenarios"><param name="ImageNumber" value="1"></OBJECT>
-      <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="s1"><param name="Local" value="structscenarios_1_1s1.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
         </UL>
       </UL>
@@ -102,17 +103,15 @@
     <LI><OBJECT type="text/sitemap"><param name="Name" value="virtualDisplay"><param name="Local" value="classvirtual_display.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskScenerioGeneration"><param name="Local" value="classv_task_scenerio_generation.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskUpdateBullets"><param name="Local" value="classv_task_update_bullets.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskUpdateEnemys"><param name="Local" value="classv_task_update_enemys.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexPlayer"><param name="Local" value="classx_mutex_player.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueBulletGeneration"><param name="Local" value="classx_queue_bullet_generation.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexVirtualDisplay"><param name="Local" value="classx_mutex_virtual_display.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueJoystick"><param name="Local" value="classx_queue_joystick.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueuePlayerGeneration"><param name="Local" value="classx_queue_player_generation.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueSW3"><param name="Local" value="classx_queue_s_w3.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       </UL>
@@ -133,53 +132,116 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="glcd.h"><param name="Local" value="glcd_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="glcd_port.h"><param name="Local" value="glcd__port_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="joystick_port.h"><param name="Local" value="joystick__port_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="SW3_Port.hpp"><param name="Local" value="_s_w3___port_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SW3_Port.hpp"><param name="Local" value="_s_w3___port_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SW3_Port_read"><param name="Local" value="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Mutexes"><param name="Local" value="dir_02cfe235a612e60fc5cf066e7c2f7397.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexPlayer.hpp"><param name="Local" value="x_mutex_player_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexVirtualDisplay.hpp"><param name="Local" value="x_mutex_virtual_display_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexPlayer.hpp"><param name="Local" value="x_mutex_player_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexPlayer"><param name="Local" value="classx_mutex_player.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              </UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexVirtualDisplay.hpp"><param name="Local" value="x_mutex_virtual_display_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexVirtualDisplay"><param name="Local" value="classx_mutex_virtual_display.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              </UL>
+            </UL>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="queues"><param name="Local" value="dir_da7770925b456a5953e75532f80e2291.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueBulletGeneration.hpp"><param name="Local" value="x_queue_bullet_generation_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueJoystick.hpp"><param name="Local" value="x_queue_joystick_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueuePlayerGeneration.hpp"><param name="Local" value="x_queue_player_generation_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueuePlayerPosition.hpp"><param name="Local" value="x_queue_player_position_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueSW3.hpp"><param name="Local" value="x_queue_s_w3_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="tasks"><param name="Local" value="dir_8098ea4b4d1eab45a4517d52d7220bc5.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskDisplayLCD.hpp"><param name="Local" value="v_task_display_l_c_d_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskJoystick.hpp"><param name="Local" value="v_task_joystick_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskScenerioGeneration.hpp"><param name="Local" value="v_task_scenerio_generation_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskSW3.hpp"><param name="Local" value="v_task_s_w3_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskUpdateBullets.hpp"><param name="Local" value="v_task_update_bullets_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskUpdateEnemys.hpp"><param name="Local" value="v_task_update_enemys_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskUpdatePlayer.hpp"><param name="Local" value="v_task_update_player_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskVirtualDisplay.hpp"><param name="Local" value="v_task_virtual_display_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskSW3.hpp"><param name="Local" value="v_task_s_w3_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskVirtualDisplay.hpp"><param name="Local" value="v_task_virtual_display_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskVirtualDisplay"><param name="Local" value="v_task_virtual_display_8hpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="bullets.hpp"><param name="Local" value="bullets_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="claster.hpp"><param name="Local" value="claster_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinates.hpp"><param name="Local" value="coordinates_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinatesTools.hpp"><param name="Local" value="coordinates_tools_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="displayConstans.hpp"><param name="Local" value="display_constans_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="bullets.hpp"><param name="Local" value="bullets_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="bullet"><param name="Local" value="classbullet.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="bullets"><param name="Local" value="classbullets.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="claster.hpp"><param name="Local" value="claster_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="claster"><param name="Local" value="classclaster.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinates.hpp"><param name="Local" value="coordinates_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinates"><param name="Local" value="structcoordinates.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinatesTools.hpp"><param name="Local" value="coordinates_tools_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="displayConstans.hpp"><param name="Local" value="display_constans_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="enemys.hpp"><param name="Local" value="enemys_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="entitiesInitData.hpp"><param name="Local" value="entities_init_data_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="field.hpp"><param name="Local" value="field_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="entitiesInitData.hpp"><param name="Local" value="entities_init_data_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="EntitiesInitialData::player1"><param name="Local" value="struct_entities_initial_data_1_1player1.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="EntitiesInitialData::enemy1"><param name="Local" value="struct_entities_initial_data_1_1enemy1.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="EntitiesInitialData::enemy2"><param name="Local" value="struct_entities_initial_data_1_1enemy2.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="EntitiesInitialData::enemy3"><param name="Local" value="struct_entities_initial_data_1_1enemy3.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="EntitiesInitialData::bullet1"><param name="Local" value="struct_entities_initial_data_1_1bullet1.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="field.hpp"><param name="Local" value="field_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="FreeRTOSConfig.h"><param name="Local" value="_free_r_t_o_s_config_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="gpio.h"><param name="Local" value="gpio_8h.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MX_GPIO_Init"><param name="Local" value="gpio_8h.html#ac724e431d2af879252de35615be2bdea"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="joystickTools.hpp"><param name="Local" value="joystick_tools_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="joystickTools.hpp"><param name="Local" value="joystick_tools_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="JoystickTools::direction"><param name="Local" value="struct_joystick_tools_1_1direction.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="main.h"><param name="Local" value="main_8h.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Error_Handler"><param name="Local" value="main_8h.html#a1730ffe1e560465665eb47d9264826f9"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="mainapp.hpp"><param name="Local" value="mainapp_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="player.hpp"><param name="Local" value="player_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="scenarios.hpp"><param name="Local" value="scenarios_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="mainapp.hpp"><param name="Local" value="mainapp_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="player.hpp"><param name="Local" value="player_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="player"><param name="Local" value="classplayer.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="segment.hpp"><param name="Local" value="segment_8hpp_source.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="stm32f1xx_hal_conf.h"><param name="Local" value="stm32f1xx__hal__conf_8h.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
@@ -231,9 +293,46 @@
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Src"><param name="Local" value="dir_b596f468b52957496e4f78b80e029268.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="hardware"><param name="Local" value="dir_783a946f02cf4126745a28569acbab55.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SW3_Port.cpp"><param name="Local" value="_s_w3___port_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="SW3_Port_read"><param name="Local" value="_s_w3___port_8cpp.html#a7744e3d553aeeea241aefdb77791a0aa"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Mutexes"><param name="Local" value="dir_4c253238008aa500a8ec71b679f79a96.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexPlayer.cpp"><param name="Local" value="x_mutex_player_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="xMutexVirtualDisplay.cpp"><param name="Local" value="x_mutex_virtual_display_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="queues"><param name="Local" value="dir_adf8214e5b49a4e50ff8308adca14012.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueJoystick.cpp"><param name="Local" value="x_queue_joystick_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="xQueueSW3.cpp"><param name="Local" value="x_queue_s_w3_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="tasks"><param name="Local" value="dir_e27be4dde253a7555133b0d0ed99ff2d.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskSW3.cpp"><param name="Local" value="v_task_s_w3_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            </UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskVirtualDisplay.cpp"><param name="Local" value="v_task_virtual_display_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="vTaskVirtualDisplay"><param name="Local" value="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36"><param name="ImageNumber" value="11"></OBJECT>
+            </UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="bullets.cpp"><param name="Local" value="bullets_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="claster.cpp"><param name="Local" value="claster_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinates.cpp"><param name="Local" value="coordinates_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="coordinatesTools.cpp"><param name="Local" value="coordinates_tools_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="enemys.cpp"><param name="Local" value="enemys_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="gpio.c"><param name="Local" value="gpio_8c.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MX_GPIO_Init"><param name="Local" value="gpio_8c.html#ac724e431d2af879252de35615be2bdea"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="joystickTools.cpp"><param name="Local" value="joystick_tools_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="main.c"><param name="Local" value="main_8c.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
@@ -243,6 +342,11 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MX_FREERTOS_Init"><param name="Local" value="main_8c.html#abade755e13d07c10889ae83143656158"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="SystemClock_Config"><param name="Local" value="main_8c.html#a70af21c671abfcc773614a9a4f63d920"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="mainapp.cpp"><param name="Local" value="mainapp_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="player.cpp"><param name="Local" value="player_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="segment.cpp"><param name="Local" value="segment_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="stm32f1xx_hal_msp.c"><param name="Local" value="stm32f1xx__hal__msp_8c.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="HAL_MspInit"><param name="Local" value="stm32f1xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f"><param name="ImageNumber" value="11"></OBJECT>

@@ -9,8 +9,10 @@ digraph "Core/Inc/tim.h"
   Node2 [id="Node000002",label="Core/Inc/hardware/glcd\l_port.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$glcd__port_8h_source.html",tooltip=" "];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="Core/Inc/hardware/glcd.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$glcd_8h_source.html",tooltip=" "];
-  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="Core/Src/main.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html",tooltip=": Main program body"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Core/Src/tasks/vTaskVirtual\lDisplay.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$v_task_virtual_display_8cpp.html",tooltip=" "];
   Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="Core/Src/tim.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tim_8c.html",tooltip="This file provides code for the configuration of the TIM instances."];
+  Node5 [id="Node000005",label="Core/Src/main.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html",tooltip=": Main program body"];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Core/Src/tim.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tim_8c.html",tooltip="This file provides code for the configuration of the TIM instances."];
 }

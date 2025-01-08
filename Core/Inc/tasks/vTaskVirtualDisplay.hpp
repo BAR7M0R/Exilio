@@ -13,16 +13,6 @@
 #ifndef SRC_VTASKVIRTUALDISPLAY_HPP_
 #define SRC_VTASKVIRTUALDISPLAY_HPP_
 
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-void vTaskVirtualDisplay(void *pvParameters);
-
-
-#ifdef __cplusplus
-}
-#endif
+extern "C" void vTaskVirtualDisplay(void *pvParameters);
 
 #endif /* SRC_VTASKVIRTUALDISPLAY_HPP_ */
