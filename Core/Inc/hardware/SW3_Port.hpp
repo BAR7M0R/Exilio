@@ -3,6 +3,8 @@
  * @author Bartłomiej Głodek
  * @date 2025-01-04
  *
+ * @brief
+ * @details
  *
  */
 #ifndef INC_HARDWARE_SW3PORT_HPP_

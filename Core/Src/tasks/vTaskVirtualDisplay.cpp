@@ -9,6 +9,7 @@
  *
  */
 
+#include <enemysManager.hpp>
 #include <glcd.h>
 #include "vTaskVirtualDisplay.hpp"
 #include "xQueueJoystick.hpp"
@@ -28,7 +29,6 @@
 #include "xMutexPlayer.hpp"
 
 #include "bullets.hpp"
-#include "enemys.hpp"
 #include "entitiesInitData.hpp"
 /**
  * @fn void vTaskVirtualDisplay(void*)
@@ -46,22 +46,19 @@ void vTaskVirtualDisplay(void *pvParameters)
 	enemys& es = enemys::GetInstance();
 
 
-	es.add(coordinates(40,8));
-	es.add(coordinates(50,8));
-	es.add(coordinates(60,8));
-	es.add(coordinates(70,8));
-	es.add(coordinates(80,8));
-	es.add(coordinates(90,8));
+	//es.add(coordinates(40,8));
+	//es.add(coordinates(50,8));
+	//es.add(coordinates(60,8));
+	//es.add(coordinates(70,8));
+	//es.add(coordinates(80,8));
+	//es.add(coordinates(90,8));
 
 	while(true)
 	{
-		//pcords.second = pcords.first;
-		//pcords.first = pcords.first + JoystickTools::convert(joystickQueue.Receive());
-		//pcords.first = coordinatesTools::stopRectangleOnBorderMap(pcords.first,pcords.first + EntitiesInitialData::player1::texture_corner_2);
-		es.add(coordinates(60,8));
-		es.add(coordinates(70,8));
-		es.add(coordinates(80,8));
-		es.add(coordinates(90,8));
+		//es.add(coordinates(60,8));
+		//es.add(coordinates(70,8));
+		//es.add(coordinates(80,8));
+		//es.add(coordinates(90,8));
 		p.updatePosition(JoystickTools::convert(joystickQueue.Receive()));
 		if(sw3Queue.Receive())
 		{
@@ -70,7 +67,6 @@ void vTaskVirtualDisplay(void *pvParameters)
 		bs.move();
 		es.move();
 
-		//xMutexVirtualDisplay_Lock();
 		for(bullet& b: bs)
 		{
 			if (b.isOnMap())
@@ -92,7 +88,6 @@ void vTaskVirtualDisplay(void *pvParameters)
 		mutexVD.lock();
 		vDisplay.putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
 		mutexVD.unlock();
-		//xMutexVirtualDisplay_Unlock();
 		bs.remove();
 		es.remove();
 		vTaskDelay(pdMS_TO_TICKS(100));

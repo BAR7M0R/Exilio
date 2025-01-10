@@ -8,12 +8,6 @@
  *
  *
  */
-/*
- * vTaskSW3.cpp
- *
- *  Created on: Jan 4, 2025
- *      Author: dev
- */
 
 #include "vTaskSW3.hpp"
 #include "SW3_Port.hpp"

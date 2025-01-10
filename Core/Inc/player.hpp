@@ -9,13 +9,6 @@
  *
  */
 
-/*
- * player.hpp
- *
- *  Created on: Jan 5, 2025
- *      Author: dev
- */
-
 #ifndef INC_PLAYER_HPP_
 #define INC_PLAYER_HPP_
 #include "coordinates.hpp"

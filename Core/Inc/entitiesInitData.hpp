@@ -16,6 +16,17 @@
 #include "coordinates.hpp"
 #include "segment.hpp"
 namespace EntitiesInitialData {
+inline constexpr std::uint8_t max_enemy_number = 10;
+inline constexpr std::uint8_t max_bullet_number = 10;
+enum class enemys {
+	enemy1,
+	enemy2,
+	enemy3
+};
+enum class bullets
+{
+	bullet1
+};
 struct player1 {
 	static constexpr inline std::array<std::uint8_t, 8> texture_data = { 0x04,
 			0x03, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00 };
@@ -60,7 +71,7 @@ struct bullet1 {
 	static constexpr inline coordinates texture_corner_1{0,0};
 	static constexpr inline coordinates texture_corner_2{3,3};
 	static constexpr inline std::uint8_t demage_points = 1;
-	static constexpr inline std::size_t max_number_at_time = 1;
+
 };
 
 };

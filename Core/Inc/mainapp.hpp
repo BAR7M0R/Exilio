@@ -14,5 +14,4 @@
 
 extern "C" void mainapp();
 
-#endif
 #endif /* SRC_MAINAPP_HPP_ */

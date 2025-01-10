@@ -7,11 +7,6 @@
  * @details
  *
  *
- *//*
- * xMutexVirtualDisplay.cpp
- *
- *  Created on: Dec 29, 2024
- *      Author: dev
  */
 
 #include "xMutexVirtualDisplay.hpp"

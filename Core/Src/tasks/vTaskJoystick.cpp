@@ -14,10 +14,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-
-
 #include <cstdint>
-
 
 void vTaskJoystick(void *pvParameters)
 {
