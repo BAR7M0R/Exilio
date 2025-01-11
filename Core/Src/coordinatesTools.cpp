@@ -18,30 +18,30 @@ using namespace displayConstans;
 
 
 bool isInVmap(const coordinates c) {
-	bool isOK = true;
-	if ((c.x < 0) or (c.x >= V_WIDTH)) {
-		isOK = false;
+	bool r = true;
+	if ((c.x < 0) or (c.x >= v_width)) {
+		r = false;
 	}
-	if ((c.y < 0) or (c.y >= V_HEIGHT * 8)) {
-		isOK = false;
+	if ((c.y < 0) or (c.y >= v_height * 8)) {
+		r = false;
 	}
-	return isOK;
+	return r;
 }
 bool isInMap(const coordinates c) {
-	bool isOK = true;
-	if ((c.x < V_MARGIN_WIDTH) or (c.x >= V_MARGIN_WIDTH + WIDTH_LCD)) {
-		isOK = false;
+	bool r = true;
+	if ((c.x < v_margin_width) or (c.x >= v_margin_width + width_lcd)) {
+		r = false;
 	}
-	if ((c.y < V_MARGIN_HEIGHT * 8)
-			or (c.y >= (V_MARGIN_HEIGHT + HEIGHT_LCD) * 8)) {
-		isOK = false;
+	if ((c.y < v_margin_height * 8)
+			or (c.y >= (v_margin_height + height_lcd) * 8)) {
+		r = false;
 	}
-	return isOK;
+	return r;
 }
 bool isInDownMargin(const coordinates c)
 {
 	bool r = false;
-	if (c.y > (displayConstans::HEIGHT_LCD + displayConstans::V_MARGIN_HEIGHT)*8) r = true;
+	if (c.y > (displayConstans::height_lcd + displayConstans::v_margin_height)*8) r = true;
 	return r;
 }
 bool isPointInScope(const coordinates c, const coordinates scopePoint1, const coordinates scopePoint2)
@@ -73,14 +73,14 @@ bool isScopeInScope(const coordinates scope1Point1, const coordinates scope1Poin
 
 coordinates stopPointOnBorderMap(coordinates c) {
 	if (!isInMap(c)) {
-		if (c.x < V_MARGIN_WIDTH)
-			c.x = V_MARGIN_WIDTH;
-		if (c.x >= V_MARGIN_WIDTH + WIDTH_LCD)
-			c.x = V_MARGIN_WIDTH + WIDTH_LCD;
-		if (c.y < V_MARGIN_HEIGHT * 8)
-			c.y = V_MARGIN_HEIGHT * 8;
-		if (c.y >= (V_MARGIN_HEIGHT + HEIGHT_LCD) * 8)
-			c.y = (V_MARGIN_HEIGHT + HEIGHT_LCD) * 8;
+		if (c.x < v_margin_width)
+			c.x = v_margin_width;
+		if (c.x >= v_margin_width + width_lcd)
+			c.x = v_margin_width + width_lcd;
+		if (c.y < v_margin_height * 8)
+			c.y = v_margin_height * 8;
+		if (c.y >= (v_margin_height + height_lcd) * 8)
+			c.y = (v_margin_height + height_lcd) * 8;
 	}
 	return c;
 
@@ -89,12 +89,12 @@ coordinates stopPointOnBorderVmap(coordinates c) {
 	if (!isInVmap(c)) {
 		if (c.x < 0)
 			c.x = 0;
-		if (c.x >= V_MARGIN_WIDTH)
-			c.x = V_MARGIN_WIDTH;
+		if (c.x >= v_margin_width)
+			c.x = v_margin_width;
 		if (c.y < 0)
 			c.y = 0;
-		if (c.y >= V_MARGIN_HEIGHT * 8)
-			c.y = V_MARGIN_HEIGHT * 8;
+		if (c.y >= v_margin_height * 8)
+			c.y = v_margin_height * 8;
 	}
 	return c;
 }

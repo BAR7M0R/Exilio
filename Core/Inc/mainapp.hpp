@@ -9,9 +9,17 @@
  *
  */
 
-#ifndef SRC_MAINAPP_HPP_
-#define SRC_MAINAPP_HPP_
 
-extern "C" void mainapp();
+#ifndef INC_MAINAPP_HPP_
+#define INC_MAINAPP_HPP_
 
-#endif /* SRC_MAINAPP_HPP_ */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void mainapp();
+
+#ifdef __cplusplus
+}
+#endif
+#endif /* INC_MAINAPP_HPP_ */

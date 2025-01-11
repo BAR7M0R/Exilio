@@ -21,7 +21,7 @@
 #include "vTaskSW3.hpp"
 #include "vTaskVirtualDisplay.hpp"
 
-void mainapp()
+void mainapp(void)
 {
 	xTaskCreate(vTaskDisplayLCD, "vTaskDisplayLCD", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 2, NULL);
 	xTaskCreate(vTaskJoystick,"vTaskJoystick",configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 3, NULL);

@@ -23,13 +23,13 @@ private:
 	xQueueJoystick& operator=(const xQueueJoystick&) = delete;
 
 public:
-	static xQueueJoystick& GetInstance();
+	static xQueueJoystick& getInstance();
 	void Send(std::uint8_t state);
-	std::uint8_t Receive();
+	std::uint8_t receive();
 
 private:
-	static constexpr uint32_t maxTimeout_ = 100;
-	static constexpr std::size_t queueSize_ = 2;
+	static constexpr uint32_t maxTimeout_ = 10;
+	static constexpr std::size_t queueSize_ = 1;
 	QueueHandle_t xQueueJoystick_;
 };
 

@@ -23,7 +23,7 @@ private:
 	xMutexVirtualDisplay& operator=(const xMutexVirtualDisplay&) = delete;
 
 public:
-	static xMutexVirtualDisplay& GetInstance();
+	static xMutexVirtualDisplay& getInstance();
 	void lock();
 	void unlock();
 

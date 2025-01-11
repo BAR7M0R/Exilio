@@ -7,15 +7,15 @@
 
 #include <enemyBase.hpp>
 #include "coordinatesTools.hpp"
-static std::int8_t currentNumberOfEnemys_ = 0;
-
-enemyBase::enemyBase(const enemys typeOfEnemy,
+std::int8_t enemyBase::currentNumber_ = 0;
+enemyBase::enemyBase(const entitiesInitialData::enemys typeOfEnemy,
 			const coordinates startPoint,
 			const std::int8_t startLife,
 			const std::int8_t scorePoint,
 			const segment& texture,
 			const coordinates& texture_corner_1,
 			const coordinates& texture_corner_2,
+			const std::uint8_t slownest,
 			const coordinates& moveDirection)
 	:type_(typeOfEnemy)
 	,currentPosition_(startPoint)
@@ -25,13 +25,28 @@ enemyBase::enemyBase(const enemys typeOfEnemy,
 	,texture_(texture)
 	,texture_corner_1_(texture_corner_1)
 	,texture_corner_2_(texture_corner_2)
+	,slownest_(slownest)
 	,moveDirection_(moveDirection)
-	,onMap_(true)
-	{}
+	,toRemove_(false)
+	,missMoveCtr_(0)
+	{currentNumber_++;}
 void enemyBase::move()
 {
-	prevousPosition_ = currentPosition_;
-	currentPosition_ = currentPosition_ + moveDirection_;
+	if(!toRemove_)
+	{
+
+		if (missMoveCtr_++ == slownest_)
+		{
+			prevousPosition_ = currentPosition_;
+			currentPosition_ = currentPosition_ + moveDirection_;
+			missMoveCtr_ = 0;
+		}
+	}
+	else
+	{
+		prevousPosition_ = currentPosition_;
+		currentPosition_ = coordinates({0,0});
+	}
 }
 void enemyBase::takeDamage(uint8_t value)
 {
@@ -39,16 +54,10 @@ void enemyBase::takeDamage(uint8_t value)
 	{
 		lifeStatus_ -= value;
 	}
-	else
+	if(lifeStatus_ == 0)
 	{
-		remove();
+		setToRemove();
 	}
-}
-void enemyBase::remove()
-{
-	currentPosition_ = coordinates({0,0});
-	prevousPosition_ = currentPosition_;
-	onMap_ = false;
 }
 std::int8_t enemyBase::getScore()
 {
@@ -58,7 +67,7 @@ std::int8_t enemyBase::getCurrentLife()
 {
 	return lifeStatus_;
 }
-bullets enemyBase::getType()
+entitiesInitialData::enemys enemyBase::getType()
 {
 	return type_;
 }
@@ -82,7 +91,11 @@ const coordinates& enemyBase::getTextureCorner2() const
 {
 	return texture_corner_2_;
 }
-const bool enemyBase::isOnMap() const
+const bool enemyBase::isToRemove() const
 {
-	return onMap_;
+	return toRemove_;
+}
+void enemyBase::setToRemove()
+{
+	toRemove_ = true;
 }

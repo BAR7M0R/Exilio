@@ -17,7 +17,7 @@ using namespace SW3PortConsts;
 
 void vTaskSW3(void *pvParameters)
 {
-	xQueueSW3& sw3Queue = xQueueSW3::GetInstance();
+	xQueueSW3& sw3Queue = xQueueSW3::getInstance();
 	uint8_t state = 0x00;
 	uint8_t state_prev = 0x00;
 	uint8_t state_pressed = 0x00;
@@ -38,7 +38,7 @@ void vTaskSW3(void *pvParameters)
 			{
 				// key_state_pressed
 				//HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
-				sw3Queue.Send(true);
+				sw3Queue.send(true);
 
 			}
 			else // can be used for auto-repeat

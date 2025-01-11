@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef SRC_CLASTER_HPP_
-#define SRC_CLASTER_HPP_
+#ifndef INC_CLASTER_HPP_
+#define INC_CLASTER_HPP_
 
 #include <array>
 
@@ -28,4 +28,4 @@ private:
 	std::array<segment*,4> _claster; //2x2 to 1x4 array
 };
 
-#endif /* SRC_CLASTER_HPP_ */
+#endif /* INC_CLASTER_HPP_ */

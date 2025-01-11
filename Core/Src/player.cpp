@@ -12,17 +12,17 @@
 #include "player.hpp"
 #include "entitiesInitData.hpp"
 #include "coordinatesTools.hpp"
-using namespace EntitiesInitialData;
+using namespace entitiesInitialData;
 
 player::player()
-:texture_(EntitiesInitialData::player1::texture_data)
-,texture_corner_1_(EntitiesInitialData::player1::texture_corner_1)
-,texture_corner_2_(EntitiesInitialData::player1::texture_corner_2)
-,offset_(EntitiesInitialData::player1::offset)
+:texture_(entitiesInitialData::player1::texture_data)
+,texture_corner_1_(entitiesInitialData::player1::texture_corner_1)
+,texture_corner_2_(entitiesInitialData::player1::texture_corner_2)
+,offset_(entitiesInitialData::player1::offset)
 ,currentPosition_({70,70})
 ,prevousPosition_({10,10})
 {}
-player& player::GetInstance()
+player& player::getInstance()
 {
 	static player instance;
 	return instance;

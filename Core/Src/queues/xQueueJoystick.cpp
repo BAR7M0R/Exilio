@@ -14,7 +14,7 @@
 xQueueJoystick::xQueueJoystick()
 :xQueueJoystick_(nullptr){}
 
-xQueueJoystick& xQueueJoystick::GetInstance()
+xQueueJoystick& xQueueJoystick::getInstance()
 {
 	static xQueueJoystick instance;
 	if(instance.xQueueJoystick_ == nullptr)
@@ -39,7 +39,7 @@ void xQueueJoystick::Send(std::uint8_t state)
 		}
 	}
 }
-std::uint8_t xQueueJoystick::Receive()
+std::uint8_t xQueueJoystick::receive()
 {
 	std::uint8_t receivedValue = 0;
 	if (xQueueJoystick_ != nullptr)

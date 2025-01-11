@@ -5,7 +5,6 @@
  *
  * @brief
  * @details
- * @todo spleat filet into two files first .hpp and second .cpp
  *
  */
 
@@ -17,12 +16,12 @@
 #include "enemyBase.hpp"
 #include "coordinates.hpp"
 #include "entitiesInitData.hpp"
-
+#include "bulletsManager.hpp"
 
 /**
  * @class enemysManager
  */
-using namespace EntitiesInitialData;
+using namespace entitiesInitialData;
 
 class enemysManager {
 private:
@@ -32,16 +31,18 @@ private:
 
 public:
 	static enemysManager& getInstance();
-	void addEnemy(const enemys typeOfEnemy, const coordinates& startPoint);
-	void moveEnemys();
-	void killEntitys(bulletsManager bullets);
-	void removeEnemys();
-    auto begin();
-    auto end();
-    auto begin() const;
-    auto end() const;
+	void add(const entitiesInitialData::enemys typeOfEnemy, const coordinates& startPoint);
+	void move();
+	void remove();
+	void chackCollisions();
+
+	std::array<std::unique_ptr<enemyBase>, entitiesInitialData::max_number::enemys>::pointer begin();
+    std::array<std::unique_ptr<enemyBase>, entitiesInitialData::max_number::enemys>::pointer end();
+    std::array<std::unique_ptr<enemyBase>, entitiesInitialData::max_number::enemys>::const_pointer begin() const;
+    std::array<std::unique_ptr<enemyBase>, entitiesInitialData::max_number::enemys>::const_pointer end() const;
 private:
-	std::array<std::unique_ptr<enemyBase>, max_enemy_number> enemys_;
+	std::array<std::unique_ptr<enemyBase>, entitiesInitialData::max_number::enemys> enemys_;
+	bulletsManager& bManager_;
 };
 
 #endif /* INC_ENEMY_HPP_ */

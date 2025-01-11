@@ -18,7 +18,7 @@
 
 void vTaskJoystick(void *pvParameters)
 {
-	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
+	xQueueJoystick& joystickQueue = xQueueJoystick::getInstance();
 	joystick_port_init();
 	uint8_t keys_state = 0x00;
 	uint8_t keys_state_prev = 0x00;

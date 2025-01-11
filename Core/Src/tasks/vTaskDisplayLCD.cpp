@@ -41,8 +41,8 @@
  */
 void vTaskDisplayLCD(void *pvParameters)
 {
-	virtualDisplay& vDisplay = virtualDisplay::GetInstance();
-	xMutexVirtualDisplay& mutexVD = xMutexVirtualDisplay::GetInstance();
+	virtualDisplay& vDisplay = virtualDisplay::getInstance();
+	xMutexVirtualDisplay& mutexVD = xMutexVirtualDisplay::getInstance();
 
 	glcd_Initialize();
 	glcd_ClearScreen();
@@ -55,6 +55,6 @@ void vTaskDisplayLCD(void *pvParameters)
 		#ifdef DEBUG
 		HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin); //to remove
 		#endif
-		vTaskDelay(pdMS_TO_TICKS(100));
+		vTaskDelay(pdMS_TO_TICKS(40));
 	}
 }

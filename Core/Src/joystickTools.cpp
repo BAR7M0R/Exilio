@@ -10,11 +10,12 @@
  */
 #include "joystickTools.hpp"
 
-namespace JoystickTools
+namespace joystickTools
 {
 
 coordinates convert(std::uint8_t joystickData)
 {
+
 	coordinates r{0,0};
 	if ((joystickData & direction::down) == direction::down) {++r.y;}
 	if ((joystickData & direction::up) == direction::up) {--r.y;}

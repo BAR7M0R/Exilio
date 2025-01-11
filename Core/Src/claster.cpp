@@ -8,10 +8,11 @@
  *
  *
  */
-
 #include "claster.hpp"
+
 #include <functional>
 #include <bitset>
+
 
 claster::claster()
 :_claster{nullptr}

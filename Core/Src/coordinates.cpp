@@ -27,3 +27,16 @@ coordinates coordinates::operator-(coordinates c) const
 	r.y = this->y -c.y;
 	return r;
 }
+bool coordinates::operator==(coordinates c) const
+{
+	bool r = true;
+	if(c.x != this->x)
+	{
+		r = false;
+	}
+	if(c.y != this->y)
+	{
+		r = false;
+	}
+	return r;
+}

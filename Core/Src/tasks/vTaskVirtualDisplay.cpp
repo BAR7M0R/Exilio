@@ -9,7 +9,10 @@
  *
  */
 
+#include <bulletsManager.hpp>
 #include <enemysManager.hpp>
+#include <bulletBase.hpp>
+#include "enemyBase.hpp"
 #include <glcd.h>
 #include "vTaskVirtualDisplay.hpp"
 #include "xQueueJoystick.hpp"
@@ -28,7 +31,6 @@
 #include "player.hpp"
 #include "xMutexPlayer.hpp"
 
-#include "bullets.hpp"
 #include "entitiesInitData.hpp"
 /**
  * @fn void vTaskVirtualDisplay(void*)
@@ -37,61 +39,58 @@
  */
 void vTaskVirtualDisplay(void *pvParameters)
 {
-	virtualDisplay& vDisplay = virtualDisplay::GetInstance();
-	xMutexVirtualDisplay& mutexVD = xMutexVirtualDisplay::GetInstance();
-	player& p = player::GetInstance();
-	xQueueSW3& sw3Queue = xQueueSW3::GetInstance();
-	xQueueJoystick& joystickQueue = xQueueJoystick::GetInstance();
-	bullets& bs = bullets::GetInstance();
-	enemys& es = enemys::GetInstance();
+	virtualDisplay& vDisplay = virtualDisplay::getInstance();
+	xMutexVirtualDisplay& mutexVD = xMutexVirtualDisplay::getInstance();
+	player& p = player::getInstance();
+	xQueueSW3& sw3Queue = xQueueSW3::getInstance();
+	xQueueJoystick& joystickQueue = xQueueJoystick::getInstance();
+	//xQueueWaveGenerator& waveGeneratorQueue = xQueueWaveGenerator::getInstance();
+	bulletsManager& bManager = bulletsManager::getInstance();
+	enemysManager& eManager = enemysManager::getInstance();
 
-
-	//es.add(coordinates(40,8));
-	//es.add(coordinates(50,8));
-	//es.add(coordinates(60,8));
-	//es.add(coordinates(70,8));
-	//es.add(coordinates(80,8));
-	//es.add(coordinates(90,8));
+		eManager.add(entitiesInitialData::enemys::enemy1, coordinates(60,0));
+		eManager.add(entitiesInitialData::enemys::enemy2, coordinates(70,0));
+		eManager.add(entitiesInitialData::enemys::enemy3, coordinates(80,0));
+		eManager.add(entitiesInitialData::enemys::enemy1, coordinates(90,0));
 
 	while(true)
 	{
-		//es.add(coordinates(60,8));
-		//es.add(coordinates(70,8));
-		//es.add(coordinates(80,8));
-		//es.add(coordinates(90,8));
-		p.updatePosition(JoystickTools::convert(joystickQueue.Receive()));
-		if(sw3Queue.Receive())
-		{
-			bs.add(p.getCurrentPosition() + coordinates({0,-1})+p.getOffset());
-		}
-		bs.move();
-		es.move();
 
-		for(bullet& b: bs)
+
+		p.updatePosition(joystickTools::convert(joystickQueue.receive()));
+		if(sw3Queue.receive())
 		{
-			if (b.isOnMap())
+			bManager.add(bullets::bullet1, p.getCurrentPosition()+p.getOffset());
+		}
+		eManager.chackCollisions();
+		bManager.move();
+		eManager.move();
+		for(std::unique_ptr<bulletBase>& b: bManager)
+		{
+			if (b !=nullptr)
 			{
 				mutexVD.lock();
-				vDisplay.putEntity(b.getCurrentCoords(), b.getPrevousCoords(), b.getTexture());
+				vDisplay.putEntity(b->getCurrentCoords(), b->getPrevousCoords(), b->getTexture());
 				mutexVD.unlock();
 			}
 		}
-		for(enemy& e: es)
+		for(std::unique_ptr<enemyBase>& e: eManager)
 		{
-			if (e.isOnMap())
+			if (e != nullptr)
 			{
 				mutexVD.lock();
-				vDisplay.putEntity(e.getCurrentCoords(), e.getPrevousCoords(), e.getTexture());
+				vDisplay.putEntity(e->getCurrentCoords(), e->getPrevousCoords(), e->getTexture());
 				mutexVD.unlock();
 			}
 		}
 		mutexVD.lock();
 		vDisplay.putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
 		mutexVD.unlock();
-		bs.remove();
-		es.remove();
+
+		bManager.remove();
+		eManager.remove();
 		vTaskDelay(pdMS_TO_TICKS(100));
 	}
 
-}
+ }
 

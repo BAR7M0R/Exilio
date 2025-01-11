@@ -9,10 +9,11 @@
  *
  */
 
+#include <Claster.hpp>
 #include "virtualDisplay.hpp"
-#include "claster.hpp"
 #include "entitiesInitData.hpp"
 #include "coordinatesTools.hpp"
+#include "displayConstans.hpp"
 using namespace displayConstans;
 
 
@@ -35,7 +36,7 @@ void virtualDisplay::fill(uint8_t data)
 uint8_t virtualDisplay::checkNumberOfCells(coordinates& coords)
 {
 	uint8_t numberOfCells=0;
-	if (coords.y%NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD == 0)
+	if (coords.y%number_of_pix_in_lcd_single_field == 0)
 	{
 		numberOfCells = 1;
 	}
@@ -55,13 +56,13 @@ segment virtualDisplay::takeSnap(coordinates coords)
 		{
 			if (yIdx == 0)
 			{
-				snap.at(xIdx) |= (_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx)
-						>> coords.y%NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD);
+				snap.at(xIdx) |= (_VMap.at(coords.y/number_of_pix_in_lcd_single_field+yIdx).at(coords.x+xIdx)
+						>> coords.y%number_of_pix_in_lcd_single_field);
 			}
 			else
 			{
-				snap.at(xIdx) |= (_VMap.at(coords.y/NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD+yIdx).at(coords.x+xIdx)
-						<< (NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD - coords.y%NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD));
+				snap.at(xIdx) |= (_VMap.at(coords.y/number_of_pix_in_lcd_single_field+yIdx).at(coords.x+xIdx)
+						<< (number_of_pix_in_lcd_single_field - coords.y%number_of_pix_in_lcd_single_field));
 			}
 		}
 	}
@@ -100,10 +101,10 @@ void virtualDisplay::putSegment(segment& s, coordinates coords)
 {
 	for(uint8_t currentFieldIndex = 0; currentFieldIndex < s.size(); ++currentFieldIndex)
 	{
-		_VMap.at(coords.y / NUMBER_OF_PIX_IN_LCD_SINGLE_FIELD).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
+		_VMap.at(coords.y / number_of_pix_in_lcd_single_field).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
 	}
 }
-virtualDisplay& virtualDisplay::GetInstance()
+virtualDisplay& virtualDisplay::getInstance()
 {
 	static virtualDisplay instance;
 	return instance;
@@ -119,11 +120,11 @@ virtualDisplay::virtualDisplay()
 
 	}
 	uint16_t k = 0;
-	for (uint8_t i = 0; i < HEIGHT_LCD; ++i)
+	for (uint8_t i = 0; i < height_lcd; ++i)
 	{
-		for (uint8_t j = 0; j < WIDTH_LCD; ++j)
+		for (uint8_t j = 0; j < width_lcd; ++j)
 		{
-			_Map[k++] = &_VMap[V_MARGIN_HEIGHT+i][V_MARGIN_WIDTH+j];
+			_Map[k++] = &_VMap[v_margin_height+i][v_margin_width+j];
 		}
 	}
 }

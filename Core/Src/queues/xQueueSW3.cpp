@@ -10,36 +10,49 @@
  */
 
 #include <xQueueSW3.hpp>
-
+#include "task.h"
 xQueueSW3::xQueueSW3()
 :xQueueSW3_(nullptr){}
 
-xQueueSW3& xQueueSW3::GetInstance()
+xQueueSW3& xQueueSW3::getInstance()
 {
 	static xQueueSW3 instance;
-	if(instance.xQueueSW3_ == nullptr)
+	if(!instance.xQueueSW3_)
 	{
 		instance.xQueueSW3_ = xQueueCreate(queueSize_, sizeof(bool));  // Przykładowa kolejka
         if (instance.xQueueSW3_ == nullptr) {
             while(true);
         }
+		xTaskCreate(xQueueSW3::controlTask, "xQueueSW3ControlTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +4, NULL);
 	}
 	return instance;
 
 }
-void xQueueSW3::Send(bool state)
+void xQueueSW3::send(bool state)
 {
-	if (xQueueSW3_ != nullptr)
+	if (xQueueSW3_)
 	{
 		xQueueSend(xQueueSW3_,static_cast<const void*>(&state),pdMS_TO_TICKS(maxTimeout_));
 	}
 }
-bool xQueueSW3::Receive()
+bool xQueueSW3::receive()
 {
 	bool receivedValue = false;
-	if (xQueueSW3_ != nullptr)
+	if (xQueueSW3_ and queueActivation_)
 	{
 		xQueueReceive(xQueueSW3_, &receivedValue, pdMS_TO_TICKS(maxTimeout_));
+		queueActivation_ = false;
 	}
     return receivedValue;
+}
+extern "C" void xQueueSW3::controlTask(void *pvParameters)
+{
+	xQueueSW3& instance = xQueueSW3::getInstance();
+    while (true)
+    {
+
+        instance.queueActivation_ = true;
+
+        vTaskDelay(pdMS_TO_TICKS(activationDelayms_));
+    }
 }

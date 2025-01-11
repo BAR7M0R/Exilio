@@ -21,7 +21,7 @@ private:
 	player& operator=(const player&) = delete;
 
 public:
-	static player& GetInstance();
+	static player& getInstance();
 	void updatePosition(coordinates direction);
 	coordinates& getCurrentPosition();
 	coordinates& getPrevousPosition();

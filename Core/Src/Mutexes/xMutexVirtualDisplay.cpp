@@ -13,7 +13,7 @@
 
 xMutexVirtualDisplay::xMutexVirtualDisplay(){}
 
-xMutexVirtualDisplay& xMutexVirtualDisplay::GetInstance()
+xMutexVirtualDisplay& xMutexVirtualDisplay::getInstance()
 {
 	static xMutexVirtualDisplay instance;
 	if(instance.xMutexVirtualDisplay_ == nullptr)

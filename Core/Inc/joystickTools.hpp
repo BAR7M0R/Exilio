@@ -8,13 +8,13 @@
  *
  *
  */
-#ifndef SRC_TASKS_JOYSTICKTOOLS_HPP_
-#define SRC_TASKS_JOYSTICKTOOLS_HPP_
+#ifndef INC_JOYSTICKTOOLS_HPP_
+#define INC_JOYSTICKTOOLS_HPP_
 
 #include <cstdint>
 #include "coordinates.hpp"
 
-namespace JoystickTools
+namespace joystickTools
 {
 struct direction
 {
@@ -28,4 +28,4 @@ coordinates convert(std::uint8_t joystickData);
 }
 
 
-#endif /* SRC_TASKS_JOYSTICKTOOLS_HPP_ */
+#endif /* INC_JOYSTICKTOOLS_HPP_ */
