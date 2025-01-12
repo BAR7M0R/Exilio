@@ -17,6 +17,8 @@
 #include "entitiesInitData.hpp"
 #include "coordinates.hpp"
 
+
+
 class xQueueWaveGenerator
 {
 private:
@@ -30,10 +32,12 @@ public:
 	static void controlTask(void *pvParameters);
 
 private:
-	static constexpr uint32_t maxTimeout_ = 1;
+	static constexpr uint32_t maxTimeout_ = 100;
 	static constexpr std::size_t queueSize_ = 1;
-	static std::uint32_t activationDelayms_ = 3000;
+	static std::uint32_t activationDelayms_;
 	bool queueActivation_;
 	QueueHandle_t xQueueWaveGenerator_;
 };
+
+
 #endif /* INC_QUEUES_XQUEUEWAVEGENERATOR_HPP_ */

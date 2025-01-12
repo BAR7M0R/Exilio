@@ -18,7 +18,7 @@
 namespace entitiesInitialData {
 namespace max_number
 {
-	static constexpr inline std::uint8_t enemys = 10;
+	static constexpr inline std::uint8_t enemys = 8;
 	static constexpr inline std::uint8_t bullets = 15;
 };
 
@@ -33,8 +33,10 @@ enum class bullets
 };
 struct enemiGen
 {
-	const enemys type;
-	const coordinates position;
+	enemys type;
+	coordinates position;
+	std::size_t number;
+	bool isGenerated;
 };
 namespace player1 {
 	static const segment texture_data({0x04,

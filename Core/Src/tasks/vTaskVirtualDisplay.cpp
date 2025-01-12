@@ -8,30 +8,33 @@
  *
  *
  */
-
-#include <bulletsManager.hpp>
-#include <enemysManager.hpp>
-#include <bulletBase.hpp>
-#include "enemyBase.hpp"
-#include <glcd.h>
 #include "vTaskVirtualDisplay.hpp"
-#include "xQueueJoystick.hpp"
-#include "xQueueSW3.hpp"
-#include "xMutexVirtualDisplay.hpp"
-#include "FreeRTOS.h"
-#include "task.h"
+#include <FreeRTOS.h>
+#include <task.h>
 #include <cstdint>
-#include <array>
 
 #include "virtualDisplay.hpp"
 
-#include "coordinatesTools.hpp"
-#include "joystickTools.hpp"
+#include "xMutexVirtualDisplay.hpp"
+
+#include "xQueueJoystick.hpp"
+#include "xQueueSW3.hpp"
+#include "xQueueWaveGenerator.hpp"
 
 #include "player.hpp"
-#include "xMutexPlayer.hpp"
+#include "enemyBase.hpp"
+#include "bulletBase.hpp"
+
+#include "enemysManager.hpp"
+#include "bulletsManager.hpp"
 
 #include "entitiesInitData.hpp"
+#include "coordinates.hpp"
+#include "joystickTools.hpp"
+#include "coordinatesTools.hpp"
+
+#include "portable.h"
+
 /**
  * @fn void vTaskVirtualDisplay(void*)
  * @brief function to managing and generate virtual map.
@@ -44,19 +47,18 @@ void vTaskVirtualDisplay(void *pvParameters)
 	player& p = player::getInstance();
 	xQueueSW3& sw3Queue = xQueueSW3::getInstance();
 	xQueueJoystick& joystickQueue = xQueueJoystick::getInstance();
-	//xQueueWaveGenerator& waveGeneratorQueue = xQueueWaveGenerator::getInstance();
+	xQueueWaveGenerator& waveGeneratorQueue = xQueueWaveGenerator::getInstance();
 	bulletsManager& bManager = bulletsManager::getInstance();
 	enemysManager& eManager = enemysManager::getInstance();
-
-		eManager.add(entitiesInitialData::enemys::enemy1, coordinates(60,0));
-		eManager.add(entitiesInitialData::enemys::enemy2, coordinates(70,0));
-		eManager.add(entitiesInitialData::enemys::enemy3, coordinates(80,0));
-		eManager.add(entitiesInitialData::enemys::enemy1, coordinates(90,0));
-
 	while(true)
 	{
 
-
+		enemiGen eGen = waveGeneratorQueue.receive();
+		if(!eGen.isGenerated)
+		{
+			eManager.add(eGen.type, eGen.position);
+			eGen.isGenerated = true;
+		}
 		p.updatePosition(joystickTools::convert(joystickQueue.receive()));
 		if(sw3Queue.receive())
 		{
@@ -89,6 +91,7 @@ void vTaskVirtualDisplay(void *pvParameters)
 
 		bManager.remove();
 		eManager.remove();
+
 		vTaskDelay(pdMS_TO_TICKS(100));
 	}
 

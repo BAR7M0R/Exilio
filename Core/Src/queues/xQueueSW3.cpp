@@ -23,7 +23,7 @@ xQueueSW3& xQueueSW3::getInstance()
         if (instance.xQueueSW3_ == nullptr) {
             while(true);
         }
-		xTaskCreate(xQueueSW3::controlTask, "xQueueSW3ControlTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +4, NULL);
+
 	}
 	return instance;
 

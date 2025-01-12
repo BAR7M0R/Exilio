@@ -11,36 +11,40 @@
 
 #include <xQueueWaveGenerator.hpp>
 #include "task.h"
-int xQueueWaveGenerator::activationDelayms_ = 1000;
+
+uint32_t xQueueWaveGenerator::activationDelayms_ = 1000;
+
 xQueueWaveGenerator::xQueueWaveGenerator()
-:xQueueWaveGenerator_(nullptr){}
+:xQueueWaveGenerator_(nullptr){
+}
 
 xQueueWaveGenerator& xQueueWaveGenerator::getInstance()
 {
 	static xQueueWaveGenerator instance;
 	if(!instance.xQueueWaveGenerator_)
 	{
-		instance.xQueueWaveGenerator_ = xQueueCreate(queueSize_, sizeof(bool));  // Przykładowa kolejka
+		instance.xQueueWaveGenerator_ = xQueueCreate(queueSize_, sizeof(entitiesInitialData::enemiGen));  // Przykładowa kolejka
         if (instance.xQueueWaveGenerator_ == nullptr) {
             while(true);
         }
-		xTaskCreate(xQueueWaveGenerator::controlTask, "xQueueSW3ControlTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY +4, NULL);
+
 	}
 	return instance;
 
 }
 void xQueueWaveGenerator::send(entitiesInitialData::enemiGen eGen, std::uint16_t activationDelayms)
 {
-	if (xQueueWaveGenerator_)
+	if (uxQueueMessagesWaiting(xQueueWaveGenerator_) == 0)
 	{
-		activationDelayms_ = activationDelayms;
-		xQueueSend(xQueueWaveGenerator_,static_cast<const void*>(&eGen),pdMS_TO_TICKS(maxTimeout_));
+		if (xQueueSend(xQueueWaveGenerator_,static_cast<const void*>(&eGen),pdMS_TO_TICKS(maxTimeout_)) != pdPASS) {
+			while(true);
+		}
 	}
 }
 entitiesInitialData::enemiGen xQueueWaveGenerator::receive()
 {
 	entitiesInitialData::enemiGen r;
-	if (xQueueWaveGenerator_ and queueActivation_)
+	if (xQueueWaveGenerator_ !=nullptr and queueActivation_)
 	{
 		xQueueReceive(xQueueWaveGenerator_, &r, pdMS_TO_TICKS(maxTimeout_));
 		queueActivation_ = false;
@@ -55,6 +59,6 @@ extern "C" void xQueueWaveGenerator::controlTask(void *pvParameters)
 
         instance.queueActivation_ = true;
 
-        vTaskDelay(pdMS_TO_TICKS(activationDelayms_));
+        vTaskDelay(pdMS_TO_TICKS(instance.activationDelayms_));
     }
 }
