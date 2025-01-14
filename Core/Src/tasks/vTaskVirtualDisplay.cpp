@@ -12,6 +12,7 @@
 #include <FreeRTOS.h>
 #include <task.h>
 #include <cstdint>
+#include <memory>
 
 #include "virtualDisplay.hpp"
 
@@ -59,7 +60,7 @@ void vTaskVirtualDisplay(void *pvParameters)
 			eManager.add(eGen.type, eGen.position);
 			eGen.isGenerated = true;
 		}
-		p.updatePosition(joystickTools::convert(joystickQueue.receive()));
+		p.move(joystickTools::convert(joystickQueue.receive()));
 		if(sw3Queue.receive())
 		{
 			bManager.add(bullets::bullet1, p.getCurrentPosition()+p.getOffset());
@@ -72,7 +73,7 @@ void vTaskVirtualDisplay(void *pvParameters)
 			if (b !=nullptr)
 			{
 				mutexVD.lock();
-				vDisplay.putEntity(b->getCurrentCoords(), b->getPrevousCoords(), b->getTexture());
+				vDisplay.put(b->getCurrentPosition(), b->getPrevousPosition(), b->getTexture());
 				mutexVD.unlock();
 			}
 		}
@@ -81,12 +82,12 @@ void vTaskVirtualDisplay(void *pvParameters)
 			if (e != nullptr)
 			{
 				mutexVD.lock();
-				vDisplay.putEntity(e->getCurrentCoords(), e->getPrevousCoords(), e->getTexture());
+				vDisplay.put(e->getCurrentPosition(), e->getPrevousCoords(), e->getTexture());
 				mutexVD.unlock();
 			}
 		}
 		mutexVD.lock();
-		vDisplay.putEntity(p.getCurrentPosition(), p.getPrevousPosition(), p.getTexture());
+		vDisplay.put(p.getCurrentPosition(), p.getPreviousPosition(), p.getTexture());
 		mutexVD.unlock();
 
 		bManager.remove();
@@ -94,6 +95,5 @@ void vTaskVirtualDisplay(void *pvParameters)
 
 		vTaskDelay(pdMS_TO_TICKS(100));
 	}
-
- }
+}
 

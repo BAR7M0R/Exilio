@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -52,40 +52,39 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="joystick_tools_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * joystickTools.hpp</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *  Created on: Jan 4, 2025</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *      Author: dev</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef SRC_TASKS_JOYSTICKTOOLS_HPP_</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define SRC_TASKS_JOYSTICKTOOLS_HPP_</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="coordinates_8hpp.html">coordinates.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span>JoystickTools</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_joystick_tools_1_1direction.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_joystick_tools_1_1direction.html">direction</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef INC_JOYSTICKTOOLS_HPP_</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define INC_JOYSTICKTOOLS_HPP_</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="coordinates_8hpp.html">coordinates.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacejoystick_tools.html">joystickTools</a></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t down   = 0b00000001;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t up     = 0b00000010;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t left   = 0b00000100;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t right  = 0b00001000;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t middle = 0b00010000;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structjoystick_tools_1_1direction.html">   33</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structjoystick_tools_1_1direction.html">direction</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structjoystick_tools_1_1direction.html#a64ff6d336ec6d8a12c5c1d05e6c47d2d">   35</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="structjoystick_tools_1_1direction.html#a64ff6d336ec6d8a12c5c1d05e6c47d2d">down</a>   = 0b00000001;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structjoystick_tools_1_1direction.html#a87a3fdf5ee555ac2c0c379c49842d02f">   36</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="structjoystick_tools_1_1direction.html#a87a3fdf5ee555ac2c0c379c49842d02f">up</a>     = 0b00000010;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structjoystick_tools_1_1direction.html#ac2be0649488aba799a00a07e071b866f">   37</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="structjoystick_tools_1_1direction.html#ac2be0649488aba799a00a07e071b866f">left</a>   = 0b00000100;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structjoystick_tools_1_1direction.html#a3adf7f1d6bb6c1dbe0d71cdd1342b21c">   38</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="structjoystick_tools_1_1direction.html#a3adf7f1d6bb6c1dbe0d71cdd1342b21c">right</a>  = 0b00001000;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structjoystick_tools_1_1direction.html#aa874c4540fcb483943747ca5aa181840">   39</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="structjoystick_tools_1_1direction.html#aa874c4540fcb483943747ca5aa181840">middle</a> = 0b00010000;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><a class="code hl_struct" href="structcoordinates.html">coordinates</a> convert(std::uint8_t joystickData);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">/* SRC_TASKS_JOYSTICKTOOLS_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_struct" href="structcoordinates.html">coordinates</a> <a class="code hl_function" href="namespacejoystick_tools.html#acb1951078a2bffc7a88bbd5fbafd6c0c">convert</a>(std::uint8_t joystickData);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">/* INC_JOYSTICKTOOLS_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="acoordinates_8hpp_html"><div class="ttname"><a href="coordinates_8hpp.html">coordinates.hpp</a></div></div>
-<div class="ttc" id="astruct_joystick_tools_1_1direction_html"><div class="ttname"><a href="struct_joystick_tools_1_1direction.html">JoystickTools::direction</a></div><div class="ttdef"><b>Definition</b> joystickTools.hpp:28</div></div>
-<div class="ttc" id="astructcoordinates_html"><div class="ttname"><a href="structcoordinates.html">coordinates</a></div><div class="ttdef"><b>Definition</b> coordinates.hpp:15</div></div>
+<div class="ttc" id="anamespacejoystick_tools_html"><div class="ttname"><a href="namespacejoystick_tools.html">joystickTools</a></div></div>
+<div class="ttc" id="anamespacejoystick_tools_html_acb1951078a2bffc7a88bbd5fbafd6c0c"><div class="ttname"><a href="namespacejoystick_tools.html#acb1951078a2bffc7a88bbd5fbafd6c0c">joystickTools::convert</a></div><div class="ttdeci">coordinates convert(std::uint8_t joystickData)</div><div class="ttdef"><b>Definition</b> joystickTools.cpp:16</div></div>
+<div class="ttc" id="astructcoordinates_html"><div class="ttname"><a href="structcoordinates.html">coordinates</a></div><div class="ttdef"><b>Definition</b> coordinates.hpp:26</div></div>
+<div class="ttc" id="astructjoystick_tools_1_1direction_html"><div class="ttname"><a href="structjoystick_tools_1_1direction.html">joystickTools::direction</a></div><div class="ttdef"><b>Definition</b> joystickTools.hpp:34</div></div>
+<div class="ttc" id="astructjoystick_tools_1_1direction_html_a3adf7f1d6bb6c1dbe0d71cdd1342b21c"><div class="ttname"><a href="structjoystick_tools_1_1direction.html#a3adf7f1d6bb6c1dbe0d71cdd1342b21c">joystickTools::direction::right</a></div><div class="ttdeci">static constexpr std::uint8_t right</div><div class="ttdef"><b>Definition</b> joystickTools.hpp:38</div></div>
+<div class="ttc" id="astructjoystick_tools_1_1direction_html_a64ff6d336ec6d8a12c5c1d05e6c47d2d"><div class="ttname"><a href="structjoystick_tools_1_1direction.html#a64ff6d336ec6d8a12c5c1d05e6c47d2d">joystickTools::direction::down</a></div><div class="ttdeci">static constexpr std::uint8_t down</div><div class="ttdef"><b>Definition</b> joystickTools.hpp:35</div></div>
+<div class="ttc" id="astructjoystick_tools_1_1direction_html_a87a3fdf5ee555ac2c0c379c49842d02f"><div class="ttname"><a href="structjoystick_tools_1_1direction.html#a87a3fdf5ee555ac2c0c379c49842d02f">joystickTools::direction::up</a></div><div class="ttdeci">static constexpr std::uint8_t up</div><div class="ttdef"><b>Definition</b> joystickTools.hpp:36</div></div>
+<div class="ttc" id="astructjoystick_tools_1_1direction_html_aa874c4540fcb483943747ca5aa181840"><div class="ttname"><a href="structjoystick_tools_1_1direction.html#aa874c4540fcb483943747ca5aa181840">joystickTools::direction::middle</a></div><div class="ttdeci">static constexpr std::uint8_t middle</div><div class="ttdef"><b>Definition</b> joystickTools.hpp:39</div></div>
+<div class="ttc" id="astructjoystick_tools_1_1direction_html_ac2be0649488aba799a00a07e071b866f"><div class="ttname"><a href="structjoystick_tools_1_1direction.html#ac2be0649488aba799a00a07e071b866f">joystickTools::direction::left</a></div><div class="ttdeci">static constexpr std::uint8_t left</div><div class="ttdef"><b>Definition</b> joystickTools.hpp:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

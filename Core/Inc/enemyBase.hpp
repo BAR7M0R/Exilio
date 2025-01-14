@@ -3,9 +3,16 @@
  * @author Bartłomiej Głodek
  * @date 2025-01-10
  *
+ * @copyright
+ * Copyright (c) Bartłomiej Głodek 2025
+ * Permission is granted to use, copy, modify, and distribute this software for any non-commercial purpose, free of charge.
+ * For commercial use, you must notify the author and obtain permission before using this software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
  * @brief
  * @details
- *
+ * @todo opis
  *
  */
 #ifndef INC_ENEMYBASE_HPP_
@@ -13,7 +20,10 @@
 #include <cstdint>
 #include "coordinates.hpp"
 #include "entitiesInitData.hpp"
-
+/**
+ * @class enemyBase
+ * @todo opis
+ */
 class enemyBase
 {
 public:
@@ -26,17 +36,30 @@ public:
 			const coordinates& texture_corner_2,
 			const std::uint8_t slownest,
 			const coordinates& moveDirection);
+	/**
+	 * @fn void move()
+	 * @todo opis
+	 */
 	void move();
+	/**
+	 * @fn void takeDamage(uint8_t)
+	 * @param value
+	 * @todo opis
+	 */
 	void takeDamage(uint8_t value);
 	std::int8_t getScore();
 	std::int8_t getCurrentLife();
 	entitiesInitialData::enemys getType();
 	const segment& getTexture() const;
-	coordinates& getCurrentCoords();
+	coordinates& getCurrentPosition();
 	coordinates& getPrevousCoords();
 	const coordinates& getTextureCorner1() const;
 	const coordinates& getTextureCorner2() const;
 	const bool isToRemove() const;
+	/**
+	 * @fn void setToRemove()
+	 * @todo opis
+	 */
 	void setToRemove();
 
 	static std::int8_t currentNumber_;

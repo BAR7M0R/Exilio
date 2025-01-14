@@ -1,0 +1,15 @@
+<map id="player::player" name="player::player">
+<area shape="rect" id="Node000001" title=" " alt="" coords="587,56,686,83"/>
+<area shape="rect" id="Node000002" href="$classplayer.html#a66d3f826f379dcc7c9b4890863074be4" title=" " alt="" coords="406,5,539,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="575,53,517,35,519,30,577,48"/>
+<area shape="rect" id="Node000006" href="$classplayer.html#a4665a9a14b92cd85aa657545ba56a5c4" title=" " alt="" coords="413,56,532,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="571,72,533,72,533,67,571,67"/>
+<area shape="rect" id="Node000007" href="$classplayer.html#a562deb1fda48edf8063f6270a15a6943" title=" " alt="" coords="423,107,522,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="577,90,519,109,517,104,575,85"/>
+<area shape="rect" id="Node000003" href="$v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" id="Node000004" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

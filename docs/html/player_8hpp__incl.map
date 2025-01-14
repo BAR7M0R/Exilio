@@ -1,0 +1,15 @@
+<map id="Core/Inc/player.hpp" name="Core/Inc/player.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,5,194,32"/>
+<area shape="rect" id="Node000002" href="$coordinates_8hpp.html" title=" " alt="" coords="5,80,119,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,34,85,70,81,66,113,31"/>
+<area shape="rect" id="Node000004" href="$segment_8hpp.html" title="This file contains the declaration of the segment class, which is the basic type of screan manipulati..." alt="" coords="143,80,240,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,31,172,67,168,70,135,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="86,229,147,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,106,109,214,104,216,64,108"/>
+<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="181,109,162,130,144,156,132,186,124,215,119,213,127,184,140,153,158,127,177,105"/>
+<area shape="rect" id="Node000005" href="$field_8hpp.html" title=" " alt="" coords="154,155,224,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="194,107,192,139,187,139,188,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="248,155,298,181"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="207,105,249,142,246,146,204,109"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="178,184,142,220,138,216,174,180"/>
+</map>

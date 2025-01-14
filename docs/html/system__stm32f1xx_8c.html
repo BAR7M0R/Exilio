@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Exilio: Core/Src/system_stm32f1xx.c File Reference</title>
+<title>Exilio: Core/Src/hardware/system_stm32f1xx.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -43,7 +43,7 @@ $(function(){ initResizable(false); });
 </script>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li><li class="navelem"><a class="el" href="dir_783a946f02cf4126745a28569acbab55.html">hardware</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -62,7 +62,12 @@ $(function(){ initResizable(false); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for system_stm32f1xx.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="system__stm32f1xx_8c__incl.png" border="0" usemap="#a_core_2_src_2system__stm32f1xx_8c" alt=""/></div>
+<div class="center"><img src="system__stm32f1xx_8c__incl.png" border="0" usemap="#a_core_2_src_2hardware_2system__stm32f1xx_8c" alt=""/></div>
+<map name="a_core_2_src_2hardware_2system__stm32f1xx_8c" id="a_core_2_src_2hardware_2system__stm32f1xx_8c">
+<area shape="rect" title="CMSIS Cortex&#45;M3 Device Peripheral Access Layer System Source File." alt="" coords="5,5,183,48"/>
+<area shape="rect" title=" " alt="" coords="47,96,141,123"/>
+<area shape="poly" title=" " alt="" coords="97,49,97,80,91,80,91,49"/>
+</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -83,14 +88,11 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:gaa3cd3e43291e81e795d642b79b6088e6" id="r_gaa3cd3e43291e81e795d642b79b6088e6"><td class="memItemLeft" align="right" valign="top">
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SystemCoreClock</b> = 8000000</td></tr>
+<tr class="memitem:gaa3cd3e43291e81e795d642b79b6088e6" id="r_gaa3cd3e43291e81e795d642b79b6088e6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m32_f1xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a> = 8000000</td></tr>
 <tr class="separator:gaa3cd3e43291e81e795d642b79b6088e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga53cb26d01524d9560f98101a2c597c40" id="r_ga53cb26d01524d9560f98101a2c597c40"><td class="memItemLeft" align="right" valign="top">
-const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>AHBPrescTable</b> [16U] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}</td></tr>
+<tr class="memitem:ga53cb26d01524d9560f98101a2c597c40" id="r_ga53cb26d01524d9560f98101a2c597c40"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m32_f1xx___system___private___variables.html#ga53cb26d01524d9560f98101a2c597c40">AHBPrescTable</a> [16U] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}</td></tr>
 <tr class="separator:ga53cb26d01524d9560f98101a2c597c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa93c123312c9273c0928a79f1203f759" id="r_gaa93c123312c9273c0928a79f1203f759"><td class="memItemLeft" align="right" valign="top">
-const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>APBPrescTable</b> [8U] = {0, 0, 0, 0, 1, 2, 3, 4}</td></tr>
+<tr class="memitem:gaa93c123312c9273c0928a79f1203f759" id="r_gaa93c123312c9273c0928a79f1203f759"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m32_f1xx___system___private___variables.html#gaa93c123312c9273c0928a79f1203f759">APBPrescTable</a> [8U] = {0, 0, 0, 0, 1, 2, 3, 4}</td></tr>
 <tr class="separator:gaa93c123312c9273c0928a79f1203f759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -47,35 +47,558 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classvirtual_display-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">virtualDisplay Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is singleton class based on the <a href="pdf/memory_model.pdf">memory model</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="virtual_display_8hpp_source.html">virtualDisplay.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9dceacb3eb23d50e40f4509893bdd13" id="r_ab9dceacb3eb23d50e40f4509893bdd13"><td class="memItemLeft" align="right" valign="top"><a id="ab9dceacb3eb23d50e40f4509893bdd13" name="ab9dceacb3eb23d50e40f4509893bdd13"></a>
-std::uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>getVMap</b> ()</td></tr>
-<tr class="separator:ab9dceacb3eb23d50e40f4509893bdd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a452d7a7dcbe609684379e69a632029b4" id="r_a452d7a7dcbe609684379e69a632029b4"><td class="memItemLeft" align="right" valign="top"><a id="a452d7a7dcbe609684379e69a632029b4" name="a452d7a7dcbe609684379e69a632029b4"></a>
-std::uint8_t **&#160;</td><td class="memItemRight" valign="bottom"><b>getMap</b> ()</td></tr>
+<tr class="memitem:a452d7a7dcbe609684379e69a632029b4" id="r_a452d7a7dcbe609684379e69a632029b4"><td class="memItemLeft" align="right" valign="top">std::uint8_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a452d7a7dcbe609684379e69a632029b4">getMap</a> ()</td></tr>
+<tr class="memdesc:a452d7a7dcbe609684379e69a632029b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a pointer to the virtual map.  <br /></td></tr>
 <tr class="separator:a452d7a7dcbe609684379e69a632029b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2a5b76de918e346e60b62cc014c86d7" id="r_ac2a5b76de918e346e60b62cc014c86d7"><td class="memItemLeft" align="right" valign="top"><a id="ac2a5b76de918e346e60b62cc014c86d7" name="ac2a5b76de918e346e60b62cc014c86d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fill</b> (uint8_t data)</td></tr>
-<tr class="separator:ac2a5b76de918e346e60b62cc014c86d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3f2d03e216c25c615d9543954a0db09" id="r_ae3f2d03e216c25c615d9543954a0db09"><td class="memItemLeft" align="right" valign="top"><a id="ae3f2d03e216c25c615d9543954a0db09" name="ae3f2d03e216c25c615d9543954a0db09"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>putEntity</b> (<a class="el" href="structcoordinates.html">coordinates</a> &amp;coords, <a class="el" href="structcoordinates.html">coordinates</a> &amp;cordspreve, const <a class="el" href="classsegment.html">segment</a> &amp;texture)</td></tr>
-<tr class="separator:ae3f2d03e216c25c615d9543954a0db09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467e5c154f8ddf6ea6bd118b01693d75" id="r_a467e5c154f8ddf6ea6bd118b01693d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a467e5c154f8ddf6ea6bd118b01693d75">put</a> (<a class="el" href="structcoordinates.html">coordinates</a> &amp;nextPosition, <a class="el" href="structcoordinates.html">coordinates</a> &amp;currentPosition, const <a class="el" href="classsegment.html">segment</a> &amp;texture)</td></tr>
+<tr class="memdesc:a467e5c154f8ddf6ea6bd118b01693d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the texture's position on virtual map.  <br /></td></tr>
+<tr class="separator:a467e5c154f8ddf6ea6bd118b01693d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afe8b19ac64106efe1ee1e79d1451a88d" id="r_afe8b19ac64106efe1ee1e79d1451a88d"><td class="memItemLeft" align="right" valign="top"><a id="afe8b19ac64106efe1ee1e79d1451a88d" name="afe8b19ac64106efe1ee1e79d1451a88d"></a>
-static <a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
-<tr class="separator:afe8b19ac64106efe1ee1e79d1451a88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7083b08ddc7406e018ca657407254fb1" id="r_a7083b08ddc7406e018ca657407254fb1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7083b08ddc7406e018ca657407254fb1">getInstance</a> ()</td></tr>
+<tr class="memdesc:a7083b08ddc7406e018ca657407254fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and retrieves the singleton instance.  <br /></td></tr>
+<tr class="separator:a7083b08ddc7406e018ca657407254fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aff39f25f69a4cc8c3ebeb58e8f11606f" id="r_aff39f25f69a4cc8c3ebeb58e8f11606f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff39f25f69a4cc8c3ebeb58e8f11606f">virtualDisplay</a> ()</td></tr>
+<tr class="separator:aff39f25f69a4cc8c3ebeb58e8f11606f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e90d8b5a768392016adaf8aea0e3a6" id="r_af5e90d8b5a768392016adaf8aea0e3a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5e90d8b5a768392016adaf8aea0e3a6">virtualDisplay</a> (const <a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;)=delete</td></tr>
+<tr class="separator:af5e90d8b5a768392016adaf8aea0e3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0aa30d4b080a79c89b4205e06707d9c" id="r_ad0aa30d4b080a79c89b4205e06707d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0aa30d4b080a79c89b4205e06707d9c">operator=</a> (const <a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;)=delete</td></tr>
+<tr class="separator:ad0aa30d4b080a79c89b4205e06707d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231df007fa355ac2626d1f0786830bf9" id="r_a231df007fa355ac2626d1f0786830bf9"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a231df007fa355ac2626d1f0786830bf9">checkNumberOfFields</a> (<a class="el" href="structcoordinates.html">coordinates</a> &amp;pointPosition)</td></tr>
+<tr class="separator:a231df007fa355ac2626d1f0786830bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7f1eb950fbb738dc506ea41692f8f8" id="r_abd7f1eb950fbb738dc506ea41692f8f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsegment.html">segment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd7f1eb950fbb738dc506ea41692f8f8">takeSnap</a> (<a class="el" href="structcoordinates.html">coordinates</a> pointPosition)</td></tr>
+<tr class="separator:abd7f1eb950fbb738dc506ea41692f8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c139f149bc90b1b78065e05e1e48596" id="r_a3c139f149bc90b1b78065e05e1e48596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c139f149bc90b1b78065e05e1e48596">putSegment</a> (<a class="el" href="classsegment.html">segment</a> &amp;s, <a class="el" href="structcoordinates.html">coordinates</a> coords)</td></tr>
+<tr class="separator:a3c139f149bc90b1b78065e05e1e48596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a64ce2fde737d06c4dac075e74758be81" id="r_a64ce2fde737d06c4dac075e74758be81"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::array&lt; <a class="el" href="field_8hpp.html#a32cef26e51bb25de7d1e5eba5ff967e8">field</a>, <a class="el" href="namespacedisplay_constans.html#a201e79c2e8183598b284b04ac0d074c6">v_width</a> &gt;, <a class="el" href="namespacedisplay_constans.html#ade322e45908129d83309736b803cf440">v_height</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64ce2fde737d06c4dac075e74758be81">vMap_</a></td></tr>
+<tr class="separator:a64ce2fde737d06c4dac075e74758be81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a7c9ec959bdc1a0c013d2104ccd694" id="r_a79a7c9ec959bdc1a0c013d2104ccd694"><td class="memItemLeft" align="right" valign="top">std::uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a7c9ec959bdc1a0c013d2104ccd694">map_</a> [<a class="el" href="namespacedisplay_constans.html#a6c4960c2cace7049d4590350e9a2f993">height_lcd</a> *<a class="el" href="namespacedisplay_constans.html#a6a6dd228126cc18101000566fd290865">width_lcd</a>]</td></tr>
+<tr class="separator:a79a7c9ec959bdc1a0c013d2104ccd694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is singleton class based on the <a href="pdf/memory_model.pdf">memory model</a>. </p>
+<p>Defines a two-dimensional array virtual map using the <a class="el" href="field_8hpp.html">fields alias type.</a></p>
+<p>Since this class is Singleton and based on concept lazy initialization, the instance is initialized only upon the first usage of 'getInstance'.</p>
+<p>User methods:</p><ul>
+<li>'getInstance' - Create and retrieves the Singleton instance.</li>
+<li>'getMap' - Provides access to the map pointer array for display purposes.</li>
+<li>'put' - Sets data on the virtual map. </li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aff39f25f69a4cc8c3ebeb58e8f11606f" name="aff39f25f69a4cc8c3ebeb58e8f11606f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff39f25f69a4cc8c3ebeb58e8f11606f">&#9670;&#160;</a></span>virtualDisplay() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtualDisplay::virtualDisplay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_aff39f25f69a4cc8c3ebeb58e8f11606f_icgraph.png" border="0" usemap="#aclassvirtual_display_aff39f25f69a4cc8c3ebeb58e8f11606f_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_aff39f25f69a4cc8c3ebeb58e8f11606f_icgraph" id="aclassvirtual_display_aff39f25f69a4cc8c3ebeb58e8f11606f_icgraph">
+<area shape="rect" title=" " alt="" coords="642,81,829,108"/>
+<area shape="rect" href="classvirtual_display.html#a7083b08ddc7406e018ca657407254fb1" title="Creates and retrieves the singleton instance." alt="" coords="412,31,588,57"/>
+<area shape="poly" title=" " alt="" coords="654,80,565,61,566,55,655,75"/>
+<area shape="rect" href="classvirtual_display.html#ad0aa30d4b080a79c89b4205e06707d9c" title=" " alt="" coords="418,81,582,108"/>
+<area shape="poly" title=" " alt="" coords="626,97,582,97,582,92,626,92"/>
+<area shape="rect" href="classvirtual_display.html#af5e90d8b5a768392016adaf8aea0e3a6" title=" " alt="" coords="406,132,594,159"/>
+<area shape="poly" title=" " alt="" coords="655,114,566,134,565,129,654,109"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="396,34,353,29,354,24,396,29"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="397,59,359,64,358,58,396,54"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5e90d8b5a768392016adaf8aea0e3a6" name="af5e90d8b5a768392016adaf8aea0e3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e90d8b5a768392016adaf8aea0e3a6">&#9670;&#160;</a></span>virtualDisplay() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtualDisplay::virtualDisplay </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_af5e90d8b5a768392016adaf8aea0e3a6_cgraph.png" border="0" usemap="#aclassvirtual_display_af5e90d8b5a768392016adaf8aea0e3a6_cgraph" alt=""/></div>
+<map name="aclassvirtual_display_af5e90d8b5a768392016adaf8aea0e3a6_cgraph" id="aclassvirtual_display_af5e90d8b5a768392016adaf8aea0e3a6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,193,32"/>
+<area shape="rect" href="classvirtual_display.html#aff39f25f69a4cc8c3ebeb58e8f11606f" title=" " alt="" coords="241,5,428,32"/>
+<area shape="poly" title=" " alt="" coords="193,16,225,16,225,21,193,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a231df007fa355ac2626d1f0786830bf9" name="a231df007fa355ac2626d1f0786830bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231df007fa355ac2626d1f0786830bf9">&#9670;&#160;</a></span>checkNumberOfFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t virtualDisplay::checkNumberOfFields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoordinates.html">coordinates</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pointPosition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a231df007fa355ac2626d1f0786830bf9_icgraph.png" border="0" usemap="#aclassvirtual_display_a231df007fa355ac2626d1f0786830bf9_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_a231df007fa355ac2626d1f0786830bf9_icgraph" id="aclassvirtual_display_a231df007fa355ac2626d1f0786830bf9_icgraph">
+<area shape="rect" title=" " alt="" coords="792,5,981,48"/>
+<area shape="rect" href="classvirtual_display.html#abd7f1eb950fbb738dc506ea41692f8f8" title=" " alt="" coords="581,13,744,40"/>
+<area shape="poly" title=" " alt="" coords="777,29,745,29,745,24,777,24"/>
+<area shape="rect" href="classvirtual_display.html#a467e5c154f8ddf6ea6bd118b01693d75" title="Update the texture&#39;s position on virtual map." alt="" coords="406,13,533,40"/>
+<area shape="poly" title=" " alt="" coords="565,29,533,29,533,24,565,24"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,13,358,40"/>
+<area shape="poly" title=" " alt="" coords="391,29,359,29,359,24,391,24"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,13,173,40"/>
+<area shape="poly" title=" " alt="" coords="206,29,174,29,174,24,206,24"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,13,55,40"/>
+<area shape="poly" title=" " alt="" coords="87,29,55,29,55,24,87,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7083b08ddc7406e018ca657407254fb1" name="a7083b08ddc7406e018ca657407254fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7083b08ddc7406e018ca657407254fb1">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp; virtualDisplay::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and retrieves the singleton instance. </p>
+<p>This method ensures that only one instance of <a class="el" href="classvirtual_display.html" title="This is singleton class based on the memory model.">virtualDisplay</a> exists. </p><dl class="section return"><dt>Returns</dt><dd>A reference to the singleton instance of <a class="el" href="classvirtual_display.html" title="This is singleton class based on the memory model.">virtualDisplay</a>. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a7083b08ddc7406e018ca657407254fb1_cgraph.png" border="0" usemap="#aclassvirtual_display_a7083b08ddc7406e018ca657407254fb1_cgraph" alt=""/></div>
+<map name="aclassvirtual_display_a7083b08ddc7406e018ca657407254fb1_cgraph" id="aclassvirtual_display_a7083b08ddc7406e018ca657407254fb1_cgraph">
+<area shape="rect" title="Creates and retrieves the singleton instance." alt="" coords="5,5,182,32"/>
+<area shape="rect" href="classvirtual_display.html#aff39f25f69a4cc8c3ebeb58e8f11606f" title=" " alt="" coords="230,5,417,32"/>
+<area shape="poly" title=" " alt="" coords="182,16,214,16,214,21,182,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a7083b08ddc7406e018ca657407254fb1_icgraph.png" border="0" usemap="#aclassvirtual_display_a7083b08ddc7406e018ca657407254fb1_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_a7083b08ddc7406e018ca657407254fb1_icgraph" id="aclassvirtual_display_a7083b08ddc7406e018ca657407254fb1_icgraph">
+<area shape="rect" title="Creates and retrieves the singleton instance." alt="" coords="406,31,583,57"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="390,34,353,29,354,24,391,29"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="391,59,359,64,358,58,390,54"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a452d7a7dcbe609684379e69a632029b4" name="a452d7a7dcbe609684379e69a632029b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452d7a7dcbe609684379e69a632029b4">&#9670;&#160;</a></span>getMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ** virtualDisplay::getMap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a pointer to the virtual map. </p>
+<p>The size of the array is fixed and it is equal 1024 bytes(1024 <a class="el" href="field_8hpp.html">fields </a>). </p><dl class="section return"><dt>Returns</dt><dd>A double pointer to an array of <code>std::uint8_t</code> representing the virtual map. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a452d7a7dcbe609684379e69a632029b4_icgraph.png" border="0" usemap="#aclassvirtual_display_a452d7a7dcbe609684379e69a632029b4_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_a452d7a7dcbe609684379e69a632029b4_icgraph" id="aclassvirtual_display_a452d7a7dcbe609684379e69a632029b4_icgraph">
+<area shape="rect" title="Retrieves a pointer to the virtual map." alt="" coords="396,5,548,32"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="221,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="381,21,348,21,348,16,381,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,174,21,174,16,205,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0aa30d4b080a79c89b4205e06707d9c" name="ad0aa30d4b080a79c89b4205e06707d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0aa30d4b080a79c89b4205e06707d9c">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp; virtualDisplay::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvirtual_display.html">virtualDisplay</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_ad0aa30d4b080a79c89b4205e06707d9c_cgraph.png" border="0" usemap="#aclassvirtual_display_ad0aa30d4b080a79c89b4205e06707d9c_cgraph" alt=""/></div>
+<map name="aclassvirtual_display_ad0aa30d4b080a79c89b4205e06707d9c_cgraph" id="aclassvirtual_display_ad0aa30d4b080a79c89b4205e06707d9c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,169,32"/>
+<area shape="rect" href="classvirtual_display.html#aff39f25f69a4cc8c3ebeb58e8f11606f" title=" " alt="" coords="217,5,404,32"/>
+<area shape="poly" title=" " alt="" coords="169,16,201,16,201,21,169,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a467e5c154f8ddf6ea6bd118b01693d75" name="a467e5c154f8ddf6ea6bd118b01693d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467e5c154f8ddf6ea6bd118b01693d75">&#9670;&#160;</a></span>put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void virtualDisplay::put </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoordinates.html">coordinates</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>nextPosition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcoordinates.html">coordinates</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>currentPosition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsegment.html">segment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the texture's position on virtual map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nextPosition</td><td>- The next position of the texture. </td></tr>
+    <tr><td class="paramname">currentPosition</td><td>- The current position of the texture </td></tr>
+    <tr><td class="paramname">texture</td><td>- The texture used to mask the current position and set the next position. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_cgraph.png" border="0" usemap="#aclassvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_cgraph" alt=""/></div>
+<map name="aclassvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_cgraph" id="aclassvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_cgraph">
+<area shape="rect" title="Update the texture&#39;s position on virtual map." alt="" coords="5,148,132,175"/>
+<area shape="rect" href="classclaster.html#a29c778cfced36d74c17c35007a053494" title=" " alt="" coords="180,5,383,48"/>
+<area shape="poly" title=" " alt="" coords="79,146,120,103,148,79,178,58,188,52,190,57,181,62,151,83,124,107,83,149"/>
+<area shape="rect" href="classvirtual_display.html#a3c139f149bc90b1b78065e05e1e48596" title=" " alt="" coords="192,72,370,99"/>
+<area shape="poly" title=" " alt="" coords="95,145,179,108,202,101,204,106,181,113,97,150"/>
+<area shape="rect" href="classclaster.html#accde12bb1e37990e7820d5800d2a144d" title=" " alt="" coords="183,123,380,149"/>
+<area shape="poly" title=" " alt="" coords="132,151,167,147,167,152,133,156"/>
+<area shape="rect" href="classvirtual_display.html#abd7f1eb950fbb738dc506ea41692f8f8" title=" " alt="" coords="200,173,363,200"/>
+<area shape="poly" title=" " alt="" coords="133,166,184,172,183,178,132,172"/>
+<area shape="rect" href="namespacecoordinates_tools.html#ad5e3812951a94c97b825df17a61f74f9" title=" " alt="" coords="181,228,382,255"/>
+<area shape="poly" title=" " alt="" coords="98,173,181,210,213,221,212,226,179,214,96,178"/>
+<area shape="rect" href="namespacecoordinates_tools.html#a249de20c61bcaaea0cdc18668842bc30" title=" " alt="" coords="192,279,371,305"/>
+<area shape="poly" title=" " alt="" coords="82,174,122,219,150,243,181,264,193,270,191,275,178,269,147,248,119,222,78,177"/>
+<area shape="rect" href="classsegment.html#ab775b97a2adafc9cfb5d0a944ff17ae1" title="Returns the size of the segment." alt="" coords="474,68,577,95"/>
+<area shape="poly" title=" " alt="" coords="381,46,459,64,458,69,379,51"/>
+<area shape="poly" title=" " alt="" coords="371,81,458,80,458,85,371,87"/>
+<area shape="poly" title=" " alt="" coords="344,119,458,94,459,99,345,125"/>
+<area shape="poly" title=" " alt="" coords="358,170,382,159,396,146,405,133,414,118,430,104,458,91,460,96,432,109,418,122,409,136,400,150,384,164,360,175"/>
+<area shape="rect" href="classsegment.html#adc9b1033e89f29514ccdf16ef915b370" title="Accesses the @link field.hpp field @endlink element at the specified index, with bounds checking." alt="" coords="480,119,571,145"/>
+<area shape="poly" title=" " alt="" coords="344,170,465,143,466,148,345,175"/>
+<area shape="rect" href="classvirtual_display.html#a231df007fa355ac2626d1f0786830bf9" title=" " alt="" coords="431,169,620,212"/>
+<area shape="poly" title=" " alt="" coords="364,185,415,186,415,192,363,191"/>
+<area shape="rect" href="namespacecoordinates_tools.html#ae8b12b2546b392eee122cf2df7fa5589" title=" " alt="" coords="668,261,851,288"/>
+<area shape="poly" title=" " alt="" coords="383,246,653,265,652,270,382,251"/>
+<area shape="rect" href="namespacecoordinates_tools.html#ab07d197609bc06de924819c52dfe7a95" title=" " alt="" coords="438,287,613,313"/>
+<area shape="poly" title=" " alt="" coords="341,253,453,280,452,285,339,258"/>
+<area shape="poly" title=" " alt="" coords="613,288,652,284,653,289,614,293"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_icgraph.png" border="0" usemap="#aclassvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_icgraph" id="aclassvirtual_display_a467e5c154f8ddf6ea6bd118b01693d75_icgraph">
+<area shape="rect" title="Update the texture&#39;s position on virtual map." alt="" coords="406,5,533,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c139f149bc90b1b78065e05e1e48596" name="a3c139f149bc90b1b78065e05e1e48596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c139f149bc90b1b78065e05e1e48596">&#9670;&#160;</a></span>putSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void virtualDisplay::putSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsegment.html">segment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcoordinates.html">coordinates</a></td>          <td class="paramname"><span class="paramname"><em>coords</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a3c139f149bc90b1b78065e05e1e48596_cgraph.png" border="0" usemap="#aclassvirtual_display_a3c139f149bc90b1b78065e05e1e48596_cgraph" alt=""/></div>
+<map name="aclassvirtual_display_a3c139f149bc90b1b78065e05e1e48596_cgraph" id="aclassvirtual_display_a3c139f149bc90b1b78065e05e1e48596_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" href="classsegment.html#ab775b97a2adafc9cfb5d0a944ff17ae1" title="Returns the size of the segment." alt="" coords="232,5,335,32"/>
+<area shape="poly" title=" " alt="" coords="184,16,216,16,216,21,184,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_a3c139f149bc90b1b78065e05e1e48596_icgraph.png" border="0" usemap="#aclassvirtual_display_a3c139f149bc90b1b78065e05e1e48596_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_a3c139f149bc90b1b78065e05e1e48596_icgraph" id="aclassvirtual_display_a3c139f149bc90b1b78065e05e1e48596_icgraph">
+<area shape="rect" title=" " alt="" coords="581,5,759,32"/>
+<area shape="rect" href="classvirtual_display.html#a467e5c154f8ddf6ea6bd118b01693d75" title="Update the texture&#39;s position on virtual map." alt="" coords="406,5,533,32"/>
+<area shape="poly" title=" " alt="" coords="565,21,533,21,533,16,565,16"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd7f1eb950fbb738dc506ea41692f8f8" name="abd7f1eb950fbb738dc506ea41692f8f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7f1eb950fbb738dc506ea41692f8f8">&#9670;&#160;</a></span>takeSnap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsegment.html">segment</a> virtualDisplay::takeSnap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoordinates.html">coordinates</a></td>          <td class="paramname"><span class="paramname"><em>pointPosition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_cgraph.png" border="0" usemap="#aclassvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_cgraph" alt=""/></div>
+<map name="aclassvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_cgraph" id="aclassvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,64,169,91"/>
+<area shape="rect" href="classsegment.html#adc9b1033e89f29514ccdf16ef915b370" title="Accesses the @link field.hpp field @endlink element at the specified index, with bounds checking." alt="" coords="266,5,356,32"/>
+<area shape="poly" title=" " alt="" coords="140,61,250,32,252,37,142,66"/>
+<area shape="rect" href="classvirtual_display.html#a231df007fa355ac2626d1f0786830bf9" title=" " alt="" coords="217,56,406,99"/>
+<area shape="poly" title=" " alt="" coords="169,75,201,75,201,80,169,80"/>
+<area shape="rect" href="classsegment.html#ab775b97a2adafc9cfb5d0a944ff17ae1" title="Returns the size of the segment." alt="" coords="260,123,363,149"/>
+<area shape="poly" title=" " alt="" coords="142,89,245,116,244,121,140,94"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_icgraph.png" border="0" usemap="#aclassvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_icgraph" alt=""/></div>
+<map name="aclassvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_icgraph" id="aclassvirtual_display_abd7f1eb950fbb738dc506ea41692f8f8_icgraph">
+<area shape="rect" title=" " alt="" coords="581,5,744,32"/>
+<area shape="rect" href="classvirtual_display.html#a467e5c154f8ddf6ea6bd118b01693d75" title="Update the texture&#39;s position on virtual map." alt="" coords="406,5,533,32"/>
+<area shape="poly" title=" " alt="" coords="565,21,533,21,533,16,565,16"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a79a7c9ec959bdc1a0c013d2104ccd694" name="a79a7c9ec959bdc1a0c013d2104ccd694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a7c9ec959bdc1a0c013d2104ccd694">&#9670;&#160;</a></span>map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t* virtualDisplay::map_[<a class="el" href="namespacedisplay_constans.html#a6c4960c2cace7049d4590350e9a2f993">height_lcd</a> *<a class="el" href="namespacedisplay_constans.html#a6a6dd228126cc18101000566fd290865">width_lcd</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64ce2fde737d06c4dac075e74758be81" name="a64ce2fde737d06c4dac075e74758be81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ce2fde737d06c4dac075e74758be81">&#9670;&#160;</a></span>vMap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::array&lt;<a class="el" href="field_8hpp.html#a32cef26e51bb25de7d1e5eba5ff967e8">field</a>, <a class="el" href="namespacedisplay_constans.html#a201e79c2e8183598b284b04ac0d074c6">v_width</a>&gt;, <a class="el" href="namespacedisplay_constans.html#ade322e45908129d83309736b803cf440">v_height</a>&gt; virtualDisplay::vMap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Core/Inc/<a class="el" href="virtual_display_8hpp_source.html">virtualDisplay.hpp</a></li>
-<li>Core/Src/<b>virtualDisplay.cpp</b></li>
+<li>Core/Src/<a class="el" href="virtual_display_8cpp.html">virtualDisplay.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -50,7 +50,8 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">SW3_Port.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -59,11 +60,23 @@ $(function(){ initResizable(false); });
 Include dependency graph for SW3_Port.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_w3___port_8hpp__incl.png" border="0" usemap="#a_core_2_inc_2hardware_2_s_w3___port_8hpp" alt=""/></div>
+<map name="a_core_2_inc_2hardware_2_s_w3___port_8hpp" id="a_core_2_inc_2hardware_2_s_w3___port_8hpp">
+<area shape="rect" title=" " alt="" coords="5,5,167,48"/>
+<area shape="rect" title=" " alt="" coords="56,96,116,123"/>
+<area shape="poly" title=" " alt="" coords="89,49,89,80,83,80,83,49"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_w3___port_8hpp__dep__incl.png" border="0" usemap="#a_core_2_inc_2hardware_2_s_w3___port_8hppdep" alt=""/></div>
+<map name="a_core_2_inc_2hardware_2_s_w3___port_8hppdep" id="a_core_2_inc_2hardware_2_s_w3___port_8hppdep">
+<area shape="rect" title=" " alt="" coords="109,5,270,48"/>
+<area shape="rect" href="_s_w3___port_8cpp.html" title=" " alt="" coords="5,96,169,139"/>
+<area shape="poly" title=" " alt="" coords="156,60,113,97,109,93,153,56"/>
+<area shape="rect" href="v_task_s_w3_8cpp.html" title=" " alt="" coords="192,104,395,131"/>
+<area shape="poly" title=" " alt="" coords="227,56,281,102,277,106,224,60"/>
+</map>
 </div>
 </div>
 <p><a href="_s_w3___port_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -72,15 +85,30 @@ This graph shows which files directly or indirectly include this file:</div>
 Namespaces</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_w3_port_defines.html">SW3PortDefines</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_w3_port_consts.html">SW3PortConsts</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7744e3d553aeeea241aefdb77791a0aa" id="r_a7744e3d553aeeea241aefdb77791a0aa"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7744e3d553aeeea241aefdb77791a0aa">SW3_Port_read</a> ()</td></tr>
 <tr class="separator:a7744e3d553aeeea241aefdb77791a0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0366c233a0483a48cbb493279af3cf4d" id="r_a0366c233a0483a48cbb493279af3cf4d"><td class="memItemLeft" align="right" valign="top">static constexpr std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_w3_port_consts.html#a0366c233a0483a48cbb493279af3cf4d">SW3PortConsts::sw_3</a> = 0b00000001</td></tr>
+<tr class="separator:a0366c233a0483a48cbb493279af3cf4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c8f8657717dc6e34461fd333046234" id="r_a25c8f8657717dc6e34461fd333046234"><td class="memItemLeft" align="right" valign="top">static constexpr std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_w3_port_consts.html#a25c8f8657717dc6e34461fd333046234">SW3PortConsts::keys_pressed</a> = 1</td></tr>
+<tr class="separator:a25c8f8657717dc6e34461fd333046234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b12523ba7a505e5a04c53c403f9ae06" id="r_a9b12523ba7a505e5a04c53c403f9ae06"><td class="memItemLeft" align="right" valign="top">static constexpr std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_w3_port_consts.html#a9b12523ba7a505e5a04c53c403f9ae06">SW3PortConsts::key_pressed</a> = 1</td></tr>
+<tr class="separator:a9b12523ba7a505e5a04c53c403f9ae06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68b48354d0b24550d611f610ace1339b" id="r_a68b48354d0b24550d611f610ace1339b"><td class="memItemLeft" align="right" valign="top">static constexpr std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_w3_port_consts.html#a68b48354d0b24550d611f610ace1339b">SW3PortConsts::keys_released</a> = 0</td></tr>
+<tr class="separator:a68b48354d0b24550d611f610ace1339b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Bartłomiej Głodek </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-01-04 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025-01-04</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) Bartłomiej Głodek 2025 Permission is granted to use, copy, modify, and distribute this software for any non-commercial purpose, free of charge. For commercial use, you must notify the author and obtain permission before using this software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000063">Todo</a></b></dt><dd>opis </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a7744e3d553aeeea241aefdb77791a0aa" name="a7744e3d553aeeea241aefdb77791a0aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7744e3d553aeeea241aefdb77791a0aa">&#9670;&#160;</a></span>SW3_Port_read()</h2>
@@ -99,6 +127,20 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>should be 0 or 1</dd>
 <dd>
 state of SW3 button value should be 0 for low state 1 for hight state </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_w3___port_8hpp_a7744e3d553aeeea241aefdb77791a0aa_icgraph.png" border="0" usemap="#a_s_w3___port_8hpp_a7744e3d553aeeea241aefdb77791a0aa_icgraph" alt=""/></div>
+<map name="a_s_w3___port_8hpp_a7744e3d553aeeea241aefdb77791a0aa_icgraph" id="a_s_w3___port_8hpp_a7744e3d553aeeea241aefdb77791a0aa_icgraph">
+<area shape="rect" title=" " alt="" coords="354,5,468,32"/>
+<area shape="rect" href="v_task_s_w3_8cpp.html#aaf530153872989b7a43b9eb8f6ff3759" title=" " alt="" coords="221,5,306,32"/>
+<area shape="poly" title=" " alt="" coords="339,21,307,21,307,16,339,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>

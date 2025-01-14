@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -47,26 +47,344 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classx_mutex_virtual_display-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">xMutexVirtualDisplay Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>mutex singledon wraper class for handling virtual display it is used inside vTaskVirtualDisplay and vTaskDisplay  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="x_mutex_virtual_display_8hpp_source.html">xMutexVirtualDisplay.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a98124eaa57140dba5040dd002aa91607" id="r_a98124eaa57140dba5040dd002aa91607"><td class="memItemLeft" align="right" valign="top"><a id="a98124eaa57140dba5040dd002aa91607" name="a98124eaa57140dba5040dd002aa91607"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>lock</b> ()</td></tr>
+<tr class="memitem:a98124eaa57140dba5040dd002aa91607" id="r_a98124eaa57140dba5040dd002aa91607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98124eaa57140dba5040dd002aa91607">lock</a> ()</td></tr>
 <tr class="separator:a98124eaa57140dba5040dd002aa91607"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40f0d9307845d88288de573842704535" id="r_a40f0d9307845d88288de573842704535"><td class="memItemLeft" align="right" valign="top"><a id="a40f0d9307845d88288de573842704535" name="a40f0d9307845d88288de573842704535"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock</b> ()</td></tr>
+<tr class="memitem:a40f0d9307845d88288de573842704535" id="r_a40f0d9307845d88288de573842704535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40f0d9307845d88288de573842704535">unlock</a> ()</td></tr>
 <tr class="separator:a40f0d9307845d88288de573842704535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a244c897619aeaaa92466db0185c0bb16" id="r_a244c897619aeaaa92466db0185c0bb16"><td class="memItemLeft" align="right" valign="top"><a id="a244c897619aeaaa92466db0185c0bb16" name="a244c897619aeaaa92466db0185c0bb16"></a>
-static <a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
-<tr class="separator:a244c897619aeaaa92466db0185c0bb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55fdc427f65aaf10752371b577c99ed" id="r_af55fdc427f65aaf10752371b577c99ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af55fdc427f65aaf10752371b577c99ed">getInstance</a> ()</td></tr>
+<tr class="separator:af55fdc427f65aaf10752371b577c99ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7357758acd6d7694e89a6508cf7e3368" id="r_a7357758acd6d7694e89a6508cf7e3368"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a> ()</td></tr>
+<tr class="separator:a7357758acd6d7694e89a6508cf7e3368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9399ce406df30612eb21428edadaa84" id="r_ad9399ce406df30612eb21428edadaa84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9399ce406df30612eb21428edadaa84">xMutexVirtualDisplay</a> (const <a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;)=delete</td></tr>
+<tr class="separator:ad9399ce406df30612eb21428edadaa84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8613a6ba2b76c300d8fca7b9c86a9496" id="r_a8613a6ba2b76c300d8fca7b9c86a9496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8613a6ba2b76c300d8fca7b9c86a9496">operator=</a> (const <a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;)=delete</td></tr>
+<tr class="separator:a8613a6ba2b76c300d8fca7b9c86a9496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a829c35145b1f258ee21a58120e6399f1" id="r_a829c35145b1f258ee21a58120e6399f1"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a829c35145b1f258ee21a58120e6399f1">xMutexVirtualDisplay_</a> = nullptr</td></tr>
+<tr class="separator:a829c35145b1f258ee21a58120e6399f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac9b8b83d0ab8260ccfcbfbff474e2210" id="r_ac9b8b83d0ab8260ccfcbfbff474e2210"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9b8b83d0ab8260ccfcbfbff474e2210">maxTimeout_</a> = 10</td></tr>
+<tr class="separator:ac9b8b83d0ab8260ccfcbfbff474e2210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>mutex singledon wraper class for handling virtual display it is used inside vTaskVirtualDisplay and vTaskDisplay </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="virtual_display_8hpp.html">virtualDisplay.hpp</a> </dd>
+<dd>
+<a class="el" href="v_task_virtual_display_8hpp.html">vTaskVirtualDisplay.hpp</a> </dd>
+<dd>
+vTaskDisplay.hpp </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7357758acd6d7694e89a6508cf7e3368" name="a7357758acd6d7694e89a6508cf7e3368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7357758acd6d7694e89a6508cf7e3368">&#9670;&#160;</a></span>xMutexVirtualDisplay() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xMutexVirtualDisplay::xMutexVirtualDisplay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_a7357758acd6d7694e89a6508cf7e3368_icgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_a7357758acd6d7694e89a6508cf7e3368_icgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_a7357758acd6d7694e89a6508cf7e3368_icgraph" id="aclassx_mutex_virtual_display_a7357758acd6d7694e89a6508cf7e3368_icgraph">
+<area shape="rect" title=" " alt="" coords="608,89,761,132"/>
+<area shape="rect" href="classx_mutex_virtual_display.html#af55fdc427f65aaf10752371b577c99ed" title=" " alt="" coords="410,23,556,65"/>
+<area shape="poly" title=" " alt="" coords="603,87,549,69,551,63,605,82"/>
+<area shape="rect" href="classx_mutex_virtual_display.html#a8613a6ba2b76c300d8fca7b9c86a9496" title=" " alt="" coords="410,89,556,132"/>
+<area shape="poly" title=" " alt="" coords="592,113,556,113,556,108,592,108"/>
+<area shape="rect" href="classx_mutex_virtual_display.html#ad9399ce406df30612eb21428edadaa84" title=" " alt="" coords="406,156,560,199"/>
+<area shape="poly" title=" " alt="" coords="605,140,551,158,549,153,603,135"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="395,35,353,30,354,24,395,30"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="396,58,359,63,358,58,395,53"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9399ce406df30612eb21428edadaa84" name="ad9399ce406df30612eb21428edadaa84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9399ce406df30612eb21428edadaa84">&#9670;&#160;</a></span>xMutexVirtualDisplay() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xMutexVirtualDisplay::xMutexVirtualDisplay </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_ad9399ce406df30612eb21428edadaa84_cgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_ad9399ce406df30612eb21428edadaa84_cgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_ad9399ce406df30612eb21428edadaa84_cgraph" id="aclassx_mutex_virtual_display_ad9399ce406df30612eb21428edadaa84_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,159,48"/>
+<area shape="rect" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368" title=" " alt="" coords="207,5,360,48"/>
+<area shape="poly" title=" " alt="" coords="159,24,191,24,191,29,159,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af55fdc427f65aaf10752371b577c99ed" name="af55fdc427f65aaf10752371b577c99ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55fdc427f65aaf10752371b577c99ed">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp; xMutexVirtualDisplay::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_cgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_cgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_cgraph" id="aclassx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,151,48"/>
+<area shape="rect" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368" title=" " alt="" coords="199,5,352,48"/>
+<area shape="poly" title=" " alt="" coords="151,24,183,24,183,29,151,29"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_icgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_icgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_icgraph" id="aclassx_mutex_virtual_display_af55fdc427f65aaf10752371b577c99ed_icgraph">
+<area shape="rect" title=" " alt="" coords="406,23,552,65"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="390,35,353,30,354,25,391,30"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="392,58,359,63,358,58,391,53"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a98124eaa57140dba5040dd002aa91607" name="a98124eaa57140dba5040dd002aa91607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98124eaa57140dba5040dd002aa91607">&#9670;&#160;</a></span>lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xMutexVirtualDisplay::lock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000071">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_a98124eaa57140dba5040dd002aa91607_icgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_a98124eaa57140dba5040dd002aa91607_icgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_a98124eaa57140dba5040dd002aa91607_icgraph" id="aclassx_mutex_virtual_display_a98124eaa57140dba5040dd002aa91607_icgraph">
+<area shape="rect" title=" " alt="" coords="406,23,552,65"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="390,35,353,30,354,25,391,30"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="392,58,359,63,358,58,391,53"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8613a6ba2b76c300d8fca7b9c86a9496" name="a8613a6ba2b76c300d8fca7b9c86a9496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8613a6ba2b76c300d8fca7b9c86a9496">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp; xMutexVirtualDisplay::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classx_mutex_virtual_display.html">xMutexVirtualDisplay</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_a8613a6ba2b76c300d8fca7b9c86a9496_cgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_a8613a6ba2b76c300d8fca7b9c86a9496_cgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_a8613a6ba2b76c300d8fca7b9c86a9496_cgraph" id="aclassx_mutex_virtual_display_a8613a6ba2b76c300d8fca7b9c86a9496_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,151,48"/>
+<area shape="rect" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368" title=" " alt="" coords="199,5,352,48"/>
+<area shape="poly" title=" " alt="" coords="151,24,183,24,183,29,151,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a40f0d9307845d88288de573842704535" name="a40f0d9307845d88288de573842704535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f0d9307845d88288de573842704535">&#9670;&#160;</a></span>unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xMutexVirtualDisplay::unlock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000072">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_mutex_virtual_display_a40f0d9307845d88288de573842704535_icgraph.png" border="0" usemap="#aclassx_mutex_virtual_display_a40f0d9307845d88288de573842704535_icgraph" alt=""/></div>
+<map name="aclassx_mutex_virtual_display_a40f0d9307845d88288de573842704535_icgraph" id="aclassx_mutex_virtual_display_a40f0d9307845d88288de573842704535_icgraph">
+<area shape="rect" title=" " alt="" coords="406,23,552,65"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="390,35,353,30,354,25,391,30"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="392,58,359,63,358,58,391,53"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac9b8b83d0ab8260ccfcbfbff474e2210" name="ac9b8b83d0ab8260ccfcbfbff474e2210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b8b83d0ab8260ccfcbfbff474e2210">&#9670;&#160;</a></span>maxTimeout_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t xMutexVirtualDisplay::maxTimeout_ = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a829c35145b1f258ee21a58120e6399f1" name="a829c35145b1f258ee21a58120e6399f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829c35145b1f258ee21a58120e6399f1">&#9670;&#160;</a></span>xMutexVirtualDisplay_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t xMutexVirtualDisplay::xMutexVirtualDisplay_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Core/Inc/Mutexes/<a class="el" href="x_mutex_virtual_display_8hpp_source.html">xMutexVirtualDisplay.hpp</a></li>
 <li>Core/Src/Mutexes/<a class="el" href="x_mutex_virtual_display_8cpp.html">xMutexVirtualDisplay.cpp</a></li>

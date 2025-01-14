@@ -20,7 +20,7 @@ player::player()
 ,texture_corner_2_(entitiesInitialData::player1::texture_corner_2)
 ,offset_(entitiesInitialData::player1::offset)
 ,currentPosition_({70,70})
-,prevousPosition_({10,10})
+,previousPosition_({10,10})
 {}
 player& player::getInstance()
 {
@@ -28,10 +28,10 @@ player& player::getInstance()
 	return instance;
 
 }
-void player::updatePosition(coordinates direction)
+void player::move(coordinates direction)
 {
 	using namespace coordinatesTools;
-	prevousPosition_ = currentPosition_;
+	previousPosition_ = currentPosition_;
 	currentPosition_ = currentPosition_ + direction;
 	currentPosition_ = stopRectangleOnBorderMap(currentPosition_,currentPosition_ + texture_corner_2_);
 }
@@ -39,9 +39,9 @@ coordinates& player::getCurrentPosition()
 {
 	return currentPosition_;
 }
-coordinates& player::getPrevousPosition()
+coordinates& player::getPreviousPosition()
 {
-	return prevousPosition_;
+	return previousPosition_;
 }
 const coordinates& player::getTextureCorner1() const
 {

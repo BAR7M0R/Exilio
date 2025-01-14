@@ -1,0 +1,16 @@
+<map id="Core/Inc/claster.hpp" name="Core/Inc/claster.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,184,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,155,56,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,34,77,55,57,81,44,111,37,140,32,138,39,109,52,79,73,51,96,31"/>
+<area shape="rect" id="Node000003" href="$segment_8hpp.html" title="This file contains the declaration of the segment class, which is the basic type of screan manipulati..." alt="" coords="66,80,163,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,33,117,64,112,64,112,33"/>
+<area shape="rect" id="Node000006" href="$coordinates_8hpp.html" title=" " alt="" coords="187,80,300,107"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="138,30,209,70,207,74,136,35"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="102,109,58,146,55,142,98,105"/>
+<area shape="rect" id="Node000004" href="$field_8hpp.html" title=" " alt="" coords="79,155,150,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="117,107,117,139,112,139,112,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="156,229,217,256"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="128,105,146,127,164,153,176,184,184,213,179,215,171,186,159,156,142,130,124,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="129,180,165,216,162,220,125,184"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="241,108,199,216,194,214,236,106"/>
+</map>

@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -51,35 +51,43 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">xQueueJoystick.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef INC_QUEUES_XQUEUEJOYSTICK_HPP_</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define INC_QUEUES_XQUEUEJOYSTICK_HPP_</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;queue.h&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html">   18</a></span><span class="keyword">class </span>xQueueJoystick</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    xQueueJoystick();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    xQueueJoystick(<span class="keyword">const</span> xQueueJoystick&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    xQueueJoystick&amp; operator=(<span class="keyword">const</span> xQueueJoystick&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> xQueueJoystick&amp; GetInstance();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> Send(std::uint8_t state);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::uint8_t Receive();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<a href="x_queue_joystick_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef INC_QUEUES_XQUEUEJOYSTICK_HPP_</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define INC_QUEUES_XQUEUEJOYSTICK_HPP_</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;queue.h&quot;</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html">   28</a></span><span class="keyword">class </span><a class="code hl_function" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t maxTimeout_ = 100;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t queueSize_ = 2;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    QueueHandle_t xQueueJoystick_;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html#a25247a322bd9e8fb963e1ea27bd5b160">   32</a></span>    <a class="code hl_function" href="classx_queue_joystick.html#a25247a322bd9e8fb963e1ea27bd5b160">xQueueJoystick</a>(<span class="keyword">const</span> <a class="code hl_function" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html#aaf84a1c9bda8a811314bae1ea669e623">   33</a></span>    <a class="code hl_function" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a>&amp; <a class="code hl_function" href="classx_queue_joystick.html#aaf84a1c9bda8a811314bae1ea669e623">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">static</span> <a class="code hl_function" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a>&amp; <a class="code hl_function" href="classx_queue_joystick.html#a28ae225e62fbc9256ef119abd5bd82bb">getInstance</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classx_queue_joystick.html#a0c1d8664d507aa6fcd8ecf4829eda108">Send</a>(std::uint8_t state);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::uint8_t <a class="code hl_function" href="classx_queue_joystick.html#af4f08efa5257313da62086df15026711">receive</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html#af41a6b998e2e5c5531cb29034893d60c">   51</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t <a class="code hl_variable" href="classx_queue_joystick.html#af41a6b998e2e5c5531cb29034893d60c">maxTimeout_</a> = 10;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html#ab8602559a5aa6dc9eaa5c32816d8e641">   52</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t <a class="code hl_variable" href="classx_queue_joystick.html#ab8602559a5aa6dc9eaa5c32816d8e641">queueSize_</a> = 1;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classx_queue_joystick.html#ac36139e91e637c982dd183d727f2528d">   53</a></span>    QueueHandle_t <a class="code hl_variable" href="classx_queue_joystick.html#ac36139e91e637c982dd183d727f2528d">xQueueJoystick_</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">/* INC_QUEUES_XQUEUEJOYSTICK_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">/* INC_QUEUES_XQUEUEJOYSTICK_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassx_queue_joystick_html_a0c1d8664d507aa6fcd8ecf4829eda108"><div class="ttname"><a href="classx_queue_joystick.html#a0c1d8664d507aa6fcd8ecf4829eda108">xQueueJoystick::Send</a></div><div class="ttdeci">void Send(std::uint8_t state)</div><div class="ttdef"><b>Definition</b> xQueueJoystick.cpp:30</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_a25247a322bd9e8fb963e1ea27bd5b160"><div class="ttname"><a href="classx_queue_joystick.html#a25247a322bd9e8fb963e1ea27bd5b160">xQueueJoystick::xQueueJoystick</a></div><div class="ttdeci">xQueueJoystick(const xQueueJoystick &amp;)=delete</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_a28ae225e62fbc9256ef119abd5bd82bb"><div class="ttname"><a href="classx_queue_joystick.html#a28ae225e62fbc9256ef119abd5bd82bb">xQueueJoystick::getInstance</a></div><div class="ttdeci">static xQueueJoystick &amp; getInstance()</div><div class="ttdef"><b>Definition</b> xQueueJoystick.cpp:17</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_aa5ddbf2fdc64660e3985b1b20c790494"><div class="ttname"><a href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick::xQueueJoystick</a></div><div class="ttdeci">xQueueJoystick()</div><div class="ttdef"><b>Definition</b> xQueueJoystick.cpp:14</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_aaf84a1c9bda8a811314bae1ea669e623"><div class="ttname"><a href="classx_queue_joystick.html#aaf84a1c9bda8a811314bae1ea669e623">xQueueJoystick::operator=</a></div><div class="ttdeci">xQueueJoystick &amp; operator=(const xQueueJoystick &amp;)=delete</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_ab8602559a5aa6dc9eaa5c32816d8e641"><div class="ttname"><a href="classx_queue_joystick.html#ab8602559a5aa6dc9eaa5c32816d8e641">xQueueJoystick::queueSize_</a></div><div class="ttdeci">static constexpr std::size_t queueSize_</div><div class="ttdef"><b>Definition</b> xQueueJoystick.hpp:52</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_ac36139e91e637c982dd183d727f2528d"><div class="ttname"><a href="classx_queue_joystick.html#ac36139e91e637c982dd183d727f2528d">xQueueJoystick::xQueueJoystick_</a></div><div class="ttdeci">QueueHandle_t xQueueJoystick_</div><div class="ttdef"><b>Definition</b> xQueueJoystick.hpp:53</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_af41a6b998e2e5c5531cb29034893d60c"><div class="ttname"><a href="classx_queue_joystick.html#af41a6b998e2e5c5531cb29034893d60c">xQueueJoystick::maxTimeout_</a></div><div class="ttdeci">static constexpr uint32_t maxTimeout_</div><div class="ttdef"><b>Definition</b> xQueueJoystick.hpp:51</div></div>
+<div class="ttc" id="aclassx_queue_joystick_html_af4f08efa5257313da62086df15026711"><div class="ttname"><a href="classx_queue_joystick.html#af4f08efa5257313da62086df15026711">xQueueJoystick::receive</a></div><div class="ttdeci">std::uint8_t receive()</div><div class="ttdef"><b>Definition</b> xQueueJoystick.cpp:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

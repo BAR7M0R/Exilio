@@ -1,0 +1,8 @@
+<map id="coordinatesTools::stopRectangleOnBorderMap" name="coordinatesTools::stopRectangleOnBorderMap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,217,48"/>
+<area shape="rect" id="Node000002" href="$namespacecoordinates_tools.html#abad9704a024eac7445ba4adc6be4ee7e" title=" " alt="" coords="495,13,668,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,21,265,20,447,20,479,21,479,26,447,25,265,25,217,26"/>
+<area shape="rect" id="Node000003" href="$namespacecoordinates_tools.html#a4c5fec12767ae677877353fc13bbf637" title=" " alt="" coords="265,35,447,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,37,250,41,249,46,217,42"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="447,42,479,37,480,43,448,47"/>
+</map>

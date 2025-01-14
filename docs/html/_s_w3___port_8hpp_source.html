@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -52,21 +52,29 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="_s_w3___port_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef INC_HARDWARE_SW3PORT_HPP_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define INC_HARDWARE_SW3PORT_HPP_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>SW3PortConsts</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t sw_3 = 0b00000001;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t keys_pressed = 1;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t key_pressed = 1;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t keys_released = 0;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>std::uint8_t <a class="code hl_function" href="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa">SW3_Port_read</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">/* INC_HARDWARE_SW3PORT_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef INC_HARDWARE_SW3PORT_HPP_</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define INC_HARDWARE_SW3PORT_HPP_</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespace_s_w3_port_consts.html">   24</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_s_w3_port_consts.html">SW3PortConsts</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespace_s_w3_port_consts.html#a0366c233a0483a48cbb493279af3cf4d">   26</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="namespace_s_w3_port_consts.html#a0366c233a0483a48cbb493279af3cf4d">sw_3</a> = 0b00000001;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespace_s_w3_port_consts.html#a25c8f8657717dc6e34461fd333046234">   27</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="namespace_s_w3_port_consts.html#a25c8f8657717dc6e34461fd333046234">keys_pressed</a> = 1;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespace_s_w3_port_consts.html#a9b12523ba7a505e5a04c53c403f9ae06">   28</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="namespace_s_w3_port_consts.html#a9b12523ba7a505e5a04c53c403f9ae06">key_pressed</a> = 1;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespace_s_w3_port_consts.html#a68b48354d0b24550d611f610ace1339b">   29</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">inline</span> std::uint8_t <a class="code hl_variable" href="namespace_s_w3_port_consts.html#a68b48354d0b24550d611f610ace1339b">keys_released</a> = 0;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>std::uint8_t <a class="code hl_function" href="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa">SW3_Port_read</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">/* INC_HARDWARE_SW3PORT_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_s_w3___port_8hpp_html_a7744e3d553aeeea241aefdb77791a0aa"><div class="ttname"><a href="_s_w3___port_8hpp.html#a7744e3d553aeeea241aefdb77791a0aa">SW3_Port_read</a></div><div class="ttdeci">std::uint8_t SW3_Port_read()</div><div class="ttdef"><b>Definition</b> SW3_Port.cpp:14</div></div>
+<div class="ttc" id="anamespace_s_w3_port_consts_html"><div class="ttname"><a href="namespace_s_w3_port_consts.html">SW3PortConsts</a></div><div class="ttdef"><b>Definition</b> SW3_Port.hpp:25</div></div>
+<div class="ttc" id="anamespace_s_w3_port_consts_html_a0366c233a0483a48cbb493279af3cf4d"><div class="ttname"><a href="namespace_s_w3_port_consts.html#a0366c233a0483a48cbb493279af3cf4d">SW3PortConsts::sw_3</a></div><div class="ttdeci">static constexpr std::uint8_t sw_3</div><div class="ttdef"><b>Definition</b> SW3_Port.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_w3_port_consts_html_a25c8f8657717dc6e34461fd333046234"><div class="ttname"><a href="namespace_s_w3_port_consts.html#a25c8f8657717dc6e34461fd333046234">SW3PortConsts::keys_pressed</a></div><div class="ttdeci">static constexpr std::uint8_t keys_pressed</div><div class="ttdef"><b>Definition</b> SW3_Port.hpp:27</div></div>
+<div class="ttc" id="anamespace_s_w3_port_consts_html_a68b48354d0b24550d611f610ace1339b"><div class="ttname"><a href="namespace_s_w3_port_consts.html#a68b48354d0b24550d611f610ace1339b">SW3PortConsts::keys_released</a></div><div class="ttdeci">static constexpr std::uint8_t keys_released</div><div class="ttdef"><b>Definition</b> SW3_Port.hpp:29</div></div>
+<div class="ttc" id="anamespace_s_w3_port_consts_html_a9b12523ba7a505e5a04c53c403f9ae06"><div class="ttname"><a href="namespace_s_w3_port_consts.html#a9b12523ba7a505e5a04c53c403f9ae06">SW3PortConsts::key_pressed</a></div><div class="ttdeci">static constexpr std::uint8_t key_pressed</div><div class="ttdef"><b>Definition</b> SW3_Port.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

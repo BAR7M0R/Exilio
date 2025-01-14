@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -47,26 +47,361 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classx_queue_joystick-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">xQueueJoystick Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="x_queue_joystick_8hpp_source.html">xQueueJoystick.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c1d8664d507aa6fcd8ecf4829eda108" id="r_a0c1d8664d507aa6fcd8ecf4829eda108"><td class="memItemLeft" align="right" valign="top"><a id="a0c1d8664d507aa6fcd8ecf4829eda108" name="a0c1d8664d507aa6fcd8ecf4829eda108"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (std::uint8_t state)</td></tr>
+<tr class="memitem:a0c1d8664d507aa6fcd8ecf4829eda108" id="r_a0c1d8664d507aa6fcd8ecf4829eda108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c1d8664d507aa6fcd8ecf4829eda108">Send</a> (std::uint8_t state)</td></tr>
 <tr class="separator:a0c1d8664d507aa6fcd8ecf4829eda108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3adeb6938c70c367cf693b2b73c98b52" id="r_a3adeb6938c70c367cf693b2b73c98b52"><td class="memItemLeft" align="right" valign="top"><a id="a3adeb6938c70c367cf693b2b73c98b52" name="a3adeb6938c70c367cf693b2b73c98b52"></a>
-std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Receive</b> ()</td></tr>
-<tr class="separator:a3adeb6938c70c367cf693b2b73c98b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f08efa5257313da62086df15026711" id="r_af4f08efa5257313da62086df15026711"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4f08efa5257313da62086df15026711">receive</a> ()</td></tr>
+<tr class="separator:af4f08efa5257313da62086df15026711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1ea436f79a80e661d19702177c1bc0a8" id="r_a1ea436f79a80e661d19702177c1bc0a8"><td class="memItemLeft" align="right" valign="top"><a id="a1ea436f79a80e661d19702177c1bc0a8" name="a1ea436f79a80e661d19702177c1bc0a8"></a>
-static <a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
-<tr class="separator:a1ea436f79a80e661d19702177c1bc0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ae225e62fbc9256ef119abd5bd82bb" id="r_a28ae225e62fbc9256ef119abd5bd82bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28ae225e62fbc9256ef119abd5bd82bb">getInstance</a> ()</td></tr>
+<tr class="separator:a28ae225e62fbc9256ef119abd5bd82bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa5ddbf2fdc64660e3985b1b20c790494" id="r_aa5ddbf2fdc64660e3985b1b20c790494"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5ddbf2fdc64660e3985b1b20c790494">xQueueJoystick</a> ()</td></tr>
+<tr class="separator:aa5ddbf2fdc64660e3985b1b20c790494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25247a322bd9e8fb963e1ea27bd5b160" id="r_a25247a322bd9e8fb963e1ea27bd5b160"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25247a322bd9e8fb963e1ea27bd5b160">xQueueJoystick</a> (const <a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;)=delete</td></tr>
+<tr class="separator:a25247a322bd9e8fb963e1ea27bd5b160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf84a1c9bda8a811314bae1ea669e623" id="r_aaf84a1c9bda8a811314bae1ea669e623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf84a1c9bda8a811314bae1ea669e623">operator=</a> (const <a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;)=delete</td></tr>
+<tr class="separator:aaf84a1c9bda8a811314bae1ea669e623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac36139e91e637c982dd183d727f2528d" id="r_ac36139e91e637c982dd183d727f2528d"><td class="memItemLeft" align="right" valign="top">QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac36139e91e637c982dd183d727f2528d">xQueueJoystick_</a></td></tr>
+<tr class="separator:ac36139e91e637c982dd183d727f2528d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af41a6b998e2e5c5531cb29034893d60c" id="r_af41a6b998e2e5c5531cb29034893d60c"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af41a6b998e2e5c5531cb29034893d60c">maxTimeout_</a> = 10</td></tr>
+<tr class="separator:af41a6b998e2e5c5531cb29034893d60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8602559a5aa6dc9eaa5c32816d8e641" id="r_ab8602559a5aa6dc9eaa5c32816d8e641"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8602559a5aa6dc9eaa5c32816d8e641">queueSize_</a> = 1</td></tr>
+<tr class="separator:ab8602559a5aa6dc9eaa5c32816d8e641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000080">Todo</a></b></dt><dd>opis </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa5ddbf2fdc64660e3985b1b20c790494" name="aa5ddbf2fdc64660e3985b1b20c790494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ddbf2fdc64660e3985b1b20c790494">&#9670;&#160;</a></span>xQueueJoystick() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xQueueJoystick::xQueueJoystick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_aa5ddbf2fdc64660e3985b1b20c790494_icgraph.png" border="0" usemap="#aclassx_queue_joystick_aa5ddbf2fdc64660e3985b1b20c790494_icgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_aa5ddbf2fdc64660e3985b1b20c790494_icgraph" id="aclassx_queue_joystick_aa5ddbf2fdc64660e3985b1b20c790494_icgraph">
+<area shape="rect" title=" " alt="" coords="672,81,889,108"/>
+<area shape="rect" href="classx_queue_joystick.html#a28ae225e62fbc9256ef119abd5bd82bb" title=" " alt="" coords="419,31,611,57"/>
+<area shape="poly" title=" " alt="" coords="691,80,588,61,589,55,692,75"/>
+<area shape="rect" href="classx_queue_joystick.html#aaf84a1c9bda8a811314bae1ea669e623" title=" " alt="" coords="426,81,604,108"/>
+<area shape="poly" title=" " alt="" coords="656,97,605,97,605,92,656,92"/>
+<area shape="rect" href="classx_queue_joystick.html#a25247a322bd9e8fb963e1ea27bd5b160" title=" " alt="" coords="406,132,624,159"/>
+<area shape="poly" title=" " alt="" coords="692,114,589,134,588,129,691,109"/>
+<area shape="rect" href="v_task_joystick_8cpp.html#ab9464689429070c75bf80016aaa32f96" title="independent task function to handle joystick" alt="" coords="237,5,342,32"/>
+<area shape="poly" title=" " alt="" coords="404,34,342,27,343,22,405,29"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="405,59,359,64,359,59,404,54"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="222,33,174,41,173,36,221,27"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25247a322bd9e8fb963e1ea27bd5b160" name="a25247a322bd9e8fb963e1ea27bd5b160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25247a322bd9e8fb963e1ea27bd5b160">&#9670;&#160;</a></span>xQueueJoystick() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xQueueJoystick::xQueueJoystick </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_a25247a322bd9e8fb963e1ea27bd5b160_cgraph.png" border="0" usemap="#aclassx_queue_joystick_a25247a322bd9e8fb963e1ea27bd5b160_cgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_a25247a322bd9e8fb963e1ea27bd5b160_cgraph" id="aclassx_queue_joystick_a25247a322bd9e8fb963e1ea27bd5b160_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,223,32"/>
+<area shape="rect" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494" title=" " alt="" coords="271,5,488,32"/>
+<area shape="poly" title=" " alt="" coords="223,16,255,16,255,21,223,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a28ae225e62fbc9256ef119abd5bd82bb" name="a28ae225e62fbc9256ef119abd5bd82bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ae225e62fbc9256ef119abd5bd82bb">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp; xQueueJoystick::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_cgraph.png" border="0" usemap="#aclassx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_cgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_cgraph" id="aclassx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,197,32"/>
+<area shape="rect" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494" title=" " alt="" coords="245,5,462,32"/>
+<area shape="poly" title=" " alt="" coords="197,16,229,16,229,21,197,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_icgraph.png" border="0" usemap="#aclassx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_icgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_icgraph" id="aclassx_queue_joystick_a28ae225e62fbc9256ef119abd5bd82bb_icgraph">
+<area shape="rect" title=" " alt="" coords="406,31,598,57"/>
+<area shape="rect" href="v_task_joystick_8cpp.html#ab9464689429070c75bf80016aaa32f96" title="independent task function to handle joystick" alt="" coords="237,5,342,32"/>
+<area shape="poly" title=" " alt="" coords="391,33,342,28,343,22,392,28"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" title=" " alt="" coords="391,60,359,64,358,59,391,55"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" title=" " alt="" coords="222,33,174,41,173,36,221,27"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf84a1c9bda8a811314bae1ea669e623" name="aaf84a1c9bda8a811314bae1ea669e623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf84a1c9bda8a811314bae1ea669e623">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp; xQueueJoystick::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classx_queue_joystick.html">xQueueJoystick</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_aaf84a1c9bda8a811314bae1ea669e623_cgraph.png" border="0" usemap="#aclassx_queue_joystick_aaf84a1c9bda8a811314bae1ea669e623_cgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_aaf84a1c9bda8a811314bae1ea669e623_cgraph" id="aclassx_queue_joystick_aaf84a1c9bda8a811314bae1ea669e623_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" href="classx_queue_joystick.html#aa5ddbf2fdc64660e3985b1b20c790494" title=" " alt="" coords="232,5,449,32"/>
+<area shape="poly" title=" " alt="" coords="184,16,216,16,216,21,184,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4f08efa5257313da62086df15026711" name="af4f08efa5257313da62086df15026711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f08efa5257313da62086df15026711">&#9670;&#160;</a></span>receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t xQueueJoystick::receive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000082">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_af4f08efa5257313da62086df15026711_icgraph.png" border="0" usemap="#aclassx_queue_joystick_af4f08efa5257313da62086df15026711_icgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_af4f08efa5257313da62086df15026711_icgraph" id="aclassx_queue_joystick_af4f08efa5257313da62086df15026711_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,572,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,358,21,358,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0c1d8664d507aa6fcd8ecf4829eda108" name="a0c1d8664d507aa6fcd8ecf4829eda108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c1d8664d507aa6fcd8ecf4829eda108">&#9670;&#160;</a></span>Send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xQueueJoystick::Send </td>
+          <td>(</td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000081">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_joystick_a0c1d8664d507aa6fcd8ecf4829eda108_icgraph.png" border="0" usemap="#aclassx_queue_joystick_a0c1d8664d507aa6fcd8ecf4829eda108_icgraph" alt=""/></div>
+<map name="aclassx_queue_joystick_a0c1d8664d507aa6fcd8ecf4829eda108_icgraph" id="aclassx_queue_joystick_a0c1d8664d507aa6fcd8ecf4829eda108_icgraph">
+<area shape="rect" title=" " alt="" coords="374,5,528,32"/>
+<area shape="rect" href="v_task_joystick_8cpp.html#ab9464689429070c75bf80016aaa32f96" title="independent task function to handle joystick" alt="" coords="221,5,326,32"/>
+<area shape="poly" title=" " alt="" coords="359,21,327,21,327,16,359,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af41a6b998e2e5c5531cb29034893d60c" name="af41a6b998e2e5c5531cb29034893d60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41a6b998e2e5c5531cb29034893d60c">&#9670;&#160;</a></span>maxTimeout_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t xQueueJoystick::maxTimeout_ = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8602559a5aa6dc9eaa5c32816d8e641" name="ab8602559a5aa6dc9eaa5c32816d8e641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8602559a5aa6dc9eaa5c32816d8e641">&#9670;&#160;</a></span>queueSize_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t xQueueJoystick::queueSize_ = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac36139e91e637c982dd183d727f2528d" name="ac36139e91e637c982dd183d727f2528d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36139e91e637c982dd183d727f2528d">&#9670;&#160;</a></span>xQueueJoystick_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QueueHandle_t xQueueJoystick::xQueueJoystick_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Core/Inc/queues/<a class="el" href="x_queue_joystick_8hpp_source.html">xQueueJoystick.hpp</a></li>
 <li>Core/Src/queues/<a class="el" href="x_queue_joystick_8cpp.html">xQueueJoystick.cpp</a></li>

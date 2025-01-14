@@ -1,0 +1,9 @@
+<map id="Core/Inc/hardware/adc.h" name="Core/Inc/hardware/adc.h">
+<area shape="rect" id="Node000001" title="This file contains all the function prototypes for the adc.c file." alt="" coords="200,5,364,32"/>
+<area shape="rect" id="Node000002" href="$adc_8c.html" title="This file provides code for the configuration of the ADC instances." alt="" coords="5,88,172,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,41,120,90,117,85,236,36"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title=": Main program body" alt="" coords="195,88,368,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,48,284,88,279,88,279,48"/>
+<area shape="rect" id="Node000004" href="$v_task_wave_generator_8cpp.html" title=" " alt="" coords="392,80,574,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="329,36,432,77,430,82,327,41"/>
+</map>

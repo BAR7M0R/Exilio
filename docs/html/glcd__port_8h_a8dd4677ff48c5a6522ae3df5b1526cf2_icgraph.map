@@ -1,0 +1,18 @@
+<map id="glcd_WriteData" name="glcd_WriteData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="569,81,679,108"/>
+<area shape="rect" id="Node000002" href="$glcd_8c.html#afaa94e2282de85556d78d780517d3e4b" title=" " alt="" coords="396,5,521,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="581,76,520,46,493,35,495,30,522,42,584,72"/>
+<area shape="rect" id="Node000006" href="$glcd_8c.html#ac3cd9920102988e35941b9ffdde9b044" title=" " alt="" coords="408,56,509,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="553,87,508,80,509,74,554,81"/>
+<area shape="rect" id="Node000007" href="$glcd_8c.html#a08d1961fdccfbebee8e5cf6540cafe9a" title=" " alt="" coords="404,107,513,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="554,108,514,114,513,109,553,103"/>
+<area shape="rect" id="Node000008" href="$glcd_8c.html#a904fee41587613ff27c402b88a86d162" title=" " alt="" coords="408,157,509,184"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="584,118,522,148,495,159,493,154,520,143,581,113"/>
+<area shape="rect" id="Node000003" href="$v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="221,56,348,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,40,334,58,332,53,395,34"/>
+<area shape="rect" id="Node000004" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,56,173,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,72,174,72,174,67,205,67"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="395,104,332,86,334,81,396,99"/>
+</map>

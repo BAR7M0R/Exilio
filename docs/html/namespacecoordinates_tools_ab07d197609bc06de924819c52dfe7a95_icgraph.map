@@ -1,0 +1,29 @@
+<map id="coordinatesTools::vMapSc" name="coordinatesTools::vMapSc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="853,224,1028,251"/>
+<area shape="rect" id="Node000002" href="$namespacecoordinates_tools.html#ad5e3812951a94c97b825df17a61f74f9" title=" " alt="" coords="592,5,794,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="926,211,907,173,881,128,846,83,803,46,781,35,784,30,807,42,850,80,885,125,912,170,930,209"/>
+<area shape="rect" id="Node000007" href="$namespacecoordinates_tools.html#ac0980a97723756bdf2b366a3165a8434" title=" " alt="" coords="592,56,794,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="920,213,872,153,840,123,804,97,778,86,780,81,806,92,843,118,876,150,924,209"/>
+<area shape="rect" id="Node000008" href="$namespacecoordinates_tools.html#a9e9739c189261cd6eed08deb6a909360" title=" " alt="" coords="581,107,805,133"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="910,216,862,181,804,148,771,136,773,131,806,143,865,176,913,212"/>
+<area shape="rect" id="Node000009" href="$namespacecoordinates_tools.html#a71e930ae0e527d0bc6cfc5d3b57c3f83" title=" " alt="" coords="592,157,794,200"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="866,222,785,203,786,198,867,217"/>
+<area shape="rect" id="Node000010" href="$namespacecoordinates_tools.html#a282b54f021ebf17ec1fb88670ae7ee8e" title=" " alt="" coords="598,224,788,251"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="837,240,788,240,788,235,837,235"/>
+<area shape="rect" id="Node000011" href="$namespacecoordinates_tools.html#ace91f2c4739f01b4c3bb7d8838309709" title=" " alt="" coords="593,275,792,301"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="857,257,762,277,761,271,856,252"/>
+<area shape="rect" id="Node000012" href="$namespacecoordinates_tools.html#a9e26247c8f33d22fa6cf48e1761b747f" title=" " alt="" coords="600,325,786,352"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="908,262,861,290,806,316,770,327,768,322,804,311,858,285,905,257"/>
+<area shape="rect" id="Node000013" href="$namespacecoordinates_tools.html#ac7924a85d283d3fb2a14fbb215af90b8" title=" " alt="" coords="589,376,796,403"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="921,265,873,317,841,344,806,366,779,378,777,373,804,362,838,339,869,313,918,261"/>
+<area shape="rect" id="Node000014" href="$namespacecoordinates_tools.html#ab262237f132960c8c760b4ca534bf64c" title=" " alt="" coords="600,427,786,469"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="928,266,909,300,881,341,847,382,807,417,786,428,783,424,803,412,843,378,877,338,904,297,924,263"/>
+<area shape="rect" id="Node000003" href="$classvirtual_display.html#a467e5c154f8ddf6ea6bd118b01693d75" title="Update the texture&#39;s position on virtual map." alt="" coords="406,5,533,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="577,21,533,21,533,16,577,16"/>
+<area shape="rect" id="Node000004" href="$v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" id="Node000005" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

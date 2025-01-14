@@ -1,0 +1,7 @@
+<map id="Core/Inc/tasks/vTaskDisplayLCD.hpp" name="Core/Inc/tasks/vTaskDisplayLCD.hpp">
+<area shape="rect" id="Node000001" title="Header file of display task that manages the virtual map on the GLCD screen." alt="" coords="83,5,274,48"/>
+<area shape="rect" id="Node000002" href="$mainapp_8cpp.html" title=" " alt="" coords="5,104,157,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,61,97,106,93,102,143,57"/>
+<area shape="rect" id="Node000003" href="$v_task_display_l_c_d_8cpp.html" title=" " alt="" coords="181,96,373,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,57,256,93,252,97,211,61"/>
+</map>

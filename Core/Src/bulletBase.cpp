@@ -54,11 +54,11 @@ const segment& bulletBase::getTexture() const
 {
 	return texture_;
 }
-coordinates& bulletBase::getCurrentCoords()
+coordinates& bulletBase::getCurrentPosition()
 {
 	return currentPosition_;
 }
-coordinates& bulletBase::getPrevousCoords()
+coordinates& bulletBase::getPrevousPosition()
 {
 	return prevousPosition_;
 }

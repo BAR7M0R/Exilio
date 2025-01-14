@@ -55,7 +55,7 @@ void bulletsManager::move()
 	{
 		if(b != nullptr)
 		{
-			if(coordinatesTools::isInMap(b->getCurrentCoords()))
+			if(coordinatesTools::isInMap(b->getCurrentPosition()))
 			{
 				b->move();
 			}

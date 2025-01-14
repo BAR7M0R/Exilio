@@ -1,0 +1,16 @@
+<map id="enemysManager::enemysManager" name="enemysManager::enemysManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="676,56,897,83"/>
+<area shape="rect" id="Node000002" href="$classenemys_manager.html#afc5b39d363f17f8b8c920af6e1cb41bd" title=" " alt="" coords="406,5,628,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="696,55,591,35,592,30,697,50"/>
+<area shape="rect" id="Node000003" href="$classenemys_manager.html#ae23773639f2a5436cf1ab2a7cf6da937" title=" " alt="" coords="420,56,614,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="660,81,614,81,614,75,660,76"/>
+<area shape="rect" id="Node000007" href="$classenemys_manager.html#a273d80b0b59d6fdd435e3db1a77dadb5" title=" " alt="" coords="427,107,607,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="697,89,592,109,591,103,696,84"/>
+<area shape="poly" id="edge3_Node000003_Node000001" title=" " alt="" coords="629,58,675,58,675,63,629,63"/>
+<area shape="rect" id="Node000004" href="$v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="405,72,359,72,359,67,405,67"/>
+<area shape="rect" id="Node000005" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,56,173,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="206,72,174,72,174,67,206,67"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Core/Src/hardware/stm32f1xx_hal_timebase_tim.c" name="Core/Src/hardware/stm32f1xx_hal_timebase_tim.c">
+<area shape="rect" id="Node000001" title="HAL time base based on the hardware TIM." alt="" coords="42,5,238,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,123,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,50,88,86,84,83,118,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="146,96,288,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,47,197,83,193,86,158,50"/>
+</map>

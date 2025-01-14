@@ -1,0 +1,15 @@
+<map id="xQueueSW3::getInstance" name="xQueueSW3::getInstance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="439,56,611,83"/>
+<area shape="rect" id="Node000002" href="$classx_queue_s_w3.html#af096614f8965840ee527bc8fb821664a" title=" " alt="" coords="221,5,391,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,55,366,35,368,30,450,49"/>
+<area shape="rect" id="Node000005" href="$v_task_s_w3_8cpp.html#aaf530153872989b7a43b9eb8f6ff3759" title=" " alt="" coords="264,56,349,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="424,72,349,72,349,67,424,67"/>
+<area shape="rect" id="Node000006" href="$v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="238,107,375,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="450,89,368,109,366,103,449,84"/>
+<area shape="rect" id="Node000003" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,56,173,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,40,222,47,174,61,173,56,220,41,243,34"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="248,72,173,72,173,67,248,67"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="243,104,220,97,173,83,174,77,222,92,245,99"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="virtualDisplay::virtualDisplay" name="virtualDisplay::virtualDisplay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="642,81,829,108"/>
+<area shape="rect" id="Node000002" href="$classvirtual_display.html#a7083b08ddc7406e018ca657407254fb1" title="Creates and retrieves the singleton instance." alt="" coords="412,31,588,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="654,80,565,61,566,55,655,75"/>
+<area shape="rect" id="Node000007" href="$classvirtual_display.html#ad0aa30d4b080a79c89b4205e06707d9c" title=" " alt="" coords="418,81,582,108"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="626,97,582,97,582,92,626,92"/>
+<area shape="rect" id="Node000008" href="$classvirtual_display.html#af5e90d8b5a768392016adaf8aea0e3a6" title=" " alt="" coords="406,132,594,159"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="655,114,566,134,565,129,654,109"/>
+<area shape="rect" id="Node000003" href="$v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="226,5,353,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,34,353,29,354,24,396,29"/>
+<area shape="rect" id="Node000006" href="$v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="397,59,359,64,358,58,396,54"/>
+<area shape="rect" id="Node000004" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="211,34,174,41,173,36,210,29"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="205,58,173,52,174,47,206,53"/>
+</map>

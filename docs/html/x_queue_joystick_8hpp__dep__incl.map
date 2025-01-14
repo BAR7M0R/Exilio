@@ -1,0 +1,9 @@
+<map id="Core/Inc/queues/xQueueJoystick.hpp" name="Core/Inc/queues/xQueueJoystick.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="262,5,503,32"/>
+<area shape="rect" id="Node000002" href="$x_queue_joystick_8cpp.html" title=" " alt="" coords="5,88,248,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="329,40,167,90,166,85,327,34"/>
+<area shape="rect" id="Node000003" href="$v_task_joystick_8cpp.html" title=" " alt="" coords="271,88,494,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="385,48,385,88,380,88,380,48"/>
+<area shape="rect" id="Node000004" href="$v_task_virtual_display_8cpp.html" title=" " alt="" coords="518,80,703,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="433,35,553,77,551,82,431,40"/>
+</map>

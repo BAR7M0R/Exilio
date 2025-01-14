@@ -1,0 +1,8 @@
+<map id="coordinatesTools::vMapSLeft" name="coordinatesTools::vMapSLeft">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" id="Node000002" href="$namespacecoordinates_tools.html#ae8b12b2546b392eee122cf2df7fa5589" title=" " alt="" coords="467,5,649,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,16,451,16,451,21,196,21"/>
+<area shape="rect" id="Node000003" href="$namespacecoordinates_tools.html#ab07d197609bc06de924819c52dfe7a95" title=" " alt="" coords="244,31,419,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,26,228,30,228,35,196,32"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="419,32,451,28,452,33,420,37"/>
+</map>

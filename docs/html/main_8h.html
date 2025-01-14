@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Exilio: Core/Inc/main.h File Reference</title>
+<title>Exilio: Core/Inc/hardware/main.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -43,7 +43,7 @@ $(function(){ initResizable(false); });
 </script>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_e2489e887f17afa3cbc07a4ec152cdd2.html">Inc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_e2489e887f17afa3cbc07a4ec152cdd2.html">Inc</a></li><li class="navelem"><a class="el" href="dir_5684279766062723563e8bcb08fbb50f.html">hardware</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -61,317 +61,271 @@ $(function(){ initResizable(false); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8h__incl.png" border="0" usemap="#a_core_2_inc_2main_8h" alt=""/></div>
+<div class="center"><img src="main_8h__incl.png" border="0" usemap="#a_core_2_inc_2hardware_2main_8h" alt=""/></div>
+<map name="a_core_2_inc_2hardware_2main_8h" id="a_core_2_inc_2hardware_2main_8h">
+<area shape="rect" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="5,5,177,32"/>
+<area shape="rect" title=" " alt="" coords="32,80,150,107"/>
+<area shape="poly" title=" " alt="" coords="94,33,94,64,88,64,88,33"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8h__dep__incl.png" border="0" usemap="#a_core_2_inc_2main_8hdep" alt=""/></div>
+<div class="center"><img src="main_8h__dep__incl.png" border="0" usemap="#a_core_2_inc_2hardware_2main_8hdep" alt=""/></div>
+<map name="a_core_2_inc_2hardware_2main_8hdep" id="a_core_2_inc_2hardware_2main_8hdep">
+<area shape="rect" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="1034,5,1205,32"/>
+<area shape="rect" href="adc_8h.html" title="This file contains all the function prototypes for the adc.c file." alt="" coords="282,88,447,115"/>
+<area shape="poly" title=" " alt="" coords="1018,31,784,53,506,83,447,90,447,85,506,77,784,48,1018,26"/>
+<area shape="rect" href="main_8c.html" title=": Main program body" alt="" coords="400,179,574,205"/>
+<area shape="poly" title=" " alt="" coords="1018,26,905,31,780,42,667,59,622,70,588,82,558,104,531,130,496,180,492,176,527,127,554,100,586,78,620,64,666,53,780,37,905,26,1018,20"/>
+<area shape="rect" href="glcd__port_8h.html" title=" " alt="" coords="980,171,1136,213"/>
+<area shape="poly" title=" " alt="" coords="1067,41,1041,58,1022,81,1016,103,1020,127,1030,149,1043,169,1038,172,1025,152,1015,128,1010,103,1017,79,1038,54,1065,37"/>
+<area shape="rect" href="gpio_8h.html" title="This file contains all the function prototypes for the gpio.c file." alt="" coords="600,88,767,115"/>
+<area shape="poly" title=" " alt="" coords="1031,38,782,83,745,90,744,85,781,77,1030,33"/>
+<area shape="rect" href="joystick__port_8h.html" title=" " alt="" coords="1030,80,1208,123"/>
+<area shape="poly" title=" " alt="" coords="1122,48,1122,80,1116,80,1116,48"/>
+<area shape="rect" href="tim_8h.html" title="This file contains all the function prototypes for the tim.c file." alt="" coords="793,88,954,115"/>
+<area shape="poly" title=" " alt="" coords="1067,40,913,90,911,85,1066,35"/>
+<area shape="rect" href="_s_w3___port_8cpp.html" title=" " alt="" coords="1232,80,1396,123"/>
+<area shape="poly" title=" " alt="" coords="1165,36,1265,77,1263,82,1163,41"/>
+<area shape="rect" href="freertos_8c.html" title=" " alt="" coords="1419,88,1608,115"/>
+<area shape="poly" title=" " alt="" coords="1197,33,1452,85,1451,90,1196,38"/>
+<area shape="rect" href="stm32f1xx__hal__msp_8c.html" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="1632,80,1828,123"/>
+<area shape="poly" title=" " alt="" coords="1221,28,1407,49,1621,77,1632,79,1631,84,1620,83,1406,54,1220,33"/>
+<area shape="rect" href="stm32f1xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="1852,88,2072,115"/>
+<area shape="poly" title=" " alt="" coords="1221,23,1500,43,1839,77,1891,85,1890,90,1839,83,1499,49,1220,29"/>
+<area shape="rect" href="mainapp_8cpp.html" title=" " alt="" coords="2096,88,2247,115"/>
+<area shape="poly" title=" " alt="" coords="1220,18,1385,22,1601,32,1842,49,2085,77,2123,85,2122,90,2084,83,1842,55,1601,37,1385,27,1220,23"/>
+<area shape="rect" href="adc_8c.html" title="This file provides code for the configuration of the ADC instances." alt="" coords="5,179,172,205"/>
+<area shape="poly" title=" " alt="" coords="311,122,129,181,127,176,310,117"/>
+<area shape="poly" title=" " alt="" coords="396,122,471,176,468,180,393,126"/>
+<area shape="rect" href="v_task_wave_generator_8cpp.html" title=" " alt="" coords="195,171,376,213"/>
+<area shape="poly" title=" " alt="" coords="345,128,306,172,302,168,341,125"/>
+<area shape="rect" href="glcd_8h.html" title=" " alt="" coords="881,269,1048,296"/>
+<area shape="poly" title=" " alt="" coords="1027,226,980,271,976,267,1024,222"/>
+<area shape="rect" href="glcd__port_8c.html" title=" " alt="" coords="1072,261,1230,304"/>
+<area shape="poly" title=" " alt="" coords="1092,222,1131,259,1128,263,1089,226"/>
+<area shape="rect" href="glcd_8c.html" title=" " alt="" coords="777,360,946,387"/>
+<area shape="poly" title=" " alt="" coords="940,308,878,361,875,357,937,304"/>
+<area shape="rect" href="v_task_display_l_c_d_8cpp.html" title=" " alt="" coords="971,352,1163,395"/>
+<area shape="poly" title=" " alt="" coords="992,304,1045,350,1042,354,989,308"/>
+<area shape="poly" title=" " alt="" coords="643,124,516,181,514,176,640,119"/>
+<area shape="rect" href="gpio_8c.html" title="This file provides code for the configuration of all used GPIO pins." alt="" coords="598,179,768,205"/>
+<area shape="poly" title=" " alt="" coords="686,130,686,178,680,178,680,130"/>
+<area shape="rect" href="joystick__port_8c.html" title=" " alt="" coords="1160,171,1340,213"/>
+<area shape="poly" title=" " alt="" coords="1163,129,1221,168,1218,172,1160,134"/>
+<area shape="rect" href="v_task_joystick_8cpp.html" title=" " alt="" coords="1364,179,1586,205"/>
+<area shape="poly" title=" " alt="" coords="1218,124,1425,175,1423,181,1217,130"/>
+<area shape="poly" title=" " alt="" coords="804,121,543,181,542,175,803,116"/>
+<area shape="poly" title=" " alt="" coords="915,119,1016,168,1014,173,913,124"/>
+<area shape="rect" href="tim_8c.html" title="This file provides code for the configuration of the TIM instances." alt="" coords="792,179,956,205"/>
+<area shape="poly" title=" " alt="" coords="876,130,876,178,871,178,871,130"/>
+</map>
 </div>
 </div>
 <p><a href="main_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac1980352aac0da31ff304e914a1722d1" id="r_ac1980352aac0da31ff304e914a1722d1"><td class="memItemLeft" align="right" valign="top"><a id="ac1980352aac0da31ff304e914a1722d1" name="ac1980352aac0da31ff304e914a1722d1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D2_Pin</b>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
+<tr class="memitem:ac1980352aac0da31ff304e914a1722d1" id="r_ac1980352aac0da31ff304e914a1722d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1980352aac0da31ff304e914a1722d1">LCD_D2_Pin</a>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
 <tr class="separator:ac1980352aac0da31ff304e914a1722d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae64e1b2b85356243d8ce9a77742423df" id="r_ae64e1b2b85356243d8ce9a77742423df"><td class="memItemLeft" align="right" valign="top"><a id="ae64e1b2b85356243d8ce9a77742423df" name="ae64e1b2b85356243d8ce9a77742423df"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D2_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:ae64e1b2b85356243d8ce9a77742423df" id="r_ae64e1b2b85356243d8ce9a77742423df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae64e1b2b85356243d8ce9a77742423df">LCD_D2_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:ae64e1b2b85356243d8ce9a77742423df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9686e1553c63091b0d6bc0b3804a8348" id="r_a9686e1553c63091b0d6bc0b3804a8348"><td class="memItemLeft" align="right" valign="top"><a id="a9686e1553c63091b0d6bc0b3804a8348" name="a9686e1553c63091b0d6bc0b3804a8348"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D3_Pin</b>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
+<tr class="memitem:a9686e1553c63091b0d6bc0b3804a8348" id="r_a9686e1553c63091b0d6bc0b3804a8348"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9686e1553c63091b0d6bc0b3804a8348">LCD_D3_Pin</a>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
 <tr class="separator:a9686e1553c63091b0d6bc0b3804a8348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91a70efedee5362c8ad4932569a18fd" id="r_ac91a70efedee5362c8ad4932569a18fd"><td class="memItemLeft" align="right" valign="top"><a id="ac91a70efedee5362c8ad4932569a18fd" name="ac91a70efedee5362c8ad4932569a18fd"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D3_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:ac91a70efedee5362c8ad4932569a18fd" id="r_ac91a70efedee5362c8ad4932569a18fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91a70efedee5362c8ad4932569a18fd">LCD_D3_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:ac91a70efedee5362c8ad4932569a18fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb2684e750191210c0e4e3929babcb0a" id="r_abb2684e750191210c0e4e3929babcb0a"><td class="memItemLeft" align="right" valign="top"><a id="abb2684e750191210c0e4e3929babcb0a" name="abb2684e750191210c0e4e3929babcb0a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D4_Pin</b>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="memitem:abb2684e750191210c0e4e3929babcb0a" id="r_abb2684e750191210c0e4e3929babcb0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2684e750191210c0e4e3929babcb0a">LCD_D4_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
 <tr class="separator:abb2684e750191210c0e4e3929babcb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa05fd750a9a62de2bdb8568cfdb09076" id="r_aa05fd750a9a62de2bdb8568cfdb09076"><td class="memItemLeft" align="right" valign="top"><a id="aa05fd750a9a62de2bdb8568cfdb09076" name="aa05fd750a9a62de2bdb8568cfdb09076"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D4_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:aa05fd750a9a62de2bdb8568cfdb09076" id="r_aa05fd750a9a62de2bdb8568cfdb09076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa05fd750a9a62de2bdb8568cfdb09076">LCD_D4_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:aa05fd750a9a62de2bdb8568cfdb09076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac87b3cda0ef2f915a686c40923b87348" id="r_ac87b3cda0ef2f915a686c40923b87348"><td class="memItemLeft" align="right" valign="top"><a id="ac87b3cda0ef2f915a686c40923b87348" name="ac87b3cda0ef2f915a686c40923b87348"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D5_Pin</b>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="memitem:ac87b3cda0ef2f915a686c40923b87348" id="r_ac87b3cda0ef2f915a686c40923b87348"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac87b3cda0ef2f915a686c40923b87348">LCD_D5_Pin</a>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
 <tr class="separator:ac87b3cda0ef2f915a686c40923b87348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93df360fe1d36333db0665f3fa0bcf65" id="r_a93df360fe1d36333db0665f3fa0bcf65"><td class="memItemLeft" align="right" valign="top"><a id="a93df360fe1d36333db0665f3fa0bcf65" name="a93df360fe1d36333db0665f3fa0bcf65"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D5_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a93df360fe1d36333db0665f3fa0bcf65" id="r_a93df360fe1d36333db0665f3fa0bcf65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93df360fe1d36333db0665f3fa0bcf65">LCD_D5_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a93df360fe1d36333db0665f3fa0bcf65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca1e6ee0f52cd22f8ca3b84d0800f98" id="r_adca1e6ee0f52cd22f8ca3b84d0800f98"><td class="memItemLeft" align="right" valign="top"><a id="adca1e6ee0f52cd22f8ca3b84d0800f98" name="adca1e6ee0f52cd22f8ca3b84d0800f98"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D6_Pin</b>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="memitem:adca1e6ee0f52cd22f8ca3b84d0800f98" id="r_adca1e6ee0f52cd22f8ca3b84d0800f98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adca1e6ee0f52cd22f8ca3b84d0800f98">LCD_D6_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
 <tr class="separator:adca1e6ee0f52cd22f8ca3b84d0800f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaabeecb0506ef73983dfb5b142285d93" id="r_aaabeecb0506ef73983dfb5b142285d93"><td class="memItemLeft" align="right" valign="top"><a id="aaabeecb0506ef73983dfb5b142285d93" name="aaabeecb0506ef73983dfb5b142285d93"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D6_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:aaabeecb0506ef73983dfb5b142285d93" id="r_aaabeecb0506ef73983dfb5b142285d93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaabeecb0506ef73983dfb5b142285d93">LCD_D6_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:aaabeecb0506ef73983dfb5b142285d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accb81ed62e4c90952b327e6109ea1949" id="r_accb81ed62e4c90952b327e6109ea1949"><td class="memItemLeft" align="right" valign="top"><a id="accb81ed62e4c90952b327e6109ea1949" name="accb81ed62e4c90952b327e6109ea1949"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW4_Pin</b>&#160;&#160;&#160;GPIO_PIN_13</td></tr>
+<tr class="memitem:accb81ed62e4c90952b327e6109ea1949" id="r_accb81ed62e4c90952b327e6109ea1949"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accb81ed62e4c90952b327e6109ea1949">SW4_Pin</a>&#160;&#160;&#160;GPIO_PIN_13</td></tr>
 <tr class="separator:accb81ed62e4c90952b327e6109ea1949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7e7f73d8264966009b57cab87d10c4e" id="r_ac7e7f73d8264966009b57cab87d10c4e"><td class="memItemLeft" align="right" valign="top"><a id="ac7e7f73d8264966009b57cab87d10c4e" name="ac7e7f73d8264966009b57cab87d10c4e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW4_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:ac7e7f73d8264966009b57cab87d10c4e" id="r_ac7e7f73d8264966009b57cab87d10c4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7e7f73d8264966009b57cab87d10c4e">SW4_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:ac7e7f73d8264966009b57cab87d10c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0388f90269edf6014063c55e7f57912" id="r_ac0388f90269edf6014063c55e7f57912"><td class="memItemLeft" align="right" valign="top"><a id="ac0388f90269edf6014063c55e7f57912" name="ac0388f90269edf6014063c55e7f57912"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_1_Pin</b>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="memitem:ac0388f90269edf6014063c55e7f57912" id="r_ac0388f90269edf6014063c55e7f57912"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0388f90269edf6014063c55e7f57912">SW_EXT_1_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
 <tr class="separator:ac0388f90269edf6014063c55e7f57912"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c0e3c36c25aff422dd2104a97a1855f" id="r_a9c0e3c36c25aff422dd2104a97a1855f"><td class="memItemLeft" align="right" valign="top"><a id="a9c0e3c36c25aff422dd2104a97a1855f" name="a9c0e3c36c25aff422dd2104a97a1855f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_1_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:a9c0e3c36c25aff422dd2104a97a1855f" id="r_a9c0e3c36c25aff422dd2104a97a1855f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0e3c36c25aff422dd2104a97a1855f">SW_EXT_1_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:a9c0e3c36c25aff422dd2104a97a1855f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcbd5780498b56d37e8b9ccbded9e3a4" id="r_abcbd5780498b56d37e8b9ccbded9e3a4"><td class="memItemLeft" align="right" valign="top"><a id="abcbd5780498b56d37e8b9ccbded9e3a4" name="abcbd5780498b56d37e8b9ccbded9e3a4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_UP_Pin</b>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="memitem:abcbd5780498b56d37e8b9ccbded9e3a4" id="r_abcbd5780498b56d37e8b9ccbded9e3a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcbd5780498b56d37e8b9ccbded9e3a4">JOY_UP_Pin</a>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
 <tr class="separator:abcbd5780498b56d37e8b9ccbded9e3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f8cc5c3c7686c8cdb595f7222bb3840" id="r_a7f8cc5c3c7686c8cdb595f7222bb3840"><td class="memItemLeft" align="right" valign="top"><a id="a7f8cc5c3c7686c8cdb595f7222bb3840" name="a7f8cc5c3c7686c8cdb595f7222bb3840"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_UP_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:a7f8cc5c3c7686c8cdb595f7222bb3840" id="r_a7f8cc5c3c7686c8cdb595f7222bb3840"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f8cc5c3c7686c8cdb595f7222bb3840">JOY_UP_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:a7f8cc5c3c7686c8cdb595f7222bb3840"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b48afe94118b91b66eef1da2260f952" id="r_a6b48afe94118b91b66eef1da2260f952"><td class="memItemLeft" align="right" valign="top"><a id="a6b48afe94118b91b66eef1da2260f952" name="a6b48afe94118b91b66eef1da2260f952"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_4_Pin</b>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
+<tr class="memitem:a6b48afe94118b91b66eef1da2260f952" id="r_a6b48afe94118b91b66eef1da2260f952"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b48afe94118b91b66eef1da2260f952">SW_EXT_4_Pin</a>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
 <tr class="separator:a6b48afe94118b91b66eef1da2260f952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea72ea41630d5f9d6e82ac5dd0252784" id="r_aea72ea41630d5f9d6e82ac5dd0252784"><td class="memItemLeft" align="right" valign="top"><a id="aea72ea41630d5f9d6e82ac5dd0252784" name="aea72ea41630d5f9d6e82ac5dd0252784"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_4_GPIO_Port</b>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="memitem:aea72ea41630d5f9d6e82ac5dd0252784" id="r_aea72ea41630d5f9d6e82ac5dd0252784"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea72ea41630d5f9d6e82ac5dd0252784">SW_EXT_4_GPIO_Port</a>&#160;&#160;&#160;GPIOB</td></tr>
 <tr class="separator:aea72ea41630d5f9d6e82ac5dd0252784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a02c31a2dc1c28e86cfdf505732029" id="r_af9a02c31a2dc1c28e86cfdf505732029"><td class="memItemLeft" align="right" valign="top"><a id="af9a02c31a2dc1c28e86cfdf505732029" name="af9a02c31a2dc1c28e86cfdf505732029"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D7_Pin</b>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="memitem:af9a02c31a2dc1c28e86cfdf505732029" id="r_af9a02c31a2dc1c28e86cfdf505732029"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9a02c31a2dc1c28e86cfdf505732029">LCD_D7_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
 <tr class="separator:af9a02c31a2dc1c28e86cfdf505732029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac297f9c095004eafd7756ca2b891d03a" id="r_ac297f9c095004eafd7756ca2b891d03a"><td class="memItemLeft" align="right" valign="top"><a id="ac297f9c095004eafd7756ca2b891d03a" name="ac297f9c095004eafd7756ca2b891d03a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D7_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:ac297f9c095004eafd7756ca2b891d03a" id="r_ac297f9c095004eafd7756ca2b891d03a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac297f9c095004eafd7756ca2b891d03a">LCD_D7_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:ac297f9c095004eafd7756ca2b891d03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84cf65c2b017bc8fe002c811705bc846" id="r_a84cf65c2b017bc8fe002c811705bc846"><td class="memItemLeft" align="right" valign="top"><a id="a84cf65c2b017bc8fe002c811705bc846" name="a84cf65c2b017bc8fe002c811705bc846"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RS_Pin</b>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
+<tr class="memitem:a84cf65c2b017bc8fe002c811705bc846" id="r_a84cf65c2b017bc8fe002c811705bc846"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84cf65c2b017bc8fe002c811705bc846">LCD_RS_Pin</a>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
 <tr class="separator:a84cf65c2b017bc8fe002c811705bc846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a7bf8fda04f0139622a654cc9ca5530" id="r_a7a7bf8fda04f0139622a654cc9ca5530"><td class="memItemLeft" align="right" valign="top"><a id="a7a7bf8fda04f0139622a654cc9ca5530" name="a7a7bf8fda04f0139622a654cc9ca5530"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RS_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a7a7bf8fda04f0139622a654cc9ca5530" id="r_a7a7bf8fda04f0139622a654cc9ca5530"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a7bf8fda04f0139622a654cc9ca5530">LCD_RS_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a7a7bf8fda04f0139622a654cc9ca5530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a4056daf7b9ead00ef1320ab049bfa7" id="r_a8a4056daf7b9ead00ef1320ab049bfa7"><td class="memItemLeft" align="right" valign="top"><a id="a8a4056daf7b9ead00ef1320ab049bfa7" name="a8a4056daf7b9ead00ef1320ab049bfa7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_E_Pin</b>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
+<tr class="memitem:a8a4056daf7b9ead00ef1320ab049bfa7" id="r_a8a4056daf7b9ead00ef1320ab049bfa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a4056daf7b9ead00ef1320ab049bfa7">LCD_E_Pin</a>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
 <tr class="separator:a8a4056daf7b9ead00ef1320ab049bfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafd4440032d23f5d8df5b2c906c8db40" id="r_aafd4440032d23f5d8df5b2c906c8db40"><td class="memItemLeft" align="right" valign="top"><a id="aafd4440032d23f5d8df5b2c906c8db40" name="aafd4440032d23f5d8df5b2c906c8db40"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_E_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:aafd4440032d23f5d8df5b2c906c8db40" id="r_aafd4440032d23f5d8df5b2c906c8db40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafd4440032d23f5d8df5b2c906c8db40">LCD_E_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:aafd4440032d23f5d8df5b2c906c8db40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4e900ebcc316a242287b4de1cc541ab" id="r_ad4e900ebcc316a242287b4de1cc541ab"><td class="memItemLeft" align="right" valign="top"><a id="ad4e900ebcc316a242287b4de1cc541ab" name="ad4e900ebcc316a242287b4de1cc541ab"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RW_Pin</b>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
+<tr class="memitem:ad4e900ebcc316a242287b4de1cc541ab" id="r_ad4e900ebcc316a242287b4de1cc541ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4e900ebcc316a242287b4de1cc541ab">LCD_RW_Pin</a>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
 <tr class="separator:ad4e900ebcc316a242287b4de1cc541ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7aa549ab9cdb985db6f23a573d57108" id="r_ad7aa549ab9cdb985db6f23a573d57108"><td class="memItemLeft" align="right" valign="top"><a id="ad7aa549ab9cdb985db6f23a573d57108" name="ad7aa549ab9cdb985db6f23a573d57108"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RW_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:ad7aa549ab9cdb985db6f23a573d57108" id="r_ad7aa549ab9cdb985db6f23a573d57108"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7aa549ab9cdb985db6f23a573d57108">LCD_RW_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:ad7aa549ab9cdb985db6f23a573d57108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a6949aadef222d7f8bc3053ed14467" id="r_a80a6949aadef222d7f8bc3053ed14467"><td class="memItemLeft" align="right" valign="top"><a id="a80a6949aadef222d7f8bc3053ed14467" name="a80a6949aadef222d7f8bc3053ed14467"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_CS1_Pin</b>&#160;&#160;&#160;GPIO_PIN_11</td></tr>
+<tr class="memitem:a80a6949aadef222d7f8bc3053ed14467" id="r_a80a6949aadef222d7f8bc3053ed14467"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80a6949aadef222d7f8bc3053ed14467">LCD_CS1_Pin</a>&#160;&#160;&#160;GPIO_PIN_11</td></tr>
 <tr class="separator:a80a6949aadef222d7f8bc3053ed14467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7008fceec9ee77eb8b2d490fe795716e" id="r_a7008fceec9ee77eb8b2d490fe795716e"><td class="memItemLeft" align="right" valign="top"><a id="a7008fceec9ee77eb8b2d490fe795716e" name="a7008fceec9ee77eb8b2d490fe795716e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_CS1_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a7008fceec9ee77eb8b2d490fe795716e" id="r_a7008fceec9ee77eb8b2d490fe795716e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7008fceec9ee77eb8b2d490fe795716e">LCD_CS1_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a7008fceec9ee77eb8b2d490fe795716e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75ffec949a569255539878d6a554921f" id="r_a75ffec949a569255539878d6a554921f"><td class="memItemLeft" align="right" valign="top"><a id="a75ffec949a569255539878d6a554921f" name="a75ffec949a569255539878d6a554921f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_CS2_Pin</b>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
+<tr class="memitem:a75ffec949a569255539878d6a554921f" id="r_a75ffec949a569255539878d6a554921f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75ffec949a569255539878d6a554921f">LCD_CS2_Pin</a>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
 <tr class="separator:a75ffec949a569255539878d6a554921f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf323c968adf2ee419c44f315b9adef" id="r_a9cf323c968adf2ee419c44f315b9adef"><td class="memItemLeft" align="right" valign="top"><a id="a9cf323c968adf2ee419c44f315b9adef" name="a9cf323c968adf2ee419c44f315b9adef"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_CS2_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a9cf323c968adf2ee419c44f315b9adef" id="r_a9cf323c968adf2ee419c44f315b9adef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cf323c968adf2ee419c44f315b9adef">LCD_CS2_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a9cf323c968adf2ee419c44f315b9adef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f050faf586d6fb652d66c2795cf6ba" id="r_ac0f050faf586d6fb652d66c2795cf6ba"><td class="memItemLeft" align="right" valign="top"><a id="ac0f050faf586d6fb652d66c2795cf6ba" name="ac0f050faf586d6fb652d66c2795cf6ba"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BUZZER_Pin</b>&#160;&#160;&#160;GPIO_PIN_13</td></tr>
+<tr class="memitem:ac0f050faf586d6fb652d66c2795cf6ba" id="r_ac0f050faf586d6fb652d66c2795cf6ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f050faf586d6fb652d66c2795cf6ba">BUZZER_Pin</a>&#160;&#160;&#160;GPIO_PIN_13</td></tr>
 <tr class="separator:ac0f050faf586d6fb652d66c2795cf6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fba9f1605fb71c4ef6dc1dfb09207d8" id="r_a9fba9f1605fb71c4ef6dc1dfb09207d8"><td class="memItemLeft" align="right" valign="top"><a id="a9fba9f1605fb71c4ef6dc1dfb09207d8" name="a9fba9f1605fb71c4ef6dc1dfb09207d8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BUZZER_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a9fba9f1605fb71c4ef6dc1dfb09207d8" id="r_a9fba9f1605fb71c4ef6dc1dfb09207d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fba9f1605fb71c4ef6dc1dfb09207d8">BUZZER_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a9fba9f1605fb71c4ef6dc1dfb09207d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf9c15ce1f17dded9340882dbf82d7b1" id="r_abf9c15ce1f17dded9340882dbf82d7b1"><td class="memItemLeft" align="right" valign="top"><a id="abf9c15ce1f17dded9340882dbf82d7b1" name="abf9c15ce1f17dded9340882dbf82d7b1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_1_Pin</b>&#160;&#160;&#160;GPIO_PIN_14</td></tr>
+<tr class="memitem:abf9c15ce1f17dded9340882dbf82d7b1" id="r_abf9c15ce1f17dded9340882dbf82d7b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9c15ce1f17dded9340882dbf82d7b1">LED_1_Pin</a>&#160;&#160;&#160;GPIO_PIN_14</td></tr>
 <tr class="separator:abf9c15ce1f17dded9340882dbf82d7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c03b4b960de6c291739156b52be7f5" id="r_a81c03b4b960de6c291739156b52be7f5"><td class="memItemLeft" align="right" valign="top"><a id="a81c03b4b960de6c291739156b52be7f5" name="a81c03b4b960de6c291739156b52be7f5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_1_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a81c03b4b960de6c291739156b52be7f5" id="r_a81c03b4b960de6c291739156b52be7f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c03b4b960de6c291739156b52be7f5">LED_1_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a81c03b4b960de6c291739156b52be7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17f93fd494f5c87a5a6518109976d543" id="r_a17f93fd494f5c87a5a6518109976d543"><td class="memItemLeft" align="right" valign="top"><a id="a17f93fd494f5c87a5a6518109976d543" name="a17f93fd494f5c87a5a6518109976d543"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_2_Pin</b>&#160;&#160;&#160;GPIO_PIN_15</td></tr>
+<tr class="memitem:a17f93fd494f5c87a5a6518109976d543" id="r_a17f93fd494f5c87a5a6518109976d543"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17f93fd494f5c87a5a6518109976d543">LED_2_Pin</a>&#160;&#160;&#160;GPIO_PIN_15</td></tr>
 <tr class="separator:a17f93fd494f5c87a5a6518109976d543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8210a06ad8599ec66538b4e8c22bfdae" id="r_a8210a06ad8599ec66538b4e8c22bfdae"><td class="memItemLeft" align="right" valign="top"><a id="a8210a06ad8599ec66538b4e8c22bfdae" name="a8210a06ad8599ec66538b4e8c22bfdae"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_2_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a8210a06ad8599ec66538b4e8c22bfdae" id="r_a8210a06ad8599ec66538b4e8c22bfdae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8210a06ad8599ec66538b4e8c22bfdae">LED_2_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a8210a06ad8599ec66538b4e8c22bfdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28a94621da780c47bbdeffa9e8329e50" id="r_a28a94621da780c47bbdeffa9e8329e50"><td class="memItemLeft" align="right" valign="top"><a id="a28a94621da780c47bbdeffa9e8329e50" name="a28a94621da780c47bbdeffa9e8329e50"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_2_Pin</b>&#160;&#160;&#160;GPIO_PIN_14</td></tr>
+<tr class="memitem:a28a94621da780c47bbdeffa9e8329e50" id="r_a28a94621da780c47bbdeffa9e8329e50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28a94621da780c47bbdeffa9e8329e50">SW_EXT_2_Pin</a>&#160;&#160;&#160;GPIO_PIN_14</td></tr>
 <tr class="separator:a28a94621da780c47bbdeffa9e8329e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a9bff97f4a142bbe53725a09da3e23" id="r_a97a9bff97f4a142bbe53725a09da3e23"><td class="memItemLeft" align="right" valign="top"><a id="a97a9bff97f4a142bbe53725a09da3e23" name="a97a9bff97f4a142bbe53725a09da3e23"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_2_GPIO_Port</b>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="memitem:a97a9bff97f4a142bbe53725a09da3e23" id="r_a97a9bff97f4a142bbe53725a09da3e23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97a9bff97f4a142bbe53725a09da3e23">SW_EXT_2_GPIO_Port</a>&#160;&#160;&#160;GPIOB</td></tr>
 <tr class="separator:a97a9bff97f4a142bbe53725a09da3e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb4154a33c41e317f42cb1e62fc86522" id="r_afb4154a33c41e317f42cb1e62fc86522"><td class="memItemLeft" align="right" valign="top"><a id="afb4154a33c41e317f42cb1e62fc86522" name="afb4154a33c41e317f42cb1e62fc86522"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_6_Pin</b>&#160;&#160;&#160;GPIO_PIN_15</td></tr>
+<tr class="memitem:afb4154a33c41e317f42cb1e62fc86522" id="r_afb4154a33c41e317f42cb1e62fc86522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb4154a33c41e317f42cb1e62fc86522">SW_EXT_6_Pin</a>&#160;&#160;&#160;GPIO_PIN_15</td></tr>
 <tr class="separator:afb4154a33c41e317f42cb1e62fc86522"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae34655f9babb27057369aefd3bd0fab2" id="r_ae34655f9babb27057369aefd3bd0fab2"><td class="memItemLeft" align="right" valign="top"><a id="ae34655f9babb27057369aefd3bd0fab2" name="ae34655f9babb27057369aefd3bd0fab2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_6_GPIO_Port</b>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="memitem:ae34655f9babb27057369aefd3bd0fab2" id="r_ae34655f9babb27057369aefd3bd0fab2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae34655f9babb27057369aefd3bd0fab2">SW_EXT_6_GPIO_Port</a>&#160;&#160;&#160;GPIOB</td></tr>
 <tr class="separator:ae34655f9babb27057369aefd3bd0fab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb34bc802dba3dd6cdd9d61b8d670567" id="r_adb34bc802dba3dd6cdd9d61b8d670567"><td class="memItemLeft" align="right" valign="top"><a id="adb34bc802dba3dd6cdd9d61b8d670567" name="adb34bc802dba3dd6cdd9d61b8d670567"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_DOWN_Pin</b>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="memitem:adb34bc802dba3dd6cdd9d61b8d670567" id="r_adb34bc802dba3dd6cdd9d61b8d670567"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb34bc802dba3dd6cdd9d61b8d670567">JOY_DOWN_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
 <tr class="separator:adb34bc802dba3dd6cdd9d61b8d670567"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9eb7549c950a569a4f1ae8f83abca7a" id="r_ad9eb7549c950a569a4f1ae8f83abca7a"><td class="memItemLeft" align="right" valign="top"><a id="ad9eb7549c950a569a4f1ae8f83abca7a" name="ad9eb7549c950a569a4f1ae8f83abca7a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_DOWN_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:ad9eb7549c950a569a4f1ae8f83abca7a" id="r_ad9eb7549c950a569a4f1ae8f83abca7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9eb7549c950a569a4f1ae8f83abca7a">JOY_DOWN_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:ad9eb7549c950a569a4f1ae8f83abca7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2efe43dd040cbc0e9e2b21a721e62f15" id="r_a2efe43dd040cbc0e9e2b21a721e62f15"><td class="memItemLeft" align="right" valign="top"><a id="a2efe43dd040cbc0e9e2b21a721e62f15" name="a2efe43dd040cbc0e9e2b21a721e62f15"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_RIGHT_Pin</b>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="memitem:a2efe43dd040cbc0e9e2b21a721e62f15" id="r_a2efe43dd040cbc0e9e2b21a721e62f15"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2efe43dd040cbc0e9e2b21a721e62f15">JOY_RIGHT_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
 <tr class="separator:a2efe43dd040cbc0e9e2b21a721e62f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4b6ff1f3e465d040dd9b4e84cb1299" id="r_a2d4b6ff1f3e465d040dd9b4e84cb1299"><td class="memItemLeft" align="right" valign="top"><a id="a2d4b6ff1f3e465d040dd9b4e84cb1299" name="a2d4b6ff1f3e465d040dd9b4e84cb1299"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_RIGHT_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:a2d4b6ff1f3e465d040dd9b4e84cb1299" id="r_a2d4b6ff1f3e465d040dd9b4e84cb1299"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d4b6ff1f3e465d040dd9b4e84cb1299">JOY_RIGHT_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:a2d4b6ff1f3e465d040dd9b4e84cb1299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4169670fc4e75a3b019fbfb0d401ef43" id="r_a4169670fc4e75a3b019fbfb0d401ef43"><td class="memItemLeft" align="right" valign="top"><a id="a4169670fc4e75a3b019fbfb0d401ef43" name="a4169670fc4e75a3b019fbfb0d401ef43"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_LEFT_Pin</b>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
+<tr class="memitem:a4169670fc4e75a3b019fbfb0d401ef43" id="r_a4169670fc4e75a3b019fbfb0d401ef43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4169670fc4e75a3b019fbfb0d401ef43">JOY_LEFT_Pin</a>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
 <tr class="separator:a4169670fc4e75a3b019fbfb0d401ef43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41f68da93ecee743c036eb9969ed886" id="r_ac41f68da93ecee743c036eb9969ed886"><td class="memItemLeft" align="right" valign="top"><a id="ac41f68da93ecee743c036eb9969ed886" name="ac41f68da93ecee743c036eb9969ed886"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_LEFT_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:ac41f68da93ecee743c036eb9969ed886" id="r_ac41f68da93ecee743c036eb9969ed886"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac41f68da93ecee743c036eb9969ed886">JOY_LEFT_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:ac41f68da93ecee743c036eb9969ed886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63503bf3a0be8e6a5095ee3405b9b651" id="r_a63503bf3a0be8e6a5095ee3405b9b651"><td class="memItemLeft" align="right" valign="top"><a id="a63503bf3a0be8e6a5095ee3405b9b651" name="a63503bf3a0be8e6a5095ee3405b9b651"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_OK_Pin</b>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
+<tr class="memitem:a63503bf3a0be8e6a5095ee3405b9b651" id="r_a63503bf3a0be8e6a5095ee3405b9b651"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63503bf3a0be8e6a5095ee3405b9b651">JOY_OK_Pin</a>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
 <tr class="separator:a63503bf3a0be8e6a5095ee3405b9b651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c342945592f457c395129d931bb4fa" id="r_a59c342945592f457c395129d931bb4fa"><td class="memItemLeft" align="right" valign="top"><a id="a59c342945592f457c395129d931bb4fa" name="a59c342945592f457c395129d931bb4fa"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOY_OK_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:a59c342945592f457c395129d931bb4fa" id="r_a59c342945592f457c395129d931bb4fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59c342945592f457c395129d931bb4fa">JOY_OK_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:a59c342945592f457c395129d931bb4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e3c494cec6ebd651762228c60494355" id="r_a6e3c494cec6ebd651762228c60494355"><td class="memItemLeft" align="right" valign="top"><a id="a6e3c494cec6ebd651762228c60494355" name="a6e3c494cec6ebd651762228c60494355"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW3_Pin</b>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
+<tr class="memitem:a6e3c494cec6ebd651762228c60494355" id="r_a6e3c494cec6ebd651762228c60494355"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e3c494cec6ebd651762228c60494355">SW3_Pin</a>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
 <tr class="separator:a6e3c494cec6ebd651762228c60494355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9b544b39cc021e2ff9699948cc97a8" id="r_a5e9b544b39cc021e2ff9699948cc97a8"><td class="memItemLeft" align="right" valign="top"><a id="a5e9b544b39cc021e2ff9699948cc97a8" name="a5e9b544b39cc021e2ff9699948cc97a8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW3_GPIO_Port</b>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="memitem:a5e9b544b39cc021e2ff9699948cc97a8" id="r_a5e9b544b39cc021e2ff9699948cc97a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e9b544b39cc021e2ff9699948cc97a8">SW3_GPIO_Port</a>&#160;&#160;&#160;GPIOC</td></tr>
 <tr class="separator:a5e9b544b39cc021e2ff9699948cc97a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eaec27eeb807377ee0d8e00f8d03a6d" id="r_a4eaec27eeb807377ee0d8e00f8d03a6d"><td class="memItemLeft" align="right" valign="top"><a id="a4eaec27eeb807377ee0d8e00f8d03a6d" name="a4eaec27eeb807377ee0d8e00f8d03a6d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_1_Pin</b>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
+<tr class="memitem:a4eaec27eeb807377ee0d8e00f8d03a6d" id="r_a4eaec27eeb807377ee0d8e00f8d03a6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eaec27eeb807377ee0d8e00f8d03a6d">LED_EXT_1_Pin</a>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
 <tr class="separator:a4eaec27eeb807377ee0d8e00f8d03a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ecdb413ed185d71a4d22468aa53ba7" id="r_a77ecdb413ed185d71a4d22468aa53ba7"><td class="memItemLeft" align="right" valign="top"><a id="a77ecdb413ed185d71a4d22468aa53ba7" name="a77ecdb413ed185d71a4d22468aa53ba7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_1_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:a77ecdb413ed185d71a4d22468aa53ba7" id="r_a77ecdb413ed185d71a4d22468aa53ba7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77ecdb413ed185d71a4d22468aa53ba7">LED_EXT_1_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:a77ecdb413ed185d71a4d22468aa53ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b2100a275fcbfa9665a8bc4123d46fb" id="r_a2b2100a275fcbfa9665a8bc4123d46fb"><td class="memItemLeft" align="right" valign="top"><a id="a2b2100a275fcbfa9665a8bc4123d46fb" name="a2b2100a275fcbfa9665a8bc4123d46fb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_2_Pin</b>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
+<tr class="memitem:a2b2100a275fcbfa9665a8bc4123d46fb" id="r_a2b2100a275fcbfa9665a8bc4123d46fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b2100a275fcbfa9665a8bc4123d46fb">LED_EXT_2_Pin</a>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
 <tr class="separator:a2b2100a275fcbfa9665a8bc4123d46fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afadea8c78f9111851306888b9e5a16d6" id="r_afadea8c78f9111851306888b9e5a16d6"><td class="memItemLeft" align="right" valign="top"><a id="afadea8c78f9111851306888b9e5a16d6" name="afadea8c78f9111851306888b9e5a16d6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_2_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:afadea8c78f9111851306888b9e5a16d6" id="r_afadea8c78f9111851306888b9e5a16d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afadea8c78f9111851306888b9e5a16d6">LED_EXT_2_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:afadea8c78f9111851306888b9e5a16d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1455f761e64a73c960b519462a96e4e9" id="r_a1455f761e64a73c960b519462a96e4e9"><td class="memItemLeft" align="right" valign="top"><a id="a1455f761e64a73c960b519462a96e4e9" name="a1455f761e64a73c960b519462a96e4e9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_3_Pin</b>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
+<tr class="memitem:a1455f761e64a73c960b519462a96e4e9" id="r_a1455f761e64a73c960b519462a96e4e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1455f761e64a73c960b519462a96e4e9">LED_EXT_3_Pin</a>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
 <tr class="separator:a1455f761e64a73c960b519462a96e4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01bd12841571e8e567198252b586e087" id="r_a01bd12841571e8e567198252b586e087"><td class="memItemLeft" align="right" valign="top"><a id="a01bd12841571e8e567198252b586e087" name="a01bd12841571e8e567198252b586e087"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_3_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:a01bd12841571e8e567198252b586e087" id="r_a01bd12841571e8e567198252b586e087"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01bd12841571e8e567198252b586e087">LED_EXT_3_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:a01bd12841571e8e567198252b586e087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ba6cd692c9102fecf37b99359829d5" id="r_a66ba6cd692c9102fecf37b99359829d5"><td class="memItemLeft" align="right" valign="top"><a id="a66ba6cd692c9102fecf37b99359829d5" name="a66ba6cd692c9102fecf37b99359829d5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_4_Pin</b>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="memitem:a66ba6cd692c9102fecf37b99359829d5" id="r_a66ba6cd692c9102fecf37b99359829d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ba6cd692c9102fecf37b99359829d5">LED_EXT_4_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
 <tr class="separator:a66ba6cd692c9102fecf37b99359829d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59306c17ed59c850c17ebb6793cc2860" id="r_a59306c17ed59c850c17ebb6793cc2860"><td class="memItemLeft" align="right" valign="top"><a id="a59306c17ed59c850c17ebb6793cc2860" name="a59306c17ed59c850c17ebb6793cc2860"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_4_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:a59306c17ed59c850c17ebb6793cc2860" id="r_a59306c17ed59c850c17ebb6793cc2860"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59306c17ed59c850c17ebb6793cc2860">LED_EXT_4_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:a59306c17ed59c850c17ebb6793cc2860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96453d5d142f350f892d742721f908af" id="r_a96453d5d142f350f892d742721f908af"><td class="memItemLeft" align="right" valign="top"><a id="a96453d5d142f350f892d742721f908af" name="a96453d5d142f350f892d742721f908af"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_5_Pin</b>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="memitem:a96453d5d142f350f892d742721f908af" id="r_a96453d5d142f350f892d742721f908af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96453d5d142f350f892d742721f908af">LED_EXT_5_Pin</a>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
 <tr class="separator:a96453d5d142f350f892d742721f908af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc6be73ece1ae9ce567203ef59749a1" id="r_a7fc6be73ece1ae9ce567203ef59749a1"><td class="memItemLeft" align="right" valign="top"><a id="a7fc6be73ece1ae9ce567203ef59749a1" name="a7fc6be73ece1ae9ce567203ef59749a1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_5_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:a7fc6be73ece1ae9ce567203ef59749a1" id="r_a7fc6be73ece1ae9ce567203ef59749a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fc6be73ece1ae9ce567203ef59749a1">LED_EXT_5_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:a7fc6be73ece1ae9ce567203ef59749a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad97efafaf783cae9456d9f4d1bb2f1dd" id="r_ad97efafaf783cae9456d9f4d1bb2f1dd"><td class="memItemLeft" align="right" valign="top"><a id="ad97efafaf783cae9456d9f4d1bb2f1dd" name="ad97efafaf783cae9456d9f4d1bb2f1dd"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_6_Pin</b>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="memitem:ad97efafaf783cae9456d9f4d1bb2f1dd" id="r_ad97efafaf783cae9456d9f4d1bb2f1dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad97efafaf783cae9456d9f4d1bb2f1dd">LED_EXT_6_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
 <tr class="separator:ad97efafaf783cae9456d9f4d1bb2f1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3669e53beee75c087a7bdb673b8fefc" id="r_ad3669e53beee75c087a7bdb673b8fefc"><td class="memItemLeft" align="right" valign="top"><a id="ad3669e53beee75c087a7bdb673b8fefc" name="ad3669e53beee75c087a7bdb673b8fefc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_6_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:ad3669e53beee75c087a7bdb673b8fefc" id="r_ad3669e53beee75c087a7bdb673b8fefc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3669e53beee75c087a7bdb673b8fefc">LED_EXT_6_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:ad3669e53beee75c087a7bdb673b8fefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5575702611bb94db166b11bbb5876e46" id="r_a5575702611bb94db166b11bbb5876e46"><td class="memItemLeft" align="right" valign="top"><a id="a5575702611bb94db166b11bbb5876e46" name="a5575702611bb94db166b11bbb5876e46"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_7_Pin</b>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="memitem:a5575702611bb94db166b11bbb5876e46" id="r_a5575702611bb94db166b11bbb5876e46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5575702611bb94db166b11bbb5876e46">LED_EXT_7_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
 <tr class="separator:a5575702611bb94db166b11bbb5876e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b48a32c1addaf95b961ed6148692fdb" id="r_a2b48a32c1addaf95b961ed6148692fdb"><td class="memItemLeft" align="right" valign="top"><a id="a2b48a32c1addaf95b961ed6148692fdb" name="a2b48a32c1addaf95b961ed6148692fdb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LED_EXT_7_GPIO_Port</b>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="memitem:a2b48a32c1addaf95b961ed6148692fdb" id="r_a2b48a32c1addaf95b961ed6148692fdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b48a32c1addaf95b961ed6148692fdb">LED_EXT_7_GPIO_Port</a>&#160;&#160;&#160;GPIOD</td></tr>
 <tr class="separator:a2b48a32c1addaf95b961ed6148692fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891844b56407bfbbd7cd3d7d8f4c8e8a" id="r_a891844b56407bfbbd7cd3d7d8f4c8e8a"><td class="memItemLeft" align="right" valign="top"><a id="a891844b56407bfbbd7cd3d7d8f4c8e8a" name="a891844b56407bfbbd7cd3d7d8f4c8e8a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_5_Pin</b>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="memitem:a891844b56407bfbbd7cd3d7d8f4c8e8a" id="r_a891844b56407bfbbd7cd3d7d8f4c8e8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a891844b56407bfbbd7cd3d7d8f4c8e8a">SW_EXT_5_Pin</a>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
 <tr class="separator:a891844b56407bfbbd7cd3d7d8f4c8e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3690db167a840404eb65768a75890366" id="r_a3690db167a840404eb65768a75890366"><td class="memItemLeft" align="right" valign="top"><a id="a3690db167a840404eb65768a75890366" name="a3690db167a840404eb65768a75890366"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_5_GPIO_Port</b>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="memitem:a3690db167a840404eb65768a75890366" id="r_a3690db167a840404eb65768a75890366"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3690db167a840404eb65768a75890366">SW_EXT_5_GPIO_Port</a>&#160;&#160;&#160;GPIOB</td></tr>
 <tr class="separator:a3690db167a840404eb65768a75890366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274589552e2e54baf9e4d1d26664aecc" id="r_a274589552e2e54baf9e4d1d26664aecc"><td class="memItemLeft" align="right" valign="top"><a id="a274589552e2e54baf9e4d1d26664aecc" name="a274589552e2e54baf9e4d1d26664aecc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_3_Pin</b>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
+<tr class="memitem:a274589552e2e54baf9e4d1d26664aecc" id="r_a274589552e2e54baf9e4d1d26664aecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a274589552e2e54baf9e4d1d26664aecc">SW_EXT_3_Pin</a>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
 <tr class="separator:a274589552e2e54baf9e4d1d26664aecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53277d6e80fff145d0aa59c5249ffe80" id="r_a53277d6e80fff145d0aa59c5249ffe80"><td class="memItemLeft" align="right" valign="top"><a id="a53277d6e80fff145d0aa59c5249ffe80" name="a53277d6e80fff145d0aa59c5249ffe80"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SW_EXT_3_GPIO_Port</b>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="memitem:a53277d6e80fff145d0aa59c5249ffe80" id="r_a53277d6e80fff145d0aa59c5249ffe80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53277d6e80fff145d0aa59c5249ffe80">SW_EXT_3_GPIO_Port</a>&#160;&#160;&#160;GPIOB</td></tr>
 <tr class="separator:a53277d6e80fff145d0aa59c5249ffe80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a007f00a98d0e6e70e6bf766bcfa2d0fc" id="r_a007f00a98d0e6e70e6bf766bcfa2d0fc"><td class="memItemLeft" align="right" valign="top"><a id="a007f00a98d0e6e70e6bf766bcfa2d0fc" name="a007f00a98d0e6e70e6bf766bcfa2d0fc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D0_Pin</b>&#160;&#160;&#160;GPIO_PIN_0</td></tr>
+<tr class="memitem:a007f00a98d0e6e70e6bf766bcfa2d0fc" id="r_a007f00a98d0e6e70e6bf766bcfa2d0fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a007f00a98d0e6e70e6bf766bcfa2d0fc">LCD_D0_Pin</a>&#160;&#160;&#160;GPIO_PIN_0</td></tr>
 <tr class="separator:a007f00a98d0e6e70e6bf766bcfa2d0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a580359164c9aa60530f4a81ecf2d59b5" id="r_a580359164c9aa60530f4a81ecf2d59b5"><td class="memItemLeft" align="right" valign="top"><a id="a580359164c9aa60530f4a81ecf2d59b5" name="a580359164c9aa60530f4a81ecf2d59b5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D0_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a580359164c9aa60530f4a81ecf2d59b5" id="r_a580359164c9aa60530f4a81ecf2d59b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580359164c9aa60530f4a81ecf2d59b5">LCD_D0_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a580359164c9aa60530f4a81ecf2d59b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4784ee1b05c61465610538db75db0c08" id="r_a4784ee1b05c61465610538db75db0c08"><td class="memItemLeft" align="right" valign="top"><a id="a4784ee1b05c61465610538db75db0c08" name="a4784ee1b05c61465610538db75db0c08"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D1_Pin</b>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
+<tr class="memitem:a4784ee1b05c61465610538db75db0c08" id="r_a4784ee1b05c61465610538db75db0c08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4784ee1b05c61465610538db75db0c08">LCD_D1_Pin</a>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
 <tr class="separator:a4784ee1b05c61465610538db75db0c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f82b0d2f4a1a6a9f110584b89a18a19" id="r_a1f82b0d2f4a1a6a9f110584b89a18a19"><td class="memItemLeft" align="right" valign="top"><a id="a1f82b0d2f4a1a6a9f110584b89a18a19" name="a1f82b0d2f4a1a6a9f110584b89a18a19"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_D1_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a1f82b0d2f4a1a6a9f110584b89a18a19" id="r_a1f82b0d2f4a1a6a9f110584b89a18a19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f82b0d2f4a1a6a9f110584b89a18a19">LCD_D1_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a1f82b0d2f4a1a6a9f110584b89a18a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0583385022d6cd167604b5ec2460d28" id="r_af0583385022d6cd167604b5ec2460d28"><td class="memItemLeft" align="right" valign="top"><a id="af0583385022d6cd167604b5ec2460d28" name="af0583385022d6cd167604b5ec2460d28"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_DATA_PORT</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:af0583385022d6cd167604b5ec2460d28" id="r_af0583385022d6cd167604b5ec2460d28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0583385022d6cd167604b5ec2460d28">GLCD_DATA_PORT</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:af0583385022d6cd167604b5ec2460d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95aac946ad27ca518f3802c8a6bf9257" id="r_a95aac946ad27ca518f3802c8a6bf9257"><td class="memItemLeft" align="right" valign="top"><a id="a95aac946ad27ca518f3802c8a6bf9257" name="a95aac946ad27ca518f3802c8a6bf9257"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D0_Pin</b>&#160;&#160;&#160;GPIO_PIN_0</td></tr>
+<tr class="memitem:a95aac946ad27ca518f3802c8a6bf9257" id="r_a95aac946ad27ca518f3802c8a6bf9257"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95aac946ad27ca518f3802c8a6bf9257">GLCD_D0_Pin</a>&#160;&#160;&#160;GPIO_PIN_0</td></tr>
 <tr class="separator:a95aac946ad27ca518f3802c8a6bf9257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38d2ec6de22f6ebc34b4a6851041177b" id="r_a38d2ec6de22f6ebc34b4a6851041177b"><td class="memItemLeft" align="right" valign="top"><a id="a38d2ec6de22f6ebc34b4a6851041177b" name="a38d2ec6de22f6ebc34b4a6851041177b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D0_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a38d2ec6de22f6ebc34b4a6851041177b" id="r_a38d2ec6de22f6ebc34b4a6851041177b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38d2ec6de22f6ebc34b4a6851041177b">GLCD_D0_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a38d2ec6de22f6ebc34b4a6851041177b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfeabf38aeaab24e6bdf3d86c478366a" id="r_abfeabf38aeaab24e6bdf3d86c478366a"><td class="memItemLeft" align="right" valign="top"><a id="abfeabf38aeaab24e6bdf3d86c478366a" name="abfeabf38aeaab24e6bdf3d86c478366a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D1_Pin</b>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
+<tr class="memitem:abfeabf38aeaab24e6bdf3d86c478366a" id="r_abfeabf38aeaab24e6bdf3d86c478366a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfeabf38aeaab24e6bdf3d86c478366a">GLCD_D1_Pin</a>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
 <tr class="separator:abfeabf38aeaab24e6bdf3d86c478366a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a253f7c61fcd2e84325d2c2a8b0bfbf48" id="r_a253f7c61fcd2e84325d2c2a8b0bfbf48"><td class="memItemLeft" align="right" valign="top"><a id="a253f7c61fcd2e84325d2c2a8b0bfbf48" name="a253f7c61fcd2e84325d2c2a8b0bfbf48"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D1_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a253f7c61fcd2e84325d2c2a8b0bfbf48" id="r_a253f7c61fcd2e84325d2c2a8b0bfbf48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a253f7c61fcd2e84325d2c2a8b0bfbf48">GLCD_D1_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a253f7c61fcd2e84325d2c2a8b0bfbf48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a9cc37561111cf53d09ddcb4040795" id="r_a00a9cc37561111cf53d09ddcb4040795"><td class="memItemLeft" align="right" valign="top"><a id="a00a9cc37561111cf53d09ddcb4040795" name="a00a9cc37561111cf53d09ddcb4040795"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D2_Pin</b>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
+<tr class="memitem:a00a9cc37561111cf53d09ddcb4040795" id="r_a00a9cc37561111cf53d09ddcb4040795"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a9cc37561111cf53d09ddcb4040795">GLCD_D2_Pin</a>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
 <tr class="separator:a00a9cc37561111cf53d09ddcb4040795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89db76045490f52abe7498318857e0eb" id="r_a89db76045490f52abe7498318857e0eb"><td class="memItemLeft" align="right" valign="top"><a id="a89db76045490f52abe7498318857e0eb" name="a89db76045490f52abe7498318857e0eb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D2_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a89db76045490f52abe7498318857e0eb" id="r_a89db76045490f52abe7498318857e0eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89db76045490f52abe7498318857e0eb">GLCD_D2_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a89db76045490f52abe7498318857e0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fe3aa4698735d36e99a2ddea7882a27" id="r_a0fe3aa4698735d36e99a2ddea7882a27"><td class="memItemLeft" align="right" valign="top"><a id="a0fe3aa4698735d36e99a2ddea7882a27" name="a0fe3aa4698735d36e99a2ddea7882a27"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D3_Pin</b>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
+<tr class="memitem:a0fe3aa4698735d36e99a2ddea7882a27" id="r_a0fe3aa4698735d36e99a2ddea7882a27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe3aa4698735d36e99a2ddea7882a27">GLCD_D3_Pin</a>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
 <tr class="separator:a0fe3aa4698735d36e99a2ddea7882a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd01a245b9377a6840d021ca91a9d621" id="r_abd01a245b9377a6840d021ca91a9d621"><td class="memItemLeft" align="right" valign="top"><a id="abd01a245b9377a6840d021ca91a9d621" name="abd01a245b9377a6840d021ca91a9d621"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D3_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:abd01a245b9377a6840d021ca91a9d621" id="r_abd01a245b9377a6840d021ca91a9d621"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd01a245b9377a6840d021ca91a9d621">GLCD_D3_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:abd01a245b9377a6840d021ca91a9d621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93ee0f09a4acae0628bd3b42d0d54ed4" id="r_a93ee0f09a4acae0628bd3b42d0d54ed4"><td class="memItemLeft" align="right" valign="top"><a id="a93ee0f09a4acae0628bd3b42d0d54ed4" name="a93ee0f09a4acae0628bd3b42d0d54ed4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D4_Pin</b>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="memitem:a93ee0f09a4acae0628bd3b42d0d54ed4" id="r_a93ee0f09a4acae0628bd3b42d0d54ed4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93ee0f09a4acae0628bd3b42d0d54ed4">GLCD_D4_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
 <tr class="separator:a93ee0f09a4acae0628bd3b42d0d54ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cd499de9daf61eb382e420891943ad9" id="r_a9cd499de9daf61eb382e420891943ad9"><td class="memItemLeft" align="right" valign="top"><a id="a9cd499de9daf61eb382e420891943ad9" name="a9cd499de9daf61eb382e420891943ad9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D4_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a9cd499de9daf61eb382e420891943ad9" id="r_a9cd499de9daf61eb382e420891943ad9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cd499de9daf61eb382e420891943ad9">GLCD_D4_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a9cd499de9daf61eb382e420891943ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7224cf922fb937f5c97baff0e0499f3" id="r_aa7224cf922fb937f5c97baff0e0499f3"><td class="memItemLeft" align="right" valign="top"><a id="aa7224cf922fb937f5c97baff0e0499f3" name="aa7224cf922fb937f5c97baff0e0499f3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D5_Pin</b>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="memitem:aa7224cf922fb937f5c97baff0e0499f3" id="r_aa7224cf922fb937f5c97baff0e0499f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7224cf922fb937f5c97baff0e0499f3">GLCD_D5_Pin</a>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
 <tr class="separator:aa7224cf922fb937f5c97baff0e0499f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6e21e3792b57d7318cdedf9d9ec984d" id="r_ae6e21e3792b57d7318cdedf9d9ec984d"><td class="memItemLeft" align="right" valign="top"><a id="ae6e21e3792b57d7318cdedf9d9ec984d" name="ae6e21e3792b57d7318cdedf9d9ec984d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D5_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:ae6e21e3792b57d7318cdedf9d9ec984d" id="r_ae6e21e3792b57d7318cdedf9d9ec984d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6e21e3792b57d7318cdedf9d9ec984d">GLCD_D5_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:ae6e21e3792b57d7318cdedf9d9ec984d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e362cfa4ab1f70f2a1b4e84e74bedb" id="r_a34e362cfa4ab1f70f2a1b4e84e74bedb"><td class="memItemLeft" align="right" valign="top"><a id="a34e362cfa4ab1f70f2a1b4e84e74bedb" name="a34e362cfa4ab1f70f2a1b4e84e74bedb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D6_Pin</b>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="memitem:a34e362cfa4ab1f70f2a1b4e84e74bedb" id="r_a34e362cfa4ab1f70f2a1b4e84e74bedb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34e362cfa4ab1f70f2a1b4e84e74bedb">GLCD_D6_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
 <tr class="separator:a34e362cfa4ab1f70f2a1b4e84e74bedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18f4344bbb8b293624fa8824e2b43f3f" id="r_a18f4344bbb8b293624fa8824e2b43f3f"><td class="memItemLeft" align="right" valign="top"><a id="a18f4344bbb8b293624fa8824e2b43f3f" name="a18f4344bbb8b293624fa8824e2b43f3f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D6_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a18f4344bbb8b293624fa8824e2b43f3f" id="r_a18f4344bbb8b293624fa8824e2b43f3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18f4344bbb8b293624fa8824e2b43f3f">GLCD_D6_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a18f4344bbb8b293624fa8824e2b43f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03b607443379cf284fc0cb7a3ea4d3f3" id="r_a03b607443379cf284fc0cb7a3ea4d3f3"><td class="memItemLeft" align="right" valign="top"><a id="a03b607443379cf284fc0cb7a3ea4d3f3" name="a03b607443379cf284fc0cb7a3ea4d3f3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D7_Pin</b>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="memitem:a03b607443379cf284fc0cb7a3ea4d3f3" id="r_a03b607443379cf284fc0cb7a3ea4d3f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03b607443379cf284fc0cb7a3ea4d3f3">GLCD_D7_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
 <tr class="separator:a03b607443379cf284fc0cb7a3ea4d3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a490266c450a8d5a4d5c8b84ef3737bd7" id="r_a490266c450a8d5a4d5c8b84ef3737bd7"><td class="memItemLeft" align="right" valign="top"><a id="a490266c450a8d5a4d5c8b84ef3737bd7" name="a490266c450a8d5a4d5c8b84ef3737bd7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_D7_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a490266c450a8d5a4d5c8b84ef3737bd7" id="r_a490266c450a8d5a4d5c8b84ef3737bd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a490266c450a8d5a4d5c8b84ef3737bd7">GLCD_D7_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a490266c450a8d5a4d5c8b84ef3737bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f2a73ee536dfd1c7a10d49dfbb689ab" id="r_a0f2a73ee536dfd1c7a10d49dfbb689ab"><td class="memItemLeft" align="right" valign="top"><a id="a0f2a73ee536dfd1c7a10d49dfbb689ab" name="a0f2a73ee536dfd1c7a10d49dfbb689ab"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_CTRL_PORT</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a0f2a73ee536dfd1c7a10d49dfbb689ab" id="r_a0f2a73ee536dfd1c7a10d49dfbb689ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f2a73ee536dfd1c7a10d49dfbb689ab">GLCD_CTRL_PORT</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a0f2a73ee536dfd1c7a10d49dfbb689ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5bdbf2eaa1fe25765916d7b50e08048" id="r_ad5bdbf2eaa1fe25765916d7b50e08048"><td class="memItemLeft" align="right" valign="top"><a id="ad5bdbf2eaa1fe25765916d7b50e08048" name="ad5bdbf2eaa1fe25765916d7b50e08048"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_RS_Pin</b>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
+<tr class="memitem:ad5bdbf2eaa1fe25765916d7b50e08048" id="r_ad5bdbf2eaa1fe25765916d7b50e08048"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5bdbf2eaa1fe25765916d7b50e08048">GLCD_RS_Pin</a>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
 <tr class="separator:ad5bdbf2eaa1fe25765916d7b50e08048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77580dffb63555e66a913117828f83e1" id="r_a77580dffb63555e66a913117828f83e1"><td class="memItemLeft" align="right" valign="top"><a id="a77580dffb63555e66a913117828f83e1" name="a77580dffb63555e66a913117828f83e1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_RS_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a77580dffb63555e66a913117828f83e1" id="r_a77580dffb63555e66a913117828f83e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77580dffb63555e66a913117828f83e1">GLCD_RS_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a77580dffb63555e66a913117828f83e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebb3a6f64ed4db68180f07b6bc7496d3" id="r_aebb3a6f64ed4db68180f07b6bc7496d3"><td class="memItemLeft" align="right" valign="top"><a id="aebb3a6f64ed4db68180f07b6bc7496d3" name="aebb3a6f64ed4db68180f07b6bc7496d3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_E_Pin</b>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
+<tr class="memitem:aebb3a6f64ed4db68180f07b6bc7496d3" id="r_aebb3a6f64ed4db68180f07b6bc7496d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebb3a6f64ed4db68180f07b6bc7496d3">GLCD_E_Pin</a>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
 <tr class="separator:aebb3a6f64ed4db68180f07b6bc7496d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec4b9dd9c83ae60014ada1ee8ed100b9" id="r_aec4b9dd9c83ae60014ada1ee8ed100b9"><td class="memItemLeft" align="right" valign="top"><a id="aec4b9dd9c83ae60014ada1ee8ed100b9" name="aec4b9dd9c83ae60014ada1ee8ed100b9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_E_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:aec4b9dd9c83ae60014ada1ee8ed100b9" id="r_aec4b9dd9c83ae60014ada1ee8ed100b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec4b9dd9c83ae60014ada1ee8ed100b9">GLCD_E_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:aec4b9dd9c83ae60014ada1ee8ed100b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf1f13025840f65e139e51590aa77f37" id="r_abf1f13025840f65e139e51590aa77f37"><td class="memItemLeft" align="right" valign="top"><a id="abf1f13025840f65e139e51590aa77f37" name="abf1f13025840f65e139e51590aa77f37"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_RW_Pin</b>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
+<tr class="memitem:abf1f13025840f65e139e51590aa77f37" id="r_abf1f13025840f65e139e51590aa77f37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1f13025840f65e139e51590aa77f37">GLCD_RW_Pin</a>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
 <tr class="separator:abf1f13025840f65e139e51590aa77f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e2173c542dbf18039082b34ad1539c6" id="r_a7e2173c542dbf18039082b34ad1539c6"><td class="memItemLeft" align="right" valign="top"><a id="a7e2173c542dbf18039082b34ad1539c6" name="a7e2173c542dbf18039082b34ad1539c6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_RW_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a7e2173c542dbf18039082b34ad1539c6" id="r_a7e2173c542dbf18039082b34ad1539c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e2173c542dbf18039082b34ad1539c6">GLCD_RW_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a7e2173c542dbf18039082b34ad1539c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd3d9ecdb9ba5d3454efc5e2f547f747" id="r_abd3d9ecdb9ba5d3454efc5e2f547f747"><td class="memItemLeft" align="right" valign="top"><a id="abd3d9ecdb9ba5d3454efc5e2f547f747" name="abd3d9ecdb9ba5d3454efc5e2f547f747"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_CS1_Pin</b>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
+<tr class="memitem:abd3d9ecdb9ba5d3454efc5e2f547f747" id="r_abd3d9ecdb9ba5d3454efc5e2f547f747"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd3d9ecdb9ba5d3454efc5e2f547f747">GLCD_CS1_Pin</a>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
 <tr class="separator:abd3d9ecdb9ba5d3454efc5e2f547f747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7efee35f3231497911fd36a8cde11a99" id="r_a7efee35f3231497911fd36a8cde11a99"><td class="memItemLeft" align="right" valign="top"><a id="a7efee35f3231497911fd36a8cde11a99" name="a7efee35f3231497911fd36a8cde11a99"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_CS1_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a7efee35f3231497911fd36a8cde11a99" id="r_a7efee35f3231497911fd36a8cde11a99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7efee35f3231497911fd36a8cde11a99">GLCD_CS1_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a7efee35f3231497911fd36a8cde11a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0de483e86f64ada10e27d14350b6296" id="r_ac0de483e86f64ada10e27d14350b6296"><td class="memItemLeft" align="right" valign="top"><a id="ac0de483e86f64ada10e27d14350b6296" name="ac0de483e86f64ada10e27d14350b6296"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_CS2_Pin</b>&#160;&#160;&#160;GPIO_PIN_11</td></tr>
+<tr class="memitem:ac0de483e86f64ada10e27d14350b6296" id="r_ac0de483e86f64ada10e27d14350b6296"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0de483e86f64ada10e27d14350b6296">GLCD_CS2_Pin</a>&#160;&#160;&#160;GPIO_PIN_11</td></tr>
 <tr class="separator:ac0de483e86f64ada10e27d14350b6296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634523dafa4a100399ff683e262a78a5" id="r_a634523dafa4a100399ff683e262a78a5"><td class="memItemLeft" align="right" valign="top"><a id="a634523dafa4a100399ff683e262a78a5" name="a634523dafa4a100399ff683e262a78a5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLCD_CS2_GPIO_Port</b>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="memitem:a634523dafa4a100399ff683e262a78a5" id="r_a634523dafa4a100399ff683e262a78a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634523dafa4a100399ff683e262a78a5">GLCD_CS2_GPIO_Port</a>&#160;&#160;&#160;GPIOE</td></tr>
 <tr class="separator:a634523dafa4a100399ff683e262a78a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -385,7 +339,1408 @@ Functions</h2></td></tr>
 <dl class="section attention"><dt>Attention</dt><dd></dd></dl>
 <p>Copyright (c) 2024 STMicroelectronics. All rights reserved.</p>
 <p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9fba9f1605fb71c4ef6dc1dfb09207d8" name="a9fba9f1605fb71c4ef6dc1dfb09207d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fba9f1605fb71c4ef6dc1dfb09207d8">&#9670;&#160;</a></span>BUZZER_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUZZER_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0f050faf586d6fb652d66c2795cf6ba" name="ac0f050faf586d6fb652d66c2795cf6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f050faf586d6fb652d66c2795cf6ba">&#9670;&#160;</a></span>BUZZER_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUZZER_Pin&#160;&#160;&#160;GPIO_PIN_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7efee35f3231497911fd36a8cde11a99" name="a7efee35f3231497911fd36a8cde11a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7efee35f3231497911fd36a8cde11a99">&#9670;&#160;</a></span>GLCD_CS1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_CS1_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd3d9ecdb9ba5d3454efc5e2f547f747" name="abd3d9ecdb9ba5d3454efc5e2f547f747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3d9ecdb9ba5d3454efc5e2f547f747">&#9670;&#160;</a></span>GLCD_CS1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_CS1_Pin&#160;&#160;&#160;GPIO_PIN_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a634523dafa4a100399ff683e262a78a5" name="a634523dafa4a100399ff683e262a78a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634523dafa4a100399ff683e262a78a5">&#9670;&#160;</a></span>GLCD_CS2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_CS2_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0de483e86f64ada10e27d14350b6296" name="ac0de483e86f64ada10e27d14350b6296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0de483e86f64ada10e27d14350b6296">&#9670;&#160;</a></span>GLCD_CS2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_CS2_Pin&#160;&#160;&#160;GPIO_PIN_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f2a73ee536dfd1c7a10d49dfbb689ab" name="a0f2a73ee536dfd1c7a10d49dfbb689ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2a73ee536dfd1c7a10d49dfbb689ab">&#9670;&#160;</a></span>GLCD_CTRL_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_CTRL_PORT&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38d2ec6de22f6ebc34b4a6851041177b" name="a38d2ec6de22f6ebc34b4a6851041177b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d2ec6de22f6ebc34b4a6851041177b">&#9670;&#160;</a></span>GLCD_D0_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D0_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95aac946ad27ca518f3802c8a6bf9257" name="a95aac946ad27ca518f3802c8a6bf9257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95aac946ad27ca518f3802c8a6bf9257">&#9670;&#160;</a></span>GLCD_D0_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D0_Pin&#160;&#160;&#160;GPIO_PIN_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a253f7c61fcd2e84325d2c2a8b0bfbf48" name="a253f7c61fcd2e84325d2c2a8b0bfbf48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253f7c61fcd2e84325d2c2a8b0bfbf48">&#9670;&#160;</a></span>GLCD_D1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D1_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfeabf38aeaab24e6bdf3d86c478366a" name="abfeabf38aeaab24e6bdf3d86c478366a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfeabf38aeaab24e6bdf3d86c478366a">&#9670;&#160;</a></span>GLCD_D1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D1_Pin&#160;&#160;&#160;GPIO_PIN_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89db76045490f52abe7498318857e0eb" name="a89db76045490f52abe7498318857e0eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89db76045490f52abe7498318857e0eb">&#9670;&#160;</a></span>GLCD_D2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D2_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00a9cc37561111cf53d09ddcb4040795" name="a00a9cc37561111cf53d09ddcb4040795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a9cc37561111cf53d09ddcb4040795">&#9670;&#160;</a></span>GLCD_D2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D2_Pin&#160;&#160;&#160;GPIO_PIN_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd01a245b9377a6840d021ca91a9d621" name="abd01a245b9377a6840d021ca91a9d621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd01a245b9377a6840d021ca91a9d621">&#9670;&#160;</a></span>GLCD_D3_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D3_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fe3aa4698735d36e99a2ddea7882a27" name="a0fe3aa4698735d36e99a2ddea7882a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe3aa4698735d36e99a2ddea7882a27">&#9670;&#160;</a></span>GLCD_D3_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D3_Pin&#160;&#160;&#160;GPIO_PIN_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cd499de9daf61eb382e420891943ad9" name="a9cd499de9daf61eb382e420891943ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd499de9daf61eb382e420891943ad9">&#9670;&#160;</a></span>GLCD_D4_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D4_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93ee0f09a4acae0628bd3b42d0d54ed4" name="a93ee0f09a4acae0628bd3b42d0d54ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ee0f09a4acae0628bd3b42d0d54ed4">&#9670;&#160;</a></span>GLCD_D4_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D4_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6e21e3792b57d7318cdedf9d9ec984d" name="ae6e21e3792b57d7318cdedf9d9ec984d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e21e3792b57d7318cdedf9d9ec984d">&#9670;&#160;</a></span>GLCD_D5_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D5_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7224cf922fb937f5c97baff0e0499f3" name="aa7224cf922fb937f5c97baff0e0499f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7224cf922fb937f5c97baff0e0499f3">&#9670;&#160;</a></span>GLCD_D5_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D5_Pin&#160;&#160;&#160;GPIO_PIN_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18f4344bbb8b293624fa8824e2b43f3f" name="a18f4344bbb8b293624fa8824e2b43f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f4344bbb8b293624fa8824e2b43f3f">&#9670;&#160;</a></span>GLCD_D6_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D6_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34e362cfa4ab1f70f2a1b4e84e74bedb" name="a34e362cfa4ab1f70f2a1b4e84e74bedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e362cfa4ab1f70f2a1b4e84e74bedb">&#9670;&#160;</a></span>GLCD_D6_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D6_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a490266c450a8d5a4d5c8b84ef3737bd7" name="a490266c450a8d5a4d5c8b84ef3737bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a490266c450a8d5a4d5c8b84ef3737bd7">&#9670;&#160;</a></span>GLCD_D7_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D7_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03b607443379cf284fc0cb7a3ea4d3f3" name="a03b607443379cf284fc0cb7a3ea4d3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b607443379cf284fc0cb7a3ea4d3f3">&#9670;&#160;</a></span>GLCD_D7_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_D7_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0583385022d6cd167604b5ec2460d28" name="af0583385022d6cd167604b5ec2460d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0583385022d6cd167604b5ec2460d28">&#9670;&#160;</a></span>GLCD_DATA_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_DATA_PORT&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec4b9dd9c83ae60014ada1ee8ed100b9" name="aec4b9dd9c83ae60014ada1ee8ed100b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec4b9dd9c83ae60014ada1ee8ed100b9">&#9670;&#160;</a></span>GLCD_E_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_E_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebb3a6f64ed4db68180f07b6bc7496d3" name="aebb3a6f64ed4db68180f07b6bc7496d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb3a6f64ed4db68180f07b6bc7496d3">&#9670;&#160;</a></span>GLCD_E_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_E_Pin&#160;&#160;&#160;GPIO_PIN_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77580dffb63555e66a913117828f83e1" name="a77580dffb63555e66a913117828f83e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77580dffb63555e66a913117828f83e1">&#9670;&#160;</a></span>GLCD_RS_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_RS_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5bdbf2eaa1fe25765916d7b50e08048" name="ad5bdbf2eaa1fe25765916d7b50e08048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5bdbf2eaa1fe25765916d7b50e08048">&#9670;&#160;</a></span>GLCD_RS_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_RS_Pin&#160;&#160;&#160;GPIO_PIN_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e2173c542dbf18039082b34ad1539c6" name="a7e2173c542dbf18039082b34ad1539c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2173c542dbf18039082b34ad1539c6">&#9670;&#160;</a></span>GLCD_RW_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_RW_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf1f13025840f65e139e51590aa77f37" name="abf1f13025840f65e139e51590aa77f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1f13025840f65e139e51590aa77f37">&#9670;&#160;</a></span>GLCD_RW_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLCD_RW_Pin&#160;&#160;&#160;GPIO_PIN_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9eb7549c950a569a4f1ae8f83abca7a" name="ad9eb7549c950a569a4f1ae8f83abca7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9eb7549c950a569a4f1ae8f83abca7a">&#9670;&#160;</a></span>JOY_DOWN_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_DOWN_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb34bc802dba3dd6cdd9d61b8d670567" name="adb34bc802dba3dd6cdd9d61b8d670567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb34bc802dba3dd6cdd9d61b8d670567">&#9670;&#160;</a></span>JOY_DOWN_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_DOWN_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac41f68da93ecee743c036eb9969ed886" name="ac41f68da93ecee743c036eb9969ed886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41f68da93ecee743c036eb9969ed886">&#9670;&#160;</a></span>JOY_LEFT_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_LEFT_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4169670fc4e75a3b019fbfb0d401ef43" name="a4169670fc4e75a3b019fbfb0d401ef43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4169670fc4e75a3b019fbfb0d401ef43">&#9670;&#160;</a></span>JOY_LEFT_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_LEFT_Pin&#160;&#160;&#160;GPIO_PIN_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59c342945592f457c395129d931bb4fa" name="a59c342945592f457c395129d931bb4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c342945592f457c395129d931bb4fa">&#9670;&#160;</a></span>JOY_OK_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_OK_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63503bf3a0be8e6a5095ee3405b9b651" name="a63503bf3a0be8e6a5095ee3405b9b651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63503bf3a0be8e6a5095ee3405b9b651">&#9670;&#160;</a></span>JOY_OK_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_OK_Pin&#160;&#160;&#160;GPIO_PIN_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d4b6ff1f3e465d040dd9b4e84cb1299" name="a2d4b6ff1f3e465d040dd9b4e84cb1299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4b6ff1f3e465d040dd9b4e84cb1299">&#9670;&#160;</a></span>JOY_RIGHT_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_RIGHT_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2efe43dd040cbc0e9e2b21a721e62f15" name="a2efe43dd040cbc0e9e2b21a721e62f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efe43dd040cbc0e9e2b21a721e62f15">&#9670;&#160;</a></span>JOY_RIGHT_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_RIGHT_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f8cc5c3c7686c8cdb595f7222bb3840" name="a7f8cc5c3c7686c8cdb595f7222bb3840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8cc5c3c7686c8cdb595f7222bb3840">&#9670;&#160;</a></span>JOY_UP_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_UP_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcbd5780498b56d37e8b9ccbded9e3a4" name="abcbd5780498b56d37e8b9ccbded9e3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcbd5780498b56d37e8b9ccbded9e3a4">&#9670;&#160;</a></span>JOY_UP_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOY_UP_Pin&#160;&#160;&#160;GPIO_PIN_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7008fceec9ee77eb8b2d490fe795716e" name="a7008fceec9ee77eb8b2d490fe795716e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7008fceec9ee77eb8b2d490fe795716e">&#9670;&#160;</a></span>LCD_CS1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_CS1_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80a6949aadef222d7f8bc3053ed14467" name="a80a6949aadef222d7f8bc3053ed14467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a6949aadef222d7f8bc3053ed14467">&#9670;&#160;</a></span>LCD_CS1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_CS1_Pin&#160;&#160;&#160;GPIO_PIN_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cf323c968adf2ee419c44f315b9adef" name="a9cf323c968adf2ee419c44f315b9adef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf323c968adf2ee419c44f315b9adef">&#9670;&#160;</a></span>LCD_CS2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_CS2_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75ffec949a569255539878d6a554921f" name="a75ffec949a569255539878d6a554921f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ffec949a569255539878d6a554921f">&#9670;&#160;</a></span>LCD_CS2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_CS2_Pin&#160;&#160;&#160;GPIO_PIN_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a580359164c9aa60530f4a81ecf2d59b5" name="a580359164c9aa60530f4a81ecf2d59b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580359164c9aa60530f4a81ecf2d59b5">&#9670;&#160;</a></span>LCD_D0_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D0_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a007f00a98d0e6e70e6bf766bcfa2d0fc" name="a007f00a98d0e6e70e6bf766bcfa2d0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007f00a98d0e6e70e6bf766bcfa2d0fc">&#9670;&#160;</a></span>LCD_D0_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D0_Pin&#160;&#160;&#160;GPIO_PIN_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f82b0d2f4a1a6a9f110584b89a18a19" name="a1f82b0d2f4a1a6a9f110584b89a18a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f82b0d2f4a1a6a9f110584b89a18a19">&#9670;&#160;</a></span>LCD_D1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D1_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4784ee1b05c61465610538db75db0c08" name="a4784ee1b05c61465610538db75db0c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4784ee1b05c61465610538db75db0c08">&#9670;&#160;</a></span>LCD_D1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D1_Pin&#160;&#160;&#160;GPIO_PIN_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae64e1b2b85356243d8ce9a77742423df" name="ae64e1b2b85356243d8ce9a77742423df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64e1b2b85356243d8ce9a77742423df">&#9670;&#160;</a></span>LCD_D2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D2_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1980352aac0da31ff304e914a1722d1" name="ac1980352aac0da31ff304e914a1722d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1980352aac0da31ff304e914a1722d1">&#9670;&#160;</a></span>LCD_D2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D2_Pin&#160;&#160;&#160;GPIO_PIN_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac91a70efedee5362c8ad4932569a18fd" name="ac91a70efedee5362c8ad4932569a18fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91a70efedee5362c8ad4932569a18fd">&#9670;&#160;</a></span>LCD_D3_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D3_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9686e1553c63091b0d6bc0b3804a8348" name="a9686e1553c63091b0d6bc0b3804a8348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9686e1553c63091b0d6bc0b3804a8348">&#9670;&#160;</a></span>LCD_D3_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D3_Pin&#160;&#160;&#160;GPIO_PIN_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa05fd750a9a62de2bdb8568cfdb09076" name="aa05fd750a9a62de2bdb8568cfdb09076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05fd750a9a62de2bdb8568cfdb09076">&#9670;&#160;</a></span>LCD_D4_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D4_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb2684e750191210c0e4e3929babcb0a" name="abb2684e750191210c0e4e3929babcb0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2684e750191210c0e4e3929babcb0a">&#9670;&#160;</a></span>LCD_D4_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D4_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93df360fe1d36333db0665f3fa0bcf65" name="a93df360fe1d36333db0665f3fa0bcf65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93df360fe1d36333db0665f3fa0bcf65">&#9670;&#160;</a></span>LCD_D5_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D5_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac87b3cda0ef2f915a686c40923b87348" name="ac87b3cda0ef2f915a686c40923b87348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87b3cda0ef2f915a686c40923b87348">&#9670;&#160;</a></span>LCD_D5_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D5_Pin&#160;&#160;&#160;GPIO_PIN_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaabeecb0506ef73983dfb5b142285d93" name="aaabeecb0506ef73983dfb5b142285d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaabeecb0506ef73983dfb5b142285d93">&#9670;&#160;</a></span>LCD_D6_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D6_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adca1e6ee0f52cd22f8ca3b84d0800f98" name="adca1e6ee0f52cd22f8ca3b84d0800f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca1e6ee0f52cd22f8ca3b84d0800f98">&#9670;&#160;</a></span>LCD_D6_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D6_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac297f9c095004eafd7756ca2b891d03a" name="ac297f9c095004eafd7756ca2b891d03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac297f9c095004eafd7756ca2b891d03a">&#9670;&#160;</a></span>LCD_D7_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D7_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9a02c31a2dc1c28e86cfdf505732029" name="af9a02c31a2dc1c28e86cfdf505732029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a02c31a2dc1c28e86cfdf505732029">&#9670;&#160;</a></span>LCD_D7_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_D7_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafd4440032d23f5d8df5b2c906c8db40" name="aafd4440032d23f5d8df5b2c906c8db40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd4440032d23f5d8df5b2c906c8db40">&#9670;&#160;</a></span>LCD_E_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_E_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a4056daf7b9ead00ef1320ab049bfa7" name="a8a4056daf7b9ead00ef1320ab049bfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4056daf7b9ead00ef1320ab049bfa7">&#9670;&#160;</a></span>LCD_E_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_E_Pin&#160;&#160;&#160;GPIO_PIN_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a7bf8fda04f0139622a654cc9ca5530" name="a7a7bf8fda04f0139622a654cc9ca5530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7bf8fda04f0139622a654cc9ca5530">&#9670;&#160;</a></span>LCD_RS_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_RS_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84cf65c2b017bc8fe002c811705bc846" name="a84cf65c2b017bc8fe002c811705bc846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84cf65c2b017bc8fe002c811705bc846">&#9670;&#160;</a></span>LCD_RS_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_RS_Pin&#160;&#160;&#160;GPIO_PIN_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7aa549ab9cdb985db6f23a573d57108" name="ad7aa549ab9cdb985db6f23a573d57108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7aa549ab9cdb985db6f23a573d57108">&#9670;&#160;</a></span>LCD_RW_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_RW_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4e900ebcc316a242287b4de1cc541ab" name="ad4e900ebcc316a242287b4de1cc541ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e900ebcc316a242287b4de1cc541ab">&#9670;&#160;</a></span>LCD_RW_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_RW_Pin&#160;&#160;&#160;GPIO_PIN_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81c03b4b960de6c291739156b52be7f5" name="a81c03b4b960de6c291739156b52be7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c03b4b960de6c291739156b52be7f5">&#9670;&#160;</a></span>LED_1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_1_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf9c15ce1f17dded9340882dbf82d7b1" name="abf9c15ce1f17dded9340882dbf82d7b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9c15ce1f17dded9340882dbf82d7b1">&#9670;&#160;</a></span>LED_1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_1_Pin&#160;&#160;&#160;GPIO_PIN_14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8210a06ad8599ec66538b4e8c22bfdae" name="a8210a06ad8599ec66538b4e8c22bfdae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8210a06ad8599ec66538b4e8c22bfdae">&#9670;&#160;</a></span>LED_2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_2_GPIO_Port&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17f93fd494f5c87a5a6518109976d543" name="a17f93fd494f5c87a5a6518109976d543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f93fd494f5c87a5a6518109976d543">&#9670;&#160;</a></span>LED_2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_2_Pin&#160;&#160;&#160;GPIO_PIN_15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77ecdb413ed185d71a4d22468aa53ba7" name="a77ecdb413ed185d71a4d22468aa53ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ecdb413ed185d71a4d22468aa53ba7">&#9670;&#160;</a></span>LED_EXT_1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_1_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4eaec27eeb807377ee0d8e00f8d03a6d" name="a4eaec27eeb807377ee0d8e00f8d03a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eaec27eeb807377ee0d8e00f8d03a6d">&#9670;&#160;</a></span>LED_EXT_1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_1_Pin&#160;&#160;&#160;GPIO_PIN_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afadea8c78f9111851306888b9e5a16d6" name="afadea8c78f9111851306888b9e5a16d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afadea8c78f9111851306888b9e5a16d6">&#9670;&#160;</a></span>LED_EXT_2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_2_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b2100a275fcbfa9665a8bc4123d46fb" name="a2b2100a275fcbfa9665a8bc4123d46fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2100a275fcbfa9665a8bc4123d46fb">&#9670;&#160;</a></span>LED_EXT_2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_2_Pin&#160;&#160;&#160;GPIO_PIN_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01bd12841571e8e567198252b586e087" name="a01bd12841571e8e567198252b586e087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01bd12841571e8e567198252b586e087">&#9670;&#160;</a></span>LED_EXT_3_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_3_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1455f761e64a73c960b519462a96e4e9" name="a1455f761e64a73c960b519462a96e4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1455f761e64a73c960b519462a96e4e9">&#9670;&#160;</a></span>LED_EXT_3_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_3_Pin&#160;&#160;&#160;GPIO_PIN_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59306c17ed59c850c17ebb6793cc2860" name="a59306c17ed59c850c17ebb6793cc2860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59306c17ed59c850c17ebb6793cc2860">&#9670;&#160;</a></span>LED_EXT_4_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_4_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66ba6cd692c9102fecf37b99359829d5" name="a66ba6cd692c9102fecf37b99359829d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ba6cd692c9102fecf37b99359829d5">&#9670;&#160;</a></span>LED_EXT_4_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_4_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fc6be73ece1ae9ce567203ef59749a1" name="a7fc6be73ece1ae9ce567203ef59749a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc6be73ece1ae9ce567203ef59749a1">&#9670;&#160;</a></span>LED_EXT_5_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_5_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96453d5d142f350f892d742721f908af" name="a96453d5d142f350f892d742721f908af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96453d5d142f350f892d742721f908af">&#9670;&#160;</a></span>LED_EXT_5_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_5_Pin&#160;&#160;&#160;GPIO_PIN_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3669e53beee75c087a7bdb673b8fefc" name="ad3669e53beee75c087a7bdb673b8fefc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3669e53beee75c087a7bdb673b8fefc">&#9670;&#160;</a></span>LED_EXT_6_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_6_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad97efafaf783cae9456d9f4d1bb2f1dd" name="ad97efafaf783cae9456d9f4d1bb2f1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97efafaf783cae9456d9f4d1bb2f1dd">&#9670;&#160;</a></span>LED_EXT_6_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_6_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b48a32c1addaf95b961ed6148692fdb" name="a2b48a32c1addaf95b961ed6148692fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b48a32c1addaf95b961ed6148692fdb">&#9670;&#160;</a></span>LED_EXT_7_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_7_GPIO_Port&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5575702611bb94db166b11bbb5876e46" name="a5575702611bb94db166b11bbb5876e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5575702611bb94db166b11bbb5876e46">&#9670;&#160;</a></span>LED_EXT_7_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_EXT_7_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e9b544b39cc021e2ff9699948cc97a8" name="a5e9b544b39cc021e2ff9699948cc97a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9b544b39cc021e2ff9699948cc97a8">&#9670;&#160;</a></span>SW3_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW3_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e3c494cec6ebd651762228c60494355" name="a6e3c494cec6ebd651762228c60494355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3c494cec6ebd651762228c60494355">&#9670;&#160;</a></span>SW3_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW3_Pin&#160;&#160;&#160;GPIO_PIN_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7e7f73d8264966009b57cab87d10c4e" name="ac7e7f73d8264966009b57cab87d10c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e7f73d8264966009b57cab87d10c4e">&#9670;&#160;</a></span>SW4_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW4_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accb81ed62e4c90952b327e6109ea1949" name="accb81ed62e4c90952b327e6109ea1949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb81ed62e4c90952b327e6109ea1949">&#9670;&#160;</a></span>SW4_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW4_Pin&#160;&#160;&#160;GPIO_PIN_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c0e3c36c25aff422dd2104a97a1855f" name="a9c0e3c36c25aff422dd2104a97a1855f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0e3c36c25aff422dd2104a97a1855f">&#9670;&#160;</a></span>SW_EXT_1_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_1_GPIO_Port&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0388f90269edf6014063c55e7f57912" name="ac0388f90269edf6014063c55e7f57912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0388f90269edf6014063c55e7f57912">&#9670;&#160;</a></span>SW_EXT_1_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_1_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97a9bff97f4a142bbe53725a09da3e23" name="a97a9bff97f4a142bbe53725a09da3e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a9bff97f4a142bbe53725a09da3e23">&#9670;&#160;</a></span>SW_EXT_2_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_2_GPIO_Port&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28a94621da780c47bbdeffa9e8329e50" name="a28a94621da780c47bbdeffa9e8329e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a94621da780c47bbdeffa9e8329e50">&#9670;&#160;</a></span>SW_EXT_2_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_2_Pin&#160;&#160;&#160;GPIO_PIN_14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53277d6e80fff145d0aa59c5249ffe80" name="a53277d6e80fff145d0aa59c5249ffe80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53277d6e80fff145d0aa59c5249ffe80">&#9670;&#160;</a></span>SW_EXT_3_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_3_GPIO_Port&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a274589552e2e54baf9e4d1d26664aecc" name="a274589552e2e54baf9e4d1d26664aecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274589552e2e54baf9e4d1d26664aecc">&#9670;&#160;</a></span>SW_EXT_3_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_3_Pin&#160;&#160;&#160;GPIO_PIN_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea72ea41630d5f9d6e82ac5dd0252784" name="aea72ea41630d5f9d6e82ac5dd0252784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea72ea41630d5f9d6e82ac5dd0252784">&#9670;&#160;</a></span>SW_EXT_4_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_4_GPIO_Port&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b48afe94118b91b66eef1da2260f952" name="a6b48afe94118b91b66eef1da2260f952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b48afe94118b91b66eef1da2260f952">&#9670;&#160;</a></span>SW_EXT_4_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_4_Pin&#160;&#160;&#160;GPIO_PIN_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3690db167a840404eb65768a75890366" name="a3690db167a840404eb65768a75890366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3690db167a840404eb65768a75890366">&#9670;&#160;</a></span>SW_EXT_5_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_5_GPIO_Port&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a891844b56407bfbbd7cd3d7d8f4c8e8a" name="a891844b56407bfbbd7cd3d7d8f4c8e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891844b56407bfbbd7cd3d7d8f4c8e8a">&#9670;&#160;</a></span>SW_EXT_5_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_5_Pin&#160;&#160;&#160;GPIO_PIN_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae34655f9babb27057369aefd3bd0fab2" name="ae34655f9babb27057369aefd3bd0fab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34655f9babb27057369aefd3bd0fab2">&#9670;&#160;</a></span>SW_EXT_6_GPIO_Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_6_GPIO_Port&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb4154a33c41e317f42cb1e62fc86522" name="afb4154a33c41e317f42cb1e62fc86522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb4154a33c41e317f42cb1e62fc86522">&#9670;&#160;</a></span>SW_EXT_6_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SW_EXT_6_Pin&#160;&#160;&#160;GPIO_PIN_15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a1730ffe1e560465665eb47d9264826f9" name="a1730ffe1e560465665eb47d9264826f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1730ffe1e560465665eb47d9264826f9">&#9670;&#160;</a></span>Error_Handler()</h2>
 
@@ -412,6 +1767,19 @@ Functions</h2></td></tr>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8h_a1730ffe1e560465665eb47d9264826f9_icgraph.png" border="0" usemap="#amain_8h_a1730ffe1e560465665eb47d9264826f9_icgraph" alt=""/></div>
+<map name="amain_8h_a1730ffe1e560465665eb47d9264826f9_icgraph" id="amain_8h_a1730ffe1e560465665eb47d9264826f9_icgraph">
+<area shape="rect" title="This function is executed in case of error occurrence." alt="" coords="296,56,397,83"/>
+<area shape="rect" href="adc_8c.html#acccd58aa70215a6b184ad242312ffd0c" title=" " alt="" coords="121,5,230,32"/>
+<area shape="poly" title=" " alt="" coords="284,54,222,35,224,30,285,48"/>
+<area shape="rect" href="tim_8c.html#af1a30e036c07055e19487b8267790bac" title=" " alt="" coords="124,56,227,83"/>
+<area shape="poly" title=" " alt="" coords="280,72,227,72,227,67,280,67"/>
+<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="103,107,248,133"/>
+<area shape="poly" title=" " alt="" coords="285,90,224,109,222,104,284,85"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="121,40,56,63,54,58,119,35"/>
+<area shape="poly" title=" " alt="" coords="108,72,55,72,55,67,108,67"/>
+<area shape="poly" title=" " alt="" coords="119,103,54,80,56,75,121,98"/>
+</map>
 </div>
 
 </div>

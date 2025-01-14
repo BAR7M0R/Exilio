@@ -1,0 +1,24 @@
+<map id="Core/Inc/queues/xQueueWaveGenerator.hpp" name="Core/Inc/queues/xQueueWaveGenerator.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,5,273,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="218,320,278,347"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,51,39,70,11,97,9,109,12,122,20,204,30,236,56,270,89,295,127,311,167,322,202,327,202,332,166,327,126,316,87,299,53,274,26,239,15,205,6,123,3,109,7,95,36,65,72,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="21,96,115,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,51,98,88,95,84,144,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="139,96,207,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,49,176,80,170,80,170,49"/>
+<area shape="rect" id="Node000005" href="$entities_init_data_8hpp.html" title=" " alt="" coords="231,96,366,123"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="207,46,268,85,265,90,204,51"/>
+<area shape="rect" id="Node000006" href="$coordinates_8hpp.html" title=" " alt="" coords="336,171,450,197"/>
+<area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="274,37,331,58,357,74,379,94,388,108,394,124,397,155,392,155,388,125,383,111,375,98,353,78,328,62,272,42"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="298,124,257,305,251,304,293,123"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="316,121,366,159,363,163,313,125"/>
+<area shape="rect" id="Node000007" href="$segment_8hpp.html" title="This file contains the declaration of the segment class, which is the basic type of screan manipulati..." alt="" coords="150,171,247,197"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="283,125,230,163,227,159,279,121"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="385,199,319,274,277,312,273,308,315,270,381,196"/>
+<area shape="poly" id="edge12_Node000007_Node000002" title=" " alt="" coords="206,197,225,244,243,304,238,306,220,246,201,199"/>
+<area shape="rect" id="Node000008" href="$field_8hpp.html" title=" " alt="" coords="66,245,136,272"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="183,200,131,238,128,234,180,196"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="160,245,210,272"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="199,198,193,231,187,230,193,197"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="128,270,210,310,207,315,125,275"/>
+</map>

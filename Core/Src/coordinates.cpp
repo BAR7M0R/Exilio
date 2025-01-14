@@ -12,7 +12,11 @@
 #include "coordinates.hpp"
 
 
-
+/**
+ * @fn coordinates operator +(coordinates)const
+ * @param c
+ * @return
+ */
 coordinates coordinates::operator+(coordinates c) const
 {
 	coordinates r;
@@ -20,6 +24,12 @@ coordinates coordinates::operator+(coordinates c) const
 	r.y = this->y + c.y;
 	return r;
 }
+
+/**
+ * @fn coordinates operator -(coordinates)const
+ * @param c
+ * @return
+ */
 coordinates coordinates::operator-(coordinates c) const
 {
 	coordinates r;
@@ -27,6 +37,12 @@ coordinates coordinates::operator-(coordinates c) const
 	r.y = this->y -c.y;
 	return r;
 }
+
+/**
+ * @fn bool operator ==(coordinates)const
+ * @param c
+ * @return
+ */
 bool coordinates::operator==(coordinates c) const
 {
 	bool r = true;

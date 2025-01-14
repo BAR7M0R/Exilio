@@ -1,0 +1,9 @@
+<map id="glcd_ReadStatus" name="glcd_ReadStatus">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,127,83"/>
+<area shape="rect" id="Node000002" href="$glcd__port_8c.html#a11b908b80b0542f5335d1ba04ddb16a4" title=" " alt="" coords="183,5,336,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,53,191,34,192,39,121,58"/>
+<area shape="rect" id="Node000003" href="$glcd__port_8c.html#a20aeeb4f6777f99da833f51a09db37f0" title=" " alt="" coords="185,56,334,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,67,170,67,170,72,127,72"/>
+<area shape="rect" id="Node000004" href="$glcd__port_8c.html#ade3be48900d4485b658afdec8f8f2521" title=" " alt="" coords="175,107,344,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="121,81,192,100,191,105,119,86"/>
+</map>

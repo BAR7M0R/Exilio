@@ -75,7 +75,7 @@ const segment& enemyBase::getTexture() const
 {
 	return texture_;
 }
-coordinates& enemyBase::getCurrentCoords()
+coordinates& enemyBase::getCurrentPosition()
 {
 	return currentPosition_;
 }

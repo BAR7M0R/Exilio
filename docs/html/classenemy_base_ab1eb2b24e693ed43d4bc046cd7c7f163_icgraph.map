@@ -1,0 +1,5 @@
+<map id="enemyBase::setToRemove" name="enemyBase::setToRemove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="226,5,405,32"/>
+<area shape="rect" id="Node000002" href="$classenemy_base.html#a82df253ec5e8e28e12d9f3cdc1a23154" title=" " alt="" coords="5,5,178,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,21,178,21,178,16,210,16"/>
+</map>

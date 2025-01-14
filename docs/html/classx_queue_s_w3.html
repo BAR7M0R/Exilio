@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -47,26 +47,474 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classx_queue_s_w3-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">xQueueSW3 Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="x_queue_s_w3_8hpp_source.html">xQueueSW3.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7921f19d962ea3e77b7f2b5f0b3617d8" id="r_a7921f19d962ea3e77b7f2b5f0b3617d8"><td class="memItemLeft" align="right" valign="top"><a id="a7921f19d962ea3e77b7f2b5f0b3617d8" name="a7921f19d962ea3e77b7f2b5f0b3617d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (bool state)</td></tr>
-<tr class="separator:a7921f19d962ea3e77b7f2b5f0b3617d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5fbe8a93576be3cab5387c334689f5e" id="r_ab5fbe8a93576be3cab5387c334689f5e"><td class="memItemLeft" align="right" valign="top"><a id="ab5fbe8a93576be3cab5387c334689f5e" name="ab5fbe8a93576be3cab5387c334689f5e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Receive</b> ()</td></tr>
-<tr class="separator:ab5fbe8a93576be3cab5387c334689f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4e82fcdef73a5450af6129f6f59742" id="r_a3a4e82fcdef73a5450af6129f6f59742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a4e82fcdef73a5450af6129f6f59742">send</a> (bool state)</td></tr>
+<tr class="separator:a3a4e82fcdef73a5450af6129f6f59742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b94310f761583edadae37766c5de80" id="r_ac3b94310f761583edadae37766c5de80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b94310f761583edadae37766c5de80">receive</a> ()</td></tr>
+<tr class="separator:ac3b94310f761583edadae37766c5de80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c16c46120aa5baa3b3f8d9f6d1461b1" id="r_a3c16c46120aa5baa3b3f8d9f6d1461b1"><td class="memItemLeft" align="right" valign="top"><a id="a3c16c46120aa5baa3b3f8d9f6d1461b1" name="a3c16c46120aa5baa3b3f8d9f6d1461b1"></a>
-static <a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
-<tr class="separator:a3c16c46120aa5baa3b3f8d9f6d1461b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b729fb9f151315e298aefb97cec99b" id="r_a52b729fb9f151315e298aefb97cec99b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52b729fb9f151315e298aefb97cec99b">getInstance</a> ()</td></tr>
+<tr class="separator:a52b729fb9f151315e298aefb97cec99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af096614f8965840ee527bc8fb821664a" id="r_af096614f8965840ee527bc8fb821664a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af096614f8965840ee527bc8fb821664a">controlTask</a> (void *pvParameters)</td></tr>
+<tr class="separator:af096614f8965840ee527bc8fb821664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4ee0848c5b9567ac451e0c7801e75164" id="r_a4ee0848c5b9567ac451e0c7801e75164"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee0848c5b9567ac451e0c7801e75164">xQueueSW3</a> ()</td></tr>
+<tr class="separator:a4ee0848c5b9567ac451e0c7801e75164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320a1fa706d27e5c78f588a1bde532eb" id="r_a320a1fa706d27e5c78f588a1bde532eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a320a1fa706d27e5c78f588a1bde532eb">xQueueSW3</a> (const <a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;)=delete</td></tr>
+<tr class="separator:a320a1fa706d27e5c78f588a1bde532eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ab0a767781befcfc696c8015d3de1" id="r_a4e8ab0a767781befcfc696c8015d3de1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e8ab0a767781befcfc696c8015d3de1">operator=</a> (const <a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;)=delete</td></tr>
+<tr class="separator:a4e8ab0a767781befcfc696c8015d3de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aedebfaf5cfe4d0f0b65f420b844a7fb4" id="r_aedebfaf5cfe4d0f0b65f420b844a7fb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedebfaf5cfe4d0f0b65f420b844a7fb4">queueActivation_</a></td></tr>
+<tr class="separator:aedebfaf5cfe4d0f0b65f420b844a7fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af093b44a954a2f581d624a18eb2e6bf9" id="r_af093b44a954a2f581d624a18eb2e6bf9"><td class="memItemLeft" align="right" valign="top">QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af093b44a954a2f581d624a18eb2e6bf9">xQueueSW3_</a></td></tr>
+<tr class="separator:af093b44a954a2f581d624a18eb2e6bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a2178963a2401dffeb332e678bdee4dfe" id="r_a2178963a2401dffeb332e678bdee4dfe"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2178963a2401dffeb332e678bdee4dfe">maxTimeout_</a> = 1</td></tr>
+<tr class="separator:a2178963a2401dffeb332e678bdee4dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e381d83e6f6298f0ff70f6f2e4d861" id="r_a81e381d83e6f6298f0ff70f6f2e4d861"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81e381d83e6f6298f0ff70f6f2e4d861">queueSize_</a> = 1</td></tr>
+<tr class="separator:a81e381d83e6f6298f0ff70f6f2e4d861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df3fe664c1d9fae150223e574b1430e" id="r_a9df3fe664c1d9fae150223e574b1430e"><td class="memItemLeft" align="right" valign="top">static constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9df3fe664c1d9fae150223e574b1430e">activationDelayms_</a> = 666</td></tr>
+<tr class="separator:a9df3fe664c1d9fae150223e574b1430e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000084">Todo</a></b></dt><dd>opis </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4ee0848c5b9567ac451e0c7801e75164" name="a4ee0848c5b9567ac451e0c7801e75164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee0848c5b9567ac451e0c7801e75164">&#9670;&#160;</a></span>xQueueSW3() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xQueueSW3::xQueueSW3 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_a4ee0848c5b9567ac451e0c7801e75164_icgraph.png" border="0" usemap="#aclassx_queue_s_w3_a4ee0848c5b9567ac451e0c7801e75164_icgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_a4ee0848c5b9567ac451e0c7801e75164_icgraph" id="aclassx_queue_s_w3_a4ee0848c5b9567ac451e0c7801e75164_icgraph">
+<area shape="rect" title=" " alt="" coords="665,81,842,108"/>
+<area shape="rect" href="classx_queue_s_w3.html#af096614f8965840ee527bc8fb821664a" title=" " alt="" coords="221,5,391,32"/>
+<area shape="poly" title=" " alt="" coords="707,77,664,60,616,47,499,29,392,22,392,17,500,23,617,41,665,55,709,72"/>
+<area shape="rect" href="classx_queue_s_w3.html#a52b729fb9f151315e298aefb97cec99b" title=" " alt="" coords="442,56,614,83"/>
+<area shape="poly" title=" " alt="" coords="649,86,614,82,615,76,650,80"/>
+<area shape="rect" href="classx_queue_s_w3.html#a4e8ab0a767781befcfc696c8015d3de1" title=" " alt="" coords="449,107,607,133"/>
+<area shape="poly" title=" " alt="" coords="650,109,608,114,607,108,649,104"/>
+<area shape="rect" href="classx_queue_s_w3.html#a320a1fa706d27e5c78f588a1bde532eb" title=" " alt="" coords="439,157,617,184"/>
+<area shape="poly" title=" " alt="" coords="704,117,618,148,581,159,579,154,616,143,702,112"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,56,173,83"/>
+<area shape="poly" title=" " alt="" coords="245,40,222,47,174,61,173,56,220,41,243,34"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="451,55,367,35,368,30,452,49"/>
+<area shape="rect" href="v_task_s_w3_8cpp.html#aaf530153872989b7a43b9eb8f6ff3759" title=" " alt="" coords="264,56,349,83"/>
+<area shape="poly" title=" " alt="" coords="427,72,349,72,349,67,427,67"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="238,107,375,133"/>
+<area shape="poly" title=" " alt="" coords="452,89,368,109,367,103,451,84"/>
+<area shape="poly" title=" " alt="" coords="248,72,173,72,173,67,248,67"/>
+<area shape="poly" title=" " alt="" coords="243,104,220,97,173,83,174,77,222,92,245,99"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a320a1fa706d27e5c78f588a1bde532eb" name="a320a1fa706d27e5c78f588a1bde532eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320a1fa706d27e5c78f588a1bde532eb">&#9670;&#160;</a></span>xQueueSW3() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xQueueSW3::xQueueSW3 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_a320a1fa706d27e5c78f588a1bde532eb_cgraph.png" border="0" usemap="#aclassx_queue_s_w3_a320a1fa706d27e5c78f588a1bde532eb_cgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_a320a1fa706d27e5c78f588a1bde532eb_cgraph" id="aclassx_queue_s_w3_a320a1fa706d27e5c78f588a1bde532eb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,183,32"/>
+<area shape="rect" href="classx_queue_s_w3.html#a4ee0848c5b9567ac451e0c7801e75164" title=" " alt="" coords="231,5,408,32"/>
+<area shape="poly" title=" " alt="" coords="183,16,215,16,215,21,183,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af096614f8965840ee527bc8fb821664a" name="af096614f8965840ee527bc8fb821664a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af096614f8965840ee527bc8fb821664a">&#9670;&#160;</a></span>controlTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xQueueSW3::controlTask </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameters</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pvParameters</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_af096614f8965840ee527bc8fb821664a_cgraph.png" border="0" usemap="#aclassx_queue_s_w3_af096614f8965840ee527bc8fb821664a_cgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_af096614f8965840ee527bc8fb821664a_cgraph" id="aclassx_queue_s_w3_af096614f8965840ee527bc8fb821664a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,176,57"/>
+<area shape="rect" href="classx_queue_s_w3.html#a52b729fb9f151315e298aefb97cec99b" title=" " alt="" coords="224,5,395,32"/>
+<area shape="poly" title=" " alt="" coords="176,31,208,28,209,33,176,37"/>
+<area shape="rect" href="classx_queue_s_w3.html#a4ee0848c5b9567ac451e0c7801e75164" title=" " alt="" coords="443,31,620,57"/>
+<area shape="poly" title=" " alt="" coords="176,41,428,41,428,47,176,47"/>
+<area shape="poly" title=" " alt="" coords="396,26,428,29,427,35,395,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_af096614f8965840ee527bc8fb821664a_icgraph.png" border="0" usemap="#aclassx_queue_s_w3_af096614f8965840ee527bc8fb821664a_icgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_af096614f8965840ee527bc8fb821664a_icgraph" id="aclassx_queue_s_w3_af096614f8965840ee527bc8fb821664a_icgraph">
+<area shape="rect" title=" " alt="" coords="221,5,391,32"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,174,21,174,16,205,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a52b729fb9f151315e298aefb97cec99b" name="a52b729fb9f151315e298aefb97cec99b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b729fb9f151315e298aefb97cec99b">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp; xQueueSW3::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_cgraph.png" border="0" usemap="#aclassx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_cgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_cgraph" id="aclassx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" href="classx_queue_s_w3.html#a4ee0848c5b9567ac451e0c7801e75164" title=" " alt="" coords="225,5,402,32"/>
+<area shape="poly" title=" " alt="" coords="177,16,209,16,209,21,177,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_icgraph.png" border="0" usemap="#aclassx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_icgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_icgraph" id="aclassx_queue_s_w3_a52b729fb9f151315e298aefb97cec99b_icgraph">
+<area shape="rect" title=" " alt="" coords="439,56,611,83"/>
+<area shape="rect" href="classx_queue_s_w3.html#af096614f8965840ee527bc8fb821664a" title=" " alt="" coords="221,5,391,32"/>
+<area shape="poly" title=" " alt="" coords="449,55,366,35,368,30,450,49"/>
+<area shape="rect" href="v_task_s_w3_8cpp.html#aaf530153872989b7a43b9eb8f6ff3759" title=" " alt="" coords="264,56,349,83"/>
+<area shape="poly" title=" " alt="" coords="424,72,349,72,349,67,424,67"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="238,107,375,133"/>
+<area shape="poly" title=" " alt="" coords="450,89,368,109,366,103,449,84"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,56,173,83"/>
+<area shape="poly" title=" " alt="" coords="245,40,222,47,174,61,173,56,220,41,243,34"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="248,72,173,72,173,67,248,67"/>
+<area shape="poly" title=" " alt="" coords="243,104,220,97,173,83,174,77,222,92,245,99"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4e8ab0a767781befcfc696c8015d3de1" name="a4e8ab0a767781befcfc696c8015d3de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8ab0a767781befcfc696c8015d3de1">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp; xQueueSW3::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classx_queue_s_w3.html">xQueueSW3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_a4e8ab0a767781befcfc696c8015d3de1_cgraph.png" border="0" usemap="#aclassx_queue_s_w3_a4e8ab0a767781befcfc696c8015d3de1_cgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_a4e8ab0a767781befcfc696c8015d3de1_cgraph" id="aclassx_queue_s_w3_a4e8ab0a767781befcfc696c8015d3de1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" href="classx_queue_s_w3.html#a4ee0848c5b9567ac451e0c7801e75164" title=" " alt="" coords="212,5,389,32"/>
+<area shape="poly" title=" " alt="" coords="164,16,196,16,196,21,164,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3b94310f761583edadae37766c5de80" name="ac3b94310f761583edadae37766c5de80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b94310f761583edadae37766c5de80">&#9670;&#160;</a></span>receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool xQueueSW3::receive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000086">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_ac3b94310f761583edadae37766c5de80_icgraph.png" border="0" usemap="#aclassx_queue_s_w3_ac3b94310f761583edadae37766c5de80_icgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_ac3b94310f761583edadae37766c5de80_icgraph" id="aclassx_queue_s_w3_ac3b94310f761583edadae37766c5de80_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,552,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,358,21,358,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a4e82fcdef73a5450af6129f6f59742" name="a3a4e82fcdef73a5450af6129f6f59742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4e82fcdef73a5450af6129f6f59742">&#9670;&#160;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xQueueSW3::send </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000085">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classx_queue_s_w3_a3a4e82fcdef73a5450af6129f6f59742_icgraph.png" border="0" usemap="#aclassx_queue_s_w3_a3a4e82fcdef73a5450af6129f6f59742_icgraph" alt=""/></div>
+<map name="aclassx_queue_s_w3_a3a4e82fcdef73a5450af6129f6f59742_icgraph" id="aclassx_queue_s_w3_a3a4e82fcdef73a5450af6129f6f59742_icgraph">
+<area shape="rect" title=" " alt="" coords="354,5,486,32"/>
+<area shape="rect" href="v_task_s_w3_8cpp.html#aaf530153872989b7a43b9eb8f6ff3759" title=" " alt="" coords="221,5,306,32"/>
+<area shape="poly" title=" " alt="" coords="339,21,307,21,307,16,339,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9df3fe664c1d9fae150223e574b1430e" name="a9df3fe664c1d9fae150223e574b1430e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df3fe664c1d9fae150223e574b1430e">&#9670;&#160;</a></span>activationDelayms_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint32_t xQueueSW3::activationDelayms_ = 666</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2178963a2401dffeb332e678bdee4dfe" name="a2178963a2401dffeb332e678bdee4dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2178963a2401dffeb332e678bdee4dfe">&#9670;&#160;</a></span>maxTimeout_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t xQueueSW3::maxTimeout_ = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedebfaf5cfe4d0f0b65f420b844a7fb4" name="aedebfaf5cfe4d0f0b65f420b844a7fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedebfaf5cfe4d0f0b65f420b844a7fb4">&#9670;&#160;</a></span>queueActivation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool xQueueSW3::queueActivation_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81e381d83e6f6298f0ff70f6f2e4d861" name="a81e381d83e6f6298f0ff70f6f2e4d861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e381d83e6f6298f0ff70f6f2e4d861">&#9670;&#160;</a></span>queueSize_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t xQueueSW3::queueSize_ = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af093b44a954a2f581d624a18eb2e6bf9" name="af093b44a954a2f581d624a18eb2e6bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af093b44a954a2f581d624a18eb2e6bf9">&#9670;&#160;</a></span>xQueueSW3_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QueueHandle_t xQueueSW3::xQueueSW3_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Core/Inc/queues/<a class="el" href="x_queue_s_w3_8hpp_source.html">xQueueSW3.hpp</a></li>
 <li>Core/Src/queues/<a class="el" href="x_queue_s_w3_8cpp.html">xQueueSW3.cpp</a></li>

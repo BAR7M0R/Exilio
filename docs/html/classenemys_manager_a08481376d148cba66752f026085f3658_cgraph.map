@@ -1,0 +1,6 @@
+<map id="enemysManager::enemysManager" name="enemysManager::enemysManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,227,32"/>
+<area shape="rect" id="Node000002" href="$classenemys_manager.html#ae23773639f2a5436cf1ab2a7cf6da937" title=" " alt="" coords="275,5,468,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,25,259,25,259,30,227,30"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="274,13,242,12,242,7,274,7"/>
+</map>

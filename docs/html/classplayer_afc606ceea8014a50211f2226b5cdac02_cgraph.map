@@ -1,0 +1,10 @@
+<map id="player::move" name="player::move">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,102,40"/>
+<area shape="rect" id="Node000002" href="$namespacecoordinates_tools.html#a70ca8c67af90d65cd659c04215a81b40" title=" " alt="" coords="150,5,361,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,24,134,24,134,29,102,29"/>
+<area shape="rect" id="Node000003" href="$namespacecoordinates_tools.html#abad9704a024eac7445ba4adc6be4ee7e" title=" " alt="" coords="639,13,813,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,21,409,20,591,20,624,21,624,26,591,25,409,25,362,26"/>
+<area shape="rect" id="Node000004" href="$namespacecoordinates_tools.html#a4c5fec12767ae677877353fc13bbf637" title=" " alt="" coords="409,35,591,77"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="362,37,394,41,393,46,361,42"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="591,42,624,37,624,43,592,47"/>
+</map>

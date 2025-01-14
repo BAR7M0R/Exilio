@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Exilio: Core/Src/stm32f1xx_it.c File Reference</title>
+<title>Exilio: Core/Src/hardware/stm32f1xx_it.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -43,13 +43,12 @@ $(function(){ initResizable(false); });
 </script>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li><li class="navelem"><a class="el" href="dir_783a946f02cf4126745a28569acbab55.html">hardware</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">stm32f1xx_it.c File Reference</div></div>
@@ -63,59 +62,50 @@ $(function(){ initResizable(false); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for stm32f1xx_it.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="stm32f1xx__it_8c__incl.png" border="0" usemap="#a_core_2_src_2stm32f1xx__it_8c" alt=""/></div>
+<div class="center"><img src="stm32f1xx__it_8c__incl.png" border="0" usemap="#a_core_2_src_2hardware_2stm32f1xx__it_8c" alt=""/></div>
+<map name="a_core_2_src_2hardware_2stm32f1xx__it_8c" id="a_core_2_src_2hardware_2stm32f1xx__it_8c">
+<area shape="rect" title="Interrupt Service Routines." alt="" coords="7,5,228,32"/>
+<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="34,80,94,107"/>
+<area shape="poly" title=" " alt="" coords="110,34,84,69,80,66,106,31"/>
+<area shape="rect" href="stm32f1xx__it_8h.html" title="This file contains the headers of the interrupt handlers." alt="" coords="118,80,226,107"/>
+<area shape="poly" title=" " alt="" coords="129,31,155,66,151,69,125,34"/>
+<area shape="rect" title=" " alt="" coords="5,155,123,181"/>
+<area shape="poly" title=" " alt="" coords="67,107,67,139,61,139,61,107"/>
+</map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_hard_fault_stack_frame.html">HardFaultStackFrame</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6ad7a5e3ee69cb6db6a6b9111ba898bc" id="r_a6ad7a5e3ee69cb6db6a6b9111ba898bc"><td class="memItemLeft" align="right" valign="top"><a id="a6ad7a5e3ee69cb6db6a6b9111ba898bc" name="a6ad7a5e3ee69cb6db6a6b9111ba898bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>NMI_Handler</b> (void)</td></tr>
-<tr class="memdesc:a6ad7a5e3ee69cb6db6a6b9111ba898bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Non maskable interrupt. <br /></td></tr>
+<tr class="memitem:a6ad7a5e3ee69cb6db6a6b9111ba898bc" id="r_a6ad7a5e3ee69cb6db6a6b9111ba898bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad7a5e3ee69cb6db6a6b9111ba898bc">NMI_Handler</a> (void)</td></tr>
+<tr class="memdesc:a6ad7a5e3ee69cb6db6a6b9111ba898bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Non maskable interrupt.  <br /></td></tr>
 <tr class="separator:a6ad7a5e3ee69cb6db6a6b9111ba898bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bffc10d5bd4106753b7c30e86903bea" id="r_a2bffc10d5bd4106753b7c30e86903bea"><td class="memItemLeft" align="right" valign="top"><a id="a2bffc10d5bd4106753b7c30e86903bea" name="a2bffc10d5bd4106753b7c30e86903bea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HardFault_Handler</b> (void)</td></tr>
-<tr class="memdesc:a2bffc10d5bd4106753b7c30e86903bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Hard fault interrupt. <br /></td></tr>
+<tr class="memitem:a2bffc10d5bd4106753b7c30e86903bea" id="r_a2bffc10d5bd4106753b7c30e86903bea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bffc10d5bd4106753b7c30e86903bea">HardFault_Handler</a> (void)</td></tr>
+<tr class="memdesc:a2bffc10d5bd4106753b7c30e86903bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Hard fault interrupt.  <br /></td></tr>
 <tr class="separator:a2bffc10d5bd4106753b7c30e86903bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af80ff52c2e5d565b18972e5faf33e5d2" id="r_af80ff52c2e5d565b18972e5faf33e5d2"><td class="memItemLeft" align="right" valign="top"><a id="af80ff52c2e5d565b18972e5faf33e5d2" name="af80ff52c2e5d565b18972e5faf33e5d2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>hard_fault_handler_c</b> (<a class="el" href="struct_hard_fault_stack_frame.html">HardFaultStackFrame</a> *stackFrame)</td></tr>
-<tr class="separator:af80ff52c2e5d565b18972e5faf33e5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3150f74512510287a942624aa9b44cc5" id="r_a3150f74512510287a942624aa9b44cc5"><td class="memItemLeft" align="right" valign="top"><a id="a3150f74512510287a942624aa9b44cc5" name="a3150f74512510287a942624aa9b44cc5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MemManage_Handler</b> (void)</td></tr>
-<tr class="memdesc:a3150f74512510287a942624aa9b44cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Memory management fault. <br /></td></tr>
+<tr class="memitem:a3150f74512510287a942624aa9b44cc5" id="r_a3150f74512510287a942624aa9b44cc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3150f74512510287a942624aa9b44cc5">MemManage_Handler</a> (void)</td></tr>
+<tr class="memdesc:a3150f74512510287a942624aa9b44cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Memory management fault.  <br /></td></tr>
 <tr class="separator:a3150f74512510287a942624aa9b44cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a850cefb17a977292ae5eb4cafa9976c3" id="r_a850cefb17a977292ae5eb4cafa9976c3"><td class="memItemLeft" align="right" valign="top"><a id="a850cefb17a977292ae5eb4cafa9976c3" name="a850cefb17a977292ae5eb4cafa9976c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BusFault_Handler</b> (void)</td></tr>
-<tr class="memdesc:a850cefb17a977292ae5eb4cafa9976c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Prefetch fault, memory access fault. <br /></td></tr>
+<tr class="memitem:a850cefb17a977292ae5eb4cafa9976c3" id="r_a850cefb17a977292ae5eb4cafa9976c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a850cefb17a977292ae5eb4cafa9976c3">BusFault_Handler</a> (void)</td></tr>
+<tr class="memdesc:a850cefb17a977292ae5eb4cafa9976c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Prefetch fault, memory access fault.  <br /></td></tr>
 <tr class="separator:a850cefb17a977292ae5eb4cafa9976c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d98923de2ed6b7309b66f9ba2971647" id="r_a1d98923de2ed6b7309b66f9ba2971647"><td class="memItemLeft" align="right" valign="top"><a id="a1d98923de2ed6b7309b66f9ba2971647" name="a1d98923de2ed6b7309b66f9ba2971647"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UsageFault_Handler</b> (void)</td></tr>
-<tr class="memdesc:a1d98923de2ed6b7309b66f9ba2971647"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Undefined instruction or illegal state. <br /></td></tr>
+<tr class="memitem:a1d98923de2ed6b7309b66f9ba2971647" id="r_a1d98923de2ed6b7309b66f9ba2971647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d98923de2ed6b7309b66f9ba2971647">UsageFault_Handler</a> (void)</td></tr>
+<tr class="memdesc:a1d98923de2ed6b7309b66f9ba2971647"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Undefined instruction or illegal state.  <br /></td></tr>
 <tr class="separator:a1d98923de2ed6b7309b66f9ba2971647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbdfb05858cc36fc520974df37ec3cb0" id="r_adbdfb05858cc36fc520974df37ec3cb0"><td class="memItemLeft" align="right" valign="top"><a id="adbdfb05858cc36fc520974df37ec3cb0" name="adbdfb05858cc36fc520974df37ec3cb0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DebugMon_Handler</b> (void)</td></tr>
-<tr class="memdesc:adbdfb05858cc36fc520974df37ec3cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Debug monitor. <br /></td></tr>
+<tr class="memitem:adbdfb05858cc36fc520974df37ec3cb0" id="r_adbdfb05858cc36fc520974df37ec3cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbdfb05858cc36fc520974df37ec3cb0">DebugMon_Handler</a> (void)</td></tr>
+<tr class="memdesc:adbdfb05858cc36fc520974df37ec3cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles Debug monitor.  <br /></td></tr>
 <tr class="separator:adbdfb05858cc36fc520974df37ec3cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51741dbf9b0de1b8b56b5a6f1ef2e694" id="r_a51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="memItemLeft" align="right" valign="top"><a id="a51741dbf9b0de1b8b56b5a6f1ef2e694" name="a51741dbf9b0de1b8b56b5a6f1ef2e694"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM1_UP_IRQHandler</b> (void)</td></tr>
-<tr class="memdesc:a51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles TIM1 update interrupt. <br /></td></tr>
+<tr class="memitem:a51741dbf9b0de1b8b56b5a6f1ef2e694" id="r_a51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51741dbf9b0de1b8b56b5a6f1ef2e694">TIM1_UP_IRQHandler</a> (void)</td></tr>
+<tr class="memdesc:a51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles TIM1 update interrupt.  <br /></td></tr>
 <tr class="separator:a51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98cff83252098363b2dbca9608df964e" id="r_a98cff83252098363b2dbca9608df964e"><td class="memItemLeft" align="right" valign="top"><a id="a98cff83252098363b2dbca9608df964e" name="a98cff83252098363b2dbca9608df964e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM7_IRQHandler</b> (void)</td></tr>
-<tr class="memdesc:a98cff83252098363b2dbca9608df964e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles TIM7 global interrupt. <br /></td></tr>
+<tr class="memitem:a98cff83252098363b2dbca9608df964e" id="r_a98cff83252098363b2dbca9608df964e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98cff83252098363b2dbca9608df964e">TIM7_IRQHandler</a> (void)</td></tr>
+<tr class="memdesc:a98cff83252098363b2dbca9608df964e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles TIM7 global interrupt.  <br /></td></tr>
 <tr class="separator:a98cff83252098363b2dbca9608df964e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abb71bf3ee68e2a051fbeec6c3ab3012d" id="r_abb71bf3ee68e2a051fbeec6c3ab3012d"><td class="memItemLeft" align="right" valign="top"><a id="abb71bf3ee68e2a051fbeec6c3ab3012d" name="abb71bf3ee68e2a051fbeec6c3ab3012d"></a>
-TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>htim7</b></td></tr>
+<tr class="memitem:abb71bf3ee68e2a051fbeec6c3ab3012d" id="r_abb71bf3ee68e2a051fbeec6c3ab3012d"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb71bf3ee68e2a051fbeec6c3ab3012d">htim7</a></td></tr>
 <tr class="separator:abb71bf3ee68e2a051fbeec6c3ab3012d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25fc663547539bc49fecc0011bd76ab5" id="r_a25fc663547539bc49fecc0011bd76ab5"><td class="memItemLeft" align="right" valign="top"><a id="a25fc663547539bc49fecc0011bd76ab5" name="a25fc663547539bc49fecc0011bd76ab5"></a>
-TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>htim1</b></td></tr>
+<tr class="memitem:a25fc663547539bc49fecc0011bd76ab5" id="r_a25fc663547539bc49fecc0011bd76ab5"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25fc663547539bc49fecc0011bd76ab5">htim1</a></td></tr>
 <tr class="separator:a25fc663547539bc49fecc0011bd76ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -123,7 +113,205 @@ TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>htim1</b
 <dl class="section attention"><dt>Attention</dt><dd></dd></dl>
 <p>Copyright (c) 2024 STMicroelectronics. All rights reserved.</p>
 <p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a850cefb17a977292ae5eb4cafa9976c3" name="a850cefb17a977292ae5eb4cafa9976c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850cefb17a977292ae5eb4cafa9976c3">&#9670;&#160;</a></span>BusFault_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BusFault_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles Prefetch fault, memory access fault. </p>
+
+</div>
+</div>
+<a id="adbdfb05858cc36fc520974df37ec3cb0" name="adbdfb05858cc36fc520974df37ec3cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbdfb05858cc36fc520974df37ec3cb0">&#9670;&#160;</a></span>DebugMon_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugMon_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles Debug monitor. </p>
+
+</div>
+</div>
+<a id="a2bffc10d5bd4106753b7c30e86903bea" name="a2bffc10d5bd4106753b7c30e86903bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bffc10d5bd4106753b7c30e86903bea">&#9670;&#160;</a></span>HardFault_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HardFault_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles Hard fault interrupt. </p>
+
+</div>
+</div>
+<a id="a3150f74512510287a942624aa9b44cc5" name="a3150f74512510287a942624aa9b44cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3150f74512510287a942624aa9b44cc5">&#9670;&#160;</a></span>MemManage_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MemManage_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles Memory management fault. </p>
+
+</div>
+</div>
+<a id="a6ad7a5e3ee69cb6db6a6b9111ba898bc" name="a6ad7a5e3ee69cb6db6a6b9111ba898bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad7a5e3ee69cb6db6a6b9111ba898bc">&#9670;&#160;</a></span>NMI_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NMI_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles Non maskable interrupt. </p>
+
+</div>
+</div>
+<a id="a51741dbf9b0de1b8b56b5a6f1ef2e694" name="a51741dbf9b0de1b8b56b5a6f1ef2e694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51741dbf9b0de1b8b56b5a6f1ef2e694">&#9670;&#160;</a></span>TIM1_UP_IRQHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TIM1_UP_IRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles TIM1 update interrupt. </p>
+
+</div>
+</div>
+<a id="a98cff83252098363b2dbca9608df964e" name="a98cff83252098363b2dbca9608df964e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98cff83252098363b2dbca9608df964e">&#9670;&#160;</a></span>TIM7_IRQHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TIM7_IRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles TIM7 global interrupt. </p>
+
+</div>
+</div>
+<a id="a1d98923de2ed6b7309b66f9ba2971647" name="a1d98923de2ed6b7309b66f9ba2971647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d98923de2ed6b7309b66f9ba2971647">&#9670;&#160;</a></span>UsageFault_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UsageFault_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function handles Undefined instruction or illegal state. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a25fc663547539bc49fecc0011bd76ab5" name="a25fc663547539bc49fecc0011bd76ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fc663547539bc49fecc0011bd76ab5">&#9670;&#160;</a></span>htim1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_HandleTypeDef htim1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb71bf3ee68e2a051fbeec6c3ab3012d" name="abb71bf3ee68e2a051fbeec6c3ab3012d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb71bf3ee68e2a051fbeec6c3ab3012d">&#9670;&#160;</a></span>htim7</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_HandleTypeDef htim7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.1

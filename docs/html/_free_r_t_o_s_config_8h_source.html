@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Exilio: Core/Inc/FreeRTOSConfig.h Source File</title>
+<title>Exilio: Core/Inc/hardware/FreeRTOSConfig.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -43,7 +43,7 @@ $(function(){ initResizable(false); });
 </script>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_e2489e887f17afa3cbc07a4ec152cdd2.html">Inc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_e2489e887f17afa3cbc07a4ec152cdd2.html">Inc</a></li><li class="navelem"><a class="el" href="dir_5684279766062723563e8bcb08fbb50f.html">hardware</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -51,7 +51,7 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">FreeRTOSConfig.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* USER CODE BEGIN Header */</span></div>
+<a href="_free_r_t_o_s_config_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* USER CODE BEGIN Header */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * FreeRTOS Kernel V10.0.1</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.</span></div>
@@ -102,86 +102,87 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">/* Ensure definitions are only used by the compiler, and not by the assembler. */</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#if defined(__ICCARM__) || defined(__CC_ARM) || defined(__GNUC__)</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">  #include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">extern</span> uint32_t SystemCoreClock;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">extern</span> uint32_t <a class="code hl_variable" href="group___s_t_m32_f1xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define configUSE_PREEMPTION                     1</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define configSUPPORT_STATIC_ALLOCATION          1</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define configSUPPORT_DYNAMIC_ALLOCATION         1</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define configUSE_IDLE_HOOK                      0</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define configUSE_TICK_HOOK                      0</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define configCPU_CLOCK_HZ                       ( SystemCoreClock )</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define configTICK_RATE_HZ                       ((TickType_t)1000)</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define configMAX_PRIORITIES                     ( 5 )</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define configMINIMAL_STACK_SIZE                 ((uint16_t)128)</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define configTOTAL_HEAP_SIZE                    ((size_t)4096)</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define configMAX_TASK_NAME_LEN                  ( 16 )</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define configUSE_16_BIT_TICKS                   0</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define configUSE_MUTEXES                        1</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define configQUEUE_REGISTRY_SIZE                8</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#define configUSE_RECURSIVE_MUTEXES              1</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define configUSE_PORT_OPTIMISED_TASK_SELECTION  1</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#adde83486022745409c40605922b0bdd6">   54</a></span><span class="preprocessor">#define configUSE_PREEMPTION                     1</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a1d6797a53b62d501b095f964036a7ac4">   55</a></span><span class="preprocessor">#define configSUPPORT_STATIC_ALLOCATION          1</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#afa3f8d6510699d972c9af08fa41f66dc">   56</a></span><span class="preprocessor">#define configSUPPORT_DYNAMIC_ALLOCATION         1</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ac637ae45863c19fa2e919db0ed49301f">   57</a></span><span class="preprocessor">#define configUSE_IDLE_HOOK                      0</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a23c5922c077106fad3f70b54d9071466">   58</a></span><span class="preprocessor">#define configUSE_TICK_HOOK                      0</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#aa68082df879e6fc96bcb9b26513639e7">   59</a></span><span class="preprocessor">#define configCPU_CLOCK_HZ                       ( SystemCoreClock )</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a2f0258dd1e3b877e5bc013be54c2db6a">   60</a></span><span class="preprocessor">#define configTICK_RATE_HZ                       ((TickType_t)1000)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a9a78f5ac61e6cb172dadf2a51f11db38">   61</a></span><span class="preprocessor">#define configMAX_PRIORITIES                     ( 5 )</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a6c534a6cf8a00528fe0be42083484f9a">   62</a></span><span class="preprocessor">#define configMINIMAL_STACK_SIZE                 ((uint16_t)128)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a9f213227674effff0122a75d94d87938">   63</a></span><span class="preprocessor">#define configTOTAL_HEAP_SIZE                    ((size_t)4096)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ac388dc4041aab6997348828eb27fc1a8">   64</a></span><span class="preprocessor">#define configMAX_TASK_NAME_LEN                  ( 16 )</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#aac311ed9b9e5ae4d2d9648b33a24acce">   65</a></span><span class="preprocessor">#define configUSE_16_BIT_TICKS                   0</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a543bf3c79008974cc1d36bab51d94fbf">   66</a></span><span class="preprocessor">#define configUSE_MUTEXES                        1</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#aa4b5138c4e42a180f0abd4f2455f90fb">   67</a></span><span class="preprocessor">#define configQUEUE_REGISTRY_SIZE                8</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a9fe02d866cb1c4fbaa0c3de79f53d42d">   68</a></span><span class="preprocessor">#define configUSE_RECURSIVE_MUTEXES              1</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#aebb8c3a87d591f60f974772be0ee798d">   69</a></span><span class="preprocessor">#define configUSE_PORT_OPTIMISED_TASK_SELECTION  1</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">/* Co-routine definitions. */</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#define configUSE_CO_ROUTINES                    0</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#define configMAX_CO_ROUTINE_PRIORITIES          ( 2 )</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a57990715eb06402474b8b47e1d562616">   72</a></span><span class="preprocessor">#define configUSE_CO_ROUTINES                    0</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ae8f3fd645e6e78dfeb8a6e874af6195a">   73</a></span><span class="preprocessor">#define configMAX_CO_ROUTINE_PRIORITIES          ( 2 )</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">/* Set the following definitions to 1 to include the API function, or zero</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">to exclude the API function. */</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define INCLUDE_vTaskPrioritySet            1</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define INCLUDE_uxTaskPriorityGet           1</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define INCLUDE_vTaskDelete                 1</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#define INCLUDE_vTaskCleanUpResources       0</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#define INCLUDE_vTaskSuspend                1</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define INCLUDE_vTaskDelayUntil             0</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#define INCLUDE_vTaskDelay                  1</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define INCLUDE_xTaskGetSchedulerState      1</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ad6858ac8aaf726007fd19752956ef1bd">   77</a></span><span class="preprocessor">#define INCLUDE_vTaskPrioritySet            1</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a1279eb797355460aeeec06aa524e91df">   78</a></span><span class="preprocessor">#define INCLUDE_uxTaskPriorityGet           1</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a5ae1434fdf995108dc749ff9329f53bd">   79</a></span><span class="preprocessor">#define INCLUDE_vTaskDelete                 1</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a7ee138825e57f243c8ee5fd4207b9e26">   80</a></span><span class="preprocessor">#define INCLUDE_vTaskCleanUpResources       0</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#aef8fbb97819ad3d962f334ac298206d1">   81</a></span><span class="preprocessor">#define INCLUDE_vTaskSuspend                1</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ae8459bfd5b428319bb10de9f504a53aa">   82</a></span><span class="preprocessor">#define INCLUDE_vTaskDelayUntil             0</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a24361a6eb816a965f1ee4e2e08e364f8">   83</a></span><span class="preprocessor">#define INCLUDE_vTaskDelay                  1</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a9ed60ede556830584e6bfd4a3ab4f9de">   84</a></span><span class="preprocessor">#define INCLUDE_xTaskGetSchedulerState      1</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">/* Cortex-M specific definitions. */</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#ifdef __NVIC_PRIO_BITS</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> <span class="comment">/* __BVIC_PRIO_BITS will be specified when CMSIS is being used. */</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor"> #define configPRIO_BITS         __NVIC_PRIO_BITS</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor"> #define configPRIO_BITS         4</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a5796db11ec6f9aa38d017d2ac393c5ba">   91</a></span><span class="preprocessor"> #define configPRIO_BITS         4</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">/* The lowest interrupt priority that can be used in a call to a &quot;set priority&quot;</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">function. */</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define configLIBRARY_LOWEST_INTERRUPT_PRIORITY   15</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a10da20f180ec9bd131b0052a802dbc39">   96</a></span><span class="preprocessor">#define configLIBRARY_LOWEST_INTERRUPT_PRIORITY   15</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">/* The highest interrupt priority that can be used by any interrupt service</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">routine that makes calls to interrupt safe FreeRTOS API functions.  DO NOT CALL</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">INTERRUPT SAFE FREERTOS API FUNCTIONS FROM ANY INTERRUPT THAT HAS A HIGHER</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">PRIORITY THAN THIS! (higher priorities are lower numeric values. */</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY 5</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a2254bd235d882be3061bcad0b1e8be98">  102</a></span><span class="preprocessor">#define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY 5</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">/* Interrupt priorities used by the kernel port layer itself.  These are generic</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">to all Cortex-M ports, and do not rely on any particular library functions. */</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define configKERNEL_INTERRUPT_PRIORITY         ( configLIBRARY_LOWEST_INTERRUPT_PRIORITY &lt;&lt; (8 - configPRIO_BITS) )</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ac42cff506ad61d4174fa23e952e3225e">  106</a></span><span class="preprocessor">#define configKERNEL_INTERRUPT_PRIORITY         ( configLIBRARY_LOWEST_INTERRUPT_PRIORITY &lt;&lt; (8 - configPRIO_BITS) )</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">/* !!!! configMAX_SYSCALL_INTERRUPT_PRIORITY must not be set to zero !!!!</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#define configMAX_SYSCALL_INTERRUPT_PRIORITY    ( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY &lt;&lt; (8 - configPRIO_BITS) )</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a54bfc31c410ee452577a25a4552c3704">  109</a></span><span class="preprocessor">#define configMAX_SYSCALL_INTERRUPT_PRIORITY    ( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY &lt;&lt; (8 - configPRIO_BITS) )</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">/* Normal assert() semantics without relying on the provision of an assert.h</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">header file. */</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">/* USER CODE BEGIN 1 */</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#define configASSERT( x ) if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a228c70cd48927d6ab730ed1a6dfbe35f">  114</a></span><span class="preprocessor">#define configASSERT( x ) if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">/* USER CODE END 1 */</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">/* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">standard names. */</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#define vPortSVCHandler    SVC_Handler</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#define xPortPendSVHandler PendSV_Handler</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ad43047b3ea0a146673e30637488bf754">  119</a></span><span class="preprocessor">#define vPortSVCHandler    SVC_Handler</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#a6f30022da7d797dd31f1b8a11cae9a35">  120</a></span><span class="preprocessor">#define xPortPendSVHandler PendSV_Handler</span></div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">/* IMPORTANT: This define is commented when used with STM32Cube firmware, when the timebase source is SysTick,</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">              to prevent overwriting SysTick_Handler defined within STM32Cube HAL */</span></div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#define xPortSysTickHandler SysTick_Handler</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="_free_r_t_o_s_config_8h.html#ae42e6318b5d564e44f97f8c765859448">  125</a></span><span class="preprocessor">#define xPortSysTickHandler SysTick_Handler</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">/* USER CODE BEGIN Defines */</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">/* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">/* USER CODE END Defines */</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#endif </span><span class="comment">/* FREERTOS_CONFIG_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup___s_t_m32_f1xx___system___private___variables_html_gaa3cd3e43291e81e795d642b79b6088e6"><div class="ttname"><a href="group___s_t_m32_f1xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a></div><div class="ttdeci">uint32_t SystemCoreClock</div><div class="ttdef"><b>Definition</b> system_stm32f1xx.c:141</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

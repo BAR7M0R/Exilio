@@ -1,0 +1,8 @@
+<map id="coordinatesTools::vMapSDownRigth" name="coordinatesTools::vMapSDownRigth">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,208,48"/>
+<area shape="rect" id="Node000002" href="$namespacecoordinates_tools.html#ae8b12b2546b392eee122cf2df7fa5589" title=" " alt="" coords="479,13,661,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,24,463,24,463,29,208,29"/>
+<area shape="rect" id="Node000003" href="$namespacecoordinates_tools.html#ab07d197609bc06de924819c52dfe7a95" title=" " alt="" coords="256,39,431,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,35,241,38,240,44,208,40"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="431,40,463,36,464,41,432,45"/>
+</map>

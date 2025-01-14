@@ -1,0 +1,9 @@
+<map id="Core/Inc/hardware/joystick_port.h" name="Core/Inc/hardware/joystick_port.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,183,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="19,96,84,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,50,68,83,63,81,81,47"/>
+<area shape="rect" id="Node000003" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="108,96,168,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,47,126,81,121,83,103,50"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="79,171,197,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="141,123,141,155,135,155,135,123"/>
+</map>

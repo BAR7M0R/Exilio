@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -47,41 +47,614 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classplayer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">player Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="player_8hpp_source.html">player.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for player:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer__coll__graph.png" border="0" usemap="#aplayer_coll__map" alt="Collaboration graph"/></div>
+<map name="aplayer_coll__map" id="aplayer_coll__map">
+<area shape="rect" title=" " alt="" coords="65,192,121,219"/>
+<area shape="poly" title=" " alt="" coords="126,185,141,190,148,205,144,217,135,224,122,225,109,222,111,217,123,220,133,219,140,214,143,206,137,194,124,190"/>
+<area shape="rect" href="classsegment.html" title="This is wrapper around std::array&lt;field , 8&gt; class based on the memory model." alt="" coords="5,5,77,32"/>
+<area shape="poly" title=" " alt="" coords="44,47,50,104,56,136,67,167,83,190,79,193,62,169,51,138,44,105,39,48"/>
+<area shape="rect" href="structcoordinates.html" title=" " alt="" coords="101,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="145,48,136,105,118,169,104,193,100,191,113,167,131,103,140,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa50bb58ea7ba6255aacc9911b767dff2" id="r_aa50bb58ea7ba6255aacc9911b767dff2"><td class="memItemLeft" align="right" valign="top"><a id="aa50bb58ea7ba6255aacc9911b767dff2" name="aa50bb58ea7ba6255aacc9911b767dff2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updatePosition</b> (<a class="el" href="structcoordinates.html">coordinates</a> direction)</td></tr>
-<tr class="separator:aa50bb58ea7ba6255aacc9911b767dff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34bdd135312222bc8dbf144bb1a5cb5" id="r_ac34bdd135312222bc8dbf144bb1a5cb5"><td class="memItemLeft" align="right" valign="top"><a id="ac34bdd135312222bc8dbf144bb1a5cb5" name="ac34bdd135312222bc8dbf144bb1a5cb5"></a>
-<a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentPosition</b> ()</td></tr>
+<tr class="memitem:afc606ceea8014a50211f2226b5cdac02" id="r_afc606ceea8014a50211f2226b5cdac02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc606ceea8014a50211f2226b5cdac02">move</a> (<a class="el" href="structcoordinates.html">coordinates</a> direction)</td></tr>
+<tr class="separator:afc606ceea8014a50211f2226b5cdac02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34bdd135312222bc8dbf144bb1a5cb5" id="r_ac34bdd135312222bc8dbf144bb1a5cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac34bdd135312222bc8dbf144bb1a5cb5">getCurrentPosition</a> ()</td></tr>
 <tr class="separator:ac34bdd135312222bc8dbf144bb1a5cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a707e2d677f4484db498f093e9385d23a" id="r_a707e2d677f4484db498f093e9385d23a"><td class="memItemLeft" align="right" valign="top"><a id="a707e2d677f4484db498f093e9385d23a" name="a707e2d677f4484db498f093e9385d23a"></a>
-<a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPrevousPosition</b> ()</td></tr>
+<tr class="memitem:a707e2d677f4484db498f093e9385d23a" id="r_a707e2d677f4484db498f093e9385d23a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a707e2d677f4484db498f093e9385d23a">getPrevousPosition</a> ()</td></tr>
 <tr class="separator:a707e2d677f4484db498f093e9385d23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61535af376252a70de62e8b246c188a" id="r_ad61535af376252a70de62e8b246c188a"><td class="memItemLeft" align="right" valign="top"><a id="ad61535af376252a70de62e8b246c188a" name="ad61535af376252a70de62e8b246c188a"></a>
-const <a class="el" href="classsegment.html">segment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> () const</td></tr>
+<tr class="memitem:ad61535af376252a70de62e8b246c188a" id="r_ad61535af376252a70de62e8b246c188a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classsegment.html">segment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61535af376252a70de62e8b246c188a">getTexture</a> () const</td></tr>
 <tr class="separator:ad61535af376252a70de62e8b246c188a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a364a0ac83bd2cfd938af75ae6c61d3a2" id="r_a364a0ac83bd2cfd938af75ae6c61d3a2"><td class="memItemLeft" align="right" valign="top"><a id="a364a0ac83bd2cfd938af75ae6c61d3a2" name="a364a0ac83bd2cfd938af75ae6c61d3a2"></a>
-const <a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTextureCorner1</b> () const</td></tr>
+<tr class="memitem:a364a0ac83bd2cfd938af75ae6c61d3a2" id="r_a364a0ac83bd2cfd938af75ae6c61d3a2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364a0ac83bd2cfd938af75ae6c61d3a2">getTextureCorner1</a> () const</td></tr>
 <tr class="separator:a364a0ac83bd2cfd938af75ae6c61d3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ed2dfd2dccf2715792c47b0cb008858" id="r_a2ed2dfd2dccf2715792c47b0cb008858"><td class="memItemLeft" align="right" valign="top"><a id="a2ed2dfd2dccf2715792c47b0cb008858" name="a2ed2dfd2dccf2715792c47b0cb008858"></a>
-const <a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTextureCorner2</b> () const</td></tr>
+<tr class="memitem:a2ed2dfd2dccf2715792c47b0cb008858" id="r_a2ed2dfd2dccf2715792c47b0cb008858"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed2dfd2dccf2715792c47b0cb008858">getTextureCorner2</a> () const</td></tr>
 <tr class="separator:a2ed2dfd2dccf2715792c47b0cb008858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51ea6faad26a2b756c296f4b04d5378b" id="r_a51ea6faad26a2b756c296f4b04d5378b"><td class="memItemLeft" align="right" valign="top"><a id="a51ea6faad26a2b756c296f4b04d5378b" name="a51ea6faad26a2b756c296f4b04d5378b"></a>
-const <a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOffset</b> () const</td></tr>
+<tr class="memitem:a51ea6faad26a2b756c296f4b04d5378b" id="r_a51ea6faad26a2b756c296f4b04d5378b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcoordinates.html">coordinates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51ea6faad26a2b756c296f4b04d5378b">getOffset</a> () const</td></tr>
 <tr class="separator:a51ea6faad26a2b756c296f4b04d5378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a01a97050eae2c47fca602c1b5e150f3b" id="r_a01a97050eae2c47fca602c1b5e150f3b"><td class="memItemLeft" align="right" valign="top"><a id="a01a97050eae2c47fca602c1b5e150f3b" name="a01a97050eae2c47fca602c1b5e150f3b"></a>
-static <a class="el" href="classplayer.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
-<tr class="separator:a01a97050eae2c47fca602c1b5e150f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d3f826f379dcc7c9b4890863074be4" id="r_a66d3f826f379dcc7c9b4890863074be4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classplayer.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66d3f826f379dcc7c9b4890863074be4">getInstance</a> ()</td></tr>
+<tr class="separator:a66d3f826f379dcc7c9b4890863074be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a97de83bce15f880241f561b55b016b02" id="r_a97de83bce15f880241f561b55b016b02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97de83bce15f880241f561b55b016b02">player</a> ()</td></tr>
+<tr class="separator:a97de83bce15f880241f561b55b016b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562deb1fda48edf8063f6270a15a6943" id="r_a562deb1fda48edf8063f6270a15a6943"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a562deb1fda48edf8063f6270a15a6943">player</a> (const <a class="el" href="classplayer.html">player</a> &amp;)=delete</td></tr>
+<tr class="separator:a562deb1fda48edf8063f6270a15a6943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4665a9a14b92cd85aa657545ba56a5c4" id="r_a4665a9a14b92cd85aa657545ba56a5c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classplayer.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4665a9a14b92cd85aa657545ba56a5c4">operator=</a> (const <a class="el" href="classplayer.html">player</a> &amp;)=delete</td></tr>
+<tr class="separator:a4665a9a14b92cd85aa657545ba56a5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aee21b7c77b9f19d43f2a7c77df83f15d" id="r_aee21b7c77b9f19d43f2a7c77df83f15d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classsegment.html">segment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee21b7c77b9f19d43f2a7c77df83f15d">texture_</a></td></tr>
+<tr class="separator:aee21b7c77b9f19d43f2a7c77df83f15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2fb76d97b85df53a0258169923eaf69" id="r_ac2fb76d97b85df53a0258169923eaf69"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcoordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2fb76d97b85df53a0258169923eaf69">texture_corner_1_</a></td></tr>
+<tr class="separator:ac2fb76d97b85df53a0258169923eaf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fab47c12d16e56e100ebb34e115cda" id="r_ae0fab47c12d16e56e100ebb34e115cda"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcoordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0fab47c12d16e56e100ebb34e115cda">texture_corner_2_</a></td></tr>
+<tr class="separator:ae0fab47c12d16e56e100ebb34e115cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bdfca5ab139080a6c5b9c2a7697d21" id="r_a57bdfca5ab139080a6c5b9c2a7697d21"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcoordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57bdfca5ab139080a6c5b9c2a7697d21">offset_</a></td></tr>
+<tr class="separator:a57bdfca5ab139080a6c5b9c2a7697d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c68f02d43bb297d5a1d756a3da6d0b" id="r_ae6c68f02d43bb297d5a1d756a3da6d0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcoordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6c68f02d43bb297d5a1d756a3da6d0b">currentPosition_</a></td></tr>
+<tr class="separator:ae6c68f02d43bb297d5a1d756a3da6d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee3a74cd7a13f1ea45c7d90cc1a772f" id="r_a0ee3a74cd7a13f1ea45c7d90cc1a772f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcoordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ee3a74cd7a13f1ea45c7d90cc1a772f">prevousPosition_</a></td></tr>
+<tr class="separator:a0ee3a74cd7a13f1ea45c7d90cc1a772f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aa2f2f98bfe93bf945fedea68dac1701e" id="r_aa2f2f98bfe93bf945fedea68dac1701e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classplayer.html">player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2f2f98bfe93bf945fedea68dac1701e">instance_</a></td></tr>
+<tr class="separator:aa2f2f98bfe93bf945fedea68dac1701e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000074">Todo</a></b></dt><dd>opis </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a97de83bce15f880241f561b55b016b02" name="a97de83bce15f880241f561b55b016b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97de83bce15f880241f561b55b016b02">&#9670;&#160;</a></span>player() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">player::player </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a97de83bce15f880241f561b55b016b02_icgraph.png" border="0" usemap="#aclassplayer_a97de83bce15f880241f561b55b016b02_icgraph" alt=""/></div>
+<map name="aclassplayer_a97de83bce15f880241f561b55b016b02_icgraph" id="aclassplayer_a97de83bce15f880241f561b55b016b02_icgraph">
+<area shape="rect" title=" " alt="" coords="587,56,686,83"/>
+<area shape="rect" href="classplayer.html#a66d3f826f379dcc7c9b4890863074be4" title=" " alt="" coords="406,5,539,32"/>
+<area shape="poly" title=" " alt="" coords="575,53,517,35,519,30,577,48"/>
+<area shape="rect" href="classplayer.html#a4665a9a14b92cd85aa657545ba56a5c4" title=" " alt="" coords="413,56,532,83"/>
+<area shape="poly" title=" " alt="" coords="571,72,533,72,533,67,571,67"/>
+<area shape="rect" href="classplayer.html#a562deb1fda48edf8063f6270a15a6943" title=" " alt="" coords="423,107,522,133"/>
+<area shape="poly" title=" " alt="" coords="577,90,519,109,517,104,575,85"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a562deb1fda48edf8063f6270a15a6943" name="a562deb1fda48edf8063f6270a15a6943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562deb1fda48edf8063f6270a15a6943">&#9670;&#160;</a></span>player() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">player::player </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classplayer.html">player</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a562deb1fda48edf8063f6270a15a6943_cgraph.png" border="0" usemap="#aclassplayer_a562deb1fda48edf8063f6270a15a6943_cgraph" alt=""/></div>
+<map name="aclassplayer_a562deb1fda48edf8063f6270a15a6943_cgraph" id="aclassplayer_a562deb1fda48edf8063f6270a15a6943_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,105,32"/>
+<area shape="rect" href="classplayer.html#a97de83bce15f880241f561b55b016b02" title=" " alt="" coords="153,5,252,32"/>
+<area shape="poly" title=" " alt="" coords="105,16,137,16,137,21,105,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac34bdd135312222bc8dbf144bb1a5cb5" name="ac34bdd135312222bc8dbf144bb1a5cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34bdd135312222bc8dbf144bb1a5cb5">&#9670;&#160;</a></span>getCurrentPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcoordinates.html">coordinates</a> &amp; player::getCurrentPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_ac34bdd135312222bc8dbf144bb1a5cb5_icgraph.png" border="0" usemap="#aclassplayer_ac34bdd135312222bc8dbf144bb1a5cb5_icgraph" alt=""/></div>
+<map name="aclassplayer_ac34bdd135312222bc8dbf144bb1a5cb5_icgraph" id="aclassplayer_ac34bdd135312222bc8dbf144bb1a5cb5_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,579,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="390,21,359,21,359,16,390,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a66d3f826f379dcc7c9b4890863074be4" name="a66d3f826f379dcc7c9b4890863074be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d3f826f379dcc7c9b4890863074be4">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classplayer.html">player</a> &amp; player::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a66d3f826f379dcc7c9b4890863074be4_cgraph.png" border="0" usemap="#aclassplayer_a66d3f826f379dcc7c9b4890863074be4_cgraph" alt=""/></div>
+<map name="aclassplayer_a66d3f826f379dcc7c9b4890863074be4_cgraph" id="aclassplayer_a66d3f826f379dcc7c9b4890863074be4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,138,32"/>
+<area shape="rect" href="classplayer.html#a97de83bce15f880241f561b55b016b02" title=" " alt="" coords="186,5,285,32"/>
+<area shape="poly" title=" " alt="" coords="138,16,170,16,170,21,138,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a66d3f826f379dcc7c9b4890863074be4_icgraph.png" border="0" usemap="#aclassplayer_a66d3f826f379dcc7c9b4890863074be4_icgraph" alt=""/></div>
+<map name="aclassplayer_a66d3f826f379dcc7c9b4890863074be4_icgraph" id="aclassplayer_a66d3f826f379dcc7c9b4890863074be4_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,539,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51ea6faad26a2b756c296f4b04d5378b" name="a51ea6faad26a2b756c296f4b04d5378b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ea6faad26a2b756c296f4b04d5378b">&#9670;&#160;</a></span>getOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcoordinates.html">coordinates</a> &amp; player::getOffset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a51ea6faad26a2b756c296f4b04d5378b_icgraph.png" border="0" usemap="#aclassplayer_a51ea6faad26a2b756c296f4b04d5378b_icgraph" alt=""/></div>
+<map name="aclassplayer_a51ea6faad26a2b756c296f4b04d5378b_icgraph" id="aclassplayer_a51ea6faad26a2b756c296f4b04d5378b_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,524,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="390,21,359,21,359,16,390,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a707e2d677f4484db498f093e9385d23a" name="a707e2d677f4484db498f093e9385d23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707e2d677f4484db498f093e9385d23a">&#9670;&#160;</a></span>getPrevousPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcoordinates.html">coordinates</a> &amp; player::getPrevousPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a707e2d677f4484db498f093e9385d23a_icgraph.png" border="0" usemap="#aclassplayer_a707e2d677f4484db498f093e9385d23a_icgraph" alt=""/></div>
+<map name="aclassplayer_a707e2d677f4484db498f093e9385d23a_icgraph" id="aclassplayer_a707e2d677f4484db498f093e9385d23a_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,584,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad61535af376252a70de62e8b246c188a" name="ad61535af376252a70de62e8b246c188a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61535af376252a70de62e8b246c188a">&#9670;&#160;</a></span>getTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classsegment.html">segment</a> &amp; player::getTexture </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_ad61535af376252a70de62e8b246c188a_icgraph.png" border="0" usemap="#aclassplayer_ad61535af376252a70de62e8b246c188a_icgraph" alt=""/></div>
+<map name="aclassplayer_ad61535af376252a70de62e8b246c188a_icgraph" id="aclassplayer_ad61535af376252a70de62e8b246c188a_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,532,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,358,21,358,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a364a0ac83bd2cfd938af75ae6c61d3a2" name="a364a0ac83bd2cfd938af75ae6c61d3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364a0ac83bd2cfd938af75ae6c61d3a2">&#9670;&#160;</a></span>getTextureCorner1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcoordinates.html">coordinates</a> &amp; player::getTextureCorner1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ed2dfd2dccf2715792c47b0cb008858" name="a2ed2dfd2dccf2715792c47b0cb008858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ed2dfd2dccf2715792c47b0cb008858">&#9670;&#160;</a></span>getTextureCorner2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcoordinates.html">coordinates</a> &amp; player::getTextureCorner2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc606ceea8014a50211f2226b5cdac02" name="afc606ceea8014a50211f2226b5cdac02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc606ceea8014a50211f2226b5cdac02">&#9670;&#160;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void player::move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoordinates.html">coordinates</a></td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000075">Todo</a></b></dt><dd>opis </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_afc606ceea8014a50211f2226b5cdac02_cgraph.png" border="0" usemap="#aclassplayer_afc606ceea8014a50211f2226b5cdac02_cgraph" alt=""/></div>
+<map name="aclassplayer_afc606ceea8014a50211f2226b5cdac02_cgraph" id="aclassplayer_afc606ceea8014a50211f2226b5cdac02_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,102,40"/>
+<area shape="rect" href="namespacecoordinates_tools.html#a70ca8c67af90d65cd659c04215a81b40" title=" " alt="" coords="150,5,361,48"/>
+<area shape="poly" title=" " alt="" coords="102,24,134,24,134,29,102,29"/>
+<area shape="rect" href="namespacecoordinates_tools.html#abad9704a024eac7445ba4adc6be4ee7e" title=" " alt="" coords="639,13,813,40"/>
+<area shape="poly" title=" " alt="" coords="362,21,409,20,591,20,624,21,624,26,591,25,409,25,362,26"/>
+<area shape="rect" href="namespacecoordinates_tools.html#a4c5fec12767ae677877353fc13bbf637" title=" " alt="" coords="409,35,591,77"/>
+<area shape="poly" title=" " alt="" coords="362,37,394,41,393,46,361,42"/>
+<area shape="poly" title=" " alt="" coords="591,42,624,37,624,43,592,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_afc606ceea8014a50211f2226b5cdac02_icgraph.png" border="0" usemap="#aclassplayer_afc606ceea8014a50211f2226b5cdac02_icgraph" alt=""/></div>
+<map name="aclassplayer_afc606ceea8014a50211f2226b5cdac02_icgraph" id="aclassplayer_afc606ceea8014a50211f2226b5cdac02_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,503,32"/>
+<area shape="rect" href="v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,359,21,359,16,391,16"/>
+<area shape="rect" href="mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4665a9a14b92cd85aa657545ba56a5c4" name="a4665a9a14b92cd85aa657545ba56a5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4665a9a14b92cd85aa657545ba56a5c4">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classplayer.html">player</a> &amp; player::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classplayer.html">player</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classplayer_a4665a9a14b92cd85aa657545ba56a5c4_cgraph.png" border="0" usemap="#aclassplayer_a4665a9a14b92cd85aa657545ba56a5c4_cgraph" alt=""/></div>
+<map name="aclassplayer_a4665a9a14b92cd85aa657545ba56a5c4_cgraph" id="aclassplayer_a4665a9a14b92cd85aa657545ba56a5c4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" href="classplayer.html#a97de83bce15f880241f561b55b016b02" title=" " alt="" coords="173,5,272,32"/>
+<area shape="poly" title=" " alt="" coords="125,16,157,16,157,21,125,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae6c68f02d43bb297d5a1d756a3da6d0b" name="ae6c68f02d43bb297d5a1d756a3da6d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6c68f02d43bb297d5a1d756a3da6d0b">&#9670;&#160;</a></span>currentPosition_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcoordinates.html">coordinates</a> player::currentPosition_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2f2f98bfe93bf945fedea68dac1701e" name="aa2f2f98bfe93bf945fedea68dac1701e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f2f98bfe93bf945fedea68dac1701e">&#9670;&#160;</a></span>instance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classplayer.html">player</a> player::instance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57bdfca5ab139080a6c5b9c2a7697d21" name="a57bdfca5ab139080a6c5b9c2a7697d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bdfca5ab139080a6c5b9c2a7697d21">&#9670;&#160;</a></span>offset_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcoordinates.html">coordinates</a> player::offset_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ee3a74cd7a13f1ea45c7d90cc1a772f" name="a0ee3a74cd7a13f1ea45c7d90cc1a772f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee3a74cd7a13f1ea45c7d90cc1a772f">&#9670;&#160;</a></span>prevousPosition_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcoordinates.html">coordinates</a> player::prevousPosition_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee21b7c77b9f19d43f2a7c77df83f15d" name="aee21b7c77b9f19d43f2a7c77df83f15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee21b7c77b9f19d43f2a7c77df83f15d">&#9670;&#160;</a></span>texture_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classsegment.html">segment</a> player::texture_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2fb76d97b85df53a0258169923eaf69" name="ac2fb76d97b85df53a0258169923eaf69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fb76d97b85df53a0258169923eaf69">&#9670;&#160;</a></span>texture_corner_1_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcoordinates.html">coordinates</a> player::texture_corner_1_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0fab47c12d16e56e100ebb34e115cda" name="ae0fab47c12d16e56e100ebb34e115cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0fab47c12d16e56e100ebb34e115cda">&#9670;&#160;</a></span>texture_corner_2_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcoordinates.html">coordinates</a> player::texture_corner_2_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Core/Inc/<a class="el" href="player_8hpp_source.html">player.hpp</a></li>
 <li>Core/Src/<a class="el" href="player_8cpp.html">player.cpp</a></li>

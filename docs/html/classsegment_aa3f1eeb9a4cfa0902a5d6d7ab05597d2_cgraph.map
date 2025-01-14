@@ -1,0 +1,5 @@
+<map id="segment::operator|" name="segment::operator|">
+<area shape="rect" id="Node000001" title="Returns a new segment that is the result of a bitwise OR operation with another segment." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="Node000002" href="$classsegment.html#a52879a61f133f8cd3b0afbb1a4ca5de2" title="Default constructor to create a segment with a zero&#45;initialized array." alt="" coords="183,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
+</map>

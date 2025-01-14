@@ -86,7 +86,7 @@ void enemysManager::move()
 	{
 		if(e != nullptr)
 		{
-			if(coordinatesTools::isInVmap(e->getCurrentCoords()))
+			if(coordinatesTools::isInVmap(e->getCurrentPosition()))
 			{
 				e->move();
 			}
@@ -114,7 +114,7 @@ void enemysManager::chackCollisions()
 	{
 		if(e)
 		{
-			if(coordinatesTools::isInDownMargin(e->getCurrentCoords()))
+			if(coordinatesTools::isInDownMargin(e->getCurrentPosition()))
 			{
 				e->setToRemove();
 			}
@@ -124,7 +124,7 @@ void enemysManager::chackCollisions()
 				{
 					if(b)
 					{
-						coordinates t = b->getCurrentCoords() - e->getCurrentCoords();
+						coordinates t = b->getCurrentPosition() - e->getCurrentPosition();
 						if((t.x >= e->getTextureCorner1().x and t.x < e->getTextureCorner2().x) and
 						   (t.y >= e->getTextureCorner1().y and t.y < e->getTextureCorner2().y))
 						{
@@ -139,8 +139,8 @@ void enemysManager::chackCollisions()
 									++shiftBitCounter;
 								}
 								coordinates offset({t.x, static_cast<std::int16_t>(field_size - 1 - shiftBitCounter)});
-								if ((b->getCurrentCoords().x) == (e->getCurrentCoords() + offset).x and
-									(b->getCurrentCoords().y) <= (e->getCurrentCoords() + offset).y)
+								if ((b->getCurrentPosition().x) == (e->getCurrentPosition() + offset).x and
+									(b->getCurrentPosition().y) <= (e->getCurrentPosition() + offset).y)
 								{
 									e->takeDamage(b->getDemage());
 									b->setToRemove();

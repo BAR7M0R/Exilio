@@ -1,0 +1,9 @@
+<map id="Core/Src/hardware/adc.c" name="Core/Src/hardware/adc.c">
+<area shape="rect" id="Node000001" title="This file provides code for the configuration of the ADC instances." alt="" coords="5,5,172,32"/>
+<area shape="rect" id="Node000002" href="$adc_8h.html" title="This file contains all the function prototypes for the adc.c file." alt="" coords="62,80,115,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,33,91,64,86,64,86,33"/>
+<area shape="rect" id="Node000003" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="58,155,119,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,107,91,139,86,139,86,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="30,229,147,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,182,91,214,86,214,86,182"/>
+</map>

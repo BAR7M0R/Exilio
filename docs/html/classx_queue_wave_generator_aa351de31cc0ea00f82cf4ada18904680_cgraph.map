@@ -1,0 +1,8 @@
+<map id="xQueueWaveGenerator::controlTask" name="xQueueWaveGenerator::controlTask">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,162,77"/>
+<area shape="rect" id="Node000002" href="$classx_queue_wave_generator.html#a307ac8d44f37f63a1af5e653bb10eacf" title=" " alt="" coords="210,5,366,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,42,194,37,195,43,163,47"/>
+<area shape="rect" id="Node000003" href="$classx_queue_wave_generator.html#add39ce7231b641726325ae3f148633c9" title=" " alt="" coords="414,35,578,77"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="162,56,210,57,366,57,398,57,398,62,366,63,210,63,162,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,35,399,40,398,45,366,40"/>
+</map>

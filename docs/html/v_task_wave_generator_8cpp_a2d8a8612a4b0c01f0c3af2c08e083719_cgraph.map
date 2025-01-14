@@ -1,0 +1,11 @@
+<map id="vTaskWaveGenerator" name="vTaskWaveGenerator">
+<area shape="rect" id="Node000001" title="task function to" alt="" coords="5,72,152,99"/>
+<area shape="rect" id="Node000002" href="$classx_queue_wave_generator.html#a307ac8d44f37f63a1af5e653bb10eacf" title=" " alt="" coords="200,5,356,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,69,188,50,189,56,127,74"/>
+<area shape="rect" id="Node000004" href="$v_task_wave_generator_8cpp.html#a141abc38209f800d5e714a29fef815cb" title=" " alt="" coords="234,72,322,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,83,218,83,218,88,152,88"/>
+<area shape="rect" id="Node000005" href="$classx_queue_wave_generator.html#af3e97a5aa8eab2071d70559665d3335b" title=" " alt="" coords="200,123,356,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="127,97,189,115,188,120,126,102"/>
+<area shape="rect" id="Node000003" href="$classx_queue_wave_generator.html#add39ce7231b641726325ae3f148633c9" title=" " alt="" coords="404,5,568,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="356,24,388,24,388,29,356,29"/>
+</map>

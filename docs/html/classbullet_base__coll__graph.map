@@ -1,0 +1,7 @@
+<map id="bulletBase" name="bulletBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="75,160,157,187"/>
+<area shape="rect" id="Node000002" href="$structcoordinates.html" title=" " alt="" coords="5,5,94,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,48,42,91,45,114,53,135,64,147,79,157,77,162,61,152,49,137,40,115,36,91,40,47"/>
+<area shape="rect" id="Node000003" href="$classsegment.html" title="This is wrapper around std::array&lt;field , 8&gt; class based on the memory model." alt="" coords="148,5,220,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,48,176,92,157,137,136,161,132,158,153,135,171,90,179,47"/>
+</map>

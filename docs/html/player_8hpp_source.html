@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -52,51 +52,63 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="player_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * player.hpp</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *  Created on: Jan 5, 2025</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *      Author: dev</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef INC_PLAYER_HPP_</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define INC_PLAYER_HPP_</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="coordinates_8hpp.html">coordinates.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;segment.hpp&quot;</span></div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classplayer.html">   23</a></span><span class="keyword">class </span>player</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    player();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    player(<span class="keyword">const</span> player&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    player&amp; operator=(<span class="keyword">const</span> player&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> player&amp; GetInstance();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> updatePosition(<a class="code hl_struct" href="structcoordinates.html">coordinates</a> direction);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; getCurrentPosition();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; getPrevousPosition();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">const</span> <a class="code hl_class" href="classsegment.html">segment</a>&amp; getTexture() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; getTextureCorner1() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; getTextureCorner2() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; getOffset() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">const</span> <a class="code hl_class" href="classsegment.html">segment</a> texture_;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a> texture_corner_1_;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a> texture_corner_2_;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a> offset_;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a> currentPosition_;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a> prevousPosition_;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">static</span> player instance_;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="segment_8hpp.html">segment.hpp</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classplayer.html">   27</a></span><span class="keyword">class </span><a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classplayer.html#a562deb1fda48edf8063f6270a15a6943">   31</a></span>    <a class="code hl_function" href="classplayer.html#a562deb1fda48edf8063f6270a15a6943">player</a>(<span class="keyword">const</span> <a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classplayer.html#a4665a9a14b92cd85aa657545ba56a5c4">   32</a></span>    <a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a>&amp; <a class="code hl_function" href="classplayer.html#a4665a9a14b92cd85aa657545ba56a5c4">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">static</span> <a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a>&amp; <a class="code hl_function" href="classplayer.html#a66d3f826f379dcc7c9b4890863074be4">getInstance</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classplayer.html#afc606ceea8014a50211f2226b5cdac02">move</a>(<a class="code hl_struct" href="structcoordinates.html">coordinates</a> direction);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; <a class="code hl_function" href="classplayer.html#ac34bdd135312222bc8dbf144bb1a5cb5">getCurrentPosition</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; <a class="code hl_function" href="classplayer.html#a707e2d677f4484db498f093e9385d23a">getPrevousPosition</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> <a class="code hl_class" href="classsegment.html">segment</a>&amp; <a class="code hl_function" href="classplayer.html#ad61535af376252a70de62e8b246c188a">getTexture</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; <a class="code hl_function" href="classplayer.html#a364a0ac83bd2cfd938af75ae6c61d3a2">getTextureCorner1</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; <a class="code hl_function" href="classplayer.html#a2ed2dfd2dccf2715792c47b0cb008858">getTextureCorner2</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a>&amp; <a class="code hl_function" href="classplayer.html#a51ea6faad26a2b756c296f4b04d5378b">getOffset</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classplayer.html#aee21b7c77b9f19d43f2a7c77df83f15d">   61</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classsegment.html">segment</a> <a class="code hl_variable" href="classplayer.html#aee21b7c77b9f19d43f2a7c77df83f15d">texture_</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classplayer.html#ac2fb76d97b85df53a0258169923eaf69">   62</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a> <a class="code hl_variable" href="classplayer.html#ac2fb76d97b85df53a0258169923eaf69">texture_corner_1_</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classplayer.html#ae0fab47c12d16e56e100ebb34e115cda">   63</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a> <a class="code hl_variable" href="classplayer.html#ae0fab47c12d16e56e100ebb34e115cda">texture_corner_2_</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classplayer.html#a57bdfca5ab139080a6c5b9c2a7697d21">   64</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="structcoordinates.html">coordinates</a> <a class="code hl_variable" href="classplayer.html#a57bdfca5ab139080a6c5b9c2a7697d21">offset_</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classplayer.html#ae6c68f02d43bb297d5a1d756a3da6d0b">   65</a></span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a> <a class="code hl_variable" href="classplayer.html#ae6c68f02d43bb297d5a1d756a3da6d0b">currentPosition_</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classplayer.html#a0ee3a74cd7a13f1ea45c7d90cc1a772f">   66</a></span>    <a class="code hl_struct" href="structcoordinates.html">coordinates</a> <a class="code hl_variable" href="classplayer.html#a0ee3a74cd7a13f1ea45c7d90cc1a772f">prevousPosition_</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classplayer.html#aa2f2f98bfe93bf945fedea68dac1701e">   67</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="classplayer.html#a97de83bce15f880241f561b55b016b02">player</a> <a class="code hl_variable" href="classplayer.html#aa2f2f98bfe93bf945fedea68dac1701e">instance_</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">/* INC_PLAYER_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclasssegment_html"><div class="ttname"><a href="classsegment.html">segment</a></div><div class="ttdef"><b>Definition</b> segment.hpp:15</div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">/* INC_PLAYER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassplayer_html_a0ee3a74cd7a13f1ea45c7d90cc1a772f"><div class="ttname"><a href="classplayer.html#a0ee3a74cd7a13f1ea45c7d90cc1a772f">player::prevousPosition_</a></div><div class="ttdeci">coordinates prevousPosition_</div><div class="ttdef"><b>Definition</b> player.hpp:66</div></div>
+<div class="ttc" id="aclassplayer_html_a2ed2dfd2dccf2715792c47b0cb008858"><div class="ttname"><a href="classplayer.html#a2ed2dfd2dccf2715792c47b0cb008858">player::getTextureCorner2</a></div><div class="ttdeci">const coordinates &amp; getTextureCorner2() const</div><div class="ttdef"><b>Definition</b> player.cpp:50</div></div>
+<div class="ttc" id="aclassplayer_html_a364a0ac83bd2cfd938af75ae6c61d3a2"><div class="ttname"><a href="classplayer.html#a364a0ac83bd2cfd938af75ae6c61d3a2">player::getTextureCorner1</a></div><div class="ttdeci">const coordinates &amp; getTextureCorner1() const</div><div class="ttdef"><b>Definition</b> player.cpp:46</div></div>
+<div class="ttc" id="aclassplayer_html_a4665a9a14b92cd85aa657545ba56a5c4"><div class="ttname"><a href="classplayer.html#a4665a9a14b92cd85aa657545ba56a5c4">player::operator=</a></div><div class="ttdeci">player &amp; operator=(const player &amp;)=delete</div></div>
+<div class="ttc" id="aclassplayer_html_a51ea6faad26a2b756c296f4b04d5378b"><div class="ttname"><a href="classplayer.html#a51ea6faad26a2b756c296f4b04d5378b">player::getOffset</a></div><div class="ttdeci">const coordinates &amp; getOffset() const</div><div class="ttdef"><b>Definition</b> player.cpp:58</div></div>
+<div class="ttc" id="aclassplayer_html_a562deb1fda48edf8063f6270a15a6943"><div class="ttname"><a href="classplayer.html#a562deb1fda48edf8063f6270a15a6943">player::player</a></div><div class="ttdeci">player(const player &amp;)=delete</div></div>
+<div class="ttc" id="aclassplayer_html_a57bdfca5ab139080a6c5b9c2a7697d21"><div class="ttname"><a href="classplayer.html#a57bdfca5ab139080a6c5b9c2a7697d21">player::offset_</a></div><div class="ttdeci">const coordinates offset_</div><div class="ttdef"><b>Definition</b> player.hpp:64</div></div>
+<div class="ttc" id="aclassplayer_html_a66d3f826f379dcc7c9b4890863074be4"><div class="ttname"><a href="classplayer.html#a66d3f826f379dcc7c9b4890863074be4">player::getInstance</a></div><div class="ttdeci">static player &amp; getInstance()</div><div class="ttdef"><b>Definition</b> player.cpp:25</div></div>
+<div class="ttc" id="aclassplayer_html_a707e2d677f4484db498f093e9385d23a"><div class="ttname"><a href="classplayer.html#a707e2d677f4484db498f093e9385d23a">player::getPrevousPosition</a></div><div class="ttdeci">coordinates &amp; getPrevousPosition()</div><div class="ttdef"><b>Definition</b> player.cpp:42</div></div>
+<div class="ttc" id="aclassplayer_html_a97de83bce15f880241f561b55b016b02"><div class="ttname"><a href="classplayer.html#a97de83bce15f880241f561b55b016b02">player::player</a></div><div class="ttdeci">player()</div><div class="ttdef"><b>Definition</b> player.cpp:17</div></div>
+<div class="ttc" id="aclassplayer_html_aa2f2f98bfe93bf945fedea68dac1701e"><div class="ttname"><a href="classplayer.html#aa2f2f98bfe93bf945fedea68dac1701e">player::instance_</a></div><div class="ttdeci">static player instance_</div><div class="ttdef"><b>Definition</b> player.hpp:67</div></div>
+<div class="ttc" id="aclassplayer_html_ac2fb76d97b85df53a0258169923eaf69"><div class="ttname"><a href="classplayer.html#ac2fb76d97b85df53a0258169923eaf69">player::texture_corner_1_</a></div><div class="ttdeci">const coordinates texture_corner_1_</div><div class="ttdef"><b>Definition</b> player.hpp:62</div></div>
+<div class="ttc" id="aclassplayer_html_ac34bdd135312222bc8dbf144bb1a5cb5"><div class="ttname"><a href="classplayer.html#ac34bdd135312222bc8dbf144bb1a5cb5">player::getCurrentPosition</a></div><div class="ttdeci">coordinates &amp; getCurrentPosition()</div><div class="ttdef"><b>Definition</b> player.cpp:38</div></div>
+<div class="ttc" id="aclassplayer_html_ad61535af376252a70de62e8b246c188a"><div class="ttname"><a href="classplayer.html#ad61535af376252a70de62e8b246c188a">player::getTexture</a></div><div class="ttdeci">const segment &amp; getTexture() const</div><div class="ttdef"><b>Definition</b> player.cpp:54</div></div>
+<div class="ttc" id="aclassplayer_html_ae0fab47c12d16e56e100ebb34e115cda"><div class="ttname"><a href="classplayer.html#ae0fab47c12d16e56e100ebb34e115cda">player::texture_corner_2_</a></div><div class="ttdeci">const coordinates texture_corner_2_</div><div class="ttdef"><b>Definition</b> player.hpp:63</div></div>
+<div class="ttc" id="aclassplayer_html_ae6c68f02d43bb297d5a1d756a3da6d0b"><div class="ttname"><a href="classplayer.html#ae6c68f02d43bb297d5a1d756a3da6d0b">player::currentPosition_</a></div><div class="ttdeci">coordinates currentPosition_</div><div class="ttdef"><b>Definition</b> player.hpp:65</div></div>
+<div class="ttc" id="aclassplayer_html_aee21b7c77b9f19d43f2a7c77df83f15d"><div class="ttname"><a href="classplayer.html#aee21b7c77b9f19d43f2a7c77df83f15d">player::texture_</a></div><div class="ttdeci">const segment texture_</div><div class="ttdef"><b>Definition</b> player.hpp:61</div></div>
+<div class="ttc" id="aclassplayer_html_afc606ceea8014a50211f2226b5cdac02"><div class="ttname"><a href="classplayer.html#afc606ceea8014a50211f2226b5cdac02">player::move</a></div><div class="ttdeci">void move(coordinates direction)</div><div class="ttdef"><b>Definition</b> player.cpp:31</div></div>
+<div class="ttc" id="aclasssegment_html"><div class="ttname"><a href="classsegment.html">segment</a></div><div class="ttdoc">This is wrapper around std::array&lt;field , 8&gt; class based on the memory model.</div><div class="ttdef"><b>Definition</b> segment.hpp:29</div></div>
 <div class="ttc" id="acoordinates_8hpp_html"><div class="ttname"><a href="coordinates_8hpp.html">coordinates.hpp</a></div></div>
-<div class="ttc" id="astructcoordinates_html"><div class="ttname"><a href="structcoordinates.html">coordinates</a></div><div class="ttdef"><b>Definition</b> coordinates.hpp:15</div></div>
+<div class="ttc" id="asegment_8hpp_html"><div class="ttname"><a href="segment_8hpp.html">segment.hpp</a></div><div class="ttdoc">This file contains the declaration of the segment class, which is the basic type of screan manipulati...</div></div>
+<div class="ttc" id="astructcoordinates_html"><div class="ttname"><a href="structcoordinates.html">coordinates</a></div><div class="ttdef"><b>Definition</b> coordinates.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

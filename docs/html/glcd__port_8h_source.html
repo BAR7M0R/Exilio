@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -51,37 +51,44 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">glcd_port.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GLCD_PORT_H</span></div>
+<a href="glcd__port_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GLCD_PORT_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GLCD_PORT_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="tim_8h.html">tim.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define GLCD_STATUS_BUSY    0x80</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define GLCD_WAITTIME       1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="glcd__port_8h.html#a63d557e2ca427bf0a0e37afd56b1bd8e">    8</a></span><span class="preprocessor">#define GLCD_STATUS_BUSY    0x80</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="glcd__port_8h.html#a5b1e387b4eb0d2ed88ba1304d7d2a115">    9</a></span><span class="preprocessor">#define GLCD_WAITTIME       1</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//-------------------------------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Enalbe/Disable Controller (0-2)</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//-------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> glcd_EnableController(uint8_t controller);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> glcd_DisableController(uint8_t controller);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="glcd__port_8h.html#a20aeeb4f6777f99da833f51a09db37f0">glcd_EnableController</a>(uint8_t controller);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="glcd__port_8h.html#a11b908b80b0542f5335d1ba04ddb16a4">glcd_DisableController</a>(uint8_t controller);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//-------------------------------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Read/Write Status/Command byte from specified controller (0-2)</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//-------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>uint8_t glcd_ReadStatus(uint8_t controller);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> glcd_WriteCommand(uint8_t controller, uint8_t command);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>uint8_t <a class="code hl_function" href="glcd__port_8h.html#a740b5a1c38b643c23434af203234bd05">glcd_ReadStatus</a>(uint8_t controller);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="glcd__port_8h.html#a33952ff5218583192c937eb62f3e270b">glcd_WriteCommand</a>(uint8_t controller, uint8_t command);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//-------------------------------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// Read/Write data from/to current position</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//-------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>uint8_t glcd_ReadData(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> glcd_WriteData(uint8_t data);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>uint8_t <a class="code hl_function" href="glcd__port_8h.html#a4ee369677fba2e593be6a9eefe07f608">glcd_ReadData</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="glcd__port_8h.html#a8dd4677ff48c5a6522ae3df5b1526cf2">glcd_WriteData</a>(uint8_t data);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> glcd_PortInitialize(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="glcd__port_8h.html#a6884ac9cab7a0a0b186d87b27298d792">glcd_PortInitialize</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span><span class="comment">//GLCD_PORT_H</span></div>
+<div class="ttc" id="aglcd__port_8h_html_a11b908b80b0542f5335d1ba04ddb16a4"><div class="ttname"><a href="glcd__port_8h.html#a11b908b80b0542f5335d1ba04ddb16a4">glcd_DisableController</a></div><div class="ttdeci">void glcd_DisableController(uint8_t controller)</div><div class="ttdef"><b>Definition</b> glcd_port.c:22</div></div>
+<div class="ttc" id="aglcd__port_8h_html_a20aeeb4f6777f99da833f51a09db37f0"><div class="ttname"><a href="glcd__port_8h.html#a20aeeb4f6777f99da833f51a09db37f0">glcd_EnableController</a></div><div class="ttdeci">void glcd_EnableController(uint8_t controller)</div><div class="ttdef"><b>Definition</b> glcd_port.c:9</div></div>
+<div class="ttc" id="aglcd__port_8h_html_a33952ff5218583192c937eb62f3e270b"><div class="ttname"><a href="glcd__port_8h.html#a33952ff5218583192c937eb62f3e270b">glcd_WriteCommand</a></div><div class="ttdeci">void glcd_WriteCommand(uint8_t controller, uint8_t command)</div><div class="ttdef"><b>Definition</b> glcd_port.c:80</div></div>
+<div class="ttc" id="aglcd__port_8h_html_a4ee369677fba2e593be6a9eefe07f608"><div class="ttname"><a href="glcd__port_8h.html#a4ee369677fba2e593be6a9eefe07f608">glcd_ReadData</a></div><div class="ttdeci">uint8_t glcd_ReadData(void)</div><div class="ttdef"><b>Definition</b> glcd_port.c:100</div></div>
+<div class="ttc" id="aglcd__port_8h_html_a6884ac9cab7a0a0b186d87b27298d792"><div class="ttname"><a href="glcd__port_8h.html#a6884ac9cab7a0a0b186d87b27298d792">glcd_PortInitialize</a></div><div class="ttdeci">void glcd_PortInitialize(void)</div><div class="ttdef"><b>Definition</b> glcd_port.c:144</div></div>
+<div class="ttc" id="aglcd__port_8h_html_a740b5a1c38b643c23434af203234bd05"><div class="ttname"><a href="glcd__port_8h.html#a740b5a1c38b643c23434af203234bd05">glcd_ReadStatus</a></div><div class="ttdeci">uint8_t glcd_ReadStatus(uint8_t controller)</div><div class="ttdef"><b>Definition</b> glcd_port.c:46</div></div>
+<div class="ttc" id="aglcd__port_8h_html_a8dd4677ff48c5a6522ae3df5b1526cf2"><div class="ttname"><a href="glcd__port_8h.html#a8dd4677ff48c5a6522ae3df5b1526cf2">glcd_WriteData</a></div><div class="ttdeci">void glcd_WriteData(uint8_t data)</div><div class="ttdef"><b>Definition</b> glcd_port.c:124</div></div>
 <div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">: Header for main.c file. This file contains the common defines of the application.</div></div>
 <div class="ttc" id="atim_8h_html"><div class="ttname"><a href="tim_8h.html">tim.h</a></div><div class="ttdoc">This file contains all the function prototypes for the tim.c file.</div></div>
 </div><!-- fragment --></div><!-- contents -->

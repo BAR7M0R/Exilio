@@ -1,0 +1,15 @@
+<map id="bulletsManager::bulletsManager" name="bulletsManager::bulletsManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="660,56,865,83"/>
+<area shape="rect" id="Node000002" href="$classbullets_manager.html#a21d8877087350c355fa30201d94bbcf0" title=" " alt="" coords="406,5,612,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="677,55,579,35,580,30,678,50"/>
+<area shape="rect" id="Node000003" href="$classbullets_manager.html#ae02fe365c14b61a94ce4c92f95b64d0c" title=" " alt="" coords="416,56,602,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="644,72,602,72,602,67,644,67"/>
+<area shape="rect" id="Node000007" href="$classbullets_manager.html#aab98ea862a9571b18f20f7405c889ea1" title=" " alt="" coords="423,107,595,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="678,89,580,109,579,103,677,84"/>
+<area shape="rect" id="Node000004" href="$v_task_virtual_display_8cpp.html#a4dd194f119f9342a09008a4f3c645d36" title="task function to" alt="" coords="221,56,358,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="401,72,359,72,359,67,401,67"/>
+<area shape="rect" id="Node000005" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,56,173,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="206,72,174,72,174,67,206,67"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="glcd_GoTo" name="glcd_GoTo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="569,56,652,83"/>
+<area shape="rect" id="Node000002" href="$glcd_8c.html#afaa94e2282de85556d78d780517d3e4b" title=" " alt="" coords="396,5,521,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="553,53,500,35,501,30,555,48"/>
+<area shape="rect" id="Node000006" href="$glcd_8c.html#a08d1961fdccfbebee8e5cf6540cafe9a" title=" " alt="" coords="404,56,513,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="553,72,513,72,513,67,553,67"/>
+<area shape="rect" id="Node000007" href="$glcd_8c.html#a904fee41587613ff27c402b88a86d162" title=" " alt="" coords="408,107,509,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="555,91,501,109,500,104,553,86"/>
+<area shape="rect" id="Node000003" href="$v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="221,31,348,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,33,349,37,348,32,380,27"/>
+<area shape="rect" id="Node000004" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,31,173,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,47,174,47,174,41,205,41"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="388,62,348,56,349,51,389,57"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="Core/Inc/hardware/glcd.h" name="Core/Inc/hardware/glcd.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" id="Node000002" href="$glcd__port_8h.html" title=" " alt="" coords="93,80,178,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,31,122,66,117,68,95,34"/>
+<area shape="rect" id="Node000007" href="$font_8h.html" title=" " alt="" coords="15,80,70,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="83,34,61,68,56,66,79,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="22,155,86,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,109,81,146,78,142,120,105"/>
+<area shape="rect" id="Node000004" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="130,229,190,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="140,107,158,213,153,214,135,108"/>
+<area shape="rect" id="Node000006" href="$tim_8h.html" title="This file contains all the function prototypes for the tim.c file." alt="" coords="166,155,217,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="148,106,175,141,171,144,143,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="101,304,218,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="162,257,162,288,157,288,157,257"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="189,183,174,216,169,214,184,181"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="47,107,52,139,47,140,42,108"/>
+</map>

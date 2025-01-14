@@ -21,7 +21,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 0.9</span>
+   <div id="projectname">Exilio<span id="projectnumber">&#160;ALFA 1.0</span>
    </div>
    <div id="projectbrief">A simple game based on the Raiden game concept was developed on the KANAMI ZL29ARM dev-board with stm32f107vctx uC</div>
   </td>
@@ -52,33 +52,40 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="x_mutex_virtual_display_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;semphr.h&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classx_mutex_virtual_display.html">   18</a></span><span class="keyword">class </span>xMutexVirtualDisplay</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    xMutexVirtualDisplay();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    xMutexVirtualDisplay(<span class="keyword">const</span> xMutexVirtualDisplay&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    xMutexVirtualDisplay&amp; operator=(<span class="keyword">const</span> xMutexVirtualDisplay&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> xMutexVirtualDisplay&amp; GetInstance();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> lock();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> unlock();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t maxTimeout_ = 10;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    SemaphoreHandle_t xMutexVirtualDisplay_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;semphr.h&quot;</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classx_mutex_virtual_display.html">   31</a></span><span class="keyword">class </span><a class="code hl_function" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classx_mutex_virtual_display.html#ad9399ce406df30612eb21428edadaa84">   35</a></span>    <a class="code hl_function" href="classx_mutex_virtual_display.html#ad9399ce406df30612eb21428edadaa84">xMutexVirtualDisplay</a>(<span class="keyword">const</span> <a class="code hl_function" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classx_mutex_virtual_display.html#a8613a6ba2b76c300d8fca7b9c86a9496">   36</a></span>    <a class="code hl_function" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a>&amp; <a class="code hl_function" href="classx_mutex_virtual_display.html#a8613a6ba2b76c300d8fca7b9c86a9496">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">static</span> <a class="code hl_function" href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay</a>&amp; <a class="code hl_function" href="classx_mutex_virtual_display.html#af55fdc427f65aaf10752371b577c99ed">getInstance</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classx_mutex_virtual_display.html#a98124eaa57140dba5040dd002aa91607">lock</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classx_mutex_virtual_display.html#a40f0d9307845d88288de573842704535">unlock</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classx_mutex_virtual_display.html#ac9b8b83d0ab8260ccfcbfbff474e2210">   52</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t <a class="code hl_variable" href="classx_mutex_virtual_display.html#ac9b8b83d0ab8260ccfcbfbff474e2210">maxTimeout_</a> = 10;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classx_mutex_virtual_display.html#a829c35145b1f258ee21a58120e6399f1">   53</a></span>    SemaphoreHandle_t <a class="code hl_variable" href="classx_mutex_virtual_display.html#a829c35145b1f258ee21a58120e6399f1">xMutexVirtualDisplay_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">/* SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">/* SRC_MUTEXES_XMUTEXVIRTUALDISPLAY_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_a40f0d9307845d88288de573842704535"><div class="ttname"><a href="classx_mutex_virtual_display.html#a40f0d9307845d88288de573842704535">xMutexVirtualDisplay::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdef"><b>Definition</b> xMutexVirtualDisplay.cpp:32</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_a7357758acd6d7694e89a6508cf7e3368"><div class="ttname"><a href="classx_mutex_virtual_display.html#a7357758acd6d7694e89a6508cf7e3368">xMutexVirtualDisplay::xMutexVirtualDisplay</a></div><div class="ttdeci">xMutexVirtualDisplay()</div><div class="ttdef"><b>Definition</b> xMutexVirtualDisplay.cpp:14</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_a829c35145b1f258ee21a58120e6399f1"><div class="ttname"><a href="classx_mutex_virtual_display.html#a829c35145b1f258ee21a58120e6399f1">xMutexVirtualDisplay::xMutexVirtualDisplay_</a></div><div class="ttdeci">SemaphoreHandle_t xMutexVirtualDisplay_</div><div class="ttdef"><b>Definition</b> xMutexVirtualDisplay.hpp:53</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_a8613a6ba2b76c300d8fca7b9c86a9496"><div class="ttname"><a href="classx_mutex_virtual_display.html#a8613a6ba2b76c300d8fca7b9c86a9496">xMutexVirtualDisplay::operator=</a></div><div class="ttdeci">xMutexVirtualDisplay &amp; operator=(const xMutexVirtualDisplay &amp;)=delete</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_a98124eaa57140dba5040dd002aa91607"><div class="ttname"><a href="classx_mutex_virtual_display.html#a98124eaa57140dba5040dd002aa91607">xMutexVirtualDisplay::lock</a></div><div class="ttdeci">void lock()</div><div class="ttdef"><b>Definition</b> xMutexVirtualDisplay.cpp:25</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_ac9b8b83d0ab8260ccfcbfbff474e2210"><div class="ttname"><a href="classx_mutex_virtual_display.html#ac9b8b83d0ab8260ccfcbfbff474e2210">xMutexVirtualDisplay::maxTimeout_</a></div><div class="ttdeci">static constexpr uint32_t maxTimeout_</div><div class="ttdef"><b>Definition</b> xMutexVirtualDisplay.hpp:52</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_ad9399ce406df30612eb21428edadaa84"><div class="ttname"><a href="classx_mutex_virtual_display.html#ad9399ce406df30612eb21428edadaa84">xMutexVirtualDisplay::xMutexVirtualDisplay</a></div><div class="ttdeci">xMutexVirtualDisplay(const xMutexVirtualDisplay &amp;)=delete</div></div>
+<div class="ttc" id="aclassx_mutex_virtual_display_html_af55fdc427f65aaf10752371b577c99ed"><div class="ttname"><a href="classx_mutex_virtual_display.html#af55fdc427f65aaf10752371b577c99ed">xMutexVirtualDisplay::getInstance</a></div><div class="ttdeci">static xMutexVirtualDisplay &amp; getInstance()</div><div class="ttdef"><b>Definition</b> xMutexVirtualDisplay.cpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

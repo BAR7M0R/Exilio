@@ -1,0 +1,9 @@
+<map id="virtualDisplay::getMap" name="virtualDisplay::getMap">
+<area shape="rect" id="Node000001" title="Retrieves a pointer to the virtual map." alt="" coords="396,5,548,32"/>
+<area shape="rect" id="Node000002" href="$v_task_display_l_c_d_8cpp.html#a0209a5cd4de2b88af218b3acd5a351e5" title="task function to set virtual map on GLCD screan." alt="" coords="221,5,348,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="381,21,348,21,348,16,381,16"/>
+<area shape="rect" id="Node000003" href="$mainapp_8cpp.html#a4b175533edf8931c8050f6f64845a3cb" title=" " alt="" coords="103,5,173,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,21,174,21,174,16,205,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

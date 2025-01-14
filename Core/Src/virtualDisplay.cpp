@@ -4,7 +4,7 @@
  * @date 2024-12-27
  *
  * @brief
- * @details
+ * @details See also @ref virtualDisplay for the class definition.
  *
  *
  */
@@ -16,59 +16,66 @@
 #include "displayConstans.hpp"
 using namespace displayConstans;
 
-
-
-uint8_t * virtualDisplay::getVMap()
-{
-return &_VMap[0][0];
-}
+/**
+ * @fn uint8_t getMap**()
+ * @return
+ */
 uint8_t ** virtualDisplay::getMap()
 {
-return _Map;
+return map_;
 }
-void virtualDisplay::fill(uint8_t data)
-{
-	for (auto& row:_VMap)
-	{
-		row.fill(data);
-	}
-}
-uint8_t virtualDisplay::checkNumberOfCells(coordinates& coords)
+/**
+ * @fn uint8_t checkNumberOfFields(coordinates&)
+ * @param pointPosition
+ * @return
+ */
+uint8_t virtualDisplay::checkNumberOfFields(coordinates& pointPosition)
 {
 	uint8_t numberOfCells=0;
-	if (coords.y%number_of_pix_in_lcd_single_field == 0)
+	if (pointPosition.y%number_of_pix_in_lcd_single_field == 0)
 	{
-		numberOfCells = 1;
+		   numberOfCells = 1;
 	}
 	else
 	{
-		numberOfCells = 2;
+		   numberOfCells = 2;
 	}
 	return numberOfCells;
 }
+/**
+ * @fn segment takeSnap(coordinates)
+ * @param coords
+ * @return
+ */
 segment virtualDisplay::takeSnap(coordinates coords)
 {
 	segment snap;
-	uint8_t numberOfCells = checkNumberOfCells(coords);
+	uint8_t numberOfCells = checkNumberOfFields(coords);
 	for(uint8_t xIdx = 0; xIdx < snap.size(); ++xIdx)
 	{
 		for(uint8_t yIdx = 0; yIdx < numberOfCells; ++yIdx)
 		{
 			if (yIdx == 0)
 			{
-				snap.at(xIdx) |= (_VMap.at(coords.y/number_of_pix_in_lcd_single_field+yIdx).at(coords.x+xIdx)
+				snap.at(xIdx) |= (vMap_.at(coords.y/number_of_pix_in_lcd_single_field+yIdx).at(coords.x+xIdx)
 						>> coords.y%number_of_pix_in_lcd_single_field);
 			}
 			else
 			{
-				snap.at(xIdx) |= (_VMap.at(coords.y/number_of_pix_in_lcd_single_field+yIdx).at(coords.x+xIdx)
+				snap.at(xIdx) |= (vMap_.at(coords.y/number_of_pix_in_lcd_single_field+yIdx).at(coords.x+xIdx)
 						<< (number_of_pix_in_lcd_single_field - coords.y%number_of_pix_in_lcd_single_field));
 			}
 		}
 	}
 	return snap;
 }
-void virtualDisplay::putEntity(coordinates& coords, coordinates& cordspreve, const segment& texture)
+/**
+ * @fn void put(coordinates&, coordinates&, const segment&)
+ * @param coords
+ * @param cordspreve
+ * @param texture
+ */
+void virtualDisplay::put(coordinates& coords, coordinates& cordspreve, const segment& texture)
 {
 	using namespace coordinatesTools;
 
@@ -97,21 +104,33 @@ void virtualDisplay::putEntity(coordinates& coords, coordinates& cordspreve, con
 	putSegment(core33, vMapCMove(coords, 0, 8));
 	putSegment(core44, vMapCMove(coords, 8, 8));
 }
+/**
+ * @fn void putSegment(segment&, coordinates)
+ * @param s
+ * @param coords
+ */
 void virtualDisplay::putSegment(segment& s, coordinates coords)
 {
 	for(uint8_t currentFieldIndex = 0; currentFieldIndex < s.size(); ++currentFieldIndex)
 	{
-		_VMap.at(coords.y / number_of_pix_in_lcd_single_field).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
+		vMap_.at(coords.y / number_of_pix_in_lcd_single_field).at(coords.x+currentFieldIndex) = s[currentFieldIndex];
 	}
 }
+/**
+ * @fn virtualDisplay getInstance&()
+ * @return
+ */
 virtualDisplay& virtualDisplay::getInstance()
 {
 	static virtualDisplay instance;
 	return instance;
 }
+/**
+ * @fn  virtualDisplay()
+ */
 virtualDisplay::virtualDisplay()
 {
-	for (auto& row:_VMap)
+	for (auto& row:vMap_)
 	{
 		for (int i = 0; i< 30; ++i)
 		{
@@ -124,7 +143,7 @@ virtualDisplay::virtualDisplay()
 	{
 		for (uint8_t j = 0; j < width_lcd; ++j)
 		{
-			_Map[k++] = &_VMap[v_margin_height+i][v_margin_width+j];
+			map_[k++] = &vMap_[v_margin_height+i][v_margin_width+j];
 		}
 	}
 }
